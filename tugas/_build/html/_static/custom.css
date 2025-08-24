@@ -1,0 +1,7 @@
+.logo__image {
+      border-radius: 50%;
+      /* Opsi tambahan untuk hasil lebih baik */
+      width: 50px;  /* Ganti dengan ukuran yang Anda inginkan */
+      height: 50px; /* Samakan dengan width agar jadi lingkaran sempurna */
+      object-fit: cover; /* Mencegah gambar menjadi gepeng/terdistorsi */
+    }

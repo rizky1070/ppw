@@ -1,4 +1,12 @@
-# Welcome to your Jupyter Book
+# Profile
+
+Nama : Rizkyan Dwi Prasetiawan
+
+Mahasiswa jurusan Teknik Informatika
+
+NIM : 220411100026
+
+Email : rizkyandwip@gmail.com
 
 This is a small sample book to give you a feel for how book content is
 structured.
