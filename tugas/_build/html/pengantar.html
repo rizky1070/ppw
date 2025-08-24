@@ -355,7 +355,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -371,6 +373,22 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-dan-tujuan-web-mining">1. Definisi dan Tujuan Web Mining</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taksonomi-web-mining">2. Taksonomi Web Mining</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-penambangan-konten-web-web-content-mining">a. Penambangan Konten Web (Web Content Mining)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-penambangan-penggunaan-web-web-usage-mining">b. Penambangan Penggunaan Web (Web Usage Mining)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-penambangan-struktur-web-web-structure-mining">c. Penambangan Struktur Web (Web Structure Mining)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proses-web-mining">3. Proses Web Mining</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#keterkaitan-dengan-bidang-ilmu-lain">4. Keterkaitan dengan Bidang Ilmu Lain</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -382,6 +400,67 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="pengantar-penambangan-website">
 <h1>Pengantar Penambangan Website<a class="headerlink" href="#pengantar-penambangan-website" title="Link to this heading">#</a></h1>
+<section id="definisi-dan-tujuan-web-mining">
+<h2>1. Definisi dan Tujuan Web Mining<a class="headerlink" href="#definisi-dan-tujuan-web-mining" title="Link to this heading">#</a></h2>
+<p>Web Mining adalah proses penemuan dan ekstraksi informasi yang berguna dari internet melalui berbagai teknik penambangan data. Tujuannya adalah untuk menemukan pola-pola tersembunyi dari struktur hyperlink, konten halaman, dan perilaku pengguna untuk mendukung pengambilan keputusan yang efektif.</p>
+<p>Tantangan: Web merupakan sumber data yang sangat besar, kompleks, dinamis, dan tidak spesifik pada satu domain, sehingga memerlukan teknik khusus untuk memprosesnya.</p>
+</section>
+<section id="taksonomi-web-mining">
+<h2>2. Taksonomi Web Mining<a class="headerlink" href="#taksonomi-web-mining" title="Link to this heading">#</a></h2>
+<p>Web mining secara umum dibagi menjadi tiga kategori utama:</p>
+<section id="a-penambangan-konten-web-web-content-mining">
+<h3>a. Penambangan Konten Web (Web Content Mining)<a class="headerlink" href="#a-penambangan-konten-web-web-content-mining" title="Link to this heading">#</a></h3>
+<p>Fokus pada ekstraksi informasi dari konten halaman web, seperti teks, gambar, audio, dan video.</p>
+<p>Aplikasi Utama (Text Mining):</p>
+<ul class="simple">
+<li><p>Klasifikasi Dokumen: Mengkategorikan dokumen ke dalam kelas yang telah ditentukan (misalnya, analisis sentimen, deteksi spam).</p></li>
+<li><p>Pengelompokan Dokumen (Clustering): Mengelompokkan dokumen serupa tanpa label kelas sebelumnya (misalnya, pengelompokan hasil pencarian, penemuan topik).</p></li>
+<li><p>Ekstraksi Informasi: Mengambil data terstruktur dari teks yang tidak terstruktur (misalnya, mengekstrak nama produk dan harga dari ulasan).</p></li>
+<li><p>Analisis Sentimen: Mengklasifikasikan polaritas teks (positif, netral, negatif) untuk memahami opini publik.</p></li>
+</ul>
+</section>
+<section id="b-penambangan-penggunaan-web-web-usage-mining">
+<h3>b. Penambangan Penggunaan Web (Web Usage Mining)<a class="headerlink" href="#b-penambangan-penggunaan-web-web-usage-mining" title="Link to this heading">#</a></h3>
+<p>Fokus pada analisis data yang dihasilkan dari interaksi pengguna dengan situs web, seperti clickstream (jejak klik), log server, dan cookie.</p>
+<p>Proses: Melibatkan pengumpulan data, pra-pemrosesan, penemuan pola, dan analisis pola.</p>
+<p>Aplikasi Utama:</p>
+<ul class="simple">
+<li><p>Rekomendasi Produk: Menyarankan produk kepada pengguna berdasarkan perilaku mereka atau pengguna serupa.</p></li>
+<li><p>Pencarian yang Dipersonalisasi: Menyesuaikan hasil pencarian berdasarkan preferensi dan riwayat pengguna.</p></li>
+</ul>
+</section>
+<section id="c-penambangan-struktur-web-web-structure-mining">
+<h3>c. Penambangan Struktur Web (Web Structure Mining)<a class="headerlink" href="#c-penambangan-struktur-web-web-structure-mining" title="Link to this heading">#</a></h3>
+<p>Fokus pada analisis struktur tautan (hyperlink) antar halaman web untuk memahami hubungan dan otoritas.</p>
+<p>Konsep Utama:</p>
+<ul class="simple">
+<li><p>Grafik Web (Web Graph): Representasi web di mana halaman adalah simpul (node) dan hyperlink adalah sisi (edge).</p></li>
+<li><p>Identifikasi Simpul Penting (Centrality): Menemukan halaman atau pengguna yang paling berpengaruh dalam jaringan (misalnya, algoritma PageRank Google).</p></li>
+<li><p>Deteksi Komunitas: Mengidentifikasi kelompok halaman atau pengguna yang saling berinteraksi secara padat.</p></li>
+</ul>
+</section>
+</section>
+<section id="proses-web-mining">
+<h2>3. Proses Web Mining<a class="headerlink" href="#proses-web-mining" title="Link to this heading">#</a></h2>
+<p>Prosesnya mirip dengan penambangan data pada umumnya, namun dengan penekanan khusus pada tahap pengumpulan dan pra-pemrosesan data web.</p>
+<ul class="simple">
+<li><p>Pengumpulan Data (Gathering): Menggunakan web crawler atau API untuk mengumpulkan dokumen dan data dari web.</p></li>
+<li><p>Pra-pemrosesan &amp; Transformasi (Preprocessing &amp; Transformation): Tahap paling memakan waktu (70-80% proyek), mencakup pembersihan data, seleksi fitur, dan transformasi data ke format yang sesuai untuk analisis (misalnya, teks ke vektor).</p></li>
+<li><p>Penambangan Data (Actual Data Mining): Menerapkan algoritma penambangan data (klasifikasi, pengelompokan, dll.) untuk menemukan pola.</p></li>
+<li><p>Evaluasi &amp; Iterasi: Mengevaluasi model yang dihasilkan dan melakukan eksperimen untuk meningkatkan kualitas dan akurasi.</p></li>
+</ul>
+</section>
+<section id="keterkaitan-dengan-bidang-ilmu-lain">
+<h2>4. Keterkaitan dengan Bidang Ilmu Lain<a class="headerlink" href="#keterkaitan-dengan-bidang-ilmu-lain" title="Link to this heading">#</a></h2>
+<p>Web mining merupakan bidang interdisipliner yang menggabungkan konsep dari:</p>
+<ul class="simple">
+<li><p>Natural Language Processing (NLP)</p></li>
+<li><p>Machine Learning</p></li>
+<li><p>Database Systems</p></li>
+<li><p>Social Network Analysis</p></li>
+<li><p>Graph Mining</p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -438,6 +517,29 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-dan-tujuan-web-mining">1. Definisi dan Tujuan Web Mining</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taksonomi-web-mining">2. Taksonomi Web Mining</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-penambangan-konten-web-web-content-mining">a. Penambangan Konten Web (Web Content Mining)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-penambangan-penggunaan-web-web-usage-mining">b. Penambangan Penggunaan Web (Web Usage Mining)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-penambangan-struktur-web-web-structure-mining">c. Penambangan Struktur Web (Web Structure Mining)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proses-web-mining">3. Proses Web Mining</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#keterkaitan-dengan-bidang-ilmu-lain">4. Keterkaitan dengan Bidang Ilmu Lain</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
