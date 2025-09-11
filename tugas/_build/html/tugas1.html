@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>tugas satu &#8212; My sample book</title>
+    <title>tugas 2 &#8212; My sample book</title>
   
   
   
@@ -183,6 +183,9 @@
         <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="pengantar.html">Pengantar Penambangan Website</a></li>
 <li class="toctree-l1"><a class="reference internal" href="crawling.html">Crawling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crawlinglink.html">Crawling Link Dalam Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crawlingberita2.html">Crawling Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crawlingpta3copy.html">Crawling PTA</a></li>
 </ul>
 
     </div>
@@ -366,7 +369,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>tugas satu</h1>
+    <h1>tugas 2</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -380,8 +383,162 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="tugas-satu">
-<h1>tugas satu<a class="headerlink" href="#tugas-satu" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="tugas-2">
+<h1>tugas 2<a class="headerlink" href="#tugas-2" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bs4</span><span class="w"> </span><span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">concurrent.futures</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span> <span class="c1"># Impor modul random untuk jeda</span>
+
+<span class="c1"># --- PENYESUAIAN KESEIMBANGAN ---</span>
+<span class="c1"># Kurangi jumlah pekerja agar tidak terlalu agresif</span>
+<span class="n">MAX_WORKERS</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="n">HEADERS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;User-Agent&#39;</span><span class="p">:</span> <span class="s1">&#39;ganti lek mu wak&#39;</span>
+<span class="p">}</span>
+
+<span class="c1"># ... (fungsi get_fakultas_prodi_list tidak berubah) ...</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_fakultas_prodi_list</span><span class="p">():</span>
+    <span class="n">prodi_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">url_nav</span> <span class="o">=</span> <span class="s2">&quot;https://pta.trunojoyo.ac.id/c_search/byfac&quot;</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url_nav</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">HEADERS</span><span class="p">)</span>
+        <span class="n">r</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+        <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+        <span class="n">sidebar_nav</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;div.box.sidebar_nav&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">sidebar_nav</span><span class="p">:</span> <span class="k">return</span> <span class="p">[]</span>
+        <span class="n">fakultas_items</span> <span class="o">=</span> <span class="n">sidebar_nav</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;ul&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;li&#39;</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">item_fakultas</span> <span class="ow">in</span> <span class="n">fakultas_items</span><span class="p">:</span>
+            <span class="n">anchor_fakultas</span> <span class="o">=</span> <span class="n">item_fakultas</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">anchor_fakultas</span><span class="p">:</span> <span class="k">continue</span>
+            <span class="n">nama_fakultas</span> <span class="o">=</span> <span class="n">anchor_fakultas</span><span class="o">.</span><span class="n">get_text</span><span class="p">(</span><span class="n">strip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">ul_prodi</span> <span class="o">=</span> <span class="n">item_fakultas</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;ul&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">ul_prodi</span><span class="p">:</span> <span class="k">continue</span>
+            <span class="k">for</span> <span class="n">link_prodi</span> <span class="ow">in</span> <span class="n">ul_prodi</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;li a&#39;</span><span class="p">):</span>
+                <span class="n">nama_prodi</span> <span class="o">=</span> <span class="n">link_prodi</span><span class="o">.</span><span class="n">get_text</span><span class="p">(</span><span class="n">strip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                <span class="n">href</span> <span class="o">=</span> <span class="n">link_prodi</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">)</span>
+                <span class="n">prodi_id</span> <span class="o">=</span> <span class="n">href</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                <span class="k">if</span> <span class="n">prodi_id</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
+                    <span class="n">prodi_list</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+                        <span class="s2">&quot;id_prodi&quot;</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">prodi_id</span><span class="p">),</span>
+                        <span class="s2">&quot;nama_prodi&quot;</span><span class="p">:</span> <span class="n">nama_prodi</span><span class="p">,</span>
+                        <span class="s2">&quot;nama_fakultas&quot;</span><span class="p">:</span> <span class="n">nama_fakultas</span>
+                    <span class="p">})</span>
+    <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">RequestException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Gagal mengambil daftar prodi: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">prodi_list</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">scrape_jurnal_detail</span><span class="p">(</span><span class="n">jurnal_url</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># --- PENYESUAIAN KESEIMBANGAN ---</span>
+        <span class="c1"># Beri jeda acak kecil sebelum setiap permintaan detail</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">))</span> 
+        
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">jurnal_url</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">HEADERS</span><span class="p">)</span>
+        <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+        <span class="c1"># ... (sisa fungsi sama)</span>
+        <span class="n">isi</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;div#content_journal&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">isi</span><span class="p">:</span> <span class="k">return</span> <span class="kc">None</span>
+        <span class="n">judul</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;a.title&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">penulis</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;span:contains(&quot;Penulis&quot;)&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; : &#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">pembimbing_pertama</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;span:contains(&quot;Dosen Pembimbing I&quot;)&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; : &#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">pembimbing_kedua</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;span:contains(&quot;Dosen Pembimbing II&quot;)&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">abstract_paragraphs</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;p[align=&quot;justify&quot;]&#39;</span><span class="p">)</span>
+        <span class="n">text_indo_mentah</span> <span class="o">=</span> <span class="n">abstract_paragraphs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">abstract_paragraphs</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+        <span class="n">abstrak_indonesia</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">text_indo_mentah</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">text_inggris_mentah</span> <span class="o">=</span> <span class="n">abstract_paragraphs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">text</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">abstract_paragraphs</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+        <span class="n">abstrak_inggris</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">text_inggris_mentah</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;penulis&quot;</span><span class="p">:</span> <span class="n">penulis</span><span class="p">,</span> <span class="s2">&quot;judul&quot;</span><span class="p">:</span> <span class="n">judul</span><span class="p">,</span> <span class="s2">&quot;pembimbing_pertama&quot;</span><span class="p">:</span> <span class="n">pembimbing_pertama</span><span class="p">,</span>
+            <span class="s2">&quot;pembimbing_kedua&quot;</span><span class="p">:</span> <span class="n">pembimbing_kedua</span><span class="p">,</span> <span class="s2">&quot;abstrak&quot;</span><span class="p">:</span> <span class="n">abstrak_indonesia</span><span class="p">,</span>
+            <span class="s2">&quot;abstrak_inggris&quot;</span><span class="p">:</span> <span class="n">abstrak_inggris</span>
+        <span class="p">}</span>
+    <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">RequestException</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+<span class="c1"># ... (Fungsi scrape_prodi dan main tetap sama seperti versi multithreading sebelumnya) ...</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">scrape_prodi</span><span class="p">(</span><span class="n">prodi</span><span class="p">):</span>
+    <span class="n">jurnal_urls</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">page</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://pta.trunojoyo.ac.id/c_search/byprod/</span><span class="si">{</span><span class="n">prodi</span><span class="p">[</span><span class="s1">&#39;id_prodi&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">page</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">HEADERS</span><span class="p">)</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+            <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+            <span class="n">jurnals_on_page</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;li[data-cat=&quot;#luxury&quot;] a.gray.button&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">jurnals_on_page</span><span class="p">:</span> <span class="k">break</span>
+            <span class="k">for</span> <span class="n">a_tag</span> <span class="ow">in</span> <span class="n">jurnals_on_page</span><span class="p">:</span>
+                <span class="n">jurnal_urls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a_tag</span><span class="p">[</span><span class="s1">&#39;href&#39;</span><span class="p">])</span>
+            <span class="n">page</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">RequestException</span><span class="p">:</span>
+            <span class="k">break</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">jurnal_urls</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✔️ Selesai: </span><span class="si">{</span><span class="n">prodi</span><span class="p">[</span><span class="s1">&#39;nama_fakultas&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">prodi</span><span class="p">[</span><span class="s1">&#39;nama_prodi&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> (ID: </span><span class="si">{</span><span class="n">prodi</span><span class="p">[</span><span class="s1">&#39;id_prodi&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">) | Ditemukan 0 jurnal.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[{</span><span class="s1">&#39;id_prodi&#39;</span><span class="p">:</span> <span class="n">prodi</span><span class="p">[</span><span class="s1">&#39;id_prodi&#39;</span><span class="p">],</span> <span class="s1">&#39;nama_prodi&#39;</span><span class="p">:</span> <span class="n">prodi</span><span class="p">[</span><span class="s1">&#39;nama_prodi&#39;</span><span class="p">],</span> <span class="s1">&#39;nama_fakultas&#39;</span><span class="p">:</span> <span class="n">prodi</span><span class="p">[</span><span class="s1">&#39;nama_fakultas&#39;</span><span class="p">],</span> <span class="s1">&#39;judul&#39;</span><span class="p">:</span> <span class="s1">&#39;Tidak ada jurnal&#39;</span><span class="p">,</span> <span class="s1">&#39;penulis&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;pembimbing_pertama&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;pembimbing_kedua&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;abstrak&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;abstrak_inggris&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">}]</span>
+
+    <span class="n">all_jurnal_data</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">with</span> <span class="n">concurrent</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">ThreadPoolExecutor</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="n">MAX_WORKERS</span><span class="p">)</span> <span class="k">as</span> <span class="n">executor</span><span class="p">:</span>
+        <span class="n">hasil_scrape</span> <span class="o">=</span> <span class="n">executor</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">scrape_jurnal_detail</span><span class="p">,</span> <span class="n">jurnal_urls</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">hasil</span> <span class="ow">in</span> <span class="n">hasil_scrape</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">hasil</span><span class="p">:</span>
+                <span class="n">hasil</span><span class="p">[</span><span class="s1">&#39;id_prodi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">prodi</span><span class="p">[</span><span class="s1">&#39;id_prodi&#39;</span><span class="p">]</span>
+                <span class="n">hasil</span><span class="p">[</span><span class="s1">&#39;nama_prodi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">prodi</span><span class="p">[</span><span class="s1">&#39;nama_prodi&#39;</span><span class="p">]</span>
+                <span class="n">hasil</span><span class="p">[</span><span class="s1">&#39;nama_fakultas&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">prodi</span><span class="p">[</span><span class="s1">&#39;nama_fakultas&#39;</span><span class="p">]</span>
+                <span class="n">all_jurnal_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">hasil</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✔️ Selesai: </span><span class="si">{</span><span class="n">prodi</span><span class="p">[</span><span class="s1">&#39;nama_fakultas&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">prodi</span><span class="p">[</span><span class="s1">&#39;nama_prodi&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> (ID: </span><span class="si">{</span><span class="n">prodi</span><span class="p">[</span><span class="s1">&#39;id_prodi&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">) | Berhasil mengambil </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">all_jurnal_data</span><span class="p">)</span><span class="si">}</span><span class="s2"> dari </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">jurnal_urls</span><span class="p">)</span><span class="si">}</span><span class="s2"> jurnal yang ditemukan.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">all_jurnal_data</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">daftar_prodi</span> <span class="o">=</span> <span class="n">get_fakultas_prodi_list</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">daftar_prodi</span><span class="p">:</span> <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+
+    <span class="n">final_results</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">with</span> <span class="n">concurrent</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">ThreadPoolExecutor</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="n">MAX_WORKERS</span><span class="p">)</span> <span class="k">as</span> <span class="n">executor</span><span class="p">:</span>
+        <span class="n">results_per_prodi</span> <span class="o">=</span> <span class="n">executor</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">scrape_prodi</span><span class="p">,</span> <span class="n">daftar_prodi</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">list_jurnal</span> <span class="ow">in</span> <span class="n">results_per_prodi</span><span class="p">:</span>
+            <span class="n">final_results</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">list_jurnal</span><span class="p">)</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">final_results</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">df</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+        <span class="n">original_prodi_order</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span><span class="p">[</span><span class="s1">&#39;id_prodi&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">daftar_prodi</span><span class="p">]</span>
+        <span class="n">df</span><span class="p">[</span><span class="s1">&#39;id_prodi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;id_prodi&#39;</span><span class="p">],</span> <span class="n">categories</span><span class="o">=</span><span class="n">original_prodi_order</span><span class="p">,</span> <span class="n">ordered</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;id_prodi&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;nama_fakultas&#39;</span><span class="p">,</span> <span class="s1">&#39;id_prodi&#39;</span><span class="p">,</span> <span class="s1">&#39;nama_prodi&#39;</span><span class="p">,</span> <span class="s1">&#39;judul&#39;</span><span class="p">,</span> <span class="s1">&#39;penulis&#39;</span><span class="p">,</span> <span class="s1">&#39;pembimbing_pertama&#39;</span><span class="p">,</span> <span class="s1">&#39;pembimbing_kedua&#39;</span><span class="p">,</span> <span class="s1">&#39;abstrak&#39;</span><span class="p">,</span> <span class="s1">&#39;abstrak_inggris&#39;</span><span class="p">]]</span>
+    
+    <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;pta_semua_jurnal_concurrent.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    
+    <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">✅ Proses scraping selesai.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total baris data yang dihasilkan: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total waktu eksekusi: </span><span class="si">{</span><span class="n">end_time</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">start_time</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> detik.&quot;</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">df</span>
+
+<span class="c1"># if __name__ == &quot;__main__&quot;:</span>
+<span class="c1">#     df_hasil_semua = main()</span>
+<span class="c1">#     df_hasil_semua</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
