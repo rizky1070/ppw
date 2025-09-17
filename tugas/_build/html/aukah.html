@@ -183,9 +183,11 @@
         <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="pengantar.html">Pengantar Penambangan Website</a></li>
 <li class="toctree-l1"><a class="reference internal" href="crawling.html">Crawling</a></li>
-<li class="toctree-l1"><a class="reference internal" href="crawlinglink.html">Crawling Link Dalam Page</a></li>
-<li class="toctree-l1"><a class="reference internal" href="crawlingberita2.html">Crawling Berita</a></li>
-<li class="toctree-l1"><a class="reference internal" href="crawlingpta3copy.html">Crawling PTA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_1.html">Crawling PTA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_2.html">Crawling Link Dalam Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_3.html">Crawling Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas3_1.html">Preprocessing Prodi Manajemen</a></li>
+
 </ul>
 
     </div>
@@ -568,6 +570,21 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\laragon\bin\python\python-3.10\lib\site-packages\soupsieve\css_parser.py:876: FutureWarning: The pseudo class &#39;:contains&#39; is deprecated, &#39;:-soup-contains&#39; should be used moving forward.
   warnings.warn(  # noqa: B028
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">scrape_all</span><span class="p">()</span>
+
+<span class="nn">Cell In[1], line 144,</span> in <span class="ni">scrape_all</span><span class="nt">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">141</span>         <span class="n">data</span><span class="p">[</span><span class="s2">&quot;abstrak_inggris&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">abstrak_inggris</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">143</span>     <span class="n">page</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="ne">--&gt; </span><span class="mi">144</span>     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">146</span> <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">RequestException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">147</span>     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error pada Prodi </span><span class="si">{</span><span class="n">nama_prodi</span><span class="si">}</span><span class="s2"> (ID: </span><span class="si">{</span><span class="n">prodi_id</span><span class="si">}</span><span class="s2">) halaman </span><span class="si">{</span><span class="n">page</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
 </div>
 </div>

@@ -58,7 +58,7 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'tugas2';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'test2';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -183,9 +183,11 @@
         <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="pengantar.html">Pengantar Penambangan Website</a></li>
 <li class="toctree-l1"><a class="reference internal" href="crawling.html">Crawling</a></li>
-<li class="toctree-l1"><a class="reference internal" href="crawlinglink.html">Crawling Link Dalam Page</a></li>
-<li class="toctree-l1"><a class="reference internal" href="crawlingberita2.html">Crawling Berita</a></li>
-<li class="toctree-l1"><a class="reference internal" href="crawlingpta3copy.html">Crawling PTA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_1.html">Crawling PTA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_2.html">Crawling Link Dalam Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_3.html">Crawling Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas3_1.html">Preprocessing Prodi Manajemen</a></li>
+
 </ul>
 
     </div>
@@ -257,7 +259,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftugas2.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftest2.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -287,7 +289,7 @@
       
       
       
-      <li><a href="_sources/tugas2.ipynb" target="_blank"
+      <li><a href="_sources/test2.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -475,151 +477,33 @@ document.write(`
   warnings.warn(  # noqa: B028
 </pre></div>
 </div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">71</span>
-<span class="g g-Whitespace">     </span><span class="mi">68</span>     <span class="k">return</span> <span class="n">df</span>
-<span class="g g-Whitespace">     </span><span class="mi">70</span> <span class="c1"># Untuk menjalankan fungsi</span>
-<span class="ne">---&gt; </span><span class="mi">71</span> <span class="n">updated_dataframe</span> <span class="o">=</span> <span class="n">ptaa_updated</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">72</span> <span class="nb">print</span><span class="p">(</span><span class="n">updated_dataframe</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                 penulis                                              judul  \
+0     A.Ubaidillah S.Kom  PERANCANGAN DAN IMPLEMENTASI SISTEM DATABASE \...   
+1    M. Basith Ardianto,  APLIKASI KONTROL DAN MONITORING JARINGAN KOMPU...   
+2  Akhmad Suyandi, S.Kom  RANCANG BANGUN APLIKASI PROXY SERVER UNTUK\r\n...   
+3        Heri Supriyanto  SISTEM PENDUKUNG KEPUTUSAN OPTIMASI PENJADWALA...   
+4   Septian Rahman Hakim  SISTEM AUGMENTED REALITY ANIMASI BENDA BERGERA...   
 
-<span class="nn">Cell In[1], line 27,</span> in <span class="ni">ptaa_updated</span><span class="nt">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">25</span> <span class="k">for</span> <span class="n">jurnal</span> <span class="ow">in</span> <span class="n">jurnals</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">26</span>     <span class="n">jurnal_url</span> <span class="o">=</span> <span class="n">jurnal</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;a.gray.button&#39;</span><span class="p">)[</span><span class="s1">&#39;href&#39;</span><span class="p">]</span>
-<span class="ne">---&gt; </span><span class="mi">27</span>     <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">jurnal_url</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">28</span>     <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">29</span>     <span class="n">soup1</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+              pembimbing_pertama           pembimbing_kedua  \
+0               Budi Setyono M.T               Hermawan S.T   
+1          Drs. Budi Soesilo, MT              Koko Joni, ST   
+2         Drs. Budi Soesilo, M.T           Hermawan, ST, MT   
+3           Mulaab, S.Si., M.Kom  Firli Irhamni, ST., M.Kom   
+4  Arik Kurniawati, S.Kom., M.T.       Haryanto, S.T., M.T.   
 
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\requests\api.py:73,</span> in <span class="ni">get</span><span class="nt">(url, params, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">62</span> <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">63</span><span class="w">     </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Sends a GET request.</span>
-<span class="g g-Whitespace">     </span><span class="mi">64</span><span class="sd"> </span>
-<span class="g g-Whitespace">     </span><span class="mi">65</span><span class="sd">     :param url: URL for the new :class:`Request` object.</span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">     </span><span class="mi">70</span><span class="sd">     :rtype: requests.Response</span>
-<span class="g g-Whitespace">     </span><span class="mi">71</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">73</span>     <span class="k">return</span> <span class="n">request</span><span class="p">(</span><span class="s2">&quot;get&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+                                             abstrak  \
+0  Sistem  informasi  akademik  (SIAKAD) merupaka...   
+1  Berjalannya koneksi jaringan komputer dengan l...   
+2  Web server adalah sebuah perangkat lunak serve...   
+3  Penjadwalan  kuliah  di  Perguruan  Tinggi  me...   
+4  Seiring perkembangan teknologi yang ada diduni...   
 
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\requests\api.py:59,</span> in <span class="ni">request</span><span class="nt">(method, url, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">55</span> <span class="c1"># By using the &#39;with&#39; statement we are sure the session is closed, thus we</span>
-<span class="g g-Whitespace">     </span><span class="mi">56</span> <span class="c1"># avoid leaving sockets open which can trigger a ResourceWarning in some</span>
-<span class="g g-Whitespace">     </span><span class="mi">57</span> <span class="c1"># cases, and look like a memory leak in others.</span>
-<span class="g g-Whitespace">     </span><span class="mi">58</span> <span class="k">with</span> <span class="n">sessions</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">59</span>     <span class="k">return</span> <span class="n">session</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\requests\sessions.py:589,</span> in <span class="ni">Session.request</span><span class="nt">(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)</span>
-<span class="g g-Whitespace">    </span><span class="mi">584</span> <span class="n">send_kwargs</span> <span class="o">=</span> <span class="p">{</span>
-<span class="g g-Whitespace">    </span><span class="mi">585</span>     <span class="s2">&quot;timeout&quot;</span><span class="p">:</span> <span class="n">timeout</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">586</span>     <span class="s2">&quot;allow_redirects&quot;</span><span class="p">:</span> <span class="n">allow_redirects</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">587</span> <span class="p">}</span>
-<span class="g g-Whitespace">    </span><span class="mi">588</span> <span class="n">send_kwargs</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">589</span> <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">prep</span><span class="p">,</span> <span class="o">**</span><span class="n">send_kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">591</span> <span class="k">return</span> <span class="n">resp</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\requests\sessions.py:703,</span> in <span class="ni">Session.send</span><span class="nt">(self, request, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">700</span> <span class="n">start</span> <span class="o">=</span> <span class="n">preferred_clock</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span> <span class="c1"># Send the request</span>
-<span class="ne">--&gt; </span><span class="mi">703</span> <span class="n">r</span> <span class="o">=</span> <span class="n">adapter</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">705</span> <span class="c1"># Total elapsed time of the request (approximately)</span>
-<span class="g g-Whitespace">    </span><span class="mi">706</span> <span class="n">elapsed</span> <span class="o">=</span> <span class="n">preferred_clock</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\requests\adapters.py:644,</span> in <span class="ni">HTTPAdapter.send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
-<span class="g g-Whitespace">    </span><span class="mi">641</span>     <span class="n">timeout</span> <span class="o">=</span> <span class="n">TimeoutSauce</span><span class="p">(</span><span class="n">connect</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span> <span class="n">read</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">643</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">644</span>     <span class="n">resp</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">645</span>         <span class="n">method</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">method</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">646</span>         <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">647</span>         <span class="n">body</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">body</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">648</span>         <span class="n">headers</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">headers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">649</span>         <span class="n">redirect</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">650</span>         <span class="n">assert_same_host</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">651</span>         <span class="n">preload_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">652</span>         <span class="n">decode_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">653</span>         <span class="n">retries</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_retries</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">654</span>         <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">655</span>         <span class="n">chunked</span><span class="o">=</span><span class="n">chunked</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">656</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">658</span> <span class="k">except</span> <span class="p">(</span><span class="n">ProtocolError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">)</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">659</span>     <span class="k">raise</span> <span class="ne">ConnectionError</span><span class="p">(</span><span class="n">err</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\urllib3\connectionpool.py:787,</span> in <span class="ni">HTTPConnectionPool.urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">784</span> <span class="n">response_conn</span> <span class="o">=</span> <span class="n">conn</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">release_conn</span> <span class="k">else</span> <span class="kc">None</span>
-<span class="g g-Whitespace">    </span><span class="mi">786</span> <span class="c1"># Make the request on the HTTPConnection object</span>
-<span class="ne">--&gt; </span><span class="mi">787</span> <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_request</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">788</span>     <span class="n">conn</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">789</span>     <span class="n">method</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">790</span>     <span class="n">url</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">791</span>     <span class="n">timeout</span><span class="o">=</span><span class="n">timeout_obj</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">792</span>     <span class="n">body</span><span class="o">=</span><span class="n">body</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">793</span>     <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">794</span>     <span class="n">chunked</span><span class="o">=</span><span class="n">chunked</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">795</span>     <span class="n">retries</span><span class="o">=</span><span class="n">retries</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">796</span>     <span class="n">response_conn</span><span class="o">=</span><span class="n">response_conn</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">797</span>     <span class="n">preload_content</span><span class="o">=</span><span class="n">preload_content</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">798</span>     <span class="n">decode_content</span><span class="o">=</span><span class="n">decode_content</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">799</span>     <span class="o">**</span><span class="n">response_kw</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">800</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">802</span> <span class="c1"># Everything went great!</span>
-<span class="g g-Whitespace">    </span><span class="mi">803</span> <span class="n">clean_exit</span> <span class="o">=</span> <span class="kc">True</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\urllib3\connectionpool.py:534,</span> in <span class="ni">HTTPConnectionPool._make_request</span><span class="nt">(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)</span>
-<span class="g g-Whitespace">    </span><span class="mi">532</span> <span class="c1"># Receive the response from the server</span>
-<span class="g g-Whitespace">    </span><span class="mi">533</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">534</span>     <span class="n">response</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">535</span> <span class="k">except</span> <span class="p">(</span><span class="n">BaseSSLError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">536</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_raise_timeout</span><span class="p">(</span><span class="n">err</span><span class="o">=</span><span class="n">e</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">timeout_value</span><span class="o">=</span><span class="n">read_timeout</span><span class="p">)</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\urllib3\connection.py:565,</span> in <span class="ni">HTTPConnection.getresponse</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">562</span> <span class="n">_shutdown</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sock</span><span class="p">,</span> <span class="s2">&quot;shutdown&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">564</span> <span class="c1"># Get the response from http.client.HTTPConnection</span>
-<span class="ne">--&gt; </span><span class="mi">565</span> <span class="n">httplib_response</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">567</span> <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">568</span>     <span class="n">assert_header_parsing</span><span class="p">(</span><span class="n">httplib_response</span><span class="o">.</span><span class="n">msg</span><span class="p">)</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\http\client.py:1374,</span> in <span class="ni">HTTPConnection.getresponse</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1372</span> <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1373</span>     <span class="k">try</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1374</span>         <span class="n">response</span><span class="o">.</span><span class="n">begin</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1375</span>     <span class="k">except</span> <span class="ne">ConnectionError</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1376</span>         <span class="bp">self</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\http\client.py:318,</span> in <span class="ni">HTTPResponse.begin</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">316</span> <span class="c1"># read until we get a non-100 response</span>
-<span class="g g-Whitespace">    </span><span class="mi">317</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">318</span>     <span class="n">version</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">reason</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_status</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">319</span>     <span class="k">if</span> <span class="n">status</span> <span class="o">!=</span> <span class="n">CONTINUE</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">320</span>         <span class="k">break</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\http\client.py:279,</span> in <span class="ni">HTTPResponse._read_status</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">278</span> <span class="k">def</span><span class="w"> </span><span class="nf">_read_status</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">279</span>     <span class="n">line</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fp</span><span class="o">.</span><span class="n">readline</span><span class="p">(</span><span class="n">_MAXLINE</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;iso-8859-1&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">280</span>     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">_MAXLINE</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">281</span>         <span class="k">raise</span> <span class="n">LineTooLong</span><span class="p">(</span><span class="s2">&quot;status line&quot;</span><span class="p">)</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\socket.py:705,</span> in <span class="ni">SocketIO.readinto</span><span class="nt">(self, b)</span>
-<span class="g g-Whitespace">    </span><span class="mi">703</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">704</span>     <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">705</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sock</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">706</span>     <span class="k">except</span> <span class="n">timeout</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">707</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_timeout_occurred</span> <span class="o">=</span> <span class="kc">True</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\ssl.py:1274,</span> in <span class="ni">SSLSocket.recv_into</span><span class="nt">(self, buffer, nbytes, flags)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1270</span>     <span class="k">if</span> <span class="n">flags</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1271</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1272</span>           <span class="s2">&quot;non-zero flags not allowed in calls to recv_into() on </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span>
-<span class="g g-Whitespace">   </span><span class="mi">1273</span>           <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1274</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">nbytes</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1275</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1276</span>     <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">nbytes</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\ssl.py:1130,</span> in <span class="ni">SSLSocket.read</span><span class="nt">(self, len, buffer)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1128</span> <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1129</span>     <span class="k">if</span> <span class="n">buffer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1130</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1131</span>     <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1132</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
+                                     abstrak_inggris  
+0  Academic information systems (SIAKAD) is an in...  
+1                                                  -  
+2  Web server is a server software functioning to...  
+3  Scheduling  courses  in  universities  is  a  ...  
+4  As the development of technology existing in t...  
 </pre></div>
 </div>
 </div>
@@ -983,491 +867,207 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Hukum - Ilmu Hukum (ID: 1) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Hukum - Magister Ilmu Hukum (ID: 24) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Pertanian - Teknologi Industri Pertanian (ID: 2) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Pertanian - Agribisnis (ID: 3) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Pertanian - Agroteknologi (ID: 4) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Pertanian - Ilmu Kelautan (ID: 5) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Pertanian - Manajemen Sumberdaya Perairan (ID: 35) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Pertanian - Magister Pengelolaan Sumber Daya Alam (ID: 37) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - Ekonomi Pembangunan (ID: 6) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - Manajemen (ID: 7) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - Akuntansi (ID: 8) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - D3 Akuntansi (ID: 21) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - Magister Manajemen (ID: 22) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - Magister Akuntansi (ID: 25) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - D3 Enterpreneurship (ID: 26) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - Magister Ilmu Ekonomi (ID: 36) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - Doktor Ilmu Manajemen (ID: 41) | Berhasil mengambil 0 jurnal.
-✔️ Selesai: Teknik - Teknik Industri (ID: 9) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Teknik - Teknik Informatika (ID: 10) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Teknik - Manajemen Informatika (ID: 11) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Teknik - Teknik Multimedia Dan Jaringan (ID: 19) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Teknik - Mekatronika (ID: 20) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Teknik - Teknik Elektro (ID: 23) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Teknik - Sistem Informasi (ID: 31) | Berhasil mengambil 0 jurnal.
-✔️ Selesai: Teknik - Teknik Mesin (ID: 32) | Berhasil mengambil 0 jurnal.
-✔️ Selesai: Teknik - Teknik Mekatronika (ID: 33) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Ilmu Sosial Dan Ilmu Budaya - Sosiologi (ID: 12) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Ilmu Sosial Dan Ilmu Budaya - Ilmu Komunikasi (ID: 13) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Ilmu Sosial Dan Ilmu Budaya - Psikologi (ID: 14) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Ilmu Sosial Dan Ilmu Budaya - Sastra Inggris (ID: 15) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Keislaman - Ekonomi Syariah (ID: 16) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Keislaman - Hukum Bisnis Syariah (ID: 17) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Ilmu Pendidikan - Pgsd (ID: 18) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Ilmu Pendidikan - Pendidikan Bhs Dan Sastra Indonesia (ID: 27) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Ilmu Pendidikan - Pendidikan Informatika (ID: 28) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Ilmu Pendidikan - Pendidikan Ipa (ID: 29) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Ilmu Pendidikan - Pgpaud (ID: 30) | Berhasil mengambil 1 jurnal.
-✔️ Selesai: Ilmu Pendidikan - Pendidikan Profesi Guru (ID: 38) | Berhasil mengambil 0 jurnal.
-✔️ Selesai: Mbkm - Mbkm (ID: 99) | Berhasil mengambil 0 jurnal.
-✔️ Selesai: Pascasarjana - Magister Pendidikan Dasar (ID: 39) | Berhasil mengambil 0 jurnal.
-✔️ Selesai: Pascasarjana - Doktor Pengelolaan Sumber Daya Alam (ID: 40) | Berhasil mengambil 0 jurnal.
-
-✅ Proses scraping selesai. Data disimpan ke &#39;pta_4_data_per_prodi.csv&#39;
 </pre></div>
 </div>
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Hukum - Magister Ilmu Hukum (ID: 24) | Berhasil mengambil 1 jurnal.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Pertanian - Teknologi Industri Pertanian (ID: 2) | Berhasil mengambil 1 jurnal.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Pertanian - Agribisnis (ID: 3) | Berhasil mengambil 1 jurnal.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Pertanian - Agroteknologi (ID: 4) | Berhasil mengambil 1 jurnal.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Pertanian - Ilmu Kelautan (ID: 5) | Berhasil mengambil 1 jurnal.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Pertanian - Manajemen Sumberdaya Perairan (ID: 35) | Berhasil mengambil 1 jurnal.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Pertanian - Magister Pengelolaan Sumber Daya Alam (ID: 37) | Berhasil mengambil 1 jurnal.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Ekonomi Dan Bisnis - Ekonomi Pembangunan (ID: 6) | Berhasil mengambil 1 jurnal.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Ekonomi Dan Bisnis - Manajemen (ID: 7) | Berhasil mengambil 1 jurnal.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Ekonomi Dan Bisnis - Akuntansi (ID: 8) | Berhasil mengambil 1 jurnal.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Ekonomi Dan Bisnis - D3 Akuntansi (ID: 21) | Berhasil mengambil 1 jurnal.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Ekonomi Dan Bisnis - Magister Manajemen (ID: 22) | Berhasil mengambil 1 jurnal.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Ekonomi Dan Bisnis - Magister Akuntansi (ID: 25) | Berhasil mengambil 1 jurnal.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Ekonomi Dan Bisnis - D3 Enterpreneurship (ID: 26) | Berhasil mengambil 1 jurnal.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Ekonomi Dan Bisnis - Magister Ilmu Ekonomi (ID: 36) | Berhasil mengambil 1 jurnal.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Ekonomi Dan Bisnis - Doktor Ilmu Manajemen (ID: 41) | Berhasil mengambil 0 jurnal.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Teknik - Teknik Industri (ID: 9) | Berhasil mengambil 1 jurnal.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Teknik - Teknik Informatika (ID: 10) | Berhasil mengambil 1 jurnal.
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">scrape_all</span><span class="p">()</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
+<span class="nn">Cell In[3], line 85,</span> in <span class="ni">scrape_all</span><span class="nt">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">83</span> <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://pta.trunojoyo.ac.id/c_search/byprod/</span><span class="si">{</span><span class="n">prodi_id</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">page</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">84</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">85</span>     <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">86</span>     <span class="n">r</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">87</span>     <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
 
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>nama_fakultas</th>
-      <th>id_prodi</th>
-      <th>nama_prodi</th>
-      <th>penulis</th>
-      <th>judul</th>
-      <th>pembimbing_pertama</th>
-      <th>pembimbing_kedua</th>
-      <th>abstrak</th>
-      <th>abstrak_inggris</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Hukum</td>
-      <td>1</td>
-      <td>Ilmu Hukum</td>
-      <td>Dyah Ayu Citra Seza</td>
-      <td>Implementasi Fungsi Legislasi Dewan Perwakilan...</td>
-      <td>Yudi Widagdo Harimurti, SH., MH</td>
-      <td>Safi', SH., MH</td>
-      <td>ABSTRAK Implementasi Fungsi Legislasi DPRD Kab...</td>
-      <td>ABSTRACT Implementation of Legislation Parliam...</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Hukum</td>
-      <td>24</td>
-      <td>Magister Ilmu Hukum</td>
-      <td>MOCHAMAD SAICHU</td>
-      <td>PERTANGGUNG JAWABAN HUKUM PEJABAT PEMBUAT KOMI...</td>
-      <td>Dr. Nunuk Nuswardani S.H., M.H</td>
-      <td>Dr. Deni SB Yuherawan S.H., Msi</td>
-      <td>Korupsi tergolong ke dalam kejahatan yang luar...</td>
-      <td>Korupsi tergolong ke dalam kejahatan yang luar...</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Pertanian</td>
-      <td>2</td>
-      <td>Teknologi Industri Pertanian</td>
-      <td>Mojiono</td>
-      <td>Sifat Fisik dan Profil Gelatinisasi Tepung Uwi...</td>
-      <td>Ir. Umi Purwandari, M.App.Sc., Ph.D</td>
-      <td>Burhan, S.TP., MT</td>
-      <td>Teknologi modifikasi pada tepung non konvensio...</td>
-      <td>Starch modification technology has a potential...</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Pertanian</td>
-      <td>3</td>
-      <td>Agribisnis</td>
-      <td>ENDAR PUSPA DESA</td>
-      <td>PROSPEK USAHA BAKSO IKAN DI PULAU MANDANGIN KA...</td>
-      <td>Ihsannudin, SP., MP</td>
-      <td>Aminah Happy M.A, SP., M.Si</td>
-      <td>ABSTRAK Salah satu pulau kecil yang memerlukan...</td>
-      <td>ABSTRACT One of the small island which needs t...</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Pertanian</td>
-      <td>4</td>
-      <td>Agroteknologi</td>
-      <td>Yusriansyah</td>
-      <td>Efektifitas Pemberian Nutrisi Air Leri, Air Ke...</td>
-      <td>Dr. Ir. H. Ahmad Arsyadmunir, MS</td>
-      <td>Ir. Sinar Suryawati, MSi</td>
-      <td>Yusriansyah. 08.03.1.1.1.00005. Efektifitas Pe...</td>
-      <td>Yusriansyah. 08.03.1.1.1.00005. Provision of W...</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Pertanian</td>
-      <td>5</td>
-      <td>Ilmu Kelautan</td>
-      <td>Rizki Ainul Fitria</td>
-      <td>STUDI JENIS SUBSTRAT DAN HASIL TANGKAPAN RAJUN...</td>
-      <td>Prof. Dr. Ir. Muhammad Zainuri, M. Sc</td>
-      <td>Aries Dwi Siswanto, S.T, M.T</td>
-      <td>ABSTRAK Rajungan (Portunus pelagicus) merupaka...</td>
-      <td>ABSTRACT Small crab attaching (Portunus pelagi...</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Pertanian</td>
-      <td>35</td>
-      <td>Manajemen Sumberdaya Perairan</td>
-      <td>Wizarotul Labibah</td>
-      <td>Keberadaan Mikroplastik Pada Ikan Swanggi (Pri...</td>
-      <td>Haryo Triajie, S.Pi., M.Si</td>
-      <td></td>
-      <td>Mikroplastik merupakan sampah plastik yang men...</td>
-      <td>Microplastic is plastic waste which is degrade...</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>Pertanian</td>
-      <td>37</td>
-      <td>Magister Pengelolaan Sumber Daya Alam</td>
-      <td>ahmad syaiful umam</td>
-      <td>KARAKTERISASI DAN KOLEKSI PLASMA NUTFAH UNTUK ...</td>
-      <td>Dr. Ir. Gita Pawana, M.Si</td>
-      <td>Dr. Ir. Hj. SIti Fatimah, M.Si</td>
-      <td>Madura merupakan salah satu wilayah pemasok ko...</td>
-      <td>Madura is one of the regions supplying horticu...</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Ekonomi Dan Bisnis</td>
-      <td>6</td>
-      <td>Ekonomi Pembangunan</td>
-      <td>Zeni Amaliyah</td>
-      <td>ANALISIS FAKTOR – FAKTOR YANG MEMPENGARUHI PEN...</td>
-      <td>Ris Yuwono Yudo Nugroho, SE, MSi</td>
-      <td>Bondan Satriawan, SE., MEcon.,St.</td>
-      <td>ABSTRAK Studi ini dilakukan untuk mengetahui d...</td>
-      <td>ABSTRACT This study was conducted to find out ...</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Ekonomi Dan Bisnis</td>
-      <td>7</td>
-      <td>Manajemen</td>
-      <td>SATIYAH</td>
-      <td>PENGARUH FAKTOR-FAKTOR PELATIHAN DAN PENGEMBAN...</td>
-      <td>Dra. Hj. S. Anugrahini Irawati, MM</td>
-      <td>Helmi Buyung Aulia,S,ST.SE,M.MT</td>
-      <td>ABSTRAK Satiyah, Pengaruh Faktor-faktor Pelati...</td>
-      <td>ABSTRACT In an effort to increase labor produc...</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>Ekonomi Dan Bisnis</td>
-      <td>8</td>
-      <td>Akuntansi</td>
-      <td>Nida Qolbi</td>
-      <td>PENTINGNYA KOMPETENSI PEJABAT PENGADAAN BARANG...</td>
-      <td>Mohammad Djasuli,SE., M.Si., QIA</td>
-      <td>Gita Arasy Harwida,SE.,Ak.,M.Tax,QIA</td>
-      <td>Abstrak : Pentingnya Kompetensi Pejabat Pengad...</td>
-      <td>ABSTRAK Qolbi, Nida 2012 “ The Importance Comp...</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>Ekonomi Dan Bisnis</td>
-      <td>21</td>
-      <td>D3 Akuntansi</td>
-      <td>novarika yunia kusuma wardani</td>
-      <td>Sistem Informasi Akuntansi Upah kepada Pegawai...</td>
-      <td>Nurul Kompyurini, S.E., M.Ak., Ak</td>
-      <td>Anita Carolina, S.E., MbusAdv., Ak., QIA, CA.</td>
-      <td>PT PELINDO III (Persero) cabang Tanjung Perak ...</td>
-      <td>PT PELINDO III (Persero) Tanjung Perak Surabay...</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>Ekonomi Dan Bisnis</td>
-      <td>22</td>
-      <td>Magister Manajemen</td>
-      <td>Jaka Ardiansyah, S.E</td>
-      <td>PENGARUH INFLASI, NILAI TUKAR RUPIAH DAN TINGK...</td>
-      <td>Dr. Chairul Anam, Drs.Ec., M.Kes</td>
-      <td>Dr. H. Pribanus Wantara, Drs., MM</td>
-      <td>Penelitian ini bertujuan untuk mengetahui peng...</td>
-      <td>This Research aimed to analyzed the effect of ...</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>Ekonomi Dan Bisnis</td>
-      <td>25</td>
-      <td>Magister Akuntansi</td>
-      <td>RILLA IZZATUL HAQQI</td>
-      <td>LIKUIDITAS DAN PROFITABILITAS DIGUNAKAN UNTUK ...</td>
-      <td>Prof. Dr. H. Moh. Nizarul A, SE., M.Si., Ak</td>
-      <td>Dr. Tarjo, SE., M.SI., CFE</td>
-      <td>Penelitian ini bertujuan untuk mengetahui rasi...</td>
-      <td>This study aims to determine the financial rat...</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>Ekonomi Dan Bisnis</td>
-      <td>26</td>
-      <td>D3 Enterpreneurship</td>
-      <td>Ramdhani Febriyansyah</td>
-      <td>LAPORAN KERJA USAHA DI\nPERUSAHAAN “GOOD.DEAR”</td>
-      <td>Drs. Ec. Bambang Sudarsono, M.M</td>
-      <td></td>
-      <td>ABSTRAK Ramdhani Febriyansyah, 2016. Laporan K...</td>
-      <td>ABSTRACT Ramdhani Febriyansyah, 2016. Business...</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>Ekonomi Dan Bisnis</td>
-      <td>36</td>
-      <td>Magister Ilmu Ekonomi</td>
-      <td>SUMARTO</td>
-      <td>Analisis Ketaatan Maqashid Syariah\nterhadap P...</td>
-      <td>Dr. Sutikno S.E., M.E</td>
-      <td>Dr. Anita Kristina S.E., M.Si</td>
-      <td>Penelitian ini bertujuan untuk menganalisis ba...</td>
-      <td>This study aims to analyze how the effects of ...</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>Teknik</td>
-      <td>9</td>
-      <td>Teknik Industri</td>
-      <td>Siliwangi Fitra Rachmawanto S.T.</td>
-      <td>OPTIMASI PEMILIHAN PORTOFOLIO SAHAM PERUSAHAAN...</td>
-      <td>Heri Awalul Ilhamsah S.T., M.T.</td>
-      <td>Retno Indriartiningtias S.T., M.T.</td>
-      <td>Portofolio adalah sekumpulan saham yang dimili...</td>
-      <td>Portofolio is a collection of stock owned by i...</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>Teknik</td>
-      <td>10</td>
-      <td>Teknik Informatika</td>
-      <td>A.Ubaidillah S.Kom</td>
-      <td>PERANCANGAN DAN IMPLEMENTASI SISTEM DATABASE \...</td>
-      <td>Budi Setyono M.T</td>
-      <td>Hermawan S.T</td>
-      <td>Sistem informasi akademik (SIAKAD) merupakan s...</td>
-      <td>Academic information systems (SIAKAD) is an in...</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>Teknik</td>
-      <td>11</td>
-      <td>Manajemen Informatika</td>
-      <td>Elky Lilik Misdayani</td>
-      <td>SISTEM INFORMASI PERUSAHAAN OTOBUS SUMBER KENC...</td>
-      <td>Fitri Damayanti,S.Kom,M.Kom</td>
-      <td></td>
-      <td>Sistem informasi pengolahan data yang dibutuhk...</td>
-      <td>Data processing information systems needed by ...</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>Teknik</td>
-      <td>19</td>
-      <td>Teknik Multimedia Dan Jaringan</td>
-      <td>Achmad Husaini</td>
-      <td>Elektronik Pemilihan Kepala Desa Menggunakan M...</td>
-      <td>Aeri Rachmad, ST. MT.</td>
-      <td></td>
-      <td>ABSTRAK Perkembangan teknologi informasi dan k...</td>
-      <td>ABSTRACT The development of information and co...</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>Teknik</td>
-      <td>20</td>
-      <td>Mekatronika</td>
-      <td>Moh. Amin Wahyudi</td>
-      <td>PERANCANGAN INJECTOR CLEANER DAN TESTER PADA S...</td>
-      <td>Hairil Budiarto, S.T., MT.</td>
-      <td></td>
-      <td>ABSTRAK Sepeda motor menggunakan sistem injeks...</td>
-      <td>ABSTRACT Motorcycle injection system is curren...</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>Teknik</td>
-      <td>23</td>
-      <td>Teknik Elektro</td>
-      <td>Achmad Faidi</td>
-      <td>RANCANG BANGUN PENGATUR TEGANGAN OTOMATIS PADA...</td>
-      <td>Koko Joni. S.T., M.Eng.</td>
-      <td>Achmad Fiqhi Ibadillah, S.T., M.Sc.</td>
-      <td>Tegangan yang tidak stabil dapat merusak peran...</td>
-      <td>Unstable voltages can damage electronic device...</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>Teknik</td>
-      <td>33</td>
-      <td>Teknik Mekatronika</td>
-      <td>Mochamad Izar Bahroni</td>
-      <td>Kestabilan Autonomous Quadcopter Dengan Kontro...</td>
-      <td>Sri Wahyuni, S.Kom., M.T</td>
-      <td>Faikul Umam, S.Kom., M.T</td>
-      <td>Unmanned Aerial Vehicle (UAV) memiliki banyak ...</td>
-      <td>Unmanned Aerial Vehicle (UAV) has many uses, i...</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>Ilmu Sosial Dan Ilmu Budaya</td>
-      <td>12</td>
-      <td>Sosiologi</td>
-      <td>Arief Barawijaya</td>
-      <td>STRATEGI ADAPTASI PEDAGANG MAKANAN TRADISIONAL...</td>
-      <td>Drs. Subandri, M.S</td>
-      <td>Arie Wahyu Prananta, S.Pi., M.Sos</td>
-      <td>RINGKASAN Arief Barawijaya, NIM. 08.05.2.1.1.0...</td>
-      <td>ABSTRACT Barawijaya, Arief. NIM. 08.05.2.1.1.1...</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>Ilmu Sosial Dan Ilmu Budaya</td>
-      <td>13</td>
-      <td>Ilmu Komunikasi</td>
-      <td>MUHAMMAD MOHED</td>
-      <td>STRATEGI KOMUNIKASI PEMASARAN KOPERASI SIMPAN ...</td>
-      <td>Netty Dyah Kurniasari, S.Sos, M.Med.Kom</td>
-      <td>Muhtar Wahyudi, S.Sos, MA</td>
-      <td>ABSTRAKSI STRATEGI KOMUNIKASI PEMASARAN KOPERA...</td>
-      <td>ABSTRACT MARKETING COMMUNICATION STRATEGY OF S...</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>Ilmu Sosial Dan Ilmu Budaya</td>
-      <td>14</td>
-      <td>Psikologi</td>
-      <td>Badrus Syamsi</td>
-      <td>Pengaruh Kompetensi Profesional Guru terhadap ...</td>
-      <td>Alifah Rahma Wati. S.Psi., M.Psi</td>
-      <td>Zainal Abidin. S.Psi., M.Si</td>
-      <td>Guru yang berkualitas, berkompetensi profesion...</td>
-      <td>Qualified teachers, professional competence, w...</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>Ilmu Sosial Dan Ilmu Budaya</td>
-      <td>15</td>
-      <td>Sastra Inggris</td>
-      <td>a'isyah</td>
-      <td>A Study of Language Variety on Facebook Status</td>
-      <td>Iqbal Nurul Azhar, SS.,M.Hum.</td>
-      <td>Diah Ikawati A.,SS.,M.Pd.</td>
-      <td>ABSTRACT Aisyah. 08.05.111.00018. A Study of L...</td>
-      <td>ABSTRACT Aisyah. 08.05.111.00018. A Study of L...</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>Keislaman</td>
-      <td>16</td>
-      <td>Ekonomi Syariah</td>
-      <td>MOH. MUHLIS ANWAR</td>
-      <td>“PENERAPAN SHARIA MARKETING MIX  DALAM MENINGK...</td>
-      <td>LAILATUL QADARIYAH, S.H.I, M.E.I</td>
-      <td>-</td>
-      <td>ABSTRAK Penelitian ini akan membahas tentang p...</td>
-      <td>ABSTRACT This research is going to discuss abo...</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>Keislaman</td>
-      <td>17</td>
-      <td>Hukum Bisnis Syariah</td>
-      <td>MUHAMMAD HENDRIK</td>
-      <td>PENETAPAN UJROH DI PEGADAIAN SYARIAH BANGKALAN...</td>
-      <td>H. ACH. MUS'IF, S.HI., MA</td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>Ilmu Pendidikan</td>
-      <td>18</td>
-      <td>Pgsd</td>
-      <td>Dessy Setyowati</td>
-      <td>Pengaruh Penggunaan Media Audio Visual Terhada...</td>
-      <td>Drs. Harun Al Rasyid, M.Si</td>
-      <td>Wanda Ramansyah, S.Pd., M.Pd</td>
-      <td>Latar belakang penelitian ini adalah penggunaa...</td>
-      <td>The background of this study is the use of med...</td>
-    </tr>
-    <tr>
-      <th>30</th>
-      <td>Ilmu Pendidikan</td>
-      <td>27</td>
-      <td>Pendidikan Bhs Dan Sastra Indonesia</td>
-      <td>MAULIDIYA IRAWATI</td>
-      <td>ANALISIS REGISTER BAHASA MADURA PADA MASYARAKA...</td>
-      <td>Ira Fatmawati, S.S., M.Pd.</td>
-      <td>Ahmad Jami’ul Amil, M.Pd.</td>
-      <td>Abstrak: Penggunaan bahasa Indonesia pada masy...</td>
-      <td>Abstract: The use of Indonesian reviewed Torju...</td>
-    </tr>
-    <tr>
-      <th>31</th>
-      <td>Ilmu Pendidikan</td>
-      <td>28</td>
-      <td>Pendidikan Informatika</td>
-      <td>Nurrohmat Hidayatullah Akbar</td>
-      <td>Pengembangan Game Edukasi 2 Dimensi Untuk Mate...</td>
-      <td>Arik Kurniawati, S.Kom. M.T.</td>
-      <td>Puji Rahayu Ningsih, S.Pd., M.Pd.</td>
-      <td>Materi struktur dasar algoritma pemrograman me...</td>
-      <td>The basic structure of the programming algorit...</td>
-    </tr>
-    <tr>
-      <th>32</th>
-      <td>Ilmu Pendidikan</td>
-      <td>29</td>
-      <td>Pendidikan Ipa</td>
-      <td>Anita Enia Urfi</td>
-      <td>Implementasi Model Pembelajaran Project Based ...</td>
-      <td>Mochammad Ahied S.Si., M.Si,</td>
-      <td>Irsad Rosidi, S.Pd., M.Pd</td>
-      <td>Penelitian ini bertujuan untuk mengukur tingka...</td>
-      <td>The aim of this research is to measure level o...</td>
-    </tr>
-    <tr>
-      <th>33</th>
-      <td>Ilmu Pendidikan</td>
-      <td>30</td>
-      <td>Pgpaud</td>
-      <td>Indri Wulan Suryani</td>
-      <td>Hubungan Antara Aktivitas Fisik Dengan Kedisip...</td>
-      <td>Titin Faridatun Nisa', M.Pd</td>
-      <td>Yulias Wulani Fajar, M.Pd</td>
-      <td>Pembelajaran pada anak usia dini dilakukan mel...</td>
-      <td>ABSTRAK Learning in early childhood has been d...</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\requests\api.py:73,</span> in <span class="ni">get</span><span class="nt">(url, params, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">62</span> <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">63</span><span class="w">     </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Sends a GET request.</span>
+<span class="g g-Whitespace">     </span><span class="mi">64</span><span class="sd"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">65</span><span class="sd">     :param url: URL for the new :class:`Request` object.</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">     </span><span class="mi">70</span><span class="sd">     :rtype: requests.Response</span>
+<span class="g g-Whitespace">     </span><span class="mi">71</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">---&gt; </span><span class="mi">73</span>     <span class="k">return</span> <span class="n">request</span><span class="p">(</span><span class="s2">&quot;get&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\requests\api.py:59,</span> in <span class="ni">request</span><span class="nt">(method, url, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">55</span> <span class="c1"># By using the &#39;with&#39; statement we are sure the session is closed, thus we</span>
+<span class="g g-Whitespace">     </span><span class="mi">56</span> <span class="c1"># avoid leaving sockets open which can trigger a ResourceWarning in some</span>
+<span class="g g-Whitespace">     </span><span class="mi">57</span> <span class="c1"># cases, and look like a memory leak in others.</span>
+<span class="g g-Whitespace">     </span><span class="mi">58</span> <span class="k">with</span> <span class="n">sessions</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">59</span>     <span class="k">return</span> <span class="n">session</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\requests\sessions.py:589,</span> in <span class="ni">Session.request</span><span class="nt">(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)</span>
+<span class="g g-Whitespace">    </span><span class="mi">584</span> <span class="n">send_kwargs</span> <span class="o">=</span> <span class="p">{</span>
+<span class="g g-Whitespace">    </span><span class="mi">585</span>     <span class="s2">&quot;timeout&quot;</span><span class="p">:</span> <span class="n">timeout</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">586</span>     <span class="s2">&quot;allow_redirects&quot;</span><span class="p">:</span> <span class="n">allow_redirects</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">587</span> <span class="p">}</span>
+<span class="g g-Whitespace">    </span><span class="mi">588</span> <span class="n">send_kwargs</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">589</span> <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">prep</span><span class="p">,</span> <span class="o">**</span><span class="n">send_kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">591</span> <span class="k">return</span> <span class="n">resp</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\requests\sessions.py:703,</span> in <span class="ni">Session.send</span><span class="nt">(self, request, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">700</span> <span class="n">start</span> <span class="o">=</span> <span class="n">preferred_clock</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">702</span> <span class="c1"># Send the request</span>
+<span class="ne">--&gt; </span><span class="mi">703</span> <span class="n">r</span> <span class="o">=</span> <span class="n">adapter</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">705</span> <span class="c1"># Total elapsed time of the request (approximately)</span>
+<span class="g g-Whitespace">    </span><span class="mi">706</span> <span class="n">elapsed</span> <span class="o">=</span> <span class="n">preferred_clock</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\requests\adapters.py:644,</span> in <span class="ni">HTTPAdapter.send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
+<span class="g g-Whitespace">    </span><span class="mi">641</span>     <span class="n">timeout</span> <span class="o">=</span> <span class="n">TimeoutSauce</span><span class="p">(</span><span class="n">connect</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span> <span class="n">read</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">643</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">644</span>     <span class="n">resp</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">645</span>         <span class="n">method</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">method</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">646</span>         <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">647</span>         <span class="n">body</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">body</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">648</span>         <span class="n">headers</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">headers</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">649</span>         <span class="n">redirect</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">650</span>         <span class="n">assert_same_host</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">651</span>         <span class="n">preload_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">652</span>         <span class="n">decode_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">653</span>         <span class="n">retries</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_retries</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">654</span>         <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">655</span>         <span class="n">chunked</span><span class="o">=</span><span class="n">chunked</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">656</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">658</span> <span class="k">except</span> <span class="p">(</span><span class="n">ProtocolError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">)</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">659</span>     <span class="k">raise</span> <span class="ne">ConnectionError</span><span class="p">(</span><span class="n">err</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\urllib3\connectionpool.py:787,</span> in <span class="ni">HTTPConnectionPool.urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">784</span> <span class="n">response_conn</span> <span class="o">=</span> <span class="n">conn</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">release_conn</span> <span class="k">else</span> <span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">786</span> <span class="c1"># Make the request on the HTTPConnection object</span>
+<span class="ne">--&gt; </span><span class="mi">787</span> <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_request</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">788</span>     <span class="n">conn</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">789</span>     <span class="n">method</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">790</span>     <span class="n">url</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">791</span>     <span class="n">timeout</span><span class="o">=</span><span class="n">timeout_obj</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">792</span>     <span class="n">body</span><span class="o">=</span><span class="n">body</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">793</span>     <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">794</span>     <span class="n">chunked</span><span class="o">=</span><span class="n">chunked</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">795</span>     <span class="n">retries</span><span class="o">=</span><span class="n">retries</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">796</span>     <span class="n">response_conn</span><span class="o">=</span><span class="n">response_conn</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">797</span>     <span class="n">preload_content</span><span class="o">=</span><span class="n">preload_content</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">798</span>     <span class="n">decode_content</span><span class="o">=</span><span class="n">decode_content</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">799</span>     <span class="o">**</span><span class="n">response_kw</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">800</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">802</span> <span class="c1"># Everything went great!</span>
+<span class="g g-Whitespace">    </span><span class="mi">803</span> <span class="n">clean_exit</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\urllib3\connectionpool.py:534,</span> in <span class="ni">HTTPConnectionPool._make_request</span><span class="nt">(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)</span>
+<span class="g g-Whitespace">    </span><span class="mi">532</span> <span class="c1"># Receive the response from the server</span>
+<span class="g g-Whitespace">    </span><span class="mi">533</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">534</span>     <span class="n">response</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">535</span> <span class="k">except</span> <span class="p">(</span><span class="n">BaseSSLError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">536</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_raise_timeout</span><span class="p">(</span><span class="n">err</span><span class="o">=</span><span class="n">e</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">timeout_value</span><span class="o">=</span><span class="n">read_timeout</span><span class="p">)</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\urllib3\connection.py:565,</span> in <span class="ni">HTTPConnection.getresponse</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">562</span> <span class="n">_shutdown</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sock</span><span class="p">,</span> <span class="s2">&quot;shutdown&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">564</span> <span class="c1"># Get the response from http.client.HTTPConnection</span>
+<span class="ne">--&gt; </span><span class="mi">565</span> <span class="n">httplib_response</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">567</span> <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">568</span>     <span class="n">assert_header_parsing</span><span class="p">(</span><span class="n">httplib_response</span><span class="o">.</span><span class="n">msg</span><span class="p">)</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\http\client.py:1374,</span> in <span class="ni">HTTPConnection.getresponse</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1372</span> <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1373</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1374</span>         <span class="n">response</span><span class="o">.</span><span class="n">begin</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1375</span>     <span class="k">except</span> <span class="ne">ConnectionError</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1376</span>         <span class="bp">self</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\http\client.py:318,</span> in <span class="ni">HTTPResponse.begin</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">316</span> <span class="c1"># read until we get a non-100 response</span>
+<span class="g g-Whitespace">    </span><span class="mi">317</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">318</span>     <span class="n">version</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">reason</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_status</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">319</span>     <span class="k">if</span> <span class="n">status</span> <span class="o">!=</span> <span class="n">CONTINUE</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">320</span>         <span class="k">break</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\http\client.py:279,</span> in <span class="ni">HTTPResponse._read_status</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">278</span> <span class="k">def</span><span class="w"> </span><span class="nf">_read_status</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">279</span>     <span class="n">line</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fp</span><span class="o">.</span><span class="n">readline</span><span class="p">(</span><span class="n">_MAXLINE</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;iso-8859-1&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">280</span>     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">_MAXLINE</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">281</span>         <span class="k">raise</span> <span class="n">LineTooLong</span><span class="p">(</span><span class="s2">&quot;status line&quot;</span><span class="p">)</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\socket.py:705,</span> in <span class="ni">SocketIO.readinto</span><span class="nt">(self, b)</span>
+<span class="g g-Whitespace">    </span><span class="mi">703</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">704</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">705</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sock</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">706</span>     <span class="k">except</span> <span class="n">timeout</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">707</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_timeout_occurred</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\ssl.py:1274,</span> in <span class="ni">SSLSocket.recv_into</span><span class="nt">(self, buffer, nbytes, flags)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1270</span>     <span class="k">if</span> <span class="n">flags</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1271</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1272</span>           <span class="s2">&quot;non-zero flags not allowed in calls to recv_into() on </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span>
+<span class="g g-Whitespace">   </span><span class="mi">1273</span>           <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1274</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">nbytes</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1275</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1276</span>     <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">nbytes</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\ssl.py:1130,</span> in <span class="ni">SSLSocket.read</span><span class="nt">(self, len, buffer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1128</span> <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1129</span>     <span class="k">if</span> <span class="n">buffer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1130</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1131</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1132</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

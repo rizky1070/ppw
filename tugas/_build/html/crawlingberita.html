@@ -183,9 +183,11 @@
         <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="pengantar.html">Pengantar Penambangan Website</a></li>
 <li class="toctree-l1"><a class="reference internal" href="crawling.html">Crawling</a></li>
-<li class="toctree-l1"><a class="reference internal" href="crawlinglink.html">Crawling Link Dalam Page</a></li>
-<li class="toctree-l1"><a class="reference internal" href="crawlingberita2.html">Crawling Berita</a></li>
-<li class="toctree-l1"><a class="reference internal" href="crawlingpta3copy.html">Crawling PTA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_1.html">Crawling PTA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_2.html">Crawling Link Dalam Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_3.html">Crawling Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas3_1.html">Preprocessing Prodi Manajemen</a></li>
+
 </ul>
 
     </div>
@@ -506,235 +508,227 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>1272341</td>
-      <td>Indra Sjafri Yakin Vanenburg Bisa Bawa Timnas U-23 Meroket</td>
-      <td>olahraga</td>
-      <td>Mantan direktur teknik PSSIIndra Sjafrimemberikan dukungan kepada pelatihGerald Vanenburgsetelah...</td>
-      <td>https://www.cnnindonesia.com/olahraga/20250910222925-142-1272341/indra-sjafri-yakin-vanenburg-bi...</td>
+      <td>1274827</td>
+      <td>01Tutut Soeharto Gugat Menkeu ke PTUNEkonomi</td>
+      <td>ekonomi</td>
+      <td>Putri Mantan Presiden RI ke-2 Soeharto, Siti Hardiyanti Hastuti Rukmana aliasTutut Soehartomelay...</td>
+      <td>https://www.cnnindonesia.com/ekonomi/20250917191944-532-1274827/tutut-soeharto-gugat-menkeu-ke-ptun</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1272305</td>
-      <td>Pelatih Korea: Vanenburg Butuh Waktu di Timnas Indonesia U-23</td>
-      <td>olahraga</td>
-      <td>Pelatih Korea Selatan Lee Min Sung menilaiGerald Vanenburgsebagai sosok yang kuat dan bagus namu...</td>
-      <td>https://www.cnnindonesia.com/olahraga/20250910200409-142-1272305/pelatih-korea-vanenburg-butuh-w...</td>
+      <td>1274780</td>
+      <td>02KPK Sebut Khalid Basalamah Bocorkan Materi PenyidikanNasional</td>
+      <td>nasional</td>
+      <td>Komisi Pemberantasan Korupsi (KPK) mengatakan pemilik PT Zahra Oto Mandiri (Uhud Tour)Khalid Zee...</td>
+      <td>https://www.cnnindonesia.com/nasional/20250917173001-12-1274780/kpk-sebut-khalid-basalamah-bocor...</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>1272266</td>
-      <td>01Sara Keponakan Prabowo Mundur dari DPRNasional</td>
-      <td>nasional</td>
-      <td>Politikus Partai GerindraRahayu Saraswati Djojohadikusumoalias Sara memutuskan mundur sebagai an...</td>
-      <td>https://www.cnnindonesia.com/nasional/20250910182921-32-1272266/sara-keponakan-prabowo-mundur-da...</td>
+      <td>1274836</td>
+      <td>03VIDEO: Serangan Israel ke Gaza Bunuh Hampir 65 Ribu Warga PalestinaInternasional</td>
+      <td>internasional</td>
+      <td>Jumlah korban jiwa di Palestina atas serangan Israel meningkat menjadi 64.964 sejak konflik anta...</td>
+      <td>https://www.cnnindonesia.com/internasional/20250917193857-124-1274836/video-serangan-israel-ke-g...</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>1272319</td>
-      <td>02Prabowo Setujui Ide Menkeu Tarik Rp200 T Uang Pemerintah di BIEkonomi</td>
-      <td>ekonomi</td>
-      <td>Presiden Prabowo Subianto menyetujui ide Menteri KeuanganPurbaya Yudhi Sadewauntuk menarik Rp200...</td>
-      <td>https://www.cnnindonesia.com/ekonomi/20250910204701-532-1272319/prabowo-setujui-ide-menkeu-tarik...</td>
+      <td>1274834</td>
+      <td>04Jejak Bima Permana Putra, Pedemo Hilang yang Ditemukan di MalangNasional</td>
+      <td>nasional</td>
+      <td>Polisi menyebut keberadaanBima Permana Putra(29) di Jakarta saat gelombangdemonstrasiakhir Agust...</td>
+      <td>https://www.cnnindonesia.com/nasional/20250917192751-12-1274834/jejak-bima-permana-putra-pedemo-...</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>1272280</td>
-      <td>03VIDEO: Menkes Baru Swedia Ambruk saat Jumpa Pers PerdanaInternasional</td>
-      <td>internasional</td>
-      <td>Menteri Kesehatan Swedia yang baru dipilih, Elisabeth Lann, pingsan saat menggelar jumpa pers pe...</td>
-      <td>https://www.cnnindonesia.com/internasional/20250910185359-139-1272280/video-menkes-baru-swedia-a...</td>
+      <td>1274720</td>
+      <td>05VIDEO: Prabowo Resmi Tunjuk Erick Thohir Jadi MenporaOlahraga</td>
+      <td>olahraga</td>
+      <td>Erick Thohir resmi menjadi Menteri Pemuda dan Olahraga baru setelah dilantik di Istana Merdeka p...</td>
+      <td>https://www.cnnindonesia.com/olahraga/20250917153806-182-1274720/video-prabowo-resmi-tunjuk-eric...</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>1272135</td>
-      <td>04Berstatus Terpidana, Silfester Matutina Masih Jadi Komisaris ID FoodEkonomi</td>
-      <td>ekonomi</td>
-      <td>Silfester Matutina, terpidana kasus dugaan pencemaran nama baik terhadap Jusuf Kalla, ternyata m...</td>
-      <td>https://www.cnnindonesia.com/ekonomi/20250910135552-92-1272135/berstatus-terpidana-silfester-mat...</td>
+      <td>1273706</td>
+      <td>06Reshuffle Kabinet, Prabowo Lantik Djamari Chaniago Jadi Menko PolkamNasional</td>
+      <td>nasional</td>
+      <td>Presiden RIPrabowo Subiantomelantik Djamari Chaniago jadi Menteri Koordinator Politik dan Keaman...</td>
+      <td>https://www.cnnindonesia.com/nasional/20250915090002-32-1273706/reshuffle-kabinet-prabowo-lantik...</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>1272234</td>
-      <td>05Timnas Futsal Indonesia Siap Tumpas Denmark di Final CFAOlahraga</td>
+      <td>1274722</td>
+      <td>Erick Thohir Buka Suara Soal Rangkap Jabatan Menpora dan Ketua PSSI</td>
       <td>olahraga</td>
-      <td>PelatihTimnas Futsal Indonesiadi CFA International Tournament 2025, Amril Daulay, mengaku siap m...</td>
-      <td>https://www.cnnindonesia.com/olahraga/20250910165232-142-1272234/timnas-futsal-indonesia-siap-tu...</td>
+      <td>Erick Thohiryang resmi jadi Menteri Pemuda dan Olahraga (Menpora) menyampaikan komentarnya soal ...</td>
+      <td>https://www.cnnindonesia.com/olahraga/20250917154231-178-1274722/erick-thohir-buka-suara-soal-ra...</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>1272341</td>
-      <td>06Indra Sjafri Yakin Vanenburg Bisa Bawa Timnas U-23 MeroketOlahraga</td>
-      <td>olahraga</td>
-      <td>Mantan direktur teknik PSSIIndra Sjafrimemberikan dukungan kepada pelatihGerald Vanenburgsetelah...</td>
-      <td>https://www.cnnindonesia.com/olahraga/20250910222925-142-1272341/indra-sjafri-yakin-vanenburg-bi...</td>
+      <td>1274593</td>
+      <td>Reshuffle, Angga Raka Dilantik Jadi Kepala Badan Komunikasi Pemerintah</td>
+      <td>nasional</td>
+      <td>Presiden RIPrabowo Subiantomelantik Angga Raka Prabowo sebagai Kepala Badan Komunikasi Pemerinta...</td>
+      <td>https://www.cnnindonesia.com/nasional/20250917122808-32-1274593/reshuffle-angga-raka-dilantik-ja...</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>1271984</td>
-      <td>Bali Diterjang Banjir Besar, Dua Warga Meninggal Dunia</td>
-      <td>nasional</td>
-      <td>Banjirbesar melandaBali, menerjang sejumlah daerah seperti Kabupaten Jembrana dan Kota Denpasar ...</td>
-      <td>https://www.cnnindonesia.com/nasional/20250910093338-20-1271984/bali-diterjang-banjir-besar-dua-...</td>
+      <td>1274711</td>
+      <td>Ditunjuk Jadi Menpora, Erick Thohir Tak Lagi Jabat Menteri BUMN</td>
+      <td>ekonomi</td>
+      <td>Erick Thohirtak lagi menjabat Menteri Badan Urusan Milik Negara (BUMN) setelah dilantik sebagai ...</td>
+      <td>https://www.cnnindonesia.com/ekonomi/20250917152025-92-1274711/ditunjuk-jadi-menpora-erick-thohi...</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>1271909</td>
-      <td>Timnas Indonesia era Kluivert: Inverted Fullback, Ball Winner, Mezzala</td>
-      <td>olahraga</td>
-      <td>Tak berlebihan kiranya jikaPatrick Kluivertdisebut mulai memperlihatkan jati dirinya diTimnas In...</td>
-      <td>https://www.cnnindonesia.com/olahraga/20250910061945-142-1271909/timnas-indonesia-era-kluivert-i...</td>
+      <td>1274706</td>
+      <td>Reshuffle Kabinet, Prabowo Angkat Qodari Jadi Kepala KSP</td>
+      <td>nasional</td>
+      <td>PresidenPrabowo Subiantomengangkat Muhammad Qodari jadi Kepala Kantor Staf Kepresidenan (KSP) me...</td>
+      <td>https://www.cnnindonesia.com/nasional/20250917151001-20-1274706/reshuffle-kabinet-prabowo-angkat...</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>1271958</td>
-      <td>Kualifikasi Piala Dunia: Bekuk Brasil, Bolivia Bisa Lawan Indonesia</td>
-      <td>olahraga</td>
-      <td>Timnas Boliviamengalahkan Brasil dalamKualifikasi Piala Dunia 2026di Stadion Municipal de El Alt...</td>
-      <td>https://www.cnnindonesia.com/olahraga/20250910083028-142-1271958/kualifikasi-piala-dunia-bekuk-b...</td>
+      <td>1274612</td>
+      <td>Ahmad Dofiri Dilantik Jadi Penasihat Khusus untuk Reformasi Kepolisian</td>
+      <td>nasional</td>
+      <td>Presiden RIPrabowo Subiantomelantik Ahmad Dofiri sebagai Penasihat Khusus Presiden bidang Keaman...</td>
+      <td>https://www.cnnindonesia.com/nasional/20250917125320-32-1274612/ahmad-dofiri-dilantik-jadi-penas...</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>1271939</td>
-      <td>Israel Serang Qatar, Trump Peringatkan Tel Aviv Konsekuensi Serius</td>
-      <td>internasional</td>
-      <td>PresidenAmerika SerikatDonald Trumpmemperingatkan konsekuensi serius ke Tel Aviv usai Israel men...</td>
-      <td>https://www.cnnindonesia.com/internasional/20250910074037-120-1271939/israel-serang-qatar-trump-...</td>
+      <td>1274682</td>
+      <td>Istri dan Anak Kacab Bank Ilham Pradipta Minta Perlindungan ke LPSK</td>
+      <td>nasional</td>
+      <td>Keluarga mendiangM Ilham Pradipta, kepala cabang sebuah bank di Jakarta Pusat yang diculik hingg...</td>
+      <td>https://www.cnnindonesia.com/nasional/20250917142800-12-1274682/istri-dan-anak-kacab-bank-ilham-...</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>1271911</td>
-      <td>Daftar 16 Tim Negara Lolos Piala Asia U-23 2026</td>
-      <td>olahraga</td>
-      <td>Seiring dengan hari terakhirkualifikasi Piala Asia U-23 2026pada 9 September 2026, seluruh konte...</td>
-      <td>https://www.cnnindonesia.com/olahraga/20250910062938-142-1271911/daftar-16-tim-negara-lolos-pial...</td>
+      <td>1273706</td>
+      <td>BREAKING NEWSReshuffle Kabinet, Prabowo Lantik Djamari Chaniago Jadi Menko PolkamNasional</td>
+      <td>nasional</td>
+      <td>Presiden RIPrabowo Subiantomelantik Djamari Chaniago jadi Menteri Koordinator Politik dan Keaman...</td>
+      <td>https://www.cnnindonesia.com/nasional/20250915090002-32-1273706/reshuffle-kabinet-prabowo-lantik...</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>1272165</td>
-      <td>Ada Putusan MK, TNI Masih Pertimbangkan Polisikan Ferry IrwandiNasional</td>
+      <td>1274624</td>
+      <td>BREAKING NEWSDaftar Lengkap Menteri, Wamen dan Pejabat Dilantik Prabowo Hari IniNasional</td>
       <td>nasional</td>
-      <td>TNImasih mempertimbangkan langkah hukum yang akan diambil terhadap CEO Malaka ProjectFerry Irwan...</td>
-      <td>https://www.cnnindonesia.com/nasional/20250910145755-12-1272165/ada-putusan-mk-tni-masih-pertimb...</td>
+      <td>Presiden Prabowo Subianto melakukanreshuffleatau kocok ulangKabinet Merah Putihdi Istana Kepresi...</td>
+      <td>https://www.cnnindonesia.com/nasional/20250917124357-32-1274624/daftar-lengkap-menteri-wamen-dan...</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>1272212</td>
-      <td>Purbaya Sebut Rp425 T Mengendap di BI: Makanya Orang Susah Cari KerjaEkonomi</td>
-      <td>ekonomi</td>
-      <td>Menteri KeuanganPurbaya Yudhi Sadewamenyebut duit pemerintah sekitar Rp425 triliun mengendap diB...</td>
-      <td>https://www.cnnindonesia.com/ekonomi/20250910160549-532-1272212/purbaya-sebut-rp425-t-mengendap-...</td>
+      <td>1274706</td>
+      <td>BREAKING NEWSReshuffle Kabinet, Prabowo Angkat Qodari Jadi Kepala KSPNasional</td>
+      <td>nasional</td>
+      <td>PresidenPrabowo Subiantomengangkat Muhammad Qodari jadi Kepala Kantor Staf Kepresidenan (KSP) me...</td>
+      <td>https://www.cnnindonesia.com/nasional/20250917151001-20-1274706/reshuffle-kabinet-prabowo-angkat...</td>
     </tr>
     <tr>
       <th>15</th>
-      <td>1271929</td>
-      <td>Kata-kata PM Qatar Usai Israel Bombardir DohaInternasional</td>
-      <td>internasional</td>
-      <td>Perdana MenteriQatar, Mohammed bin Abdulrahman bin Jassim Al-Thani, mengecam seranganIsraelke Ib...</td>
-      <td>https://www.cnnindonesia.com/internasional/20250910073726-120-1271929/kata-kata-pm-qatar-usai-is...</td>
+      <td>1274780</td>
+      <td>KPK Sebut Khalid Basalamah Bocorkan Materi PenyidikanNasional</td>
+      <td>nasional</td>
+      <td>Komisi Pemberantasan Korupsi (KPK) mengatakan pemilik PT Zahra Oto Mandiri (Uhud Tour)Khalid Zee...</td>
+      <td>https://www.cnnindonesia.com/nasional/20250917173001-12-1274780/kpk-sebut-khalid-basalamah-bocor...</td>
     </tr>
     <tr>
       <th>16</th>
-      <td>1271958</td>
-      <td>Kualifikasi Piala Dunia: Bekuk Brasil, Bolivia Bisa Lawan IndonesiaOlahraga</td>
-      <td>olahraga</td>
-      <td>Timnas Boliviamengalahkan Brasil dalamKualifikasi Piala Dunia 2026di Stadion Municipal de El Alt...</td>
-      <td>https://www.cnnindonesia.com/olahraga/20250910083028-142-1271958/kualifikasi-piala-dunia-bekuk-b...</td>
+      <td>1274864</td>
+      <td>00:56VIDEO: Dituding Ada Orang Besar, Roy Suryo Kembali Somasi JokowiTV</td>
+      <td>tv</td>
+      <td>Pakar telematika Roy Suryo hari Rabu (17/9) kembali melayangkan somasi ke Presiden ke-7 RI, Joko...</td>
+      <td>https://www.cnnindonesia.com/tv/20250917214024-400-1274864/video-dituding-ada-orang-besar-roy-su...</td>
     </tr>
     <tr>
       <th>17</th>
-      <td>1272331</td>
-      <td>01:30VIDEO: Kapal Misi Kemanusiaan Untuk Gaza Diserang DroneTV</td>
-      <td>tv</td>
-      <td>Satu armada kapal peserta Sumud Flotilla yang hendak membawa misi kemanusiaan ke Gaza, Palestina...</td>
-      <td>https://www.cnnindonesia.com/tv/20250910215612-404-1272331/video-kapal-misi-kemanusiaan-untuk-ga...</td>
+      <td>1274859</td>
+      <td>Keluarga Bingung Kasus Prada Lucky Sudah 40 Hari Belum DisidangkanNasional</td>
+      <td>nasional</td>
+      <td>Keluarga mendiangPrada Lucky Chepril Saputra Namomempertanyakan kelanjutan proses hukum yang sed...</td>
+      <td>https://www.cnnindonesia.com/nasional/20250917211052-12-1274859/keluarga-bingung-kasus-prada-luc...</td>
     </tr>
     <tr>
       <th>18</th>
-      <td>1272267</td>
-      <td>Yusril Minta Restorative Justice 13 Tersangka Pembakaran DPRD SulselNasional</td>
-      <td>nasional</td>
-      <td>Menteri Koordinator Bidang Hukum, HAM, Imigrasi, dan PemasyarakatanYusril Ihza Mahendrameminta p...</td>
-      <td>https://www.cnnindonesia.com/nasional/20250910181510-12-1272267/yusril-minta-restorative-justice...</td>
+      <td>1274731</td>
+      <td>3 PR Erick Thohir usai Jadi Menpora BaruOlahraga</td>
+      <td>olahraga</td>
+      <td>Setidaknya tiga pekerjaan rumah (PR) menantiErick Thohirsetelah dilantik menjadi Menteri Pemuda ...</td>
+      <td>https://www.cnnindonesia.com/olahraga/20250917155223-178-1274731/3-pr-erick-thohir-usai-jadi-men...</td>
     </tr>
     <tr>
       <th>19</th>
-      <td>1272341</td>
-      <td>Indra Sjafri Yakin Vanenburg Bisa Bawa Timnas U-23 MeroketOlahraga</td>
-      <td>olahraga</td>
-      <td>Mantan direktur teknik PSSIIndra Sjafrimemberikan dukungan kepada pelatihGerald Vanenburgsetelah...</td>
-      <td>https://www.cnnindonesia.com/olahraga/20250910222925-142-1272341/indra-sjafri-yakin-vanenburg-bi...</td>
+      <td>1274863</td>
+      <td>04:25VIDEO: Jokowi Digugat Lewat Citizen Lawsuit, Gibran Digugat Rp 125 TTV</td>
+      <td>tv</td>
+      <td>Presiden ke-7 RI Joko Widodo menghadapi gugatan citizen lawsuit dari dua alumnus UGM, sementara ...</td>
+      <td>https://www.cnnindonesia.com/tv/20250917213553-400-1274863/video-jokowi-digugat-lewat-citizen-la...</td>
     </tr>
     <tr>
       <th>20</th>
-      <td>1272339</td>
-      <td>02:44VIDEO: Aktivis Ditangkap, Isnur: Harusnya Provokatornya yang DibongkarTV</td>
-      <td>tv</td>
-      <td>Ketua Umum YLBHI Muhamad Isnur menyatakan penahanan terhadap para aktivis saat ini merupakan pen...</td>
-      <td>https://www.cnnindonesia.com/tv/20250910220153-404-1272339/video-aktivis-ditangkap-isnur-harusny...</td>
+      <td>1274835</td>
+      <td>01:13VIDEO: Messi Tuntaskan Dendam Inter Miami ke Seattle SoundersOlahraga</td>
+      <td>olahraga</td>
+      <td>Lionel Messidan Jordi Alba memimpin kemenangan Inter Miami 3-1 atas Seattle Sounders pada Selasa...</td>
+      <td>https://www.cnnindonesia.com/olahraga/20250917193559-146-1274835/video-messi-tuntaskan-dendam-in...</td>
     </tr>
     <tr>
       <th>21</th>
-      <td>1272333</td>
-      <td>00:54VIDEO: Tim Advokat: Proses Hukum ke Delpedro DipaksakanTV</td>
+      <td>1274829</td>
+      <td>00:41VIDEO: Tabung LPG Bersubsidi Langka, Emak-Emak EmosiTV</td>
       <td>tv</td>
-      <td>Tim advokat Delpedro Marhaen yang diwakili Fian Alaydrus menyatakan penahanan terhadap kliennya ...</td>
-      <td>https://www.cnnindonesia.com/tv/20250910220149-404-1272333/video-tim-advokat-proses-hukum-ke-del...</td>
+      <td>Emak-emak ini tak mampu lagi membendung emosinya. Mereka nekat menerobos masuk ke Stasiun Pengis...</td>
+      <td>https://www.cnnindonesia.com/tv/20250917192322-400-1274829/video-tabung-lpg-bersubsidi-langka-em...</td>
     </tr>
     <tr>
       <th>22</th>
-      <td>1272335</td>
-      <td>05:28VIDEO: Aktivis Ditangkap, Komnas HAM Dorong Restorative JusticeTV</td>
-      <td>tv</td>
-      <td>Sejumlah aktivis dan netizen ditangkap oleh Polda Metro Jaya dengan tuduhan menghasut massa dala...</td>
-      <td>https://www.cnnindonesia.com/tv/20250910220153-404-1272335/video-aktivis-ditangkap-komnas-ham-do...</td>
+      <td>1274853</td>
+      <td>Berebut Bahas RUU Pemilu, Rapat Evaluasi Prolegnas di Baleg MamanasNasional</td>
+      <td>nasional</td>
+      <td>Rapat evaluasi sekaligus penyusunan Program Legislasi Nasional (Prolegnas) di Badan Legislasi (B...</td>
+      <td>https://www.cnnindonesia.com/nasional/20250917204018-32-1274853/berebut-bahas-ruu-pemilu-rapat-e...</td>
     </tr>
     <tr>
       <th>23</th>
-      <td>1272332</td>
-      <td>Aliansi Ibu Indonesia Minta Aparat Setop Represif, Bebaskan PelajarNasional</td>
-      <td>nasional</td>
-      <td>Aliansi Ibu Indonesia mendesak aparat agar membebaskan seluruh pelajar yang masih ditahan dan be...</td>
-      <td>https://www.cnnindonesia.com/nasional/20250910213029-20-1272332/aliansi-ibu-indonesia-minta-apar...</td>
+      <td>1274792</td>
+      <td>Reaksi Taufik Hidayat Usai Erick Thohir Jadi Menpora BaruOlahraga</td>
+      <td>olahraga</td>
+      <td>Legenda bulutangkis Indonesia sekaligus Wakil Menteri Pemuda dan OlahragaTaufik Hidayatbuka suar...</td>
+      <td>https://www.cnnindonesia.com/olahraga/20250917175608-178-1274792/reaksi-taufik-hidayat-usai-eric...</td>
     </tr>
     <tr>
       <th>24</th>
-      <td>1272329</td>
-      <td>Jadwal Pertandingan Pekan Kelima Super League: Banyak Big MatchOlahraga</td>
-      <td>olahraga</td>
-      <td>Pertandingan pekan kelimaSuper League 2025/2026akan menghadirkan laga-laga besar atau big match....</td>
-      <td>https://www.cnnindonesia.com/olahraga/20250910213706-142-1272329/jadwal-pertandingan-pekan-kelim...</td>
+      <td>1274840</td>
+      <td>09:35VIDEO: Polemik Tanggul Beton Laut Jakarta, Nelayan Menjerit!TV</td>
+      <td>tv</td>
+      <td>Masih ingat dengan pagar laut di Tangerang dan Bekasi? Meski kasusnya tak terdengar lagi, kini m...</td>
+      <td>https://www.cnnindonesia.com/tv/20250917195237-404-1274840/video-polemik-tanggul-beton-laut-jaka...</td>
     </tr>
     <tr>
       <th>25</th>
-      <td>1272330</td>
-      <td>01:08VIDEO: Gibran: Reshuffle Sudah Dihitung MatangTV</td>
-      <td>tv</td>
-      <td>Wakil Presiden Gibran Rakabuming menyebut proses bongkar kursi menteri di Kabinet Merah Putih ol...</td>
-      <td>https://www.cnnindonesia.com/tv/20250910215612-404-1272330/video-gibran-reshuffle-sudah-dihitung...</td>
+      <td>1274843</td>
+      <td>BI Catat Transaksi Mata Uang Lokal dengan Mitra Tembus US$16,4 MEkonomi</td>
+      <td>ekonomi</td>
+      <td>Bank Indonesia (BI) mencatat nilaitransaksimata uang lokal atau Local Currency Transaction (LCT)...</td>
+      <td>https://www.cnnindonesia.com/ekonomi/20250917195704-78-1274843/bi-catat-transaksi-mata-uang-loka...</td>
     </tr>
     <tr>
       <th>26</th>
-      <td>1272286</td>
-      <td>21 Rumah di Batam Rusak Diterjang Puting BeliungNasional</td>
-      <td>nasional</td>
-      <td>Puluhan rumah warga di Kelurahan Tanjung Buntung, Kecamatan Bengkong, KotaBatam, Kepulauan Riau,...</td>
-      <td>https://www.cnnindonesia.com/nasional/20250910192945-20-1272286/21-rumah-di-batam-rusak-diterjan...</td>
+      <td>1274854</td>
+      <td>Invasi Gaza, Pasukan Israel Buka Rute buat Usir Warga PalestinaInternasional</td>
+      <td>internasional</td>
+      <td>PasukanIsraelmembuka rute untuk mengusir wargaPalestinausai serangan brutal mereka ke Kota Gaza ...</td>
+      <td>https://www.cnnindonesia.com/internasional/20250917204124-120-1274854/invasi-gaza-pasukan-israel...</td>
     </tr>
     <tr>
       <th>27</th>
-      <td>1272279</td>
-      <td>KPK Segera Tetapkan dan Umumkan Tersangka Kuota Haji dalam Waktu DekatNasional</td>
+      <td>1274846</td>
+      <td>Rekonstruksi Pembunuhan Mojokerto, Tersangka Mutilasi 2 Jam Non-StopNasional</td>
       <td>nasional</td>
-      <td>Komisi Pemberantasan Korupsi (KPK) mengungkapkan bakal menetapkan dan mengumumkan tersangka kasu...</td>
-      <td>https://www.cnnindonesia.com/nasional/20250910185051-12-1272279/kpk-segera-tetapkan-dan-umumkan-...</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>1272234</td>
-      <td>Timnas Futsal Indonesia Siap Tumpas Denmark di Final CFAOlahraga</td>
-      <td>olahraga</td>
-      <td>PelatihTimnas Futsal Indonesiadi CFA International Tournament 2025, Amril Daulay, mengaku siap m...</td>
-      <td>https://www.cnnindonesia.com/olahraga/20250910165232-142-1272234/timnas-futsal-indonesia-siap-tu...</td>
+      <td>Satreskrim PolresMojokertomenggelar rekonstruksi kasusmutilasiyang dilakukan tersangka Alvi Maul...</td>
+      <td>https://www.cnnindonesia.com/nasional/20250917200835-12-1274846/rekonstruksi-pembunuhan-mojokert...</td>
     </tr>
   </tbody>
 </table>

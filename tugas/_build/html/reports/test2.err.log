@@ -26,8 +26,6 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-['import pandas as pd', 'import requests', 'from bs4 import BeautifulSoup', '', 'def ptaa_updated():']
-...
-['    return df', '', '# Untuk menjalankan fungsi', 'updated_dataframe = ptaa_updated()', 'print(updated_dataframe.head())']
+scrape_all()
 -------------------
 
