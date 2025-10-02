@@ -61,7 +61,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'ekstraksi_fitur_tfidf_pta_manajemen';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="CBOW Berita" href="cbow_berita.html" />
+    <link rel="next" title="CBOW Berita" href="cbow_beritacopy.html" />
     <link rel="prev" title="Ekstraksi fitur TFID berita" href="ekstraksi_fitur_tfidf_berita.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -188,10 +188,11 @@
 <li class="toctree-l1"><a class="reference internal" href="tugas2_3.html">Crawling Berita</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas3_1_copy2.html">Preprocessing Prodi Manajemen</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="preprocessing_berita.html">PREPROCESSING</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preprocessing_berita.html">Preprocessing berita</a></li>
+
 <li class="toctree-l1"><a class="reference internal" href="ekstraksi_fitur_tfidf_berita.html">Ekstraksi fitur TFID berita</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Ekstraksi fitur TFID PTA Manajemen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cbow_berita.html">CBOW Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cbow_beritacopy.html">CBOW Berita</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cbow_PTA_manajemen.html">CBOW PTA Manajemen</a></li>
 </ul>
 
@@ -518,152 +519,11 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting scikit-learn
-  Downloading scikit_learn-1.7.2-cp310-cp310-win_amd64.whl.metadata (11 kB)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: scikit-learn in c:\laragon\bin\python\python-3.10\lib\site-packages (1.7.2)
 Requirement already satisfied: numpy&gt;=1.22.0 in c:\laragon\bin\python\python-3.10\lib\site-packages (from scikit-learn) (1.26.4)
 Requirement already satisfied: scipy&gt;=1.8.0 in c:\laragon\bin\python\python-3.10\lib\site-packages (from scikit-learn) (1.13.1)
 Requirement already satisfied: joblib&gt;=1.2.0 in c:\laragon\bin\python\python-3.10\lib\site-packages (from scikit-learn) (1.5.2)
-Collecting threadpoolctl&gt;=3.1.0 (from scikit-learn)
-  Using cached threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
-Downloading scikit_learn-1.7.2-cp310-cp310-win_amd64.whl (8.9 MB)
-   ---------------------------------------- 0.0/8.9 MB ? eta -:--:--
-   ---------------------------------------- 0.0/8.9 MB ? eta -:--:--
-   ---------------------------------------- 0.0/8.9 MB ? eta -:--:--
-   - -------------------------------------- 0.3/8.9 MB ? eta -:--:--
-   - -------------------------------------- 0.3/8.9 MB ? eta -:--:--
-   - -------------------------------------- 0.3/8.9 MB ? eta -:--:--
-   -- ------------------------------------- 0.5/8.9 MB 442.1 kB/s eta 0:00:19
-   ---- ----------------------------------- 1.0/8.9 MB 839.3 kB/s eta 0:00:10
-   ----- ---------------------------------- 1.3/8.9 MB 987.4 kB/s eta 0:00:08
-   ------- -------------------------------- 1.6/8.9 MB 1.0 MB/s eta 0:00:08
-   ---------- ----------------------------- 2.4/8.9 MB 1.4 MB/s eta 0:00:05
-   ---------- ----------------------------- 2.4/8.9 MB 1.4 MB/s eta 0:00:05
-   ---------- ----------------------------- 2.4/8.9 MB 1.4 MB/s eta 0:00:05
-   -------------- ------------------------- 3.1/8.9 MB 1.3 MB/s eta 0:00:05
-   ----------------- ---------------------- 3.9/8.9 MB 1.5 MB/s eta 0:00:04
-   ---------------------- ----------------- 5.0/8.9 MB 1.8 MB/s eta 0:00:03
-   ---------------------------- ----------- 6.3/8.9 MB 2.1 MB/s eta 0:00:02
-   ---------------------------------- ----- 7.6/8.9 MB 2.3 MB/s eta 0:00:01
-   -------------------------------------- - 8.7/8.9 MB 2.5 MB/s eta 0:00:01
-   ---------------------------------------- 8.9/8.9 MB 2.6 MB/s  0:00:03
-Using cached threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
-Installing collected packages: threadpoolctl, scikit-learn
-
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   -------------------- ------------------- 1/2 [scikit-learn]
-   ---------------------------------------- 2/2 [scikit-learn]
-
-Successfully installed scikit-learn-1.7.2 threadpoolctl-3.6.0
+Requirement already satisfied: threadpoolctl&gt;=3.1.0 in c:\laragon\bin\python\python-3.10\lib\site-packages (from scikit-learn) (3.6.0)
 </pre></div>
 </div>
 </div>
@@ -1106,7 +966,7 @@ Requirement already satisfied: et-xmlfile in c:\laragon\bin\python\python-3.10\l
       </div>
     </a>
     <a class="right-next"
-       href="cbow_berita.html"
+       href="cbow_beritacopy.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>

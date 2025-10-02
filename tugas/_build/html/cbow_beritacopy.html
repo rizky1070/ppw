@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>CBOW PTA Manajemen &#8212; My sample book</title>
+    <title>CBOW Berita &#8212; My sample book</title>
   
   
   
@@ -58,10 +58,11 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'cbow_PTA_manajemen';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cbow_beritacopy';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="CBOW Berita" href="cbow_beritacopy.html" />
+    <link rel="next" title="CBOW PTA Manajemen" href="cbow_PTA_manajemen.html" />
+    <link rel="prev" title="Ekstraksi fitur TFID PTA Manajemen" href="ekstraksi_fitur_tfidf_pta_manajemen.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -191,8 +192,8 @@
 
 <li class="toctree-l1"><a class="reference internal" href="ekstraksi_fitur_tfidf_berita.html">Ekstraksi fitur TFID berita</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ekstraksi_fitur_tfidf_pta_manajemen.html">Ekstraksi fitur TFID PTA Manajemen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cbow_beritacopy.html">CBOW Berita</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">CBOW PTA Manajemen</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">CBOW Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cbow_PTA_manajemen.html">CBOW PTA Manajemen</a></li>
 </ul>
 
     </div>
@@ -264,7 +265,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcbow_PTA_manajemen.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcbow_beritacopy.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -294,7 +295,7 @@
       
       
       
-      <li><a href="_sources/cbow_PTA_manajemen.ipynb" target="_blank"
+      <li><a href="_sources/cbow_beritacopy.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -376,7 +377,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>CBOW PTA Manajemen</h1>
+    <h1>CBOW Berita</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -390,28 +391,66 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="cbow-pta-manajemen">
-<h1>CBOW PTA Manajemen<a class="headerlink" href="#cbow-pta-manajemen" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="cbow-berita">
+<h1>CBOW Berita<a class="headerlink" href="#cbow-berita" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># --- Import semua library yang dibutuhkan ---</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="o">!{</span>sys.executable<span class="o">}</span><span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>gensim
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: gensim in c:\laragon\bin\python\python-3.10\lib\site-packages (4.3.3)
+Requirement already satisfied: numpy&lt;2.0,&gt;=1.18.5 in c:\laragon\bin\python\python-3.10\lib\site-packages (from gensim) (1.26.4)
+Requirement already satisfied: scipy&lt;1.14.0,&gt;=1.7.0 in c:\laragon\bin\python\python-3.10\lib\site-packages (from gensim) (1.13.1)
+Requirement already satisfied: smart-open&gt;=1.8.1 in c:\laragon\bin\python\python-3.10\lib\site-packages (from gensim) (7.3.1)
+Requirement already satisfied: wrapt in c:\laragon\bin\python\python-3.10\lib\site-packages (from smart-open&gt;=1.8.1-&gt;gensim) (1.17.3)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!{</span>sys.executable<span class="o">}</span><span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>pandas
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pandas in c:\laragon\bin\python\python-3.10\lib\site-packages (2.3.2)
+Requirement already satisfied: numpy&gt;=1.22.4 in c:\laragon\bin\python\python-3.10\lib\site-packages (from pandas) (1.26.4)
+Requirement already satisfied: python-dateutil&gt;=2.8.2 in c:\laragon\bin\python\python-3.10\lib\site-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: pytz&gt;=2020.1 in c:\laragon\bin\python\python-3.10\lib\site-packages (from pandas) (2025.2)
+Requirement already satisfied: tzdata&gt;=2022.7 in c:\laragon\bin\python\python-3.10\lib\site-packages (from pandas) (2025.2)
+Requirement already satisfied: six&gt;=1.5 in c:\laragon\bin\python\python-3.10\lib\site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas) (1.17.0)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">ast</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">ast</span> <span class="c1"># Library untuk mengubah string menjadi list</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">gensim.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">Word2Vec</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">logging</span> <span class="c1"># Untuk menampilkan log proses training</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
 
 <span class="c1"># --- 1. Persiapan Corpus ---</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- TAHAP 1: MEMPERSIAPKAN CORPUS ---&quot;</span><span class="p">)</span>
-<span class="c1"># Load data dari file CSV hasil preprocessing Anda</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;hasil_preprocessing_manajemen.csv&#39;</span><span class="p">)</span>
+<span class="c1"># Load kembali data Anda (atau lanjutkan dari DataFrame yang sudah ada)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;hasil_preprocessing_berita.csv&#39;</span><span class="p">)</span>
 
-<span class="c1"># Mengubah kolom &#39;hasil_preprocessing&#39; dari string menjadi list python sungguhan</span>
+<span class="c1"># --- Konversi kolom &#39;hasil_preprocessing&#39; dari string ke list ---</span>
+<span class="c1"># Ini adalah langkah penting!</span>
+<span class="c1"># ast.literal_eval akan membaca string &quot;[&#39;a&#39;, &#39;b&#39;]&quot; dan mengubahnya menjadi list [&#39;a&#39;, &#39;b&#39;]</span>
 <span class="n">df</span><span class="p">[</span><span class="s1">&#39;tokens&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;hasil_preprocessing&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">ast</span><span class="o">.</span><span class="n">literal_eval</span><span class="p">)</span>
+
+<span class="c1"># Buat corpus yang siap untuk dilatih</span>
 <span class="n">corpus</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;tokens&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 
+
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Proses persiapan corpus selesai.&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Berikut adalah contoh 1 abstrak yang sudah diubah menjadi daftar token:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Berikut adalah contoh 1 dokumen (berita) yang sudah diubah menjadi daftar token:&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">corpus</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 </div>
@@ -419,8 +458,8 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- TAHAP 1: MEMPERSIAPKAN CORPUS ---
 Proses persiapan corpus selesai.
-Berikut adalah contoh 1 abstrak yang sudah diubah menjadi daftar token:
-[&#39;abstrak&#39;, &#39;satiyah&#39;, &#39;pengaruh&#39;, &#39;faktorfaktor&#39;, &#39;latih&#39;, &#39;kembang&#39;, &#39;produktivitas&#39;, &#39;kerja&#39;, &#39;dinas&#39;, &#39;laut&#39;, &#39;ikan&#39;, &#39;bangkal&#39;, &#39;bawah&#39;, &#39;bimbing&#39;, &#39;drahjsanugrahini&#39;, &#39;irawatimm&#39;, &#39;helm&#39;, &#39;buyung&#39;, &#39;auliasstsemmt&#39;, &#39;upaya&#39;, &#39;tingkat&#39;, &#39;produktivitas&#39;, &#39;kerja&#39;, &#39;mudah&#39;, &#39;salah&#39;, &#39;usaha&#39;, &#39;produktivitas&#39;, &#39;tingkat&#39;, &#39;terap&#39;, &#39;program&#39;, &#39;latih&#39;, &#39;kembang&#39;, &#39;sumber&#39;, &#39;daya&#39;, &#39;manusia&#39;, &#39;sdm&#39;, &#39;laksana&#39;, &#39;instansi&#39;, &#39;produktivitas&#39;, &#39;capai&#39;, &#39;tingkat&#39;, &#39;mampu&#39;, &#39;pegawai&#39;, &#39;efektif&#39;, &#39;efisien&#39;, &#39;latih&#39;, &#39;pengembnagan&#39;, &#39;harap&#39;, &#39;pegawai&#39;, &#39;sesuai&#39;, &#39;kebutuhankebutuhan&#39;, &#39;sikap&#39;, &#39;tingkah&#39;, &#39;laku&#39;, &#39;terampil&#39;, &#39;tahu&#39;, &#39;sesuai&#39;, &#39;tuntut&#39;, &#39;ubah&#39;, &#39;latih&#39;, &#39;kembang&#39;, &#39;pegawai&#39;, &#39;dukung&#39;, &#39;cipta&#39;, &#39;suasana&#39;, &#39;kerja&#39;, &#39;kondusif&#39;, &#39;instansi&#39;, &#39;produktivitas&#39;, &#39;kerja&#39;, &#39;tingkat&#39;, &#39;tuju&#39;, &#39;teliti&#39;, &#39;pengaruh&#39;, &#39;faktorfaktor&#39;, &#39;latih&#39;, &#39;kembang&#39;, &#39;produktivitas&#39;, &#39;kerja&#39;, &#39;dinas&#39;, &#39;laut&#39;, &#39;ikan&#39;, &#39;bangkal&#39;, &#39;ukur&#39;, &#39;menganalisa&#39;, &#39;hubung&#39;, &#39;variabel&#39;, &#39;teliti&#39;, &#39;dekat&#39;, &#39;observasional&#39;, &#39;analitik&#39;, &#39;amat&#39;, &#39;langsung&#39;, &#39;responden&#39;, &#39;sebar&#39;, &#39;kuisioner&#39;, &#39;analis&#39;, &#39;teliti&#39;, &#39;teliti&#39;, &#39;populasi&#39;, &#39;responden&#39;, &#39;sampel&#39;, &#39;olah&#39;, &#39;spss&#39;, &#39;versi&#39;, &#39;analis&#39;, &#39;metode&#39;, &#39;statistik&#39;, &#39;metode&#39;, &#39;non&#39;, &#39;probality&#39;, &#39;sampling&#39;, &#39;simple&#39;, &#39;random&#39;, &#39;sampling&#39;, &#39;simpul&#39;, &#39;teliti&#39;, &#39;a&#39;, &#39;faktorfaktor&#39;, &#39;latih&#39;, &#39;kembang&#39;, &#39;beda&#39;, &#39;individu&#39;, &#39;pegawai&#39;, &#39;x&#39;, &#39;hubung&#39;, &#39;analisis&#39;, &#39;jabat&#39;, &#39;x&#39;, &#39;motivasi&#39;, &#39;x&#39;, &#39;partisipasi&#39;, &#39;aktif&#39;, &#39;x&#39;, &#39;seleksi&#39;, &#39;serta&#39;, &#39;x&#39;, &#39;seleksi&#39;, &#39;instruktur&#39;, &#39;x&#39;, &#39;metode&#39;, &#39;latih&#39;, &#39;kembang&#39;, &#39;x&#39;, &#39;pengaruh&#39;, &#39;simultan&#39;, &#39;produktivitas&#39;, &#39;kerja&#39;, &#39;pegawai&#39;, &#39;dinas&#39;, &#39;laut&#39;, &#39;ikan&#39;, &#39;kabupaten&#39;, &#39;bangkal&#39;, &#39;bukti&#39;, &#39;nilai&#39;, &#39;koefisien&#39;, &#39;determinasi&#39;, &#39;ganda&#39;, &#39;r&#39;, &#39;r&#39;, &#39;square&#39;, &#39;fhitung&#39;, &#39;ftabel&#39;, &#39;b&#39;, &#39;faktor&#39;, &#39;hubung&#39;, &#39;analisis&#39;, &#39;jabat&#39;, &#39;pengaruh&#39;, &#39;parsial&#39;, &#39;produktivitas&#39;, &#39;kerja&#39;, &#39;pegawai&#39;, &#39;dinas&#39;, &#39;laut&#39;, &#39;ikan&#39;, &#39;kabupaten&#39;, &#39;bangkal&#39;, &#39;uji&#39;, &#39;hipotesis&#39;, &#39;variabel&#39;, &#39;motivasi&#39;, &#39;x&#39;, &#39;bukti&#39;, &#39;nilai&#39;, &#39;thitung&#39;, &#39;seleksi&#39;, &#39;serta&#39;, &#39;x&#39;, &#39;pengaruh&#39;, &#39;dominan&#39;, &#39;produktivitas&#39;, &#39;kerja&#39;, &#39;pegawai&#39;, &#39;instansi&#39;, &#39;dinas&#39;, &#39;laut&#39;, &#39;ikan&#39;, &#39;bangkal&#39;, &#39;kunci&#39;, &#39;dinas&#39;, &#39;laut&#39;, &#39;ikan&#39;, &#39;faktorfaktor&#39;, &#39;latih&#39;, &#39;kembang&#39;, &#39;produktivitas&#39;, &#39;kerja&#39;]
+Berikut adalah contoh 1 dokumen (berita) yang sudah diubah menjadi daftar token:
+[&#39;sidoarjobangsaonlinecom&#39;, &#39;proses&#39;, &#39;cari&#39;, &#39;korban&#39;, &#39;santri&#39;, &#39;timbun&#39;, &#39;runtuh&#39;, &#39;musala&#39;, &#39;ambruk&#39;, &#39;pondok&#39;, &#39;pesantren&#39;, &#39;ponpes&#39;, &#39;alkhoziny&#39;, &#39;budur&#39;, &#39;sidoarjo&#39;, &#39;rabu&#39;, &#39;siang&#39;, &#39;santri&#39;, &#39;enggan&#39;, &#39;nama&#39;, &#39;aku&#39;, &#39;santri&#39;, &#39;cor&#39;, &#39;bangun&#39;, &#39;hukum&#39;, &#39;santri&#39;, &#39;ikut&#39;, &#39;giat&#39;, &#39;ambruk&#39;, &#39;pas&#39;, &#39;salat&#39;, &#39;jemaah&#39;, &#39;imam&#39;, &#39;selamat&#39;, &#39;temanteman&#39;, &#39;timpa&#39;, &#39;santri&#39;, &#39;rabu&#39;, &#39;tim&#39;, &#39;sar&#39;, &#39;gabung&#39;, &#39;jibaku&#39;, &#39;sisir&#39;, &#39;puingpuing&#39;, &#39;bangun&#39;, &#39;lantai&#39;, &#39;total&#39;, &#39;ratus&#39;, &#39;santri&#39;, &#39;hasil&#39;, &#39;evakuasi&#39;, &#39;cari&#39;, &#39;musibah&#39;, &#39;milu&#39;, &#39;selip&#39;, &#39;kisah&#39;, &#39;hari&#39;, &#39;santri&#39;, &#39;pondok&#39;, &#39;salah&#39;, &#39;satu&#39;, &#39;biasa&#39;, &#39;beri&#39;, &#39;hukum&#39;, &#39;ikut&#39;, &#39;giat&#39;, &#39;pesantren&#39;, &#39;hukum&#39;, &#39;bantu&#39;, &#39;cor&#39;, &#39;bangun&#39;, &#39;santri&#39;, &#39;tahu&#39;, &#39;bolos&#39;, &#39;hukum&#39;, &#39;bantu&#39;, &#39;ngecor&#39;, &#39;tukang&#39;, &#39;santri&#39;, &#39;wajib&#39;, &#39;suruh&#39;, &#39;bantu&#39;, &#39;kena&#39;, &#39;hukum&#39;, &#39;santri&#39;, &#39;enam&#39;, &#39;mondok&#39;, &#39;untung&#39;, &#39;musala&#39;, &#39;ambruk&#39;, &#39;lokasi&#39;, &#39;pondok&#39;, &#39;pondok&#39;, &#39;musala&#39;, &#39;ambruk&#39;, &#39;ratus&#39;, &#39;santri&#39;, &#39;salat&#39;, &#39;asar&#39;, &#39;timpa&#39;, &#39;runtuh&#39;, &#39;cerita&#39;, &#39;ungkap&#39;, &#39;abdul&#39;, &#39;keluarga&#39;, &#39;salah&#39;, &#39;korban&#39;, &#39;keponakan&#39;, &#39;asal&#39;, &#39;madura&#39;, &#39;santri&#39;, &#39;bantu&#39;, &#39;cor&#39;, &#39;musala&#39;, &#39;runtuh&#39;, &#39;ngecor&#39;, &#39;jatuh&#39;, &#39;luka&#39;, &#39;wajah&#39;, &#39;gigi&#39;, &#39;copot&#39;, &#39;pungkas&#39;, &#39;cat&#39;]
 </pre></div>
 </div>
 </div>
@@ -428,13 +467,13 @@ Berikut adalah contoh 1 abstrak yang sudah diubah menjadi daftar token:
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># --- 2. Melatih Model Word2Vec (dengan Proses Terlihat) ---</span>
+
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- TAHAP 2: MELATIH MODEL WORD2VEC (CBOW) ---&quot;</span><span class="p">)</span>
 
 <span class="c1"># Mengaktifkan logging untuk melihat proses training dari Gensim</span>
 <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%(asctime)s</span><span class="s1"> : </span><span class="si">%(levelname)s</span><span class="s1"> : </span><span class="si">%(message)s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
 
-<span class="c1"># Tentukan parameter model. Anda bisa mengubah nilai embedding_dim.</span>
-<span class="n">embedding_dim</span> <span class="o">=</span> <span class="mi">150</span> 
+<span class="n">embedding_dim</span> <span class="o">=</span> <span class="mi">150</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Parameter: Dimensi vektor = </span><span class="si">{</span><span class="n">embedding_dim</span><span class="si">}</span><span class="s2">, Arsitektur = CBOW&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gensim akan menampilkan log proses training di bawah ini:&quot;</span><span class="p">)</span>
 
@@ -442,9 +481,9 @@ Berikut adalah contoh 1 abstrak yang sudah diubah menjadi daftar token:
     <span class="n">sentences</span><span class="o">=</span><span class="n">corpus</span><span class="p">,</span>
     <span class="n">vector_size</span><span class="o">=</span><span class="n">embedding_dim</span><span class="p">,</span>
     <span class="n">window</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
-    <span class="n">min_count</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="c1"># Mengabaikan kata yang muncul kurang dari 2 kali</span>
-    <span class="n">sg</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>        <span class="c1"># sg=0 untuk arsitektur CBOW</span>
-    <span class="n">workers</span><span class="o">=</span><span class="mi">4</span>    <span class="c1"># Memanfaatkan beberapa core CPU</span>
+    <span class="n">min_count</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">sg</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">workers</span><span class="o">=</span><span class="mi">4</span>
 <span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Pelatihan model selesai!&quot;</span><span class="p">)</span>
@@ -453,27 +492,62 @@ Berikut adalah contoh 1 abstrak yang sudah diubah menjadi daftar token:
 <span class="n">vocab_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">model_cbow</span><span class="o">.</span><span class="n">wv</span><span class="o">.</span><span class="n">index_to_key</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Model berhasil mempelajari </span><span class="si">{</span><span class="n">vocab_size</span><span class="si">}</span><span class="s2"> kata unik.&quot;</span><span class="p">)</span>
 
-<span class="c1"># Melihat kata-kata yang paling mirip secara semantik</span>
-<span class="c1"># Ini membuktikan model sudah belajar konteks dari data abstrak manajemen</span>
+<span class="c1"># Melihat kata-kata yang paling mirip secara semantik dengan kata tertentu</span>
+<span class="c1"># Ini membuktikan model sudah belajar konteks</span>
 <span class="k">try</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Contoh kata yang paling mirip dengan &#39;pengaruh&#39;:&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">model_cbow</span><span class="o">.</span><span class="n">wv</span><span class="o">.</span><span class="n">most_similar</span><span class="p">(</span><span class="s1">&#39;pengaruh&#39;</span><span class="p">,</span> <span class="n">topn</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Contoh kata yang paling mirip dengan &#39;polisi&#39;:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">model_cbow</span><span class="o">.</span><span class="n">wv</span><span class="o">.</span><span class="n">most_similar</span><span class="p">(</span><span class="s1">&#39;polisi&#39;</span><span class="p">,</span> <span class="n">topn</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
 
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Contoh kata yang paling mirip dengan &#39;kinerja&#39;:&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">model_cbow</span><span class="o">.</span><span class="n">wv</span><span class="o">.</span><span class="n">most_similar</span><span class="p">(</span><span class="s1">&#39;kinerja&#39;</span><span class="p">,</span> <span class="n">topn</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Contoh kata yang paling mirip dengan &#39;surabaya&#39;:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">model_cbow</span><span class="o">.</span><span class="n">wv</span><span class="o">.</span><span class="n">most_similar</span><span class="p">(</span><span class="s1">&#39;surabaya&#39;</span><span class="p">,</span> <span class="n">topn</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
 <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Kata </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2"> tidak ditemukan di vocabulary (mungkin karena jarang muncul).&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">50</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:26,668 : INFO : collecting all words and their counts
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:36,866 : INFO : collecting all words and their counts
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:26,669 : INFO : PROGRESS: at sentence #0, processed 0 words, keeping 0 word types
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:36,866 : INFO : PROGRESS: at sentence #0, processed 0 words, keeping 0 word types
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:26,680 : INFO : collected 6498 word types from a corpus of 148249 raw words and 1026 sentences
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:36,883 : INFO : collected 18096 word types from a corpus of 207077 raw words and 925 sentences
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:36,884 : INFO : Creating a fresh vocabulary
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:36,901 : INFO : Word2Vec lifecycle event {&#39;msg&#39;: &#39;effective_min_count=2 retains 10268 unique words (56.74% of original 18096, drops 7828)&#39;, &#39;datetime&#39;: &#39;2025-10-02T12:32:36.901184&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;prepare_vocab&#39;}
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:36,902 : INFO : Word2Vec lifecycle event {&#39;msg&#39;: &#39;effective_min_count=2 leaves 199249 word corpus (96.22% of original 207077, drops 7828)&#39;, &#39;datetime&#39;: &#39;2025-10-02T12:32:36.902187&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;prepare_vocab&#39;}
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:36,925 : INFO : deleting the raw counts dictionary of 18096 items
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:36,926 : INFO : sample=0.001 downsamples 16 most-common words
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:36,927 : INFO : Word2Vec lifecycle event {&#39;msg&#39;: &#39;downsampling leaves estimated 196640.93131086108 word corpus (98.7%% of prior 199249)&#39;, &#39;datetime&#39;: &#39;2025-10-02T12:32:36.927351&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;prepare_vocab&#39;}
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:36,965 : INFO : estimated required memory for 10268 words and 150 dimensions: 17455600 bytes
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:36,966 : INFO : resetting layer weights
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:36,971 : INFO : Word2Vec lifecycle event {&#39;update&#39;: False, &#39;trim_rule&#39;: &#39;None&#39;, &#39;datetime&#39;: &#39;2025-10-02T12:32:36.970795&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;build_vocab&#39;}
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:36,971 : INFO : Word2Vec lifecycle event {&#39;msg&#39;: &#39;training model with 4 workers on 10268 vocabulary and 150 features, using sg=0 hs=0 sample=0.001 negative=5 window=5 shrink_windows=True&#39;, &#39;datetime&#39;: &#39;2025-10-02T12:32:36.971786&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;train&#39;}
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:37,045 : INFO : EPOCH 0: training on 207077 raw words (196617 effective words) took 0.1s, 2757215 effective words/s
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- TAHAP 2: MELATIH MODEL WORD2VEC (CBOW) ---
@@ -481,68 +555,36 @@ Parameter: Dimensi vektor = 150, Arsitektur = CBOW
 Gensim akan menampilkan log proses training di bawah ini:
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:26,681 : INFO : Creating a fresh vocabulary
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:37,121 : INFO : EPOCH 1: training on 207077 raw words (196626 effective words) took 0.1s, 2689830 effective words/s
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:26,687 : INFO : Word2Vec lifecycle event {&#39;msg&#39;: &#39;effective_min_count=2 retains 3544 unique words (54.54% of original 6498, drops 2954)&#39;, &#39;datetime&#39;: &#39;2025-10-02T12:32:26.687514&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;prepare_vocab&#39;}
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:37,200 : INFO : EPOCH 2: training on 207077 raw words (196704 effective words) took 0.1s, 2586944 effective words/s
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:26,687 : INFO : Word2Vec lifecycle event {&#39;msg&#39;: &#39;effective_min_count=2 leaves 145295 word corpus (98.01% of original 148249, drops 2954)&#39;, &#39;datetime&#39;: &#39;2025-10-02T12:32:26.687870&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;prepare_vocab&#39;}
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:37,279 : INFO : EPOCH 3: training on 207077 raw words (196650 effective words) took 0.1s, 2570151 effective words/s
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:26,695 : INFO : deleting the raw counts dictionary of 6498 items
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:37,355 : INFO : EPOCH 4: training on 207077 raw words (196688 effective words) took 0.1s, 2628387 effective words/s
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:26,696 : INFO : sample=0.001 downsamples 67 most-common words
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:37,356 : INFO : Word2Vec lifecycle event {&#39;msg&#39;: &#39;training on 1035385 raw words (983285 effective words) took 0.4s, 2562360 effective words/s&#39;, &#39;datetime&#39;: &#39;2025-10-02T12:32:37.356221&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;train&#39;}
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:26,697 : INFO : Word2Vec lifecycle event {&#39;msg&#39;: &#39;downsampling leaves estimated 108970.73386089882 word corpus (75.0%% of prior 145295)&#39;, &#39;datetime&#39;: &#39;2025-10-02T12:32:26.697890&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;prepare_vocab&#39;}
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:26,710 : INFO : estimated required memory for 3544 words and 150 dimensions: 6024800 bytes
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:26,711 : INFO : resetting layer weights
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:26,714 : INFO : Word2Vec lifecycle event {&#39;update&#39;: False, &#39;trim_rule&#39;: &#39;None&#39;, &#39;datetime&#39;: &#39;2025-10-02T12:32:26.714906&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;build_vocab&#39;}
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:26,715 : INFO : Word2Vec lifecycle event {&#39;msg&#39;: &#39;training model with 4 workers on 3544 vocabulary and 150 features, using sg=0 hs=0 sample=0.001 negative=5 window=5 shrink_windows=True&#39;, &#39;datetime&#39;: &#39;2025-10-02T12:32:26.715350&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;train&#39;}
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:26,758 : INFO : EPOCH 0: training on 148249 raw words (108727 effective words) took 0.0s, 2675534 effective words/s
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:26,799 : INFO : EPOCH 1: training on 148249 raw words (108966 effective words) took 0.0s, 2832081 effective words/s
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:26,838 : INFO : EPOCH 2: training on 148249 raw words (109049 effective words) took 0.0s, 2925385 effective words/s
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:26,882 : INFO : EPOCH 3: training on 148249 raw words (108874 effective words) took 0.0s, 2620376 effective words/s
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:26,925 : INFO : EPOCH 4: training on 148249 raw words (108996 effective words) took 0.0s, 2657752 effective words/s
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:26,925 : INFO : Word2Vec lifecycle event {&#39;msg&#39;: &#39;training on 741245 raw words (544612 effective words) took 0.2s, 2583271 effective words/s&#39;, &#39;datetime&#39;: &#39;2025-10-02T12:32:26.925972&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;train&#39;}
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:26,926 : INFO : Word2Vec lifecycle event {&#39;params&#39;: &#39;Word2Vec&lt;vocab=3544, vector_size=150, alpha=0.025&gt;&#39;, &#39;datetime&#39;: &#39;2025-10-02T12:32:26.926944&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;created&#39;}
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:37,356 : INFO : Word2Vec lifecycle event {&#39;params&#39;: &#39;Word2Vec&lt;vocab=10268, vector_size=150, alpha=0.025&gt;&#39;, &#39;datetime&#39;: &#39;2025-10-02T12:32:37.356221&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;created&#39;}
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pelatihan model selesai!
 
 --- Melihat Hasil Pelatihan Model ---
-Model berhasil mempelajari 3544 kata unik.
+Model berhasil mempelajari 10268 kata unik.
 
-Contoh kata yang paling mirip dengan &#39;pengaruh&#39;:
-[(&#39;biologis&#39;, 0.9135837554931641), (&#39;bersamasama&#39;, 0.9006313681602478), (&#39;positif&#39;, 0.8992183208465576), (&#39;signifikan&#39;, 0.8908289074897766), (&#39;kunci&#39;, 0.8822717666625977)]
+Contoh kata yang paling mirip dengan &#39;polisi&#39;:
+[(&#39;tindak&#39;, 0.9989032745361328), (&#39;lidi&#39;, 0.9982090592384338), (&#39;titik&#39;, 0.9977859258651733), (&#39;ancam&#39;, 0.997760534286499), (&#39;jarak&#39;, 0.9977208971977234)]
 
-Contoh kata yang paling mirip dengan &#39;kinerja&#39;:
+Contoh kata yang paling mirip dengan &#39;surabaya&#39;:
+[(&#39;mojokerto&#39;, 0.9903279542922974), (&#39;pacet&#39;, 0.9821903705596924), (&#39;pn&#39;, 0.9778294563293457), (&#39;masyayikh&#39;, 0.9753422737121582), (&#39;jombang&#39;, 0.9747533798217773)]
 
-Kata &quot;Key &#39;kinerja&#39; not present in vocabulary&quot; tidak ditemukan di vocabulary (mungkin karena jarang muncul).
+==================================================
 </pre></div>
 </div>
 </div>
@@ -558,41 +600,38 @@ Kata &quot;Key &#39;kinerja&#39; not present in vocabulary&quot; tidak ditemukan
         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">num_features</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">word_vectors</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
-<span class="c1"># Mari kita ambil satu abstrak sebagai contoh</span>
-<span class="n">contoh_abstrak</span> <span class="o">=</span> <span class="n">corpus</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kita akan menganalisis abstrak pertama:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Isi abstrak (token): </span><span class="si">{</span><span class="n">contoh_abstrak</span><span class="p">[:</span><span class="mi">20</span><span class="p">]</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span> <span class="c1"># Tampilkan 20 token pertama</span>
+<span class="n">contoh_berita</span> <span class="o">=</span> <span class="n">corpus</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kita akan menganalisis berita pertama:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Isi berita (token): </span><span class="si">{</span><span class="n">contoh_berita</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-<span class="c1"># Melihat vektor dari beberapa kata pertama di abstrak tersebut</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Vektor untuk 3 kata pertama dalam abstrak:&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">contoh_abstrak</span><span class="p">[:</span><span class="mi">3</span><span class="p">]:</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Vektor untuk 3 kata pertama dalam berita:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">contoh_berita</span><span class="p">[:</span><span class="mi">3</span><span class="p">]):</span>
     <span class="k">if</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">model_cbow</span><span class="o">.</span><span class="n">wv</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  - Vektor kata &#39;</span><span class="si">{</span><span class="n">word</span><span class="si">}</span><span class="s2">&#39;: </span><span class="si">{</span><span class="n">model_cbow</span><span class="o">.</span><span class="n">wv</span><span class="p">[</span><span class="n">word</span><span class="p">][:</span><span class="mi">5</span><span class="p">]</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  - Vektor kata &#39;</span><span class="si">{</span><span class="n">word</span><span class="si">}</span><span class="s2">&#39;: </span><span class="si">{</span><span class="n">model_cbow</span><span class="o">.</span><span class="n">wv</span><span class="p">[</span><span class="n">word</span><span class="p">][:</span><span class="mi">5</span><span class="p">]</span><span class="si">}</span><span class="s2">... (ditampilkan 5 dimensi pertama)&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  - Kata &#39;</span><span class="si">{</span><span class="n">word</span><span class="si">}</span><span class="s2">&#39; tidak ada di vocabulary model.&quot;</span><span class="p">)</span>
 
-<span class="c1"># Menghitung dan menampilkan vektor akhir untuk abstrak tersebut</span>
-<span class="n">vektor_abstrak_contoh</span> <span class="o">=</span> <span class="n">create_document_vector</span><span class="p">(</span><span class="n">contoh_abstrak</span><span class="p">,</span> <span class="n">model_cbow</span><span class="p">,</span> <span class="n">embedding_dim</span><span class="p">)</span>
+<span class="n">vektor_berita_contoh</span> <span class="o">=</span> <span class="n">create_document_vector</span><span class="p">(</span><span class="n">contoh_berita</span><span class="p">,</span> <span class="n">model_cbow</span><span class="p">,</span> <span class="n">embedding_dim</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hasil vektor dokumen (setelah dirata-ratakan):&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">vektor_abstrak_contoh</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Panjang vektor: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">vektor_abstrak_contoh</span><span class="p">)</span><span class="si">}</span><span class="s2"> dimensi.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">vektor_berita_contoh</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span><span class="si">}</span><span class="s2">... (ditampilkan 10 dimensi pertama)&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Panjang vektor: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">vektor_berita_contoh</span><span class="p">)</span><span class="si">}</span><span class="s2"> dimensi (sesuai yang kita tentukan).&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- TAHAP 3: MEMBEDAH PROSES AGREGRASI MENJADI VEKTOR DOKUMEN ---
-Kita akan menganalisis abstrak pertama:
-Isi abstrak (token): [&#39;abstrak&#39;, &#39;satiyah&#39;, &#39;pengaruh&#39;, &#39;faktorfaktor&#39;, &#39;latih&#39;, &#39;kembang&#39;, &#39;produktivitas&#39;, &#39;kerja&#39;, &#39;dinas&#39;, &#39;laut&#39;, &#39;ikan&#39;, &#39;bangkal&#39;, &#39;bawah&#39;, &#39;bimbing&#39;, &#39;drahjsanugrahini&#39;, &#39;irawatimm&#39;, &#39;helm&#39;, &#39;buyung&#39;, &#39;auliasstsemmt&#39;, &#39;upaya&#39;]...
+Kita akan menganalisis berita pertama:
+Isi berita (token): [&#39;sidoarjobangsaonlinecom&#39;, &#39;proses&#39;, &#39;cari&#39;, &#39;korban&#39;, &#39;santri&#39;, &#39;timbun&#39;, &#39;runtuh&#39;, &#39;musala&#39;, &#39;ambruk&#39;, &#39;pondok&#39;, &#39;pesantren&#39;, &#39;ponpes&#39;, &#39;alkhoziny&#39;, &#39;budur&#39;, &#39;sidoarjo&#39;, &#39;rabu&#39;, &#39;siang&#39;, &#39;santri&#39;, &#39;enggan&#39;, &#39;nama&#39;, &#39;aku&#39;, &#39;santri&#39;, &#39;cor&#39;, &#39;bangun&#39;, &#39;hukum&#39;, &#39;santri&#39;, &#39;ikut&#39;, &#39;giat&#39;, &#39;ambruk&#39;, &#39;pas&#39;, &#39;salat&#39;, &#39;jemaah&#39;, &#39;imam&#39;, &#39;selamat&#39;, &#39;temanteman&#39;, &#39;timpa&#39;, &#39;santri&#39;, &#39;rabu&#39;, &#39;tim&#39;, &#39;sar&#39;, &#39;gabung&#39;, &#39;jibaku&#39;, &#39;sisir&#39;, &#39;puingpuing&#39;, &#39;bangun&#39;, &#39;lantai&#39;, &#39;total&#39;, &#39;ratus&#39;, &#39;santri&#39;, &#39;hasil&#39;, &#39;evakuasi&#39;, &#39;cari&#39;, &#39;musibah&#39;, &#39;milu&#39;, &#39;selip&#39;, &#39;kisah&#39;, &#39;hari&#39;, &#39;santri&#39;, &#39;pondok&#39;, &#39;salah&#39;, &#39;satu&#39;, &#39;biasa&#39;, &#39;beri&#39;, &#39;hukum&#39;, &#39;ikut&#39;, &#39;giat&#39;, &#39;pesantren&#39;, &#39;hukum&#39;, &#39;bantu&#39;, &#39;cor&#39;, &#39;bangun&#39;, &#39;santri&#39;, &#39;tahu&#39;, &#39;bolos&#39;, &#39;hukum&#39;, &#39;bantu&#39;, &#39;ngecor&#39;, &#39;tukang&#39;, &#39;santri&#39;, &#39;wajib&#39;, &#39;suruh&#39;, &#39;bantu&#39;, &#39;kena&#39;, &#39;hukum&#39;, &#39;santri&#39;, &#39;enam&#39;, &#39;mondok&#39;, &#39;untung&#39;, &#39;musala&#39;, &#39;ambruk&#39;, &#39;lokasi&#39;, &#39;pondok&#39;, &#39;pondok&#39;, &#39;musala&#39;, &#39;ambruk&#39;, &#39;ratus&#39;, &#39;santri&#39;, &#39;salat&#39;, &#39;asar&#39;, &#39;timpa&#39;, &#39;runtuh&#39;, &#39;cerita&#39;, &#39;ungkap&#39;, &#39;abdul&#39;, &#39;keluarga&#39;, &#39;salah&#39;, &#39;korban&#39;, &#39;keponakan&#39;, &#39;asal&#39;, &#39;madura&#39;, &#39;santri&#39;, &#39;bantu&#39;, &#39;cor&#39;, &#39;musala&#39;, &#39;runtuh&#39;, &#39;ngecor&#39;, &#39;jatuh&#39;, &#39;luka&#39;, &#39;wajah&#39;, &#39;gigi&#39;, &#39;copot&#39;, &#39;pungkas&#39;, &#39;cat&#39;]
 
-Vektor untuk 3 kata pertama dalam abstrak:
-  - Vektor kata &#39;abstrak&#39;: [ 0.28346032  0.14418076  0.01094252  0.28875625 -0.3687762 ]...
-  - Kata &#39;satiyah&#39; tidak ada di vocabulary model.
-  - Vektor kata &#39;pengaruh&#39;: [ 0.17975879  0.29121238  0.49581945  0.348861   -0.63209724]...
+Vektor untuk 3 kata pertama dalam berita:
+  - Vektor kata &#39;sidoarjobangsaonlinecom&#39;: [ 0.02980907 -0.03121699 -0.03974414 -0.01802657 -0.00259594]... (ditampilkan 5 dimensi pertama)
+  - Vektor kata &#39;proses&#39;: [ 0.7802639  -0.36440438 -0.7635247  -0.05059719  0.08312488]... (ditampilkan 5 dimensi pertama)
+  - Vektor kata &#39;cari&#39;: [ 0.47452506 -0.30249298 -0.5527339  -0.08228288 -0.02844442]... (ditampilkan 5 dimensi pertama)
 
 Hasil vektor dokumen (setelah dirata-ratakan):
-[ 0.06769532 -0.04432754  0.05343329 -0.08656652 -0.387236   -0.26817152
-  0.05859835  0.17314105 -0.31718475 -0.01902748]...
-Panjang vektor: 150 dimensi.
+[ 0.18443188 -0.13040741 -0.22675867 -0.22379631 -0.09249733 -0.46676993
+  0.091708    0.2937932   0.06883533  0.3387569 ]... (ditampilkan 10 dimensi pertama)
+Panjang vektor: 150 dimensi (sesuai yang kita tentukan).
 </pre></div>
 </div>
 </div>
@@ -603,17 +642,17 @@ Panjang vektor: 150 dimensi.
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- TAHAP 4: MEMBUAT DATAFRAME AKHIR ---&quot;</span><span class="p">)</span>
 <span class="n">doc_vectors</span> <span class="o">=</span> <span class="p">[</span><span class="n">create_document_vector</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">model_cbow</span><span class="p">,</span> <span class="n">embedding_dim</span><span class="p">)</span> <span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">corpus</span><span class="p">]</span>
 <span class="n">cbow_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">doc_vectors</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dim_</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">embedding_dim</span><span class="p">)])</span>
-<span class="c1"># Menambahkan kembali kolom abstrak_id agar sesuai dengan file TF-IDF</span>
-<span class="n">cbow_df</span><span class="p">[</span><span class="s1">&#39;abstrak_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;abstrak_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span> 
+<span class="n">cbow_df</span><span class="p">[</span><span class="s1">&#39;kategori&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;kategori&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Proses pembuatan DataFrame selesai.&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Berikut adalah contoh hasil akhirnya:&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">cbow_df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
 
-<span class="c1"># Menyimpan hasil ke file CSV</span>
-<span class="n">output_file_cbow</span> <span class="o">=</span> <span class="s2">&quot;hasil_cbow_pta_manajemen.csv&quot;</span>
+<span class="c1"># Simpan ke file CSV</span>
+<span class="n">output_file_cbow</span> <span class="o">=</span> <span class="s2">&quot;hasil_cbow_berita.csv&quot;</span>
 <span class="n">cbow_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">output_file_cbow</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🎉 Hasil CBOW berhasil disimpan ke file: </span><span class="si">{</span><span class="n">output_file_cbow</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hasil CBOW berhasil disimpan ke file: </span><span class="si">{</span><span class="n">output_file_cbow</span><span class="si">}</span><span class="s2"> 🚀&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -624,37 +663,29 @@ Panjang vektor: 150 dimensi.
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Proses pembuatan DataFrame selesai.
 Berikut adalah contoh hasil akhirnya:
       dim_1     dim_2     dim_3     dim_4     dim_5     dim_6     dim_7  \
-0  0.067695 -0.044328  0.053433 -0.086567 -0.387236 -0.268172  0.058598   
-1  0.046463  0.280637 -0.216232 -0.408439 -0.261198 -0.422715  0.035751   
-2  0.101805  0.149945 -0.206114 -0.186550 -0.284738 -0.276972  0.105108   
-3 -0.072720  0.200679  0.167987 -0.118620 -0.532630 -0.225890 -0.088351   
-4 -0.006283  0.188430 -0.031824 -0.133664 -0.423225 -0.256021 -0.024247   
+0  0.184432 -0.130407 -0.226759 -0.223796 -0.092497 -0.466770  0.091708   
+1  0.359440 -0.198136 -0.334858 -0.084738  0.015504 -0.325153  0.091467   
+2  0.204489 -0.171105 -0.175681 -0.181314 -0.023716 -0.506683  0.095250   
+3  0.365563 -0.214273 -0.374315 -0.050436  0.015612 -0.232707  0.070542   
+4  0.302561 -0.178059 -0.345705 -0.107756 -0.022182 -0.291324  0.085343   
 
       dim_8     dim_9    dim_10  ...   dim_142   dim_143   dim_144   dim_145  \
-0  0.173141 -0.317185 -0.019027  ... -0.142729  0.201854  0.094275  0.349103   
-1  0.325217 -0.300431 -0.158340  ... -0.160526  0.000128  0.497575  0.249696   
-2  0.335723 -0.243319 -0.094611  ... -0.204213  0.065734  0.297464  0.258103   
-3  0.078224 -0.403185 -0.214294  ... -0.123566  0.141172  0.088686  0.367903   
-4  0.278390 -0.322442 -0.093611  ... -0.163226  0.029379  0.255050  0.331947   
+0  0.293793  0.068835  0.338757  ...  0.254220  0.394535  0.190542  0.459511   
+1  0.074413  0.054860  0.291321  ...  0.156937  0.255666  0.091898  0.312890   
+2  0.145890 -0.017622  0.346843  ...  0.336972  0.370152  0.226407  0.459724   
+3  0.144399  0.102754  0.221568  ...  0.040130  0.182412  0.103319  0.290043   
+4  0.141308  0.095995  0.257382  ...  0.129177  0.265656  0.110801  0.309930   
 
-    dim_146   dim_147   dim_148   dim_149   dim_150  \
-0  0.023533 -0.370044 -0.224567  0.722067 -0.281667   
-1  0.111877 -0.260846 -0.244413  0.511308 -0.242502   
-2  0.059335 -0.167464 -0.119483  0.407173 -0.228469   
-3  0.168165 -0.293299 -0.533688  0.848111 -0.513757   
-4  0.046486 -0.273885 -0.278823  0.661443 -0.473432   
-
-                                          abstrak_id  
-0  ABSTRAK\r\nSatiyah, Pengaruh Faktor-faktor Pel...  
-1  Tujuan penelitian ini adalah untuk mengetahui ...  
-2  Aplikasi nyata pemanfaatan teknologi informasi...  
-3  Abstrak\r\nPenelitian ini menggunakan metode k...  
-4  Abstrak\r\n\r\nAththaariq, Pengaruh Kompetensi...  
+    dim_146   dim_147   dim_148   dim_149   dim_150  kategori  
+0  0.101505 -0.479197 -0.158688  0.192929 -0.245318     Jatim  
+1  0.108711 -0.370284 -0.185734  0.141322 -0.254892     Jatim  
+2  0.025473 -0.517250 -0.223907  0.215368 -0.332679     Jatim  
+3  0.171146 -0.266477 -0.161737  0.120314 -0.204779     Jatim  
+4  0.131181 -0.341418 -0.180369  0.125743 -0.219855     Jatim  
 
 [5 rows x 151 columns]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>🎉 Hasil CBOW berhasil disimpan ke file: hasil_cbow_pta_manajemen.csv
+
+Hasil CBOW berhasil disimpan ke file: hasil_cbow_berita.csv 🚀
 </pre></div>
 </div>
 </div>
@@ -692,13 +723,22 @@ Berikut adalah contoh hasil akhirnya:
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="cbow_beritacopy.html"
+       href="ekstraksi_fitur_tfidf_pta_manajemen.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">CBOW Berita</p>
+        <p class="prev-next-title">Ekstraksi fitur TFID PTA Manajemen</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="cbow_PTA_manajemen.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">CBOW PTA Manajemen</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>

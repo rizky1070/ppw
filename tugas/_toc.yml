@@ -13,7 +13,7 @@ chapters:
   - file: preprocessing_berita
   - file: ekstraksi_fitur_tfidf_berita
   - file: ekstraksi_fitur_tfidf_pta_manajemen
-  - file: cbow_berita
+  - file: cbow_beritacopy
   - file: cbow_PTA_manajemen
 
 
