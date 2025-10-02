@@ -9,5 +9,11 @@ chapters:
   - file: tugas2_1
   - file: tugas2_2
   - file: tugas2_3
-  - file: tugas3_1
+  - file: tugas3_1_copy2
+  - file: preprocessing_berita
+  - file: ekstraksi_fitur_tfidf_berita
+  - file: ekstraksi_fitur_tfidf_pta_manajemen
+  - file: cbow_berita
+  - file: cbow_PTA_manajemen
+
 
