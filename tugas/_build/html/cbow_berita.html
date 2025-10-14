@@ -185,15 +185,17 @@
 <li class="toctree-l1"><a class="reference internal" href="crawling.html">Crawling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas2_1.html">Crawling PTA</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas2_2.html">Crawling Link Dalam Page</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas2_3.html">Crawling Berita</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas3_1_copy2.html">Preprocessing Prodi Manajemen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_3_crawling_berita.html">Crawling Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_3_crawlingPTA_manajemen.html">Crawling PTA Manajemen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas3_1_preprocessing_berita.html">Preprocessing berita</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="preprocessing_berita.html">Preprocessing berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas3_1_preprocessing_manajemen.html">Preprocessing Prodi Manajemen</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="ekstraksi_fitur_tfidf_berita.html">Ekstraksi fitur TFID berita</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ekstraksi_fitur_tfidf_pta_manajemen.html">Ekstraksi fitur TFID PTA Manajemen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cbow_beritacopy.html">CBOW Berita</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cbow_PTA_manajemen.html">CBOW PTA Manajemen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas4_1_ekstraksi_fitur_tfidf_berita.html">Ekstraksi fitur TFID berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas4_1_ekstraksi_fitur_tfidf_pta_manajemen.html">Ekstraksi fitur TFID PTA Manajemen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas4_1_cbow_beritacopy.html">CBOW Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas4_1_cbow_PTA_manajemen.html">CBOW PTA Manajemen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas6_LDA_klasifikasi_berita.html">LDA Klasifikasi Berita</a></li>
 </ul>
 
     </div>
@@ -461,7 +463,7 @@ Requirement already satisfied: six&gt;=1.5 in c:\laragon\bin\python\python-3.10\
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Proses persiapan corpus selesai.
 Berikut adalah contoh 1 dokumen (berita) yang sudah diubah menjadi daftar token:
-[&#39;sidoarjobangsaonlinecom&#39;, &#39;proses&#39;, &#39;cari&#39;, &#39;korban&#39;, &#39;santri&#39;, &#39;timbun&#39;, &#39;runtuh&#39;, &#39;musala&#39;, &#39;ambruk&#39;, &#39;pondok&#39;, &#39;pesantren&#39;, &#39;ponpes&#39;, &#39;alkhoziny&#39;, &#39;budur&#39;, &#39;sidoarjo&#39;, &#39;rabu&#39;, &#39;siang&#39;, &#39;santri&#39;, &#39;enggan&#39;, &#39;nama&#39;, &#39;aku&#39;, &#39;santri&#39;, &#39;cor&#39;, &#39;bangun&#39;, &#39;hukum&#39;, &#39;santri&#39;, &#39;ikut&#39;, &#39;giat&#39;, &#39;ambruk&#39;, &#39;pas&#39;, &#39;salat&#39;, &#39;jemaah&#39;, &#39;imam&#39;, &#39;selamat&#39;, &#39;temanteman&#39;, &#39;timpa&#39;, &#39;santri&#39;, &#39;rabu&#39;, &#39;tim&#39;, &#39;sar&#39;, &#39;gabung&#39;, &#39;jibaku&#39;, &#39;sisir&#39;, &#39;puingpuing&#39;, &#39;bangun&#39;, &#39;lantai&#39;, &#39;total&#39;, &#39;ratus&#39;, &#39;santri&#39;, &#39;hasil&#39;, &#39;evakuasi&#39;, &#39;cari&#39;, &#39;musibah&#39;, &#39;milu&#39;, &#39;selip&#39;, &#39;kisah&#39;, &#39;hari&#39;, &#39;santri&#39;, &#39;pondok&#39;, &#39;salah&#39;, &#39;satu&#39;, &#39;biasa&#39;, &#39;beri&#39;, &#39;hukum&#39;, &#39;ikut&#39;, &#39;giat&#39;, &#39;pesantren&#39;, &#39;hukum&#39;, &#39;bantu&#39;, &#39;cor&#39;, &#39;bangun&#39;, &#39;santri&#39;, &#39;tahu&#39;, &#39;bolos&#39;, &#39;hukum&#39;, &#39;bantu&#39;, &#39;ngecor&#39;, &#39;tukang&#39;, &#39;santri&#39;, &#39;wajib&#39;, &#39;suruh&#39;, &#39;bantu&#39;, &#39;kena&#39;, &#39;hukum&#39;, &#39;santri&#39;, &#39;enam&#39;, &#39;mondok&#39;, &#39;untung&#39;, &#39;musala&#39;, &#39;ambruk&#39;, &#39;lokasi&#39;, &#39;pondok&#39;, &#39;pondok&#39;, &#39;musala&#39;, &#39;ambruk&#39;, &#39;ratus&#39;, &#39;santri&#39;, &#39;salat&#39;, &#39;asar&#39;, &#39;timpa&#39;, &#39;runtuh&#39;, &#39;cerita&#39;, &#39;ungkap&#39;, &#39;abdul&#39;, &#39;keluarga&#39;, &#39;salah&#39;, &#39;korban&#39;, &#39;keponakan&#39;, &#39;asal&#39;, &#39;madura&#39;, &#39;santri&#39;, &#39;bantu&#39;, &#39;cor&#39;, &#39;musala&#39;, &#39;runtuh&#39;, &#39;ngecor&#39;, &#39;jatuh&#39;, &#39;luka&#39;, &#39;wajah&#39;, &#39;gigi&#39;, &#39;copot&#39;, &#39;pungkas&#39;, &#39;cat&#39;]
+[&#39;kejar&#39;, &#39;tanjung&#39;, &#39;perak&#39;, &#39;surabaya&#39;, &#39;geledah&#39;, &#39;kantor&#39;, &#39;pt&#39;, &#39;pelindo&#39;, &#39;regional&#39;, &#39;surabaya&#39;, &#39;duga&#39;, &#39;kait&#39;, &#39;korupsi&#39;, &#39;kolam&#39;, &#39;labuh&#39;, &#39;kepala&#39;, &#39;kejar&#39;, &#39;tanjung&#39;, &#39;perak&#39;, &#39;ricky&#39;, &#39;setiawan&#39;, &#39;anas&#39;, &#39;geledah&#39;, &#39;kamis&#39;, &#39;wib&#39;, &#39;tim&#39;, &#39;sidik&#39;, &#39;kejar&#39;, &#39;tanjung&#39;, &#39;perak&#39;, &#39;damping&#39;, &#39;tim&#39;, &#39;amc&#39;, &#39;asintel&#39;, &#39;kejat&#39;, &#39;jatim&#39;, &#39;dasar&#39;, &#39;tetap&#39;, &#39;pn&#39;, &#39;tipikor&#39;, &#39;surabaya&#39;, &#39;nomor&#39;, &#39;nomor&#39;, &#39;penpidsustpkgldpn&#39;, &#39;sby&#39;, &#39;tanggal&#39;, &#39;oktober&#39;, &#39;damping&#39;, &#39;tim&#39;, &#39;amc&#39;, &#39;asintel&#39;, &#39;kejat&#39;, &#39;jatim&#39;, &#39;geledah&#39;, &#39;kantor&#39;, &#39;pt&#39;, &#39;pelindo&#39;, &#39;sub&#39;, &#39;regional&#39;, &#39;surabaya&#39;, &#39;ricky&#39;, &#39;terang&#39;, &#39;kamis&#39;, &#39;geledah&#39;, &#39;kantor&#39;, &#39;pt&#39;, &#39;pelindo&#39;, &#39;sub&#39;, &#39;regional&#39;, &#39;surabaya&#39;, &#39;ricky&#39;, &#39;sidik&#39;, &#39;pidsus&#39;, &#39;kejar&#39;, &#39;tanjung&#39;, &#39;perak&#39;, &#39;geledah&#39;, &#39;lokasi&#39;, &#39;tepat&#39;, &#39;kantor&#39;, &#39;pt&#39;, &#39;alur&#39;, &#39;layar&#39;, &#39;barat&#39;, &#39;surabaya&#39;, &#39;apbs&#39;, &#39;dasar&#39;, &#39;tetap&#39;, &#39;geledah&#39;, &#39;pn&#39;, &#39;tipikor&#39;, &#39;surabaya&#39;, &#39;no&#39;, &#39;nomor&#39;, &#39;penpidsustpkgldpn&#39;, &#39;sby&#39;, &#39;tanggal&#39;, &#39;oktober&#39;, &#39;geledah&#39;, &#39;kantor&#39;, &#39;pt&#39;, &#39;alur&#39;, &#39;layar&#39;, &#39;barat&#39;, &#39;surabaya&#39;, &#39;apbs&#39;, &#39;terang&#39;, &#39;geledah&#39;, &#39;personel&#39;, &#39;jaksa&#39;, &#39;kejar&#39;, &#39;tanjung&#39;, &#39;perak&#39;, &#39;pidsus&#39;, &#39;kejat&#39;, &#39;jatim&#39;, &#39;aman&#39;, &#39;tni&#39;, &#39;geledah&#39;, &#39;orang&#39;, &#39;jaksa&#39;, &#39;sidik&#39;, &#39;orang&#39;, &#39;personil&#39;, &#39;amc&#39;, &#39;kejat&#39;, &#39;jatim&#39;, &#39;orang&#39;, &#39;personil&#39;, &#39;pam&#39;, &#39;tni&#39;, &#39;imbuh&#39;, &#39;ricky&#39;, &#39;geledah&#39;, &#39;kait&#39;, &#39;sidi&#39;, &#39;perkara&#39;, &#39;duga&#39;, &#39;tindak&#39;, &#39;pidana&#39;, &#39;korupsi&#39;, &#39;pelihara&#39;, &#39;usaha&#39;, &#39;kolam&#39;, &#39;labuh&#39;, &#39;tanjung&#39;, &#39;perak&#39;, &#39;pt&#39;, &#39;pelindo&#39;, &#39;sub&#39;, &#39;reg&#39;, &#39;bersamasama&#39;, &#39;pt&#39;, &#39;apbs&#39;, &#39;turut&#39;, &#39;duga&#39;, &#39;tipikor&#39;, &#39;turut&#39;, &#39;duga&#39;, &#39;tipikor&#39;, &#39;pt&#39;, &#39;apbs&#39;, &#39;pelindo&#39;, &#39;sub&#39;, &#39;regional&#39;, &#39;capai&#39;, &#39;ratus&#39;, &#39;miliar&#39;, &#39;rupiah&#39;, &#39;nilai&#39;, &#39;giat&#39;, &#39;rp&#39;, &#39;miliar&#39;, &#39;ricky&#39;, &#39;geledah&#39;, &#39;kumpul&#39;, &#39;bukti&#39;, &#39;tambah&#39;, &#39;kait&#39;, &#39;duga&#39;, &#39;tipikor&#39;, &#39;giat&#39;, &#39;eru&#39;, &#39;kolam&#39;, &#39;labuh&#39;, &#39;labuh&#39;, &#39;tanjung&#39;, &#39;perak&#39;, &#39;geledah&#39;, &#39;lokasi&#39;, &#39;sidik&#39;, &#39;laksana&#39;, &#39;giat&#39;, &#39;sita&#39;, &#39;kait&#39;, &#39;buktibukti&#39;, &#39;hubung&#39;, &#39;giat&#39;, &#39;pelihara&#39;, &#39;usaha&#39;, &#39;kolam&#39;, &#39;labuh&#39;, &#39;tanjung&#39;, &#39;perak&#39;, &#39;laptop&#39;, &#39;dokumen&#39;, &#39;kait&#39;, &#39;kontrak&#39;, &#39;giat&#39;, &#39;rif&#39;]
 </pre></div>
 </div>
 </div>
@@ -510,43 +512,22 @@ Berikut adalah contoh 1 dokumen (berita) yang sudah diubah menjadi daftar token:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:31,773 : INFO : collecting all words and their counts
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-14 23:53:54,333 : INFO : collecting all words and their counts
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:31,773 : INFO : PROGRESS: at sentence #0, processed 0 words, keeping 0 word types
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-14 23:53:54,333 : INFO : PROGRESS: at sentence #0, processed 0 words, keeping 0 word types
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:31,790 : INFO : collected 18096 word types from a corpus of 207077 raw words and 925 sentences
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-14 23:53:54,408 : INFO : collected 41180 word types from a corpus of 763911 raw words and 3653 sentences
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:31,790 : INFO : Creating a fresh vocabulary
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-14 23:53:54,409 : INFO : Creating a fresh vocabulary
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:31,808 : INFO : Word2Vec lifecycle event {&#39;msg&#39;: &#39;effective_min_count=2 retains 10268 unique words (56.74% of original 18096, drops 7828)&#39;, &#39;datetime&#39;: &#39;2025-10-02T12:32:31.808321&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;prepare_vocab&#39;}
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-14 23:53:54,458 : INFO : Word2Vec lifecycle event {&#39;msg&#39;: &#39;effective_min_count=2 retains 21810 unique words (52.96% of original 41180, drops 19370)&#39;, &#39;datetime&#39;: &#39;2025-10-14T23:53:54.458548&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;prepare_vocab&#39;}
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:31,809 : INFO : Word2Vec lifecycle event {&#39;msg&#39;: &#39;effective_min_count=2 leaves 199249 word corpus (96.22% of original 207077, drops 7828)&#39;, &#39;datetime&#39;: &#39;2025-10-02T12:32:31.809308&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;prepare_vocab&#39;}
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:31,832 : INFO : deleting the raw counts dictionary of 18096 items
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:31,833 : INFO : sample=0.001 downsamples 16 most-common words
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:31,833 : INFO : Word2Vec lifecycle event {&#39;msg&#39;: &#39;downsampling leaves estimated 196640.93131086108 word corpus (98.7%% of prior 199249)&#39;, &#39;datetime&#39;: &#39;2025-10-02T12:32:31.833957&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;prepare_vocab&#39;}
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:31,874 : INFO : estimated required memory for 10268 words and 150 dimensions: 17455600 bytes
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:31,875 : INFO : resetting layer weights
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:31,879 : INFO : Word2Vec lifecycle event {&#39;update&#39;: False, &#39;trim_rule&#39;: &#39;None&#39;, &#39;datetime&#39;: &#39;2025-10-02T12:32:31.879958&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;build_vocab&#39;}
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:31,881 : INFO : Word2Vec lifecycle event {&#39;msg&#39;: &#39;training model with 4 workers on 10268 vocabulary and 150 features, using sg=0 hs=0 sample=0.001 negative=5 window=5 shrink_windows=True&#39;, &#39;datetime&#39;: &#39;2025-10-02T12:32:31.881011&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;train&#39;}
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-14 23:53:54,459 : INFO : Word2Vec lifecycle event {&#39;msg&#39;: &#39;effective_min_count=2 leaves 744541 word corpus (97.46% of original 763911, drops 19370)&#39;, &#39;datetime&#39;: &#39;2025-10-14T23:53:54.459583&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;prepare_vocab&#39;}
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- TAHAP 2: MELATIH MODEL WORD2VEC (CBOW) ---
@@ -554,37 +535,58 @@ Parameter: Dimensi vektor = 150, Arsitektur = CBOW
 Gensim akan menampilkan log proses training di bawah ini:
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:31,959 : INFO : EPOCH 0: training on 207077 raw words (196692 effective words) took 0.1s, 2593198 effective words/s
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-14 23:53:54,513 : INFO : deleting the raw counts dictionary of 41180 items
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:32,029 : INFO : EPOCH 1: training on 207077 raw words (196647 effective words) took 0.1s, 2946062 effective words/s
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-14 23:53:54,515 : INFO : sample=0.001 downsamples 16 most-common words
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:32,100 : INFO : EPOCH 2: training on 207077 raw words (196656 effective words) took 0.1s, 2851467 effective words/s
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-14 23:53:54,515 : INFO : Word2Vec lifecycle event {&#39;msg&#39;: &#39;downsampling leaves estimated 736320.3421055112 word corpus (98.9%% of prior 744541)&#39;, &#39;datetime&#39;: &#39;2025-10-14T23:53:54.515193&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;prepare_vocab&#39;}
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:32,177 : INFO : EPOCH 3: training on 207077 raw words (196621 effective words) took 0.1s, 2667219 effective words/s
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-14 23:53:54,605 : INFO : estimated required memory for 21810 words and 150 dimensions: 37077000 bytes
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:32,251 : INFO : EPOCH 4: training on 207077 raw words (196591 effective words) took 0.1s, 2736935 effective words/s
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-14 23:53:54,605 : INFO : resetting layer weights
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:32,252 : INFO : Word2Vec lifecycle event {&#39;msg&#39;: &#39;training on 1035385 raw words (983207 effective words) took 0.4s, 2655361 effective words/s&#39;, &#39;datetime&#39;: &#39;2025-10-02T12:32:32.252090&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;train&#39;}
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-14 23:53:54,616 : INFO : Word2Vec lifecycle event {&#39;update&#39;: False, &#39;trim_rule&#39;: &#39;None&#39;, &#39;datetime&#39;: &#39;2025-10-14T23:53:54.616015&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;build_vocab&#39;}
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-02 12:32:32,252 : INFO : Word2Vec lifecycle event {&#39;params&#39;: &#39;Word2Vec&lt;vocab=10268, vector_size=150, alpha=0.025&gt;&#39;, &#39;datetime&#39;: &#39;2025-10-02T12:32:32.252090&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;created&#39;}
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-14 23:53:54,617 : INFO : Word2Vec lifecycle event {&#39;msg&#39;: &#39;training model with 4 workers on 21810 vocabulary and 150 features, using sg=0 hs=0 sample=0.001 negative=5 window=5 shrink_windows=True&#39;, &#39;datetime&#39;: &#39;2025-10-14T23:53:54.617015&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;train&#39;}
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-14 23:53:54,966 : INFO : EPOCH 0: training on 763911 raw words (736266 effective words) took 0.3s, 2135865 effective words/s
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-14 23:53:55,306 : INFO : EPOCH 1: training on 763911 raw words (736383 effective words) took 0.3s, 2199341 effective words/s
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-14 23:53:55,653 : INFO : EPOCH 2: training on 763911 raw words (736329 effective words) took 0.3s, 2138480 effective words/s
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-14 23:53:55,971 : INFO : EPOCH 3: training on 763911 raw words (736278 effective words) took 0.3s, 2337824 effective words/s
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-14 23:53:56,304 : INFO : EPOCH 4: training on 763911 raw words (736278 effective words) took 0.3s, 2231208 effective words/s
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-14 23:53:56,304 : INFO : Word2Vec lifecycle event {&#39;msg&#39;: &#39;training on 3819555 raw words (3681534 effective words) took 1.7s, 2182794 effective words/s&#39;, &#39;datetime&#39;: &#39;2025-10-14T23:53:56.304076&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;train&#39;}
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-14 23:53:56,305 : INFO : Word2Vec lifecycle event {&#39;params&#39;: &#39;Word2Vec&lt;vocab=21810, vector_size=150, alpha=0.025&gt;&#39;, &#39;datetime&#39;: &#39;2025-10-14T23:53:56.305055&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;created&#39;}
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pelatihan model selesai!
 
 --- Melihat Hasil Pelatihan Model ---
-Model berhasil mempelajari 10268 kata unik.
+Model berhasil mempelajari 21810 kata unik.
 
 Contoh kata yang paling mirip dengan &#39;polisi&#39;:
-[(&#39;titik&#39;, 0.9988711476325989), (&#39;lari&#39;, 0.9988683462142944), (&#39;lidi&#39;, 0.9985955357551575), (&#39;tindak&#39;, 0.9985811114311218), (&#39;siap&#39;, 0.998486340045929)]
+[(&#39;lidi&#39;, 0.9115546345710754), (&#39;polsek&#39;, 0.8939005732536316), (&#39;teror&#39;, 0.8825551271438599), (&#39;kriminalitas&#39;, 0.881109893321991), (&#39;aksi&#39;, 0.8776217699050903)]
 
 Contoh kata yang paling mirip dengan &#39;surabaya&#39;:
-[(&#39;mojokerto&#39;, 0.9891858100891113), (&#39;pacet&#39;, 0.9820556640625), (&#39;jombang&#39;, 0.9792026877403259), (&#39;pn&#39;, 0.9767053723335266), (&#39;gelar&#39;, 0.9748241901397705)]
+[(&#39;delta&#39;, 0.7801066040992737), (&#39;jabodetabek&#39;, 0.779139518737793), (&#39;malang&#39;, 0.7719025611877441), (&#39;unipa&#39;, 0.7708868980407715), (&#39;bandung&#39;, 0.7670459151268005)]
 
 ==================================================
 </pre></div>
@@ -623,16 +625,16 @@ Contoh kata yang paling mirip dengan &#39;surabaya&#39;:
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- TAHAP 3: MEMBEDAH PROSES AGREGRASI MENJADI VEKTOR DOKUMEN ---
 Kita akan menganalisis berita pertama:
-Isi berita (token): [&#39;sidoarjobangsaonlinecom&#39;, &#39;proses&#39;, &#39;cari&#39;, &#39;korban&#39;, &#39;santri&#39;, &#39;timbun&#39;, &#39;runtuh&#39;, &#39;musala&#39;, &#39;ambruk&#39;, &#39;pondok&#39;, &#39;pesantren&#39;, &#39;ponpes&#39;, &#39;alkhoziny&#39;, &#39;budur&#39;, &#39;sidoarjo&#39;, &#39;rabu&#39;, &#39;siang&#39;, &#39;santri&#39;, &#39;enggan&#39;, &#39;nama&#39;, &#39;aku&#39;, &#39;santri&#39;, &#39;cor&#39;, &#39;bangun&#39;, &#39;hukum&#39;, &#39;santri&#39;, &#39;ikut&#39;, &#39;giat&#39;, &#39;ambruk&#39;, &#39;pas&#39;, &#39;salat&#39;, &#39;jemaah&#39;, &#39;imam&#39;, &#39;selamat&#39;, &#39;temanteman&#39;, &#39;timpa&#39;, &#39;santri&#39;, &#39;rabu&#39;, &#39;tim&#39;, &#39;sar&#39;, &#39;gabung&#39;, &#39;jibaku&#39;, &#39;sisir&#39;, &#39;puingpuing&#39;, &#39;bangun&#39;, &#39;lantai&#39;, &#39;total&#39;, &#39;ratus&#39;, &#39;santri&#39;, &#39;hasil&#39;, &#39;evakuasi&#39;, &#39;cari&#39;, &#39;musibah&#39;, &#39;milu&#39;, &#39;selip&#39;, &#39;kisah&#39;, &#39;hari&#39;, &#39;santri&#39;, &#39;pondok&#39;, &#39;salah&#39;, &#39;satu&#39;, &#39;biasa&#39;, &#39;beri&#39;, &#39;hukum&#39;, &#39;ikut&#39;, &#39;giat&#39;, &#39;pesantren&#39;, &#39;hukum&#39;, &#39;bantu&#39;, &#39;cor&#39;, &#39;bangun&#39;, &#39;santri&#39;, &#39;tahu&#39;, &#39;bolos&#39;, &#39;hukum&#39;, &#39;bantu&#39;, &#39;ngecor&#39;, &#39;tukang&#39;, &#39;santri&#39;, &#39;wajib&#39;, &#39;suruh&#39;, &#39;bantu&#39;, &#39;kena&#39;, &#39;hukum&#39;, &#39;santri&#39;, &#39;enam&#39;, &#39;mondok&#39;, &#39;untung&#39;, &#39;musala&#39;, &#39;ambruk&#39;, &#39;lokasi&#39;, &#39;pondok&#39;, &#39;pondok&#39;, &#39;musala&#39;, &#39;ambruk&#39;, &#39;ratus&#39;, &#39;santri&#39;, &#39;salat&#39;, &#39;asar&#39;, &#39;timpa&#39;, &#39;runtuh&#39;, &#39;cerita&#39;, &#39;ungkap&#39;, &#39;abdul&#39;, &#39;keluarga&#39;, &#39;salah&#39;, &#39;korban&#39;, &#39;keponakan&#39;, &#39;asal&#39;, &#39;madura&#39;, &#39;santri&#39;, &#39;bantu&#39;, &#39;cor&#39;, &#39;musala&#39;, &#39;runtuh&#39;, &#39;ngecor&#39;, &#39;jatuh&#39;, &#39;luka&#39;, &#39;wajah&#39;, &#39;gigi&#39;, &#39;copot&#39;, &#39;pungkas&#39;, &#39;cat&#39;]
+Isi berita (token): [&#39;kejar&#39;, &#39;tanjung&#39;, &#39;perak&#39;, &#39;surabaya&#39;, &#39;geledah&#39;, &#39;kantor&#39;, &#39;pt&#39;, &#39;pelindo&#39;, &#39;regional&#39;, &#39;surabaya&#39;, &#39;duga&#39;, &#39;kait&#39;, &#39;korupsi&#39;, &#39;kolam&#39;, &#39;labuh&#39;, &#39;kepala&#39;, &#39;kejar&#39;, &#39;tanjung&#39;, &#39;perak&#39;, &#39;ricky&#39;, &#39;setiawan&#39;, &#39;anas&#39;, &#39;geledah&#39;, &#39;kamis&#39;, &#39;wib&#39;, &#39;tim&#39;, &#39;sidik&#39;, &#39;kejar&#39;, &#39;tanjung&#39;, &#39;perak&#39;, &#39;damping&#39;, &#39;tim&#39;, &#39;amc&#39;, &#39;asintel&#39;, &#39;kejat&#39;, &#39;jatim&#39;, &#39;dasar&#39;, &#39;tetap&#39;, &#39;pn&#39;, &#39;tipikor&#39;, &#39;surabaya&#39;, &#39;nomor&#39;, &#39;nomor&#39;, &#39;penpidsustpkgldpn&#39;, &#39;sby&#39;, &#39;tanggal&#39;, &#39;oktober&#39;, &#39;damping&#39;, &#39;tim&#39;, &#39;amc&#39;, &#39;asintel&#39;, &#39;kejat&#39;, &#39;jatim&#39;, &#39;geledah&#39;, &#39;kantor&#39;, &#39;pt&#39;, &#39;pelindo&#39;, &#39;sub&#39;, &#39;regional&#39;, &#39;surabaya&#39;, &#39;ricky&#39;, &#39;terang&#39;, &#39;kamis&#39;, &#39;geledah&#39;, &#39;kantor&#39;, &#39;pt&#39;, &#39;pelindo&#39;, &#39;sub&#39;, &#39;regional&#39;, &#39;surabaya&#39;, &#39;ricky&#39;, &#39;sidik&#39;, &#39;pidsus&#39;, &#39;kejar&#39;, &#39;tanjung&#39;, &#39;perak&#39;, &#39;geledah&#39;, &#39;lokasi&#39;, &#39;tepat&#39;, &#39;kantor&#39;, &#39;pt&#39;, &#39;alur&#39;, &#39;layar&#39;, &#39;barat&#39;, &#39;surabaya&#39;, &#39;apbs&#39;, &#39;dasar&#39;, &#39;tetap&#39;, &#39;geledah&#39;, &#39;pn&#39;, &#39;tipikor&#39;, &#39;surabaya&#39;, &#39;no&#39;, &#39;nomor&#39;, &#39;penpidsustpkgldpn&#39;, &#39;sby&#39;, &#39;tanggal&#39;, &#39;oktober&#39;, &#39;geledah&#39;, &#39;kantor&#39;, &#39;pt&#39;, &#39;alur&#39;, &#39;layar&#39;, &#39;barat&#39;, &#39;surabaya&#39;, &#39;apbs&#39;, &#39;terang&#39;, &#39;geledah&#39;, &#39;personel&#39;, &#39;jaksa&#39;, &#39;kejar&#39;, &#39;tanjung&#39;, &#39;perak&#39;, &#39;pidsus&#39;, &#39;kejat&#39;, &#39;jatim&#39;, &#39;aman&#39;, &#39;tni&#39;, &#39;geledah&#39;, &#39;orang&#39;, &#39;jaksa&#39;, &#39;sidik&#39;, &#39;orang&#39;, &#39;personil&#39;, &#39;amc&#39;, &#39;kejat&#39;, &#39;jatim&#39;, &#39;orang&#39;, &#39;personil&#39;, &#39;pam&#39;, &#39;tni&#39;, &#39;imbuh&#39;, &#39;ricky&#39;, &#39;geledah&#39;, &#39;kait&#39;, &#39;sidi&#39;, &#39;perkara&#39;, &#39;duga&#39;, &#39;tindak&#39;, &#39;pidana&#39;, &#39;korupsi&#39;, &#39;pelihara&#39;, &#39;usaha&#39;, &#39;kolam&#39;, &#39;labuh&#39;, &#39;tanjung&#39;, &#39;perak&#39;, &#39;pt&#39;, &#39;pelindo&#39;, &#39;sub&#39;, &#39;reg&#39;, &#39;bersamasama&#39;, &#39;pt&#39;, &#39;apbs&#39;, &#39;turut&#39;, &#39;duga&#39;, &#39;tipikor&#39;, &#39;turut&#39;, &#39;duga&#39;, &#39;tipikor&#39;, &#39;pt&#39;, &#39;apbs&#39;, &#39;pelindo&#39;, &#39;sub&#39;, &#39;regional&#39;, &#39;capai&#39;, &#39;ratus&#39;, &#39;miliar&#39;, &#39;rupiah&#39;, &#39;nilai&#39;, &#39;giat&#39;, &#39;rp&#39;, &#39;miliar&#39;, &#39;ricky&#39;, &#39;geledah&#39;, &#39;kumpul&#39;, &#39;bukti&#39;, &#39;tambah&#39;, &#39;kait&#39;, &#39;duga&#39;, &#39;tipikor&#39;, &#39;giat&#39;, &#39;eru&#39;, &#39;kolam&#39;, &#39;labuh&#39;, &#39;labuh&#39;, &#39;tanjung&#39;, &#39;perak&#39;, &#39;geledah&#39;, &#39;lokasi&#39;, &#39;sidik&#39;, &#39;laksana&#39;, &#39;giat&#39;, &#39;sita&#39;, &#39;kait&#39;, &#39;buktibukti&#39;, &#39;hubung&#39;, &#39;giat&#39;, &#39;pelihara&#39;, &#39;usaha&#39;, &#39;kolam&#39;, &#39;labuh&#39;, &#39;tanjung&#39;, &#39;perak&#39;, &#39;laptop&#39;, &#39;dokumen&#39;, &#39;kait&#39;, &#39;kontrak&#39;, &#39;giat&#39;, &#39;rif&#39;]
 
 Vektor untuk 3 kata pertama dalam berita:
-  - Vektor kata &#39;sidoarjobangsaonlinecom&#39;: [ 0.03785476 -0.0436485  -0.0434691  -0.00972187  0.00238219]... (ditampilkan 5 dimensi pertama)
-  - Vektor kata &#39;proses&#39;: [ 0.6667523  -0.31681824 -0.65380454 -0.05745626  0.04761466]... (ditampilkan 5 dimensi pertama)
-  - Vektor kata &#39;cari&#39;: [ 0.48526934 -0.31238997 -0.5177278  -0.0260294  -0.02986568]... (ditampilkan 5 dimensi pertama)
+  - Vektor kata &#39;kejar&#39;: [ 0.51675946 -0.33283007  0.274568   -0.32549474  0.35351753]... (ditampilkan 5 dimensi pertama)
+  - Vektor kata &#39;tanjung&#39;: [ 0.25301957 -0.16210492 -0.10637868 -0.21187839  0.17086367]... (ditampilkan 5 dimensi pertama)
+  - Vektor kata &#39;perak&#39;: [ 0.39186946 -0.2721213  -0.32375646 -0.33774903  0.15561172]... (ditampilkan 5 dimensi pertama)
 
 Hasil vektor dokumen (setelah dirata-ratakan):
-[ 0.16630566 -0.14117742 -0.22792976 -0.22779529 -0.07145969 -0.4285879
-  0.06861871  0.31868747  0.07371496  0.32367116]... (ditampilkan 10 dimensi pertama)
+[ 0.4380201  -0.16187593 -0.19534649 -0.0521937   0.13976218 -0.3901292
+ -0.1512115   0.11102608 -0.218171   -0.18749884]... (ditampilkan 10 dimensi pertama)
 Panjang vektor: 150 dimensi (sesuai yang kita tentukan).
 </pre></div>
 </div>
@@ -665,29 +667,30 @@ Panjang vektor: 150 dimensi (sesuai yang kita tentukan).
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Proses pembuatan DataFrame selesai.
 Berikut adalah contoh hasil akhirnya:
       dim_1     dim_2     dim_3     dim_4     dim_5     dim_6     dim_7  \
-0  0.166306 -0.141177 -0.227930 -0.227795 -0.071460 -0.428588  0.068619   
-1  0.330574 -0.218867 -0.290526 -0.055331  0.017838 -0.306534 -0.036477   
-2  0.178960 -0.198217 -0.162004 -0.183393 -0.011273 -0.485536  0.069287   
-3  0.344861 -0.233407 -0.336107 -0.005529  0.009276 -0.194878 -0.100889   
-4  0.267335 -0.182039 -0.309657 -0.107659 -0.021687 -0.274421 -0.002984   
+0  0.438020 -0.161876 -0.195346 -0.052194  0.139762 -0.390129 -0.151212   
+1  0.069503  0.225816  0.185473 -0.286824  0.324434  0.036875 -0.281033   
+2  0.236967  0.087976 -0.047654 -0.130805  0.215498 -0.033467 -0.125836   
+3  0.731102  0.350130  0.157877  0.125055  0.246853 -0.539647 -0.354538   
+4  0.707888  0.368734 -0.119725  0.230530  0.133962 -0.587151 -0.149708   
 
       dim_8     dim_9    dim_10  ...   dim_142   dim_143   dim_144   dim_145  \
-0  0.318687  0.073715  0.323671  ...  0.237946  0.397983  0.242776  0.458092   
-1  0.056313  0.011839  0.327127  ...  0.102578  0.241297  0.099424  0.351570   
-2  0.154445 -0.039686  0.350018  ...  0.264954  0.384728  0.238522  0.452493   
-3  0.104682  0.066548  0.253076  ...  0.012362  0.142236  0.113587  0.326920   
-4  0.151571  0.069121  0.282075  ...  0.107468  0.251988  0.142767  0.340209   
+0  0.111026 -0.218171 -0.187499  ...  0.166328  0.322377  0.064064  0.108699   
+1  0.052432  0.264397 -0.255303  ...  0.011608  0.369545  0.204102  0.214166   
+2  0.091652  0.092443 -0.373500  ...  0.167421  0.455787  0.188897  0.164895   
+3  0.114834 -0.252552  0.110371  ...  0.284590  0.481658  0.306009  0.235339   
+4  0.266235 -0.443882  0.112344  ...  0.251789  0.346488  0.350450  0.314575   
 
     dim_146   dim_147   dim_148   dim_149   dim_150  kategori  
-0  0.093994 -0.483571 -0.156926  0.235140 -0.288071     Jatim  
-1  0.127819 -0.367732 -0.158995  0.207906 -0.205743     Jatim  
-2  0.007649 -0.516471 -0.203164  0.252164 -0.343154     Jatim  
-3  0.220809 -0.253994 -0.133713  0.195982 -0.132000     Jatim  
-4  0.127356 -0.354545 -0.155280  0.187978 -0.210123     Jatim  
+0 -0.011104 -0.497604 -0.191195  0.268896 -0.046476     Jatim  
+1  0.193866 -0.551458  0.025746 -0.123761 -0.375164     Jatim  
+2  0.293812 -0.571373  0.021070  0.012219 -0.320381     Jatim  
+3 -0.337358 -0.588986  0.105485  0.365796 -0.384855     Jatim  
+4 -0.301916 -0.550596 -0.051118  0.398718 -0.153268     Jatim  
 
 [5 rows x 151 columns]
-
-Hasil CBOW berhasil disimpan ke file: hasil_cbow_berita.csv 🚀
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hasil CBOW berhasil disimpan ke file: hasil_cbow_berita.csv 🚀
 </pre></div>
 </div>
 </div>

@@ -61,8 +61,6 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'preprocessing_berita';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Ekstraksi fitur TFID berita" href="ekstraksi_fitur_tfidf_berita.html" />
-    <link rel="prev" title="Preprocessing Prodi Manajemen" href="tugas3_1_copy2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -125,6 +123,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -180,20 +180,22 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="pengantar.html">Pengantar Penambangan Website</a></li>
 <li class="toctree-l1"><a class="reference internal" href="crawling.html">Crawling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas2_1.html">Crawling PTA</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas2_2.html">Crawling Link Dalam Page</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas2_3.html">Crawling Berita</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas3_1_copy2.html">Preprocessing Prodi Manajemen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_3_crawling_berita.html">Crawling Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_3_crawlingPTA_manajemen.html">Crawling PTA Manajemen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas3_1_preprocessing_berita.html">Preprocessing berita</a></li>
 
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Preprocessing berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas3_1_preprocessing_manajemen.html">Preprocessing Prodi Manajemen</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="ekstraksi_fitur_tfidf_berita.html">Ekstraksi fitur TFID berita</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ekstraksi_fitur_tfidf_pta_manajemen.html">Ekstraksi fitur TFID PTA Manajemen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cbow_beritacopy.html">CBOW Berita</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cbow_PTA_manajemen.html">CBOW PTA Manajemen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas4_1_ekstraksi_fitur_tfidf_berita.html">Ekstraksi fitur TFID berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas4_1_ekstraksi_fitur_tfidf_pta_manajemen.html">Ekstraksi fitur TFID PTA Manajemen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas4_1_cbow_beritacopy.html">CBOW Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas4_1_cbow_PTA_manajemen.html">CBOW PTA Manajemen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas6_LDA_klasifikasi_berita.html">LDA Klasifikasi Berita</a></li>
 </ul>
 
     </div>
@@ -431,7 +433,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dataset shape: (925, 5)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dataset shape: (3653, 5)
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -462,43 +464,43 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>153055</td>
+      <td>153410</td>
       <td>Jatim</td>
-      <td>Ada Santri yang Diduga Dihukum untuk Cor Bangu...</td>
-      <td>SIDOARJO,BANGSAONLINE.com- Proses pencarian ko...</td>
-      <td>https://bangsaonline.com/berita/153055/ada-san...</td>
+      <td>Diduga Kasus Korupsi, Kejari Geledah Kantor Pe...</td>
+      <td>SURABAYA, BANGSAONLINE.com- Kejari Tanjung Per...</td>
+      <td>https://bangsaonline.com/berita/153410/diduga-...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>153054</td>
+      <td>153408</td>
       <td>Jatim</td>
-      <td>Warga Dringu Lapor Dugaan Penipuan Kavling, Po...</td>
-      <td>PROBOLINGGO, BANGSAONLINE.com- Polres Probolin...</td>
-      <td>https://bangsaonline.com/berita/153054/warga-d...</td>
+      <td>Pria asal Surabaya Meninggal Mendadak di Pasar...</td>
+      <td>KOTA PASURUAN,BANGSAONLINE.com- Suasana Pasar ...</td>
+      <td>https://bangsaonline.com/berita/153408/pria-as...</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>153053</td>
+      <td>153407</td>
       <td>Jatim</td>
-      <td>Hadiri Pengukuhan Pengurus Kormi Kota Kediri, ...</td>
-      <td>KOTA KEDIRI, BANGSAONLINE.com- Wakil Wali Kota...</td>
-      <td>https://bangsaonline.com/berita/153053/hadiri-...</td>
+      <td>Polres Tuban Kembalikan BB Motor hingga Handph...</td>
+      <td>TUBAN, BANGSAONLINE.com- Satreskrim Polres Tub...</td>
+      <td>https://bangsaonline.com/berita/153407/polres-...</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>153052</td>
+      <td>153406</td>
       <td>Jatim</td>
-      <td>Datang ke RS William Booth Perpanjang Rujukan ...</td>
-      <td>SURABAYA,BANGSAONLINE.com- Polsek Wonokromo  m...</td>
-      <td>https://bangsaonline.com/berita/153052/datang-...</td>
+      <td>TMMD ke-126 Sidoarjo Bangun Rumah Warga Guna W...</td>
+      <td>SIDOARJO,BANGSAONLINE.com- Program TNI Manungg...</td>
+      <td>https://bangsaonline.com/berita/153406/tmmd-ke...</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>153050</td>
+      <td>153405</td>
       <td>Jatim</td>
-      <td>Polwan Polresta Sidoarjo Layani Keluarga Korba...</td>
-      <td>SIDOARJO,BANGSAONLINE.com- Polwan Polresta Sid...</td>
-      <td>https://bangsaonline.com/berita/153050/polwan-...</td>
+      <td>Dana Transfer Dipangkas Pusat, Bupati Gresik S...</td>
+      <td>GRESIK,BANGSAONLINE.com- Bupati Gresik, Fandi ...</td>
+      <td>https://bangsaonline.com/berita/153405/dana-tr...</td>
     </tr>
     <tr>
       <th>...</th>
@@ -509,48 +511,48 @@ document.write(`
       <td>...</td>
     </tr>
     <tr>
-      <th>920</th>
-      <td>151945</td>
+      <th>3648</th>
+      <td>147840</td>
       <td>Komunitas dan Lingkungan</td>
-      <td>Kebun Binatang Surabaya Hadapi Tantangan Overp...</td>
-      <td>SURABAYA,BANGSAONLINE.com-Kebun Binatang Surab...</td>
-      <td>https://bangsaonline.com/berita/151945/kebun-b...</td>
+      <td>Ziarah ke Makam Wali Kota Surabaya Pertama, FJ...</td>
+      <td>SURABAYA, BANGSAONLINE.com- Hari ini Kota Sura...</td>
+      <td>https://bangsaonline.com/berita/147840/ziarah-...</td>
     </tr>
     <tr>
-      <th>921</th>
-      <td>151925</td>
+      <th>3649</th>
+      <td>147677</td>
       <td>Komunitas dan Lingkungan</td>
-      <td>Tradisi Turun-Temurun, Warga Krajan Pasuruan B...</td>
-      <td>PASURUAN, BANGSAONLINE.com– Suasana semarak me...</td>
-      <td>https://bangsaonline.com/berita/151925/tradisi...</td>
+      <td>Berdayakan Masyarakat Pesisir, SNNU Jatim Gand...</td>
+      <td>JEMBER, BANGSAONLINE.com- Serikat Nelayan Nahd...</td>
+      <td>https://bangsaonline.com/berita/147677/berdaya...</td>
     </tr>
     <tr>
-      <th>922</th>
-      <td>151902</td>
+      <th>3650</th>
+      <td>147627</td>
       <td>Komunitas dan Lingkungan</td>
-      <td>Pengusaha Asal Situbondo ini Proyeksi Bakal Ku...</td>
-      <td>SURABAYA,BANGSAONLINE.com- HRM. Khalilur R. Ab...</td>
-      <td>https://bangsaonline.com/berita/151902/pengusa...</td>
+      <td>Gandeng Pemdes Sidoraharjo Gresik, YLBH FT Bek...</td>
+      <td>GRESIK, BANGSAONLINE.com- Yayasan Lembaga Bant...</td>
+      <td>https://bangsaonline.com/berita/147627/gandeng...</td>
     </tr>
     <tr>
-      <th>923</th>
-      <td>151848</td>
+      <th>3651</th>
+      <td>147590</td>
       <td>Komunitas dan Lingkungan</td>
-      <td>Doakan Kota Batu Aman dan Damai, KKG PAI Kecam...</td>
-      <td>KOTA BATU, BANGSAONLINE.com- Kelompok Kerja Gu...</td>
-      <td>https://bangsaonline.com/berita/151848/doakan-...</td>
+      <td>Kader Asal Pamekasan ini Diusung Jadi Calon Ke...</td>
+      <td>PAMEKASAN, BANGSAONLINE.com- Kader dari Pameka...</td>
+      <td>https://bangsaonline.com/berita/147590/kader-a...</td>
     </tr>
     <tr>
-      <th>924</th>
-      <td>151816</td>
+      <th>3652</th>
+      <td>147548</td>
       <td>Komunitas dan Lingkungan</td>
-      <td>Marak Seruan Demo, PWI Tuban Imbau Masyarakat ...</td>
-      <td>TUBAN, BANGSAONLINE.com- Masyarakat Kabupaten ...</td>
-      <td>https://bangsaonline.com/berita/151816/marak-s...</td>
+      <td>Hadiri Pelantikan BPC Hipmi, Mas Adi Harap Buk...</td>
+      <td>KOTA PASURUAN, BANGSAONLINE.com- Wali Kota Pas...</td>
+      <td>https://bangsaonline.com/berita/147548/hadiri-...</td>
     </tr>
   </tbody>
 </table>
-<p>925 rows × 5 columns</p>
+<p>3653 rows × 5 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -563,17 +565,17 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dataset info:
 &lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 925 entries, 0 to 924
+RangeIndex: 3653 entries, 0 to 3652
 Data columns (total 5 columns):
  #   Column      Non-Null Count  Dtype 
 ---  ------      --------------  ----- 
- 0   id_berita   925 non-null    int64 
- 1   kategori    925 non-null    object
- 2   judul       925 non-null    object
- 3   isi_berita  925 non-null    object
- 4   link        925 non-null    object
+ 0   id_berita   3653 non-null   int64 
+ 1   kategori    3653 non-null   object
+ 2   judul       3653 non-null   object
+ 3   isi_berita  3653 non-null   object
+ 4   link        3653 non-null   object
 dtypes: int64(1), object(4)
-memory usage: 36.3+ KB
+memory usage: 142.8+ KB
 </pre></div>
 </div>
 </div>
@@ -589,18 +591,18 @@ memory usage: 36.3+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      SIDOARJO,BANGSAONLINE.com- Proses pencarian ko...
-1      PROBOLINGGO, BANGSAONLINE.com- Polres Probolin...
-2      KOTA KEDIRI, BANGSAONLINE.com- Wakil Wali Kota...
-3      SURABAYA,BANGSAONLINE.com- Polsek Wonokromo  m...
-4      SIDOARJO,BANGSAONLINE.com- Polwan Polresta Sid...
-                             ...                        
-920    SURABAYA,BANGSAONLINE.com-Kebun Binatang Surab...
-921    PASURUAN, BANGSAONLINE.com– Suasana semarak me...
-922    SURABAYA,BANGSAONLINE.com- HRM. Khalilur R. Ab...
-923    KOTA BATU, BANGSAONLINE.com- Kelompok Kerja Gu...
-924    TUBAN, BANGSAONLINE.com- Masyarakat Kabupaten ...
-Name: isi_berita, Length: 925, dtype: object
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0       SURABAYA, BANGSAONLINE.com- Kejari Tanjung Per...
+1       KOTA PASURUAN,BANGSAONLINE.com- Suasana Pasar ...
+2       TUBAN, BANGSAONLINE.com- Satreskrim Polres Tub...
+3       SIDOARJO,BANGSAONLINE.com- Program TNI Manungg...
+4       GRESIK,BANGSAONLINE.com- Bupati Gresik, Fandi ...
+                              ...                        
+3648    SURABAYA, BANGSAONLINE.com- Hari ini Kota Sura...
+3649    JEMBER, BANGSAONLINE.com- Serikat Nelayan Nahd...
+3650    GRESIK, BANGSAONLINE.com- Yayasan Lembaga Bant...
+3651    PAMEKASAN, BANGSAONLINE.com- Kader dari Pameka...
+3652    KOTA PASURUAN, BANGSAONLINE.com- Wali Kota Pas...
+Name: isi_berita, Length: 3653, dtype: object
 </pre></div>
 </div>
 </div>
@@ -627,9 +629,28 @@ Name: isi_berita, Length: 925, dtype: object
 
 <span class="c1"># Fungsi untuk membersihkan teks</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">clean_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
-    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="c1"># Ubah ke huruf kecil</span>
-    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[^\w\s]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span> <span class="c1"># Hapus tanda baca</span>
-    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\d+&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span> <span class="c1"># Hapus nomor</span>
+    <span class="c1"># Pastikan input adalah string</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+        
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="c1"># 1. Ubah ke huruf kecil</span>
+    
+    <span class="c1"># 2. Ganti karakter non-breaking space (U+00A0) dengan spasi biasa</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">u</span><span class="s1">&#39;</span><span class="se">\xa0</span><span class="s1">&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+    
+    <span class="c1"># 3. Hapus awalan kota dan sumber berita </span>
+    <span class="c1"># Pola: NAMA_KOTA,BANGSAONLINE.COM-</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^\w+\s*,\s*bangsaonline\.com[–-]?\s*&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+    
+    <span class="c1"># 4. Hapus semua karakter yang BUKAN huruf, angka, atau spasi</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[^\w\s]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+    
+    <span class="c1"># 5. Hapus semua angka</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\d+&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+    
+    <span class="c1"># 6. Ganti spasi ganda/lebih menjadi satu spasi &amp; hapus spasi di awal/akhir</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    
     <span class="k">return</span> <span class="n">text</span>
 
 <span class="c1"># Terapkan pembersihan ke kolom &#39;isi&#39;</span>
@@ -666,28 +687,28 @@ Name: isi_berita, Length: 925, dtype: object
   <tbody>
     <tr>
       <th>0</th>
-      <td>SIDOARJO,BANGSAONLINE.com- Proses pencarian ko...</td>
-      <td>sidoarjobangsaonlinecom proses pencarian korba...</td>
+      <td>SURABAYA, BANGSAONLINE.com- Kejari Tanjung Per...</td>
+      <td>kejari tanjung perak surabaya melakukan pengge...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>PROBOLINGGO, BANGSAONLINE.com- Polres Probolin...</td>
-      <td>probolinggo bangsaonlinecom polres probolinggo...</td>
+      <td>KOTA PASURUAN,BANGSAONLINE.com- Suasana Pasar ...</td>
+      <td>kota pasuruanbangsaonlinecom suasana pasar keb...</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>KOTA KEDIRI, BANGSAONLINE.com- Wakil Wali Kota...</td>
-      <td>kota kediri bangsaonlinecom wakil wali kota ke...</td>
+      <td>TUBAN, BANGSAONLINE.com- Satreskrim Polres Tub...</td>
+      <td>satreskrim polres tuban mengembalikan barang b...</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>SURABAYA,BANGSAONLINE.com- Polsek Wonokromo  m...</td>
-      <td>surabayabangsaonlinecom polsek wonokromo  mena...</td>
+      <td>SIDOARJO,BANGSAONLINE.com- Program TNI Manungg...</td>
+      <td>program tni manunggal membangun desa tmmd ke t...</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>SIDOARJO,BANGSAONLINE.com- Polwan Polresta Sid...</td>
-      <td>sidoarjobangsaonlinecom polwan polresta sidoar...</td>
+      <td>GRESIK,BANGSAONLINE.com- Bupati Gresik, Fandi ...</td>
+      <td>bupati gresik fandi akhmad yani menanggapi wac...</td>
     </tr>
   </tbody>
 </table>
@@ -769,28 +790,28 @@ Requirement already satisfied: colorama in c:\laragon\bin\python\python-3.10\lib
   <tbody>
     <tr>
       <th>0</th>
-      <td>sidoarjobangsaonlinecom proses pencarian korba...</td>
-      <td>[sidoarjobangsaonlinecom, proses, pencarian, k...</td>
+      <td>kejari tanjung perak surabaya melakukan pengge...</td>
+      <td>[kejari, tanjung, perak, surabaya, melakukan, ...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>probolinggo bangsaonlinecom polres probolinggo...</td>
-      <td>[probolinggo, bangsaonlinecom, polres, proboli...</td>
+      <td>kota pasuruanbangsaonlinecom suasana pasar keb...</td>
+      <td>[kota, pasuruanbangsaonlinecom, suasana, pasar...</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>kota kediri bangsaonlinecom wakil wali kota ke...</td>
-      <td>[kota, kediri, bangsaonlinecom, wakil, wali, k...</td>
+      <td>satreskrim polres tuban mengembalikan barang b...</td>
+      <td>[satreskrim, polres, tuban, mengembalikan, bar...</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>surabayabangsaonlinecom polsek wonokromo  mena...</td>
-      <td>[surabayabangsaonlinecom, polsek, wonokromo, m...</td>
+      <td>program tni manunggal membangun desa tmmd ke t...</td>
+      <td>[program, tni, manunggal, membangun, desa, tmm...</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>sidoarjobangsaonlinecom polwan polresta sidoar...</td>
-      <td>[sidoarjobangsaonlinecom, polwan, polresta, si...</td>
+      <td>bupati gresik fandi akhmad yani menanggapi wac...</td>
+      <td>[bupati, gresik, fandi, akhmad, yani, menangga...</td>
     </tr>
   </tbody>
 </table>
@@ -850,28 +871,28 @@ Requirement already satisfied: colorama in c:\laragon\bin\python\python-3.10\lib
   <tbody>
     <tr>
       <th>0</th>
-      <td>[sidoarjobangsaonlinecom, proses, pencarian, k...</td>
-      <td>[sidoarjobangsaonlinecom, proses, pencarian, k...</td>
+      <td>[kejari, tanjung, perak, surabaya, melakukan, ...</td>
+      <td>[kejari, tanjung, perak, surabaya, penggeledah...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>[probolinggo, bangsaonlinecom, polres, proboli...</td>
-      <td>[probolinggo, bangsaonlinecom, polres, proboli...</td>
+      <td>[kota, pasuruanbangsaonlinecom, suasana, pasar...</td>
+      <td>[kota, pasuruanbangsaonlinecom, suasana, pasar...</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>[kota, kediri, bangsaonlinecom, wakil, wali, k...</td>
-      <td>[kota, kediri, bangsaonlinecom, wakil, wali, k...</td>
+      <td>[satreskrim, polres, tuban, mengembalikan, bar...</td>
+      <td>[satreskrim, polres, tuban, mengembalikan, bar...</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>[surabayabangsaonlinecom, polsek, wonokromo, m...</td>
-      <td>[surabayabangsaonlinecom, polsek, wonokromo, m...</td>
+      <td>[program, tni, manunggal, membangun, desa, tmm...</td>
+      <td>[program, tni, manunggal, membangun, desa, tmm...</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>[sidoarjobangsaonlinecom, polwan, polresta, si...</td>
-      <td>[sidoarjobangsaonlinecom, polwan, polresta, si...</td>
+      <td>[bupati, gresik, fandi, akhmad, yani, menangga...</td>
+      <td>[bupati, gresik, fandi, akhmad, yani, menangga...</td>
     </tr>
   </tbody>
 </table>
@@ -1054,23 +1075,12 @@ Requirement already satisfied: colorama in c:\laragon\bin\python\python-3.10\lib
 <span class="g g-Whitespace">     </span><span class="mi">90</span>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dictionary</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_word</span><span class="p">):</span>
 <span class="g g-Whitespace">     </span><span class="mi">91</span>             <span class="k">return</span>
 
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\Sastrawi\Stemmer\Context\Context.py:110,</span> in <span class="ni">Context.accept_prefix_visitors</span><span class="nt">(self, visitors)</span>
-<span class="g g-Whitespace">    </span><span class="mi">108</span> <span class="n">removalCount</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">removals</span><span class="p">)</span>
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\Sastrawi\Stemmer\Context\Context.py:111,</span> in <span class="ni">Context.accept_prefix_visitors</span><span class="nt">(self, visitors)</span>
 <span class="g g-Whitespace">    </span><span class="mi">109</span> <span class="k">for</span> <span class="n">visitor</span> <span class="ow">in</span> <span class="n">visitors</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">110</span>     <span class="bp">self</span><span class="o">.</span><span class="n">accept</span><span class="p">(</span><span class="n">visitor</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">111</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dictionary</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_word</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">110</span>     <span class="bp">self</span><span class="o">.</span><span class="n">accept</span><span class="p">(</span><span class="n">visitor</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">111</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dictionary</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_word</span><span class="p">):</span>
 <span class="g g-Whitespace">    </span><span class="mi">112</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_word</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\Sastrawi\Stemmer\Context\Context.py:97,</span> in <span class="ni">Context.accept</span><span class="nt">(self, visitor)</span>
-<span class="g g-Whitespace">     </span><span class="mi">96</span> <span class="k">def</span><span class="w"> </span><span class="nf">accept</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">visitor</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">97</span>     <span class="n">visitor</span><span class="o">.</span><span class="n">visit</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\Sastrawi\Stemmer\Context\Visitor\AbstractDisambiguatePrefixRule.py:15,</span> in <span class="ni">AbstractDisambiguatePrefixRule.visit</span><span class="nt">(self, context)</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="k">for</span> <span class="n">disambiguator</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">disambiguators</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">disambiguator</span><span class="o">.</span><span class="n">disambiguate</span><span class="p">(</span><span class="n">context</span><span class="o">.</span><span class="n">current_word</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">15</span>     <span class="k">if</span> <span class="n">context</span><span class="o">.</span><span class="n">dictionary</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">result</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span>         <span class="k">break</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">result</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">113</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">process_is_stopped</span><span class="p">:</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
@@ -1099,16 +1109,15 @@ Requirement already satisfied: colorama in c:\laragon\bin\python\python-3.10\lib
 kiai: 1310
 masyarakat: 882
 rp: 882
-diri: 840
 kota: 810
+diri: 803
 asep: 781
 indonesia: 749
-bangsaonlinecom: 744
 orang: 720
 jalan: 697
 milik: 651
 jawa: 613
-kh: 584
+kh: 585
 sehat: 577
 warga: 542
 : 537
@@ -1117,11 +1126,10 @@ timur: 508
 pesantren: 493
 perintah: 492
 hasil: 489
-surabaya: 489
 desa: 488
-ketua: 484
+ketua: 485
 rumah: 483
-salah: 480
+salah: 481
 harap: 467
 kuat: 465
 harga: 465
@@ -1140,6 +1148,7 @@ pimpin: 393
 serta: 388
 program: 386
 dunia: 384
+surabaya: 377
 gelar: 377
 usaha: 372
 pilih: 367
@@ -1153,8 +1162,8 @@ dr: 349
 temu: 348
 bantu: 339
 santri: 336
+prof: 336
 nasional: 333
-prof: 333
 arah: 329
 wib: 328
 kepala: 328
@@ -1183,11 +1192,10 @@ islam: 291
 korban: 290
 air: 284
 camat: 279
+wakil: 273
 nama: 272
-wakil: 272
 hasyim: 272
 tulis: 271
-pasuruan: 271
 sakit: 270
 aku: 269
 masuk: 265
@@ -1195,8 +1203,9 @@ jatim: 264
 manfaat: 264
 uang: 263
 jadi: 262
-presiden: 258
+presiden: 259
 ulama: 256
+bangsaonlinecom: 251
 sosial: 250
 aman: 249
 proses: 248
@@ -1209,25 +1218,23 @@ resmi: 237
 cuaca: 236
 suhu: 235
 pusat: 234
-gresik: 233
 yusuf: 232
 amanatul: 231
 keluarga: 228
 ruang: 228
 nyata: 226
+pasuruan: 226
 pondok: 225
 nilai: 225
 kait: 223
 negeri: 222
 baik: 222
 tinggal: 221
-mojokerto: 219
 ms: 218
 bawa: 217
 ribu: 217
 turun: 216
 ubah: 216
-jakarta: 216
 abdul: 215
 capai: 215
 informasi: 213
@@ -1237,6 +1244,7 @@ satu: 209
 malam: 209
 khofifah: 209
 tahan: 208
+gresik: 207
 allah: 207
 alami: 206
 gram: 206
@@ -1248,6 +1256,7 @@ sekolah: 200
 mudah: 199
 manusia: 199
 lengkap: 198
+mojokerto: 198
 ikut: 195
 urus: 195
 motor: 192
@@ -1258,7 +1267,6 @@ tangan: 191
 baca: 191
 suara: 190
 muda: 190
-malang: 189
 menang: 188
 media: 188
 doa: 188
@@ -1271,19 +1279,20 @@ lanjut: 183
 nomor: 183
 daftar: 183
 tampil: 183
-sidoarjo: 182
 lapor: 182
 main: 182
 agama: 181
 selamat: 180
 polisi: 180
 semangat: 180
+jakarta: 180
 rabu: 179
 lingkung: 179
 ekonomi: 178
 siswa: 178
 juang: 177
-ingat: 176
+ingat: 177
+malang: 177
 tekan: 176
 kondisi: 175
 buat: 174
@@ -1309,7 +1318,7 @@ tugas: 164
 biaya: 163
 kantor: 162
 raya: 162
-tuban: 161
+sidoarjo: 161
 khusus: 161
 tuju: 160
 pasar: 160
@@ -1326,16 +1335,15 @@ bahan: 154
 istri: 154
 dinas: 153
 israel: 153
+bakar: 153
 beda: 152
 kawasan: 152
 hubung: 152
-bakar: 152
 wisata: 152
 luka: 151
 jumat: 151
 awan: 151
-jombang: 150
-isi: 149
+isi: 150
 api: 149
 mati: 149
 dprd: 148
@@ -1361,7 +1369,7 @@ pesan: 141
 atur: 141
 olahraga: 140
 dorong: 140
-madiun: 140
+tuban: 139
 bijak: 139
 usia: 138
 merah: 138
@@ -1377,6 +1385,7 @@ peran: 136
 september: 135
 perhati: 135
 ma: 135
+jombang: 135
 provinsi: 134
 produk: 134
 bukti: 133
@@ -1384,10 +1393,11 @@ ajak: 132
 aplikasi: 132
 minggu: 132
 percaya: 131
+aksi: 130
 fasilitas: 130
+madiun: 130
 perempuan: 130
 sejarah: 130
-aksi: 129
 anakanak: 129
 potensi: 129
 prabowo: 129
@@ -1395,11 +1405,11 @@ apresiasi: 129
 lindung: 128
 tentu: 127
 latih: 127
+universitas: 126
 ahmad: 126
 ambil: 125
 dampak: 125
 terang: 125
-universitas: 125
 pahlawan: 125
 saw: 125
 kg: 124
@@ -1497,7 +1507,6 @@ selesai: 100
 industri: 100
 catat: 100
 kalah: 100
-tulungagung: 100
 bicara: 100
 ayat: 100
 total: 99
@@ -1550,7 +1559,6 @@ jual: 91
 cabang: 90
 maju: 90
 mata: 90
-pamekasan: 90
 rangka: 90
 gemar: 90
 evakuasi: 89
@@ -1571,11 +1579,11 @@ aktivitas: 87
 kelompok: 87
 rasa: 87
 pt: 86
+tulungagung: 86
 suami: 86
 pohon: 86
 kandung: 86
 lantik: 86
-probolinggo: 85
 sapa: 85
 ahli: 85
 ghazali: 85
@@ -1611,8 +1619,8 @@ sebab: 81
 kontribusi: 81
 sejahtera: 81
 jam: 81
-blitar: 81
 nikah: 81
+probolinggo: 80
 jajar: 80
 panggil: 80
 diam: 80
@@ -1631,6 +1639,7 @@ lembaga: 78
 konsumsi: 78
 kaya: 78
 segar: 78
+blitar: 78
 energi: 78
 pariwisata: 78
 arab: 78
@@ -1675,6 +1684,7 @@ saji: 72
 menu: 72
 pajak: 72
 solusi: 72
+pamekasan: 72
 paksa: 72
 pribadi: 72
 dekat: 72
@@ -1731,7 +1741,6 @@ pp: 66
 langgan: 66
 damai: 66
 sman: 66
-bangkal: 66
 gambar: 66
 wisatawan: 66
 menit: 65
@@ -1803,12 +1812,10 @@ dki: 61
 canda: 61
 of: 61
 kaji: 61
-jember: 61
 piala: 61
 kecuali: 61
 muslim: 61
 periode: 60
-sumenep: 60
 benarbenar: 60
 lupa: 60
 seharihari: 60
@@ -1878,6 +1885,7 @@ tinggi: 55
 saudi: 55
 final: 55
 sedekah: 55
+bangkal: 55
 rugi: 54
 atlet: 54
 pulau: 54
@@ -1891,6 +1899,7 @@ aji: 54
 whatsapp: 54
 hut: 54
 pola: 54
+jember: 54
 miskin: 54
 lulus: 54
 bang: 54
@@ -1902,6 +1911,7 @@ ratarata: 53
 zionis: 53
 evaluasi: 53
 bank: 53
+tumpang: 53
 meter: 53
 situasi: 53
 saudara: 53
@@ -1912,13 +1922,13 @@ panas: 53
 tahu: 52
 humas: 52
 rekam: 52
+sumenep: 52
 operasi: 52
 agenda: 52
 kitab: 52
 mesir: 52
 mitra: 52
 panitia: 52
-tumpang: 52
 grup: 52
 era: 52
 ucap: 52
@@ -2009,9 +2019,7 @@ populer: 47
 bintang: 47
 paket: 47
 sesi: 47
-magetan: 47
 maret: 47
-yogyakarta: 47
 habis: 47
 istana: 47
 karno: 47
@@ -2051,7 +2059,6 @@ sdm: 45
 stasiun: 45
 favorit: 45
 nasi: 45
-banten: 45
 teliti: 45
 lontar: 45
 kader: 45
@@ -2115,8 +2122,10 @@ lia: 42
 amanah: 42
 kemas: 42
 teman: 42
-lamongan: 42
+banten: 42
 tepat: 42
+magetan: 42
+yogyakarta: 42
 mulyadi: 42
 jksn: 42
 bara: 42
@@ -2182,7 +2191,6 @@ hitung: 39
 remaja: 39
 visi: 39
 ansor: 39
-nganjuk: 39
 juni: 39
 bola: 39
 makam: 39
@@ -2207,6 +2215,7 @@ andal: 38
 fitri: 38
 literasi: 38
 silaturahmi: 38
+sosok: 38
 materi: 38
 liput: 38
 ras: 38
@@ -2236,7 +2245,6 @@ ceo: 37
 yayasan: 37
 muslimat: 37
 pc: 37
-sosok: 37
 produktif: 37
 puskesmas: 37
 pemkot: 37
@@ -2265,7 +2273,9 @@ pindah: 36
 sepakat: 36
 mulia: 36
 deteksi: 36
+nganjuk: 36
 tamu: 36
+lamongan: 36
 bravo: 36
 bahagia: 36
 efek: 36
@@ -2307,7 +2317,6 @@ gagas: 35
 murah: 35
 jelas: 35
 asn: 35
-bal: 35
 cerai: 35
 apa: 35
 akhlak: 35
@@ -2355,7 +2364,6 @@ wuling: 34
 kejar: 33
 voli: 33
 selera: 33
-medan: 33
 tara: 33
 tangga: 33
 eko: 33
@@ -2367,6 +2375,7 @@ luncur: 33
 bimbing: 33
 ekosistem: 33
 koordinator: 33
+bal: 33
 viral: 33
 smkn: 33
 inspirasi: 33
@@ -2388,6 +2397,7 @@ juli: 32
 hafidz: 32
 nggak: 32
 faktor: 32
+medan: 32
 kritik: 32
 fakta: 32
 alternatif: 32
@@ -2553,7 +2563,6 @@ marah: 28
 akademik: 28
 transportasi: 28
 jamu: 28
-bandung: 28
 susu: 28
 papan: 28
 afif: 28
@@ -2600,7 +2609,6 @@ bau: 27
 sri: 27
 afamar: 27
 sejati: 27
-situbondo: 27
 indar: 27
 hujan: 27
 spiritual: 27
@@ -2629,6 +2637,7 @@ bencana: 26
 royong: 26
 insiden: 26
 grand: 26
+center: 26
 kayu: 26
 emosi: 26
 kondusif: 26
@@ -2652,7 +2661,6 @@ pegawai: 26
 dar: 26
 lebih: 26
 graha: 26
-sampang: 26
 tuduh: 26
 lampau: 26
 tempo: 26
@@ -2676,7 +2684,6 @@ pecel: 26
 mamdani: 26
 gigi: 25
 komite: 25
-surabayabangsaonlinecom: 25
 niat: 25
 guncang: 25
 minim: 25
@@ -2688,7 +2695,6 @@ terjun: 25
 sakti: 25
 kemudi: 25
 limut: 25
-center: 25
 padam: 25
 narasi: 25
 junjung: 25
@@ -2763,7 +2769,6 @@ jawab: 24
 skala: 24
 wibowo: 24
 asia: 24
-bojonegoro: 24
 supermarket: 24
 dpc: 24
 panggung: 24
@@ -2777,6 +2782,7 @@ teknik: 24
 riset: 24
 brawijaya: 24
 tarif: 24
+bandung: 24
 shalawat: 24
 nusron: 24
 rakaat: 24
@@ -2829,7 +2835,6 @@ pgri: 23
 identitas: 23
 malaysia: 23
 konteks: 23
-solo: 23
 gor: 23
 mui: 23
 pwnu: 23
@@ -2886,7 +2891,10 @@ terjemah: 22
 persekabpas: 22
 nelayan: 22
 lurus: 22
+situbondo: 22
 amin: 22
+solo: 22
+sampang: 22
 demokrat: 22
 donald: 22
 thailand: 22
@@ -3004,7 +3012,6 @@ afkar: 20
 kamar: 20
 umrah: 20
 doktor: 20
-banyuwangi: 20
 demonstran: 20
 alf: 20
 fajar: 20
@@ -3053,7 +3060,6 @@ dingin: 19
 oknum: 19
 palsu: 19
 tebang: 19
-kediribangsaonlinecom: 19
 jenjang: 19
 laboratorium: 19
 sertifikasi: 19
@@ -3061,6 +3067,7 @@ mutasi: 19
 manajer: 19
 motif: 19
 semen: 19
+bojonegoro: 19
 lingkar: 19
 beber: 19
 arief: 19
@@ -3075,7 +3082,6 @@ samsul: 19
 hantam: 19
 pppk: 19
 keliling: 19
-ponorogo: 19
 wawancara: 19
 imunisasi: 19
 pertamina: 19
@@ -3148,6 +3154,7 @@ sampel: 18
 cuti: 18
 uin: 18
 pkk: 18
+banyuwangi: 18
 ampun: 18
 telepon: 18
 erick: 18
@@ -3227,6 +3234,7 @@ world: 17
 kanker: 17
 fc: 17
 februari: 17
+ponorogo: 17
 cuci: 17
 fatwa: 17
 ukm: 17
@@ -3235,7 +3243,6 @@ roti: 17
 popular: 17
 ghofirin: 17
 pinjol: 17
-cirebon: 17
 peta: 17
 kakak: 17
 syaikh: 17
@@ -3357,6 +3364,7 @@ haikal: 16
 produsen: 16
 zulhas: 16
 ceramah: 16
+cirebon: 16
 koleksi: 16
 primer: 16
 phd: 16
@@ -3470,8 +3478,6 @@ united: 15
 gol: 15
 pantai: 15
 junaidi: 15
-lombok: 15
-ngawi: 15
 aljailani: 15
 abadi: 15
 salin: 15
@@ -3534,6 +3540,7 @@ gereja: 15
 tile: 15
 arca: 15
 khamenei: 15
+taleb: 15
 yenny: 15
 mondok: 14
 tetangga: 14
@@ -3583,6 +3590,7 @@ pendek: 14
 perahu: 14
 gulung: 14
 tri: 14
+lombok: 14
 nurul: 14
 kadar: 14
 teori: 14
@@ -3683,7 +3691,6 @@ dibutuhkantak: 14
 bising: 14
 engineering: 14
 ruwat: 14
-taleb: 14
 platinum: 14
 blackberry: 14
 ojek: 13
@@ -3778,7 +3785,6 @@ permen: 13
 subuh: 13
 sulteng: 13
 bertahuntahun: 13
-garut: 13
 gengsi: 13
 koperasi: 13
 grahadi: 13
@@ -3831,7 +3837,6 @@ dikisahmudulu: 13
 topping: 13
 aduk: 13
 rudal: 13
-sidoarjobangsaonlinecom: 12
 sar: 12
 kontak: 12
 stnk: 12
@@ -3901,7 +3906,6 @@ ormas: 12
 realitas: 12
 sesal: 12
 problem: 12
-majalengka: 12
 jurus: 12
 keringat: 12
 figur: 12
@@ -3941,7 +3945,6 @@ wahab: 12
 karang: 12
 tegas: 12
 lembut: 12
-mina: 12
 lelaki: 12
 fam: 12
 gila: 12
@@ -4093,6 +4096,7 @@ mts: 11
 open: 11
 karib: 11
 wisudawan: 11
+ngawi: 11
 uni: 11
 genteng: 11
 my: 11
@@ -4115,6 +4119,7 @@ tapak: 11
 lagilagi: 11
 sesat: 11
 sutradara: 11
+majalengka: 11
 maksiat: 11
 baris: 11
 koruptor: 11
@@ -4136,6 +4141,7 @@ ruh: 11
 diy: 11
 acu: 11
 durasi: 11
+garut: 11
 rela: 11
 martabat: 11
 perwira: 11
@@ -4152,6 +4158,7 @@ drone: 11
 lezat: 11
 adha: 11
 ulas: 11
+mina: 11
 alimam: 11
 pedih: 11
 jago: 11
@@ -4248,6 +4255,7 @@ curanmor: 10
 prameswati: 10
 ploso: 10
 adaptif: 10
+kediribangsaonlinecom: 10
 rw: 10
 iskandar: 10
 legislatif: 10
@@ -4275,7 +4283,6 @@ sirkulasi: 10
 junrejo: 10
 santap: 10
 sabuk: 10
-bengkulu: 10
 cermat: 10
 sumpah: 10
 aula: 10
@@ -4323,13 +4330,11 @@ katakata: 10
 pinta: 10
 chaniago: 10
 gigih: 10
-palangkaraya: 10
 humbang: 10
 kapuas: 10
 bedah: 10
 taushiyah: 10
 kiaikiai: 10
-palu: 10
 unta: 10
 rois: 10
 muchlis: 10
@@ -4508,6 +4513,7 @@ solid: 9
 kapten: 9
 publikasi: 9
 diskus: 9
+kebun: 9
 sabung: 9
 moch: 9
 zahra: 9
@@ -4524,6 +4530,7 @@ ayo: 9
 masif: 9
 toleransi: 9
 produktivitas: 9
+bengkulu: 9
 mars: 9
 hipertensi: 9
 rozak: 9
@@ -4554,7 +4561,6 @@ medsos: 9
 rembug: 9
 rano: 9
 bumn: 9
-lumajang: 9
 witir: 9
 kian: 9
 mukhlas: 9
@@ -4602,7 +4608,6 @@ bi: 9
 konsekuensi: 9
 adzab: 9
 fiqh: 9
-madinah: 9
 seringkali: 9
 laa: 9
 yuraddu: 9
@@ -4766,7 +4771,6 @@ pasca: 8
 wanrev: 8
 support: 8
 corporate: 8
-kebun: 8
 wahana: 8
 kilogram: 8
 taufiq: 8
@@ -4825,6 +4829,7 @@ brunei: 8
 obsesi: 8
 atrkepala: 8
 spbu: 8
+lumajang: 8
 call: 8
 tempa: 8
 lobi: 8
@@ -4843,10 +4848,8 @@ produkproduk: 8
 tray: 8
 weipu: 8
 riansah: 8
-manggarai: 8
 konstitusi: 8
 kaidah: 8
-trenggalek: 8
 solidaritas: 8
 beku: 8
 asin: 8
@@ -4854,8 +4857,10 @@ ikon: 8
 gontor: 8
 mayat: 8
 komunis: 8
+palangkaraya: 8
 adnanbangsaonline: 8
 opop: 8
+dirjen: 8
 audiensi: 8
 lho: 8
 butir: 8
@@ -4877,6 +4882,7 @@ istighfar: 8
 qadir: 8
 coret: 8
 ushul: 8
+madinah: 8
 hadis: 8
 sastra: 8
 ghaib: 8
@@ -5032,7 +5038,6 @@ jasin: 8
 persada: 8
 khanal: 8
 turki: 8
-teheran: 8
 ulil: 8
 wage: 8
 ulat: 8
@@ -5133,7 +5138,6 @@ efektivitas: 7
 cabdindik: 7
 hijab: 7
 tebu: 7
-malangbangsaonlinecom: 7
 industry: 7
 islamic: 7
 mem: 7
@@ -5150,7 +5154,6 @@ yasin: 7
 nawawi: 7
 angkasa: 7
 persegi: 7
-pacitan: 7
 rel: 7
 candu: 7
 fleksibilitas: 7
@@ -5206,18 +5209,20 @@ lembar: 7
 guruguru: 7
 letus: 7
 divisi: 7
+manggarai: 7
+trenggalek: 7
 jejaring: 7
 kibar: 7
 datar: 7
 hidayatullah: 7
 maja: 7
 bhinneka: 7
-dirjen: 7
 putraputrinya: 7
 tasbih: 7
 teddy: 7
 entas: 7
 hgu: 7
+palu: 7
 kotakota: 7
 buket: 7
 willy: 7
@@ -5339,6 +5344,7 @@ koin: 7
 betawi: 7
 head: 7
 ame: 7
+saiful: 7
 iris: 7
 farm: 7
 pelet: 7
@@ -5385,7 +5391,6 @@ hormon: 7
 shio: 7
 jalanjalan: 7
 bantai: 7
-roma: 7
 rpm: 7
 lithiumion: 7
 motors: 7
@@ -5555,7 +5560,6 @@ nyaring: 6
 samar: 6
 society: 6
 parmar: 6
-pasuruanbangsaonlinecom: 6
 nabrak: 6
 semprot: 6
 korsleting: 6
@@ -5574,6 +5578,7 @@ cikarang: 6
 seksi: 6
 lekat: 6
 sita: 6
+pacitan: 6
 pacu: 6
 plaza: 6
 parenting: 6
@@ -5775,7 +5780,6 @@ pihps: 6
 direksi: 6
 banderol: 6
 shehacks: 6
-saiful: 6
 baja: 6
 black: 6
 lobster: 6
@@ -5834,6 +5838,7 @@ rayon: 6
 bazaar: 6
 persijap: 6
 jepara: 6
+roma: 6
 aldo: 6
 pon: 6
 bahrain: 6
@@ -5912,9 +5917,9 @@ mec: 6
 kebur: 6
 pwils: 6
 ksatria: 6
-kathmandu: 6
 facebook: 6
 pangkal: 6
+teheran: 6
 khusyuk: 6
 iccosh: 6
 jongbiru: 6
@@ -6088,7 +6093,6 @@ kesra: 5
 hafid: 5
 empati: 5
 sufi: 5
-madiunbangsaonlinecom: 5
 puspitasari: 5
 nopember: 5
 tumpas: 5
@@ -6111,7 +6115,6 @@ telak: 5
 borong: 5
 fauzan: 5
 tagline: 5
-bangkalanbangsaonlinecom: 5
 prodi: 5
 kontingen: 5
 wr: 5
@@ -6167,13 +6170,11 @@ pungging: 5
 ing: 5
 uud: 5
 leluhur: 5
-banjarmasin: 5
 transjatim: 5
 bongkar: 5
 camil: 5
 ambon: 5
 traveloka: 5
-tembagapura: 5
 single: 5
 datadata: 5
 dua: 5
@@ -6218,7 +6219,6 @@ nahkoda: 5
 coffee: 5
 yanuar: 5
 grati: 5
-palembang: 5
 advokasi: 5
 kompromi: 5
 gegas: 5
@@ -6229,7 +6229,6 @@ atraksi: 5
 mafparmsn: 5
 plts: 5
 f h: 5
-baghdad: 5
 alsayyid: 5
 najis: 5
 anda: 5
@@ -6350,6 +6349,7 @@ andini: 5
 lakarsantri: 5
 gayung: 5
 samoka: 5
+desicha: 5
 bak: 5
 leceh: 5
 pilang: 5
@@ -6547,6 +6547,7 @@ bolong: 5
 margiono: 5
 cengkrong: 5
 cangkul: 5
+kathmandu: 5
 chitrakar: 5
 baznas: 5
 araghchi: 5
@@ -6686,7 +6687,6 @@ deputi: 4
 nyoto: 4
 pita: 4
 ah: 4
-klaten: 4
 kesah: 4
 tatit: 4
 pakat: 4
@@ -6775,7 +6775,6 @@ sana: 4
 hidayatul: 4
 laras: 4
 bidik: 4
-probolinggobangsaonlinecom: 4
 pawai: 4
 perumdam: 4
 bayuangga: 4
@@ -6903,7 +6902,6 @@ pratikno: 4
 masehi: 4
 sjafrie: 4
 pangdam: 4
-gowa: 4
 ad: 4
 intelijen: 4
 heri: 4
@@ -6920,6 +6918,7 @@ bps: 4
 kalsel: 4
 bor: 4
 asih: 4
+tembagapura: 4
 smelter: 4
 kholiq: 4
 snya: 4
@@ -6936,7 +6935,6 @@ prasasti: 4
 kaka: 4
 o: 4
 kongres: 4
-ternate: 4
 laos: 4
 zoom: 4
 cavendish: 4
@@ -6969,6 +6967,7 @@ mulyono: 4
 purwodadi: 4
 gondangwetan: 4
 assegaf: 4
+palembang: 4
 perspektif: 4
 bempas: 4
 ruangbadan: 4
@@ -6989,6 +6988,7 @@ jinayah: 4
 illa: 4
 ham: 4
 pepatah: 4
+baghdad: 4
 kirakira: 4
 antum: 4
 pres: 4
@@ -7196,7 +7196,6 @@ ak: 4
 sales: 4
 oli: 4
 trans: 4
-desicha: 4
 tampar: 4
 ismaya: 4
 mid: 4
@@ -7395,7 +7394,6 @@ stek: 4
 kontekstual: 4
 unirow: 4
 pkkmb: 4
-kendal: 4
 ormawa: 4
 peron: 4
 aesi: 4
@@ -7614,7 +7612,6 @@ rifai: 3
 albarra: 3
 mubarok: 3
 mojosari: 3
-jombangbangsaonlinecom: 3
 semester: 3
 solichin: 3
 koper: 3
@@ -7625,7 +7622,6 @@ finfest: 3
 economy: 3
 competition: 3
 talkshow: 3
-nganjukbangsaonlinecom: 3
 visit: 3
 cengkeh: 3
 raharjo: 3
@@ -7634,6 +7630,7 @@ laik: 3
 higiene: 3
 tronton: 3
 belok: 3
+klaten: 3
 aanmar: 3
 rtlh: 3
 ppas: 3
@@ -7676,7 +7673,6 @@ tambakboyo: 3
 lpg: 3
 incar: 3
 khozin: 3
-tubanbangsaonlinecom: 3
 wuruk: 3
 fiskal: 3
 representatif: 3
@@ -7730,6 +7726,7 @@ administrator: 3
 sekdakab: 3
 lenyap: 3
 tindaklanjuti: 3
+malangbangsaonlinecom: 3
 award: 3
 modest: 3
 kosmetik: 3
@@ -7743,6 +7740,7 @@ legalisasi: 3
 beliaubeliau: 3
 post: 3
 lumayan: 3
+pasuruanbangsaonlinecom: 3
 panggungrejo: 3
 ludes: 3
 hangus: 3
@@ -7925,6 +7923,7 @@ teken: 3
 almasih: 3
 paskah: 3
 independen: 3
+gowa: 3
 fah: 3
 todo: 3
 administration: 3
@@ -7937,6 +7936,7 @@ tandula: 3
 jangga: 3
 moderator: 3
 bawean: 3
+banjarmasin: 3
 meeting: 3
 karet: 3
 rantau: 3
@@ -7969,6 +7969,7 @@ chompchomp: 3
 bangsaonnline: 3
 mesem: 3
 ismail: 3
+ternate: 3
 asahduren: 3
 yulia: 3
 cht: 3
@@ -8034,7 +8035,6 @@ devrev: 3
 persepsi: 3
 plasma: 3
 atrwakil: 3
-lebak: 3
 beres: 3
 lokamodal: 3
 maman: 3
@@ -8092,7 +8092,6 @@ khilaf: 3
 hayyu: 3
 kalkulasi: 3
 leasing: 3
-bangsaonlinecomprof: 3
 hajathajat: 3
 imah: 3
 addua: 3
@@ -8167,7 +8166,6 @@ sai: 3
 tahallul: 3
 zikir: 3
 sembelih: 3
-mek: 3
 ula: 3
 wustha: 3
 zawalghurub: 3
@@ -8718,6 +8716,7 @@ muscab: 3
 belik: 3
 shofwan: 3
 guter: 3
+kendal: 3
 prasetiyo: 3
 living: 3
 disdikbud: 3
@@ -8965,10 +8964,8 @@ pataka: 2
 maria: 2
 polwan: 2
 healing: 2
-sumenepbangsaonlinecom: 2
 terpal: 2
 selimut: 2
-gresikbangsaonlinecom: 2
 dispute: 2
 itwasda: 2
 asistensi: 2
@@ -9238,7 +9235,6 @@ ghozali: 2
 lawang: 2
 regulator: 2
 tolerir: 2
-blitarbangsaonlinecom: 2
 katiyem: 2
 putut: 2
 sapisapi: 2
@@ -9555,7 +9551,6 @@ syukri: 2
 fadholi: 2
 fotokopi: 2
 berputarputar: 2
-makassar: 2
 tansri: 2
 hgb: 2
 seluasluasnya: 2
@@ -9658,6 +9653,7 @@ pkh: 2
 sufmi: 2
 dasco: 2
 konsorsium: 2
+lebak: 2
 alkadri: 2
 tarunai: 2
 rahmadani: 2
@@ -9665,7 +9661,6 @@ ragid: 2
 hera: 2
 yuniar: 2
 tasikmalaya: 2
-jemberbangsaonlinecom: 2
 cpns: 2
 sahsah: 2
 jelek: 2
@@ -9796,7 +9791,6 @@ jeddah: 2
 pangkas: 2
 lspt: 2
 fakir: 2
-bangsaonlinecominilah: 2
 syafiiyah: 2
 almubarak: 2
 sol: 2
@@ -9867,6 +9861,7 @@ bapakibu: 2
 miqat: 2
 duha: 2
 jamarat: 2
+mek: 2
 ifadah: 2
 sembahyang: 2
 islami: 2
@@ -10140,7 +10135,6 @@ faridah: 2
 masyaallah: 2
 khaira: 2
 rejeki: 2
-bangsaonlinecomini: 2
 dhuhur: 2
 hampar: 2
 teledor: 2
@@ -10638,7 +10632,6 @@ antibakteri: 2
 gosip: 2
 punya: 2
 inisagitarius: 2
-mojokertobangsaonlinecom: 2
 canggung: 2
 nasraoui: 2
 psbs: 2
@@ -11158,7 +11151,6 @@ layer: 2
 magdeburg: 2
 abdulmohsen: 2
 antiislam: 2
-taiyuan: 2
 konsumerisme: 2
 kecilkecil: 2
 cawapres: 2
@@ -11610,7 +11602,6 @@ supir: 1
 esek: 1
 ampuh: 1
 bripda: 1
-sidoarjobangsaonlinecommemperingati: 1
 khuluq: 1
 mahallul: 1
 bapakbapak: 1
@@ -12055,9 +12046,9 @@ cilik: 1
 dedy: 1
 tjahjo: 1
 poernomo: 1
+probolinggobangsaonlinecom: 1
 majemuk: 1
 probolinggougivan: 1
-situbondobangsaonlinecom: 1
 bandang: 1
 plalangan: 1
 afvour: 1
@@ -12119,6 +12110,7 @@ curtinawati: 1
 appointment: 1
 telemedicine: 1
 drorev: 1
+madiunbangsaonlinecom: 1
 omah: 1
 ecobrick: 1
 bentuknedukasi: 1
@@ -12650,7 +12642,6 @@ wit: 1
 mimika: 1
 smelting: 1
 wenas: 1
-bangsaonlinecomternyata: 1
 rongrong: 1
 jeblos: 1
 muso: 1
@@ -12714,6 +12705,7 @@ hasiholan: 1
 mengatatakan: 1
 berteletele: 1
 putarputar: 1
+makassar: 1
 sebagaiwinwin: 1
 solutionkarena: 1
 asnaedi: 1
@@ -12736,7 +12728,6 @@ kelan: 1
 badung: 1
 antaranyoman: 1
 wibowotempo: 1
-ternatebangsaonlinecom: 1
 kexviii: 1
 torang: 1
 reiligius: 1
@@ -12797,7 +12788,6 @@ effendi: 1
 surabayasidoarjo: 1
 reni: 1
 astutimdrvan: 1
-sidoarjobangsaonlinecomketua: 1
 bandi: 1
 residence: 1
 ptun: 1
@@ -12817,7 +12807,6 @@ suberi: 1
 budiono: 1
 eril: 1
 desembrilian: 1
-surabayabangsaonlinecomkebakaran: 1
 meluluhlantakkan: 1
 kuratif: 1
 ganggang: 1
@@ -12854,7 +12843,6 @@ rifarida: 1
 koperasirohmat: 1
 kehutananketua: 1
 lps: 1
-bangsaonlinecompresiden: 1
 purnawiran: 1
 pur: 1
 sudayanti: 1
@@ -13048,7 +13036,6 @@ djuwarijah: 1
 tanjungarum: 1
 sukorejopemecahan: 1
 miski: 1
-lamonganbangsaonlinecom: 1
 manfaatvan: 1
 dyandra: 1
 janenake: 1
@@ -13434,7 +13421,6 @@ mannan: 1
 hidyatullah: 1
 sekdaprof: 1
 isnu: 1
-bangsaonlinecomwakil: 1
 dhahir: 1
 kekayaanya: 1
 ikanikan: 1
@@ -13503,7 +13489,6 @@ maq id: 1
 mudharat: 1
 kontemporer: 1
 azimah: 1
-bangsaonlinecomisi: 1
 hambal: 1
 syafi: 1
 menjelentrehkan: 1
@@ -14399,7 +14384,6 @@ ibtiidaiyah: 1
 terakditasi: 1
 qorawiyyin: 1
 zaitunah: 1
-bangsaonlinecompendiri: 1
 liberal: 1
 persatuah: 1
 asysyauani: 1
@@ -14518,7 +14502,6 @@ yazid: 1
 karimullah: 1
 dzul: 1
 qornain: 1
-bangsaonlinecomdirjen: 1
 menyerahakn: 1
 penadatanganan: 1
 ghirah: 1
@@ -14905,7 +14888,6 @@ nurbuat: 1
 wakapolsek: 1
 panit: 1
 dau: 1
-surabayabangsaonlinecomdesicha: 1
 hansa: 1
 diah: 1
 ratri: 1
@@ -15002,8 +14984,6 @@ akuntansi: 1
 jayapura: 1
 nias: 1
 galis: 1
-kotakediri: 1
-bangsaonlinecomsaiful: 1
 pisaupisau: 1
 karenanggaksanggup: 1
 cilacap: 1
@@ -15014,7 +14994,6 @@ finishing: 1
 blades: 1
 loak: 1
 pungkasnnya: 1
-kotamalang: 1
 master: 1
 ceremony: 1
 protokoler: 1
@@ -16197,12 +16176,10 @@ bekerjalibra: 1
 harivirgo: 1
 kembaliscorpio: 1
 harapanmuvan: 1
-semarangbangsaonlinecom: 1
 remehisi: 1
 taurus: 1
 siniaries: 1
 masalahtaurus: 1
-samarindabangsaonlinecom: 1
 jengkel: 1
 padamucapricorn: 1
 sumberleo: 1
@@ -16387,7 +16364,6 @@ anginanginan: 1
 hengkang: 1
 horner: 1
 menginventarisir: 1
-bangsaonlinecompenumpang: 1
 stasiunstasiun: 1
 komulatif: 1
 himbau: 1
@@ -16529,7 +16505,6 @@ replika: 1
 kevin: 1
 evolusi: 1
 semua: 1
-bangsaonlinecomsalah: 1
 serobot: 1
 rabas: 1
 vietnamplus: 1
@@ -16730,7 +16705,6 @@ mnejalani: 1
 oendidikan: 1
 dicitacitakannya: 1
 mundakir: 1
-mojokertobangsaonlinecomuniversitas: 1
 aseprisvan: 1
 dikbud: 1
 mabicab: 1
@@ -16897,7 +16871,6 @@ bebek: 1
 menjauhhi: 1
 dehidrasi: 1
 menabg: 1
-tulungagungbangsaonlinecom: 1
 andarukmi: 1
 begadang: 1
 kardiovaskuler: 1
@@ -17284,7 +17257,6 @@ gubenur: 1
 peking: 1
 upayacharacter: 1
 assassinationatau: 1
-bangsaonlinecombanyak: 1
 aria: 1
 suwun: 1
 dokumendokuemen: 1
@@ -17357,7 +17329,6 @@ qusyairi: 1
 urat: 1
 dimobilisir: 1
 buhari: 1
-bangsaonlinecomsetelah: 1
 badi: 1
 bukuprofil: 1
 mengharagi: 1
@@ -17399,7 +17370,6 @@ jj: 1
 aym: 1
 rws: 1
 mf: 1
-bangsaonlinecompada: 1
 gelagat: 1
 kotrar: 1
 retooling: 1
@@ -17423,7 +17393,6 @@ abripemimpin: 1
 sesingkatsingkatnya: 1
 gerwani: 1
 sobsi: 1
-bangsaonlinecompara: 1
 cendekiawan: 1
 karrno: 1
 memprovakasi: 1
@@ -17585,7 +17554,6 @@ coventry: 1
 waikato: 1
 saint: 1
 louis: 1
-bangsaonlinecomsosok: 1
 patriot: 1
 sangatsangat: 1
 bahwaaddin: 1
@@ -17767,7 +17735,6 @@ liarabiyyin: 1
 ajamiyyin: 1
 liajamiyyin: 1
 arabiyyin: 1
-bangsaonlinecomkh: 1
 ideoologi: 1
 kartosuwiryo: 1
 tii: 1
@@ -17793,7 +17760,6 @@ leinden: 1
 gom: 1
 djasa: 1
 pedjuang: 1
-bangsaonlinecomaksi: 1
 bpupki: 1
 obar: 1
 pertempuan: 1
@@ -18042,7 +18008,6 @@ per: 1
 cncb: 1
 shamkhani: 1
 irna: 1
-johannseburg: 1
 paletina: 1
 setidakanya: 1
 churches: 1
@@ -18145,7 +18110,6 @@ protera: 1
 glorious: 1
 esecurity: 1
 ritel: 1
-manila: 1
 gma: 1
 bertindaktegas: 1
 cnnindonesia: 1
@@ -18241,7 +18205,6 @@ umpama: 1
 membuatkue: 1
 pelanpelan: 1
 imajinasi: 1
-istanbul: 1
 farhan: 1
 antalya: 1
 agency: 1
@@ -18314,8 +18277,6 @@ common: 1
 nirlaba: 1
 mentlengi: 1
 argentina: 1
-lin: 1
-bangsaonlinecomtaleb: 1
 teroris: 1
 arabia: 1
 sindonewscom: 1
@@ -18342,6 +18303,7 @@ psikoterapis: 1
 rair: 1
 suriahtermasuk: 1
 islamsementara: 1
+taiyuan: 1
 adegan: 1
 weibo: 1
 ekstensif: 1
@@ -18553,7 +18515,6 @@ jogoroto: 1
 oda: 1
 vpr: 1
 elisa: 1
-cianjur: 1
 hendrayani: 1
 cugenang: 1
 hertiani: 1
@@ -19045,7 +19006,6 @@ grr: 1
 manbail: 1
 kaliuntu: 1
 jenu: 1
-surabayabangsaonlinecomcenter: 1
 statecraft: 1
 citizenship: 1
 studies: 1
@@ -19105,7 +19065,6 @@ formad: 1
 mandangin: 1
 masalembu: 1
 revitalisasi: 1
-pamekasanbangsaonlinecom: 1
 pelan: 1
 syafik: 1
 bed: 1
@@ -19165,7 +19124,6 @@ lasia: 1
 linmas: 1
 najmudin: 1
 moril: 1
-surabayabangsaonlinecomkebun: 1
 jalak: 1
 apecsi: 1
 pelepasliaran: 1
@@ -19263,13 +19221,13 @@ Frekuensi kata disimpan di &#39;frekuensi_kata_berita.csv&#39;
     <tr>
       <th>0</th>
       <td>SIDOARJO,BANGSAONLINE.com- Proses pencarian ko...</td>
-      <td>['sidoarjobangsaonlinecom', 'proses', 'cari', ...</td>
+      <td>['proses', 'cari', 'korban', 'santri', 'timbun...</td>
       <td>Jatim</td>
     </tr>
     <tr>
       <th>1</th>
       <td>PROBOLINGGO, BANGSAONLINE.com- Polres Probolin...</td>
-      <td>['probolinggo', 'bangsaonlinecom', 'polres', '...</td>
+      <td>['polres', 'probolinggo', 'kota', 'terima', 'l...</td>
       <td>Jatim</td>
     </tr>
     <tr>
@@ -19281,13 +19239,13 @@ Frekuensi kata disimpan di &#39;frekuensi_kata_berita.csv&#39;
     <tr>
       <th>3</th>
       <td>SURABAYA,BANGSAONLINE.com- Polsek Wonokromo  m...</td>
-      <td>['surabayabangsaonlinecom', 'polsek', 'wonokro...</td>
+      <td>['polsek', 'wonokromo', 'tangkap', 'laku', 'cu...</td>
       <td>Jatim</td>
     </tr>
     <tr>
       <th>4</th>
       <td>SIDOARJO,BANGSAONLINE.com- Polwan Polresta Sid...</td>
-      <td>['sidoarjobangsaonlinecom', 'polwan', 'polrest...</td>
+      <td>['polwan', 'polresta', 'sidoarjo', 'layan', 'k...</td>
       <td>Jatim</td>
     </tr>
     <tr>
@@ -19299,19 +19257,19 @@ Frekuensi kata disimpan di &#39;frekuensi_kata_berita.csv&#39;
     <tr>
       <th>920</th>
       <td>SURABAYA,BANGSAONLINE.com-Kebun Binatang Surab...</td>
-      <td>['surabayabangsaonlinecomkebun', 'binatang', '...</td>
+      <td>['kebun', 'binatang', 'surabaya', 'kbs', 'sala...</td>
       <td>Komunitas dan Lingkungan</td>
     </tr>
     <tr>
       <th>921</th>
       <td>PASURUAN, BANGSAONLINE.com– Suasana semarak me...</td>
-      <td>['pasuruan', 'bangsaonlinecom', 'suasana', 'se...</td>
+      <td>['suasana', 'semarak', 'warna', 'ingat', 'maul...</td>
       <td>Komunitas dan Lingkungan</td>
     </tr>
     <tr>
       <th>922</th>
       <td>SURABAYA,BANGSAONLINE.com- HRM. Khalilur R. Ab...</td>
-      <td>['surabayabangsaonlinecom', 'hrm', 'khalilur',...</td>
+      <td>['hrm', 'khalilur', 'r', 'abdullah', 'sahlawiy...</td>
       <td>Komunitas dan Lingkungan</td>
     </tr>
     <tr>
@@ -19323,7 +19281,7 @@ Frekuensi kata disimpan di &#39;frekuensi_kata_berita.csv&#39;
     <tr>
       <th>924</th>
       <td>TUBAN, BANGSAONLINE.com- Masyarakat Kabupaten ...</td>
-      <td>['tuban', 'bangsaonlinecom', 'masyarakat', 'ka...</td>
+      <td>['masyarakat', 'kabupaten', 'tuban', 'akhirakh...</td>
       <td>Komunitas dan Lingkungan</td>
     </tr>
   </tbody>
@@ -19367,28 +19325,28 @@ Frekuensi kata disimpan di &#39;frekuensi_kata_berita.csv&#39;
   <tbody>
     <tr>
       <th>0</th>
-      <td>baca</td>
-      <td>228</td>
+      <td>kiai</td>
+      <td>1310</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>indonesia</td>
-      <td>159</td>
+      <td>masyarakat</td>
+      <td>882</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>rumah</td>
-      <td>158</td>
+      <td>rp</td>
+      <td>882</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>rp</td>
-      <td>138</td>
+      <td>kota</td>
+      <td>810</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>pro</td>
-      <td>119</td>
+      <td>diri</td>
+      <td>803</td>
     </tr>
     <tr>
       <th>...</th>
@@ -19396,34 +19354,43 @@ Frekuensi kata disimpan di &#39;frekuensi_kata_berita.csv&#39;
       <td>...</td>
     </tr>
     <tr>
-      <th>4475</th>
-      <td>timkompastekno</td>
+      <th>18039</th>
+      <td>ngaglik</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>4476</th>
-      <td>jugahuawei</td>
+      <th>18040</th>
+      <td>pelepasliaran</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>4477</th>
-      <td>tengahtengah</td>
+      <th>18041</th>
+      <td>apecsi</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>4478</th>
-      <td>lagipula</td>
+      <th>18042</th>
+      <td>umi</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>4479</th>
-      <td>basah</td>
+      <th>18043</th>
+      <td>pundak</td>
       <td>1</td>
     </tr>
   </tbody>
 </table>
-<p>4480 rows × 2 columns</p>
-</div></div></div>
+<p>18044 rows × 2 columns</p>
+</div></div><div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">Kernel</span> <span class="n">crashed</span> <span class="k">while</span> <span class="n">executing</span> <span class="n">code</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">current</span> <span class="n">cell</span> <span class="ow">or</span> <span class="n">a</span> <span class="n">previous</span> <span class="n">cell</span><span class="o">.</span> 
+
+<span class="n">Please</span> <span class="n">review</span> <span class="n">the</span> <span class="n">code</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">cell</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="n">to</span> <span class="n">identify</span> <span class="n">a</span> <span class="n">possible</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">failure</span><span class="o">.</span> 
+
+<span class="n">Click</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;https://aka.ms/vscodeJupyterKernelCrash&#39;</span><span class="o">&gt;</span><span class="n">here</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">info</span><span class="o">.</span> 
+
+<span class="n">View</span> <span class="n">Jupyter</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;command:jupyter.viewOutput&#39;</span><span class="o">&gt;</span><span class="n">log</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span> <span class="k">for</span> <span class="n">further</span> <span class="n">details</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 </section>
@@ -19458,24 +19425,6 @@ Frekuensi kata disimpan di &#39;frekuensi_kata_berita.csv&#39;
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="tugas3_1_copy2.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Preprocessing Prodi Manajemen</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="ekstraksi_fitur_tfidf_berita.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Ekstraksi fitur TFID berita</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
