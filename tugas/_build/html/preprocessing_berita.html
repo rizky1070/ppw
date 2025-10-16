@@ -197,14 +197,6 @@
 <li class="toctree-l1"><a class="reference internal" href="tugas4_1_cbow_PTA_manajemen.html">CBOW PTA Manajemen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas6_LDA_klasifikasi_berita.html">LDA Klasifikasi Berita</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UTS.html">UTS</a></li>
-
-
-
-
-
-
-
-
 </ul>
 
     </div>
@@ -1070,17 +1062,12 @@ Requirement already satisfied: colorama in c:\laragon\bin\python\python-3.10\lib
 <span class="g g-Whitespace">     </span><span class="mi">39</span> <span class="c1">#step 6</span>
 <span class="g g-Whitespace">     </span><span class="mi">40</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dictionary</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_word</span><span class="p">):</span>
 
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\Sastrawi\Stemmer\Context\Context.py:85,</span> in <span class="ni">Context.start_stemming_process</span><span class="nt">(self)</span>
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\Sastrawi\Stemmer\Context\Context.py:80,</span> in <span class="ni">Context.start_stemming_process</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">     </span><span class="mi">77</span>     <span class="k">return</span>
+<span class="g g-Whitespace">     </span><span class="mi">79</span> <span class="c1">#step 4, 5</span>
+<span class="ne">---&gt; </span><span class="mi">80</span> <span class="bp">self</span><span class="o">.</span><span class="n">remove_prefixes</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">81</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dictionary</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_word</span><span class="p">):</span>
 <span class="g g-Whitespace">     </span><span class="mi">82</span>     <span class="k">return</span>
-<span class="g g-Whitespace">     </span><span class="mi">84</span> <span class="c1">#ECS loop pengembalian akhiran</span>
-<span class="ne">---&gt; </span><span class="mi">85</span> <span class="bp">self</span><span class="o">.</span><span class="n">loop_pengembalian_akhiran</span><span class="p">()</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\Sastrawi\Stemmer\Context\Context.py:141,</span> in <span class="ni">Context.loop_pengembalian_akhiran</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">138</span>     <span class="bp">self</span><span class="o">.</span><span class="n">current_word</span> <span class="o">=</span> <span class="n">removal</span><span class="o">.</span><span class="n">get_subject</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">140</span> <span class="c1">#step 4,5</span>
-<span class="ne">--&gt; </span><span class="mi">141</span> <span class="bp">self</span><span class="o">.</span><span class="n">remove_prefixes</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">142</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dictionary</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_word</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">143</span>     <span class="k">return</span>
 
 <span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\Sastrawi\Stemmer\Context\Context.py:89,</span> in <span class="ni">Context.remove_prefixes</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">     </span><span class="mi">87</span> <span class="k">def</span><span class="w"> </span><span class="nf">remove_prefixes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

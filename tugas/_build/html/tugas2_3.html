@@ -197,14 +197,6 @@
 <li class="toctree-l1"><a class="reference internal" href="tugas4_1_cbow_PTA_manajemen.html">CBOW PTA Manajemen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas6_LDA_klasifikasi_berita.html">LDA Klasifikasi Berita</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UTS.html">UTS</a></li>
-
-
-
-
-
-
-
-
 </ul>
 
     </div>
@@ -570,10 +562,10 @@ document.write(`
 --- Scraping Kategori: JATIM ---
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1/2) Berhasil scrape: Jaga Ketertiban Warga, Polres Pasuruan Perketat Izin Karnava...
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1/2) Berhasil scrape: Hasil Asesmen, Polda Jatim Tutup Sementara Area Ponpes Al Kh...
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2/2) Berhasil scrape: Pemkab Situbondo Genjot Kualitas Tembakau Lewat Pelatihan Pa...
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2/2) Berhasil scrape: Jaga Ketertiban Warga, Polres Pasuruan Perketat Izin Karnava...
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Scraping Kategori: JATIM METRO ---
@@ -604,6 +596,55 @@ document.write(`
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Scraping Kategori: JATIM SELATAN ---
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1/2) Berhasil scrape: 156 ASN Kota Batu Terima Satyalancana Karya Satya...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2/2) Berhasil scrape: 190 Guru di Kota Batu Ikuti Sosialisasi Pencegahan Korupsi...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Scraping Kategori: JATIM TIMUR ---
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1/2) Berhasil scrape: Pemkab Situbondo Genjot Kualitas Tembakau Lewat Pelatihan Pa...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2/2) Berhasil scrape: Polda Jatim Perkuat Kampung Tangguh Semeru di Pasuruan...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Scraping Kategori: JATIM BARAT ---
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1/2) Berhasil scrape: Serap Aspirasi Masyarakat Ponorogo, Senator Ning Lia Tekanka...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2/2) Berhasil scrape: Pemprov Jatim Gelar Gebyar Budaya Mataraman: Ruang Tawa, Hib...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Scraping Kategori: JATIM MADURA ---
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1/2) Berhasil scrape: Tim Gabungan Gelar Operasi Tertib Pajak Kendaraan Bermotor d...
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">149</span>
+<span class="g g-Whitespace">    </span><span class="mi">147</span> <span class="c1"># --- Untuk Menjalankan Seluruh Proses Scraping ---</span>
+<span class="g g-Whitespace">    </span><span class="mi">148</span> <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">149</span>     <span class="n">df_hasil</span> <span class="o">=</span> <span class="n">scrape_semua_berita</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">150</span>     <span class="k">if</span> <span class="n">df_hasil</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">151</span>         <span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_colwidth&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="nn">Cell In[1], line 127,</span> in <span class="ni">scrape_semua_berita</span><span class="nt">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">124</span>             <span class="n">artikel_diambil</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="g g-Whitespace">    </span><span class="mi">125</span>             <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;(</span><span class="si">{</span><span class="n">artikel_diambil</span><span class="si">}</span><span class="s2">/2) Berhasil scrape: </span><span class="si">{</span><span class="n">judul</span><span class="p">[:</span><span class="mi">60</span><span class="p">]</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">127</span>     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">129</span> <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">RequestException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">130</span>     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  -&gt; Gagal mengambil detail dari </span><span class="si">{</span><span class="n">link</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
 </div>
 </div>
