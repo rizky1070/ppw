@@ -1,0 +1,816 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c72bb274" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tugas7_2_graphPTA';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Analisis dataset webusage.csv" href="tugas8_1_analisisdatsetwebusage.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="tugas7_2_graphberita.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/pp.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/pp.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Profile
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="pengantar.html">Pengantar Penambangan Website</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crawling.html">Crawling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_1.html">Crawling PTA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_2.html">Crawling Link Dalam Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_3_crawling_berita.html">Crawling Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_3_crawlingPTA_manajemen.html">Crawling PTA Manajemen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas3_1_preprocessing_manajemen.html">Preprocessing Prodi Manajemen</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="tugas4_1_ekstraksi_fitur_tfidf_berita.html">Ekstraksi fitur TFID berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas4_1_ekstraksi_fitur_tfidf_pta_manajemen.html">Ekstraksi fitur TFID PTA Manajemen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas4_1_cbow_beritacopy.html">CBOW Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas4_1_cbow_PTA_manajemen.html">CBOW PTA Manajemen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas6_LDA_klasifikasi_berita.html">LDA Klasifikasi Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UTS.html">UTS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas8_1_analisisdatsetwebusage.html">Analisis dataset webusage.csv</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas8_2_analisisdatasetnasa.html">Analisis dataset NASA</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftugas7_2_graphPTA.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/tugas7_2_graphPTA.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">networkx</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nx</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="c1"># -------------------------------------------------------------------</span>
+<span class="c1"># Memuat Data </span>
+<span class="c1"># -------------------------------------------------------------------</span>
+
+<span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;pagerank500_edges_pta.csv&#39;</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+        <span class="n">file_path</span><span class="p">,</span>
+        <span class="n">comment</span><span class="o">=</span><span class="s1">&#39;#&#39;</span><span class="p">,</span>
+        <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span>  
+    <span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data berhasil dimuat. Berikut 5 baris pertama:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Info DataFrame:&quot;</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+
+<span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error: File &#39;</span><span class="si">{</span><span class="n">file_path</span><span class="si">}</span><span class="s2">&#39; tidak ditemukan.&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Terjadi error saat membaca file: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># -------------------------------------------------------------------</span>
+<span class="c1"># Membuat Graf Penuh (untuk Analisis)</span>
+<span class="c1"># -------------------------------------------------------------------</span>
+<span class="c1"># buat graf berarah (DiGraph) dari DataFrame pandas</span>
+<span class="c1"># -------------------------------------------------------------------</span>
+
+<span class="k">if</span> <span class="s1">&#39;df&#39;</span> <span class="ow">in</span> <span class="nb">locals</span><span class="p">():</span>
+    <span class="n">G_full</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">from_pandas_edgelist</span><span class="p">(</span>
+        <span class="n">df</span><span class="p">,</span>
+        <span class="n">source</span><span class="o">=</span><span class="s1">&#39;Halaman Sumber&#39;</span><span class="p">,</span>
+        <span class="n">target</span><span class="o">=</span><span class="s1">&#39;Link Keluar (Internal)&#39;</span><span class="p">,</span>
+        <span class="n">create_using</span><span class="o">=</span><span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span> <span class="c1"># Penting: create_using=nx.DiGraph()</span>
+    <span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Informasi Graf Penuh ---&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah Node (halaman): </span><span class="si">{</span><span class="n">G_full</span><span class="o">.</span><span class="n">number_of_nodes</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah Edge (tautan): </span><span class="si">{</span><span class="n">G_full</span><span class="o">.</span><span class="n">number_of_edges</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># -------------------------------------------------------------------</span>
+<span class="c1"># Membuat Subgraph (untuk Visualisasi)</span>
+<span class="c1"># -------------------------------------------------------------------</span>
+<span class="c1"># ambil 100 edge pertama dari data untuk digambar</span>
+<span class="c1"># -------------------------------------------------------------------</span>
+
+<span class="k">if</span> <span class="s1">&#39;df&#39;</span> <span class="ow">in</span> <span class="nb">locals</span><span class="p">():</span>
+    <span class="n">df_sample</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">G_sample</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">from_pandas_edgelist</span><span class="p">(</span>
+        <span class="n">df_sample</span><span class="p">,</span>
+        <span class="n">source</span><span class="o">=</span><span class="s1">&#39;Halaman Sumber&#39;</span><span class="p">,</span>
+        <span class="n">target</span><span class="o">=</span><span class="s1">&#39;Link Keluar (Internal)&#39;</span><span class="p">,</span>
+        <span class="n">create_using</span><span class="o">=</span><span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
+    <span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Informasi Subgraph (untuk Visualisasi) ---&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah Node (sample): </span><span class="si">{</span><span class="n">G_sample</span><span class="o">.</span><span class="n">number_of_nodes</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah Edge (sample): </span><span class="si">{</span><span class="n">G_sample</span><span class="o">.</span><span class="n">number_of_edges</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># -------------------------------------------------------------------</span>
+<span class="c1"># Visualisasi Subgraph</span>
+<span class="c1"># -------------------------------------------------------------------</span>
+<span class="c1"># Menggambar G_sample (bukan G_full)</span>
+<span class="c1"># -------------------------------------------------------------------</span>
+
+<span class="k">if</span> <span class="s1">&#39;G_sample&#39;</span> <span class="ow">in</span> <span class="nb">locals</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Membuat visualisasi subgraph...&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># Mengatur ukuran gambar</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+    
+    <span class="c1"># Menentukan layout</span>
+    <span class="c1"># &#39;spring_layout&#39; adalah layout yang baik untuk graf umum</span>
+    <span class="c1"># k=0.5 dan iterations=50 membantu &#39;menyebarkan&#39; node</span>
+    <span class="n">pos</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">spring_layout</span><span class="p">(</span><span class="n">G_sample</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">iterations</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+    
+    <span class="c1"># Menggambar graf</span>
+    <span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span>
+        <span class="n">G_sample</span><span class="p">,</span>
+        <span class="n">pos</span><span class="p">,</span>
+        <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>      <span class="c1"># Tampilkan label (ID node)</span>
+        <span class="n">node_color</span><span class="o">=</span><span class="s1">&#39;skyblue&#39;</span><span class="p">,</span>  <span class="c1"># Warna node</span>
+        <span class="n">node_size</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span>         <span class="c1"># Ukuran node</span>
+        <span class="n">font_size</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span>           <span class="c1"># Ukuran font label</span>
+        <span class="n">edge_color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span>     <span class="c1"># Warna edge</span>
+        <span class="n">arrows</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>           <span class="c1"># Tampilkan panah (karena ini DiGraph)</span>
+        <span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;-|&gt;&#39;</span><span class="p">,</span>      <span class="c1"># Gaya panah</span>
+        <span class="n">arrowsize</span><span class="o">=</span><span class="mi">15</span>           <span class="c1"># Ukuran panah</span>
+    <span class="p">)</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Visualisasi Subgraph (100 Tautan Pertama)&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># Menyimpan gambar ke file</span>
+    <span class="n">output_image_path</span> <span class="o">=</span> <span class="s2">&quot;subgraph.png&quot;</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">output_image_path</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Visualisasi subgraph telah disimpan ke &#39;</span><span class="si">{</span><span class="n">output_image_path</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+    
+<span class="c1"># -------------------------------------------------------------------</span>
+<span class="c1"># Analisis Graf Penuh (Menghitung PageRank)</span>
+<span class="c1"># -------------------------------------------------------------------</span>
+<span class="c1"># gunakan graf penuh (G_full) untuk analisis</span>
+<span class="c1"># -------------------------------------------------------------------</span>
+
+<span class="k">if</span> <span class="s1">&#39;G_full&#39;</span> <span class="ow">in</span> <span class="nb">locals</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Menghitung PageRank pada GRAF PENUH...&quot;</span><span class="p">)</span>
+    <span class="c1"># Ini mungkin butuh beberapa detik</span>
+    <span class="n">pagerank_scores</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">pagerank</span><span class="p">(</span><span class="n">G_full</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.85</span><span class="p">)</span>
+    
+    <span class="c1"># Mengurutkan node berdasarkan skor PageRank</span>
+    <span class="n">sorted_pagerank</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">pagerank_scores</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">item</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- 5 Node Teratas Berdasarkan PageRank ---&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">score</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sorted_pagerank</span><span class="p">[:</span><span class="mi">5</span><span class="p">]):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">. Node </span><span class="si">{</span><span class="n">node</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">score</span><span class="si">:</span><span class="s2">.8f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Variabel baru untuk menyimpan ID node teratas</span>
+    <span class="n">top_node_id</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">if</span> <span class="n">sorted_pagerank</span><span class="p">:</span>
+        <span class="n">top_node_id</span> <span class="o">=</span> <span class="n">sorted_pagerank</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Node teratas adalah: </span><span class="si">{</span><span class="n">top_node_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># -------------------------------------------------------------------</span>
+<span class="c1"># Analisis Pengikut (In-Degree) dan Diikuti (Out-Degree)</span>
+<span class="c1"># -------------------------------------------------------------------</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Menghitung Jumlah Pengikut (In-Degree) dan Diikuti (Out-Degree)...&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># Menghitung in-degree (link masuk / pengikut)</span>
+    <span class="c1"># Ini adalah DegreeView: (node, jumlah_pengikut)</span>
+    <span class="n">in_degrees</span> <span class="o">=</span> <span class="n">G_full</span><span class="o">.</span><span class="n">in_degree</span><span class="p">()</span>
+    
+    <span class="c1"># Menghitung out-degree (link keluar / diikuti)</span>
+    <span class="c1"># Ini adalah DegreeView: (node, jumlah_diikuti)</span>
+    <span class="n">out_degrees</span> <span class="o">=</span> <span class="n">G_full</span><span class="o">.</span><span class="n">out_degree</span><span class="p">()</span>
+    
+    <span class="c1"># Mengurutkan berdasarkan &#39;Pengikut&#39; (In-Degree) terbanyak</span>
+    <span class="n">sorted_in_degree</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">in_degrees</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">item</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+    <span class="c1"># Mengurutkan berdasarkan &#39;Diikuti&#39; (Out-Degree) terbanyak</span>
+    <span class="n">sorted_out_degree</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">out_degrees</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">item</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- 5 Node Teratas Berdasarkan Jumlah Pengikut (In-Degree) ---&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;(Node yang paling banyak di-link oleh halaman lain)&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">degree</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sorted_in_degree</span><span class="p">[:</span><span class="mi">5</span><span class="p">]):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">. Node </span><span class="si">{</span><span class="n">node</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">degree</span><span class="si">}</span><span class="s2"> pengikut&quot;</span><span class="p">)</span>
+        
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- 5 Node Teratas Berdasarkan Jumlah Diikuti (Out-Degree) ---&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;(Node yang paling banyak me-link ke halaman lain)&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">degree</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sorted_out_degree</span><span class="p">[:</span><span class="mi">5</span><span class="p">]):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">. Node </span><span class="si">{</span><span class="n">node</span><span class="si">}</span><span class="s2">: mengikuti </span><span class="si">{</span><span class="n">degree</span><span class="si">}</span><span class="s2"> halaman&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># Menampilkan info untuk node teratas dari PageRank (jika ada)</span>
+    <span class="k">if</span> <span class="n">top_node_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Analisis Detail Node PageRank Teratas (Node </span><span class="si">{</span><span class="n">top_node_id</span><span class="si">}</span><span class="s2">) ---&quot;</span><span class="p">)</span>
+        <span class="c1"># G_full.in_degree(node) mengambil nilai spesifik untuk node itu</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah Pengikut (In-Degree): </span><span class="si">{</span><span class="n">G_full</span><span class="o">.</span><span class="n">in_degree</span><span class="p">(</span><span class="n">top_node_id</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah Diikuti (Out-Degree): </span><span class="si">{</span><span class="n">G_full</span><span class="o">.</span><span class="n">out_degree</span><span class="p">(</span><span class="n">top_node_id</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">networkx</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nx</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># -------------------------------------------------------------------</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># Memuat Data </span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># -------------------------------------------------------------------</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;networkx&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -------------------------------------------------------------------</span>
+<span class="c1"># Analisis Koneksi Node Teratas</span>
+<span class="c1"># -------------------------------------------------------------------</span>
+<span class="c1"># Menampilkan node yang terhubung KE dan DARI node teratas</span>
+<span class="c1"># -------------------------------------------------------------------</span>
+
+<span class="k">if</span> <span class="s1">&#39;top_node_id&#39;</span> <span class="ow">in</span> <span class="nb">locals</span><span class="p">()</span> <span class="ow">and</span> <span class="n">top_node_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Menganalisis Koneksi untuk Node Teratas (</span><span class="si">{</span><span class="n">top_node_id</span><span class="si">}</span><span class="s2">) ---&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Predecessors = Node yang menaut KE top_node_id (Pengikut/Fans)</span>
+    <span class="c1"># Ini adalah node-node yang &quot;memberikan suara&quot; PageRank-nya</span>
+    <span class="n">predecessors</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">G_full</span><span class="o">.</span><span class="n">predecessors</span><span class="p">(</span><span class="n">top_node_id</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Jumlah &#39;Pengikut&#39; (Predecessors): </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">predecessors</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Daftar Pengikut: </span><span class="si">{</span><span class="n">predecessors</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Successors = Node yang DITAUT oleh top_node_id (Yang Diikuti)</span>
+    <span class="c1"># Ini adalah node-node ke mana top_node_id &quot;memberikan suaranya&quot;</span>
+    <span class="n">successors</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">G_full</span><span class="o">.</span><span class="n">successors</span><span class="p">(</span><span class="n">top_node_id</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Jumlah &#39;Yang Diikuti&#39; (Successors): </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">successors</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Daftar Yang Diikuti: </span><span class="si">{</span><span class="n">successors</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># Menyimpan daftar node ini untuk visualisasi</span>
+    <span class="n">nodes_to_visualize</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">predecessors</span> <span class="o">+</span> <span class="n">successors</span> <span class="o">+</span> <span class="p">[</span><span class="n">top_node_id</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Total node unik untuk divisualisasikan: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">nodes_to_visualize</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># -------------------------------------------------------------------</span>
+<span class="c1"># Visualisasi Lingkungan Node Teratas</span>
+<span class="c1"># -------------------------------------------------------------------</span>
+<span class="c1"># Membuat subgraph khusus untuk node teratas dan koneksinya</span>
+<span class="c1"># -------------------------------------------------------------------</span>
+
+<span class="k">if</span> <span class="s1">&#39;nodes_to_visualize&#39;</span> <span class="ow">in</span> <span class="nb">locals</span><span class="p">()</span> <span class="ow">and</span> <span class="n">nodes_to_visualize</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Membuat visualisasi untuk lingkungan node teratas...&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># Membuat subgraph HANYA dari node yang relevan</span>
+    <span class="n">H</span> <span class="o">=</span> <span class="n">G_full</span><span class="o">.</span><span class="n">subgraph</span><span class="p">(</span><span class="n">nodes_to_visualize</span><span class="p">)</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">18</span><span class="p">))</span>
+    
+    <span class="c1"># Membuat layout</span>
+    <span class="n">pos</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">spring_layout</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">iterations</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+    
+    <span class="c1"># Membuat peta warna untuk menyorot node</span>
+    <span class="n">color_map</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">H</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="n">top_node_id</span><span class="p">:</span>
+            <span class="n">color_map</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>      <span class="c1"># Node Teratas = Merah</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">predecessors</span><span class="p">:</span>
+            <span class="n">color_map</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;skyblue&#39;</span><span class="p">)</span>  <span class="c1"># Pengikut = Biru</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">successors</span><span class="p">:</span>
+            <span class="n">color_map</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;lightgreen&#39;</span><span class="p">)</span> <span class="c1"># Yang Diikuti = Hijau</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">color_map</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span> <span class="c1"># (Seharusnya tidak terjadi)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Menggambar graf dengan </span><span class="si">{</span><span class="n">H</span><span class="o">.</span><span class="n">number_of_nodes</span><span class="p">()</span><span class="si">}</span><span class="s2"> node dan </span><span class="si">{</span><span class="n">H</span><span class="o">.</span><span class="n">number_of_edges</span><span class="p">()</span><span class="si">}</span><span class="s2"> edge.&quot;</span><span class="p">)</span>
+
+    <span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span>
+        <span class="n">H</span><span class="p">,</span>
+        <span class="n">pos</span><span class="p">,</span>
+        <span class="n">node_color</span><span class="o">=</span><span class="n">color_map</span><span class="p">,</span>
+        <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">node_size</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+        <span class="n">font_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+        <span class="n">font_color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span>
+        <span class="n">edge_color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span>
+        <span class="n">arrows</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">arrowsize</span><span class="o">=</span><span class="mi">15</span>
+    <span class="p">)</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Visualisasi Lingkungan Node PageRank Teratas (</span><span class="si">{</span><span class="n">top_node_id</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># Menambahkan legenda sederhana</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="s1">&#39;Merah = Node Teratas</span><span class="se">\n</span><span class="s1">Biru = Pengikut (Predecessors)</span><span class="se">\n</span><span class="s1">Hijau = Yang Diikuti (Successors)&#39;</span><span class="p">,</span>
+             <span class="n">transform</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">transAxes</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
+             <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">boxstyle</span><span class="o">=</span><span class="s1">&#39;round,pad=0.5&#39;</span><span class="p">,</span> <span class="n">fc</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">))</span>
+    
+    <span class="c1"># Menyimpan gambar ke file</span>
+    <span class="n">output_image_path_top</span> <span class="o">=</span> <span class="s2">&quot;top_pagerank_node_graph.png&quot;</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">output_image_path_top</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Visualisasi node teratas telah disimpan ke &#39;</span><span class="si">{</span><span class="n">output_image_path_top</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Menganalisis Koneksi untuk Node Teratas (https://pta.trunojoyo.ac.id/) ---
+
+Jumlah &#39;Pengikut&#39; (Predecessors): 496
+Daftar Pengikut: [&#39;https://pta.trunojoyo.ac.id/&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/&#39;, &#39;https://pta.trunojoyo.ac.id/c_template/&#39;, &#39;https://pta.trunojoyo.ac.id/c_contact/&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/170361100003&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/170111100053&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/160211100116&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/index/2&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/index/3&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/index/4893&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/1&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/1&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/24&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/4&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/5&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/35&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/37&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/6&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/7&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/8&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/21&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/22&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/25&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/26&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/36&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/41&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/4&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/9&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/10&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/11&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/19&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/20&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/23&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/31&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/32&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/33&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/5&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/12&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/13&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/14&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/15&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/6&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/16&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/17&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/7&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/18&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/27&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/28&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/29&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/30&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/38&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/99&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/99&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/100&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/39&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/40&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/index.html&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/index/index.html&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/160351100011&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/160521100059&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/160411100044&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/index/1&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/index/&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/index/4&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130541100133&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/140331100033&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/160111100024&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/index/5&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/040411100468&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/index/4892&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/index/4891&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/index.html&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080111100012&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080111100002&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/070111100060&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/090111100077&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/070111200007&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/1/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/1/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/1/297&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/index.html&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/1/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/1/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/1/284&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/120121100013&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/120121100001&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130121100005&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/120121100009&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/120121100003&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/24/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/24/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/24/14&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080341100042&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080341100035&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/070341100018&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080341100014&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/070341100028&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/2/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/2/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/2/436&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080331100016&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080331100063&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080331100014&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080331100005&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080331100040&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/2/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/2/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/2/114&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080321100002&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/070321100003&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080321100001&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/070321100019&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080321100023&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/3/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/3/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/3/110&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080311100005&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080311100016&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080311100004&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080311100030&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080311100024&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/4/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/4/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/4/116&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/5/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/5/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/5/96&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/160351100018&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/160351100001&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/160351100007&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/160351100006&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/160351100020&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/35/2&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/170361100010&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/170361100001&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080211100070&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080231100031&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080221100062&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080221100009&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080221100118&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/3/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/3/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/3/578&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080231100013&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080231100007&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080231100020&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080231100049&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/6/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/6/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/6/118&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/090211200001&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080211100050&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/100211200002&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080211100044&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/7/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/7/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/7/207&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080221100007&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080221100013&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/8/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/8/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/8/177&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/100241100002&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/100241100013&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/100241100007&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/100241100004&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/100241100003&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/21/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/21/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/21/31&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130261100017&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130261100005&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130261100012&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130261100002&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130261100014&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/22/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/22/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/22/14&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/110251100001&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/110251100002&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/120251100003&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/120251100004&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/120251100009&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/25/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/25/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/25/19&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130271100023&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130271100003&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130271100006&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130271100002&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130271100008&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/26/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/26/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/26/15&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/160281100009&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/160281100007&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/160281100010&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/160281100001&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/160281100006&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/36/2&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/040411100476&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/040411100480&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/070411100070&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080411100115&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/4/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/4/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/4/460&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080421100005&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080421100087&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080421100019&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080421100055&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080421100046&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/9/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/9/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/9/143&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/10/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/10/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/10/172&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/070451100021&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/070451100037&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/070451100039&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/070451100011&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/070451100015&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/11/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/11/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/11/56&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/100471100002&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/100471100034&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/100471100001&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/100471100036&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/100471100032&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/19/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/19/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/19/27&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/100461100003&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/100461100006&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/100461100007&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/100461100005&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/110461100003&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/20/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/20/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/20/28&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130431100051&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130431100041&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130431100087&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130431100025&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130431100071&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/23/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/23/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/23/34&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/160491200026&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/160491200023&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/160491200027&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/160491200028&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/160491200025&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/33/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/33/3&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080531200003&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080511100018&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080511100017&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080531100011&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080531100046&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/5/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/5/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/5/507&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080521100066&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080521100057&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/070121100033&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/070121100030&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080521200002&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/12/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/12/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/12/136&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/070131100008&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080531100035&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/13/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/13/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/13/135&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/090541100015&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/090541100014&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/100541100026&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/100541100078&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/090541100020&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/14/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/14/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/14/104&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080511100027&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080511100057&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/060511100005&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/15/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/15/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/15/133&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/110721100016&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/110721100004&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/110721100002&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/110711100023&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/110721100018&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/6/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/6/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/6/195&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/110721100009&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/16/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/16/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/16/113&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/110711100013&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/110711100025&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/110711100027&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/110711100037&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/17/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/17/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/17/83&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/110611100118&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/110611100056&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/110611100085&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/110611100090&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/110611100131&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/7/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/7/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/7/462&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/18/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/18/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/18/183&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130621100011&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130621100114&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130621100119&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130621100122&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130621100129&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/27/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/27/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/27/73&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130631100004&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130631100072&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130631100020&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130631100008&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130631100123&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/28/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/28/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/28/70&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130641100101&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130641100122&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130641100120&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130641100009&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130641100014&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/29/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/29/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/29/84&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130651100078&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130651100085&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130651100076&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130651100072&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130651100101&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/30/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/30/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/30/53&#39;, &#39;https://pta.trunojoyo.ac.id/c_upload/&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/150541100066&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/160211100030&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/160211100064&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/index/6&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/150511100021&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/160231100025&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/160541100031&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/index/7&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/index/4890&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/index/4889&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/index.html/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/index.html/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/1/index.html&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/070111100093&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080111100029&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080111100011&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080111100023&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080111100007&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/1/1&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/1/&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/1/4&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080111100047&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080111100082&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080111100054&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/090111100053&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/090111100003&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/1/5&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/150111100130&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/150111100258&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/160111100136&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/1/296&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/1/295&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/1/index.html&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/1/1&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/1/&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/1/4&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/1/5&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/1/283&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/1/282&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/24/index.html&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130121100004&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130121100013&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130121100001&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/120121100014&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/120121100012&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/24/1&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/24/&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/24/4&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/120121100002&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/140121100009&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/140121100001&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/140121100025&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/140121100011&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/24/5&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/170121100003&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/160121100004&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/150121100002&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/24/13&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/24/12&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/2/index.html&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/2/1&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/2/&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/2/4&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080331100012&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080331100057&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080331100069&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080331100022&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/2/5&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/160311100017&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/2/435&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/2/434&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/2/index.html&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080331100019&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/2/1&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/2/&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/2/4&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080331100047&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/070331100011&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080331100051&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/070331100024&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/090331100008&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/2/5&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/130331100082&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/160331100032&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/2/113&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/2/112&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/3/index.html&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080321100009&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080321100025&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/090321100002&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/090321100019&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/090321100001&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/3/1&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/3/&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/3/4&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/090321100023&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/090321100018&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/090321100005&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/090321100006&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/090321100015&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/3/5&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/160321100038&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/160321100052&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/3/109&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/3/108&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/4/index.html&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080311100028&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080311100006&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080311100001&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080311100003&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/090311100009&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/4/1&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/4/&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/4/4&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/070311100006&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/090311100002&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/090311100001&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/090311100022&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/090311100011&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/4/5&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/160311100009&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/4/115&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/4/114&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/5/index.html&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080341100023&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080341100029&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080341100007&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/070341100031&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/070341100034&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/5/1&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/5/&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/5/4&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/070341100022&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/070341100023&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/090341100028&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/070341100002&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/080341100026&#39;]
+
+Jumlah &#39;Yang Diikuti&#39; (Successors): 61
+Daftar Yang Diikuti: [&#39;https://pta.trunojoyo.ac.id/index.html&#39;, &#39;https://pta.trunojoyo.ac.id/&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/&#39;, &#39;https://pta.trunojoyo.ac.id/c_template/&#39;, &#39;https://pta.trunojoyo.ac.id/c_contact/&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/170361100003&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/170111100053&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/detail/160211100116&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/index/2&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/index/3&#39;, &#39;https://pta.trunojoyo.ac.id/welcome/index/4893&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/1&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/1&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/24&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/2&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/4&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/5&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/35&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/37&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/3&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/6&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/7&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/8&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/21&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/22&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/25&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/26&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/36&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/41&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/4&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/9&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/10&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/11&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/19&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/20&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/23&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/31&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/32&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/33&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/5&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/12&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/13&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/14&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/15&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/6&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/16&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/17&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/7&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/18&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/27&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/28&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/29&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/30&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/38&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/99&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/99&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byfac/100&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/39&#39;, &#39;https://pta.trunojoyo.ac.id/c_search/byprod/40&#39;]
+
+Total node unik untuk divisualisasikan: 497
+
+Membuat visualisasi untuk lingkungan node teratas...
+Menggambar graf dengan 497 node dan 28286 edge.
+Visualisasi node teratas telah disimpan ke &#39;top_pagerank_node_graph.png&#39;
+</pre></div>
+</div>
+<img alt="_images/3f79c1f826f9b7f5bb836055e2cc66a8ff7ed439bc7b80188d985b9bb66a951f.png" src="_images/3f79c1f826f9b7f5bb836055e2cc66a8ff7ed439bc7b80188d985b9bb66a951f.png" />
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="tugas7_2_graphberita.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="tugas8_1_analisisdatsetwebusage.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Analisis dataset webusage.csv</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

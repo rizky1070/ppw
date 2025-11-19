@@ -187,8 +187,6 @@
 <li class="toctree-l1"><a class="reference internal" href="tugas2_2.html">Crawling Link Dalam Page</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas2_3_crawling_berita.html">Crawling Berita</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas2_3_crawlingPTA_manajemen.html">Crawling PTA Manajemen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas3_1_preprocessing_berita.html">Preprocessing berita</a></li>
-
 <li class="toctree-l1"><a class="reference internal" href="tugas3_1_preprocessing_manajemen.html">Preprocessing Prodi Manajemen</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="tugas4_1_ekstraksi_fitur_tfidf_berita.html">Ekstraksi fitur TFID berita</a></li>
@@ -197,6 +195,8 @@
 <li class="toctree-l1"><a class="reference internal" href="tugas4_1_cbow_PTA_manajemen.html">CBOW PTA Manajemen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas6_LDA_klasifikasi_berita.html">LDA Klasifikasi Berita</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UTS.html">UTS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas8_1_analisisdatsetwebusage.html">Analisis dataset webusage.csv</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas8_2_analisisdatasetnasa.html">Analisis dataset NASA</a></li>
 </ul>
 
     </div>
@@ -733,7 +733,11 @@ Requirement already satisfied: click in c:\laragon\bin\python\python-3.10\lib\si
 Requirement already satisfied: joblib in c:\laragon\bin\python\python-3.10\lib\site-packages (from nltk) (1.5.2)
 Requirement already satisfied: regex&gt;=2021.8.3 in c:\laragon\bin\python\python-3.10\lib\site-packages (from nltk) (2025.9.1)
 Requirement already satisfied: tqdm in c:\laragon\bin\python\python-3.10\lib\site-packages (from nltk) (4.67.1)
-Requirement already satisfied: colorama in c:\laragon\bin\python\python-3.10\lib\site-packages (from click-&gt;nltk) (0.4.6)
+Requirement already satisfied: colorama in c:\users\rizky\appdata\roaming\python\python310\site-packages (from click-&gt;nltk) (0.4.6)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[notice] A new release of pip is available: 25.2 -&gt; 25.3
+[notice] To update, run: C:\laragon\bin\python\python-3.10\python.exe -m pip install --upgrade pip
 </pre></div>
 </div>
 </div>
@@ -912,6 +916,10 @@ Requirement already satisfied: colorama in c:\laragon\bin\python\python-3.10\lib
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: Sastrawi in c:\laragon\bin\python\python-3.10\lib\site-packages (1.0.1)
 </pre></div>
 </div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[notice] A new release of pip is available: 25.2 -&gt; 25.3
+[notice] To update, run: C:\laragon\bin\python\python-3.10\python.exe -m pip install --upgrade pip
+</pre></div>
+</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -952,149 +960,6 @@ Requirement already satisfied: colorama in c:\laragon\bin\python\python-3.10\lib
 
 <span class="c1"># Tampilkan DataFrame</span>
 <span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;stopwords_removed_isi&#39;</span><span class="p">,</span> <span class="s1">&#39;stemmed_isi&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">11</span><span class="p">],</span> <span class="n">line</span> <span class="mi">12</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="k">return</span> <span class="p">[</span><span class="n">stemmer</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">token</span><span class="p">)</span> <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">tokens</span><span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="c1"># Terapkan stemming ke kolom &#39;stopwords_removed_isi&#39;</span>
-<span class="ne">---&gt; </span><span class="mi">12</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;stemmed_isi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;stopwords_removed_isi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">stem_tokens</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="c1"># Function to find and format stemmed word changes</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="k">def</span><span class="w"> </span><span class="nf">get_stemming_changes</span><span class="p">(</span><span class="n">original_tokens</span><span class="p">,</span> <span class="n">stemmed_tokens</span><span class="p">):</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\pandas\core\series.py:4935,</span> in <span class="ni">Series.apply</span><span class="nt">(self, func, convert_dtype, args, by_row, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">4800</span> <span class="k">def</span><span class="w"> </span><span class="nf">apply</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">4801</span>     <span class="bp">self</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">4802</span>     <span class="n">func</span><span class="p">:</span> <span class="n">AggFuncType</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">4807</span>     <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">4808</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataFrame</span> <span class="o">|</span> <span class="n">Series</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">4809</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">4810</span><span class="sd">     Invoke function on values of Series.</span>
-<span class="g g-Whitespace">   </span><span class="mi">4811</span><span class="sd"> </span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">   </span><span class="mi">4926</span><span class="sd">     dtype: float64</span>
-<span class="g g-Whitespace">   </span><span class="mi">4927</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">4928</span>     <span class="k">return</span> <span class="n">SeriesApply</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">4929</span>         <span class="bp">self</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">4930</span>         <span class="n">func</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">4931</span>         <span class="n">convert_dtype</span><span class="o">=</span><span class="n">convert_dtype</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">4932</span>         <span class="n">by_row</span><span class="o">=</span><span class="n">by_row</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">4933</span>         <span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">4934</span>         <span class="n">kwargs</span><span class="o">=</span><span class="n">kwargs</span><span class="p">,</span>
-<span class="ne">-&gt; </span><span class="mi">4935</span>     <span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\pandas\core\apply.py:1422,</span> in <span class="ni">SeriesApply.apply</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1419</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_compat</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1421</span> <span class="c1"># self.func is Callable</span>
-<span class="ne">-&gt; </span><span class="mi">1422</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_standard</span><span class="p">()</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\pandas\core\apply.py:1502,</span> in <span class="ni">SeriesApply.apply_standard</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1496</span> <span class="c1"># row-wise access</span>
-<span class="g g-Whitespace">   </span><span class="mi">1497</span> <span class="c1"># apply doesn&#39;t have a `na_action` keyword and for backward compat reasons</span>
-<span class="g g-Whitespace">   </span><span class="mi">1498</span> <span class="c1"># we need to give `na_action=&quot;ignore&quot;` for categorical data.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1499</span> <span class="c1"># TODO: remove the `na_action=&quot;ignore&quot;` when that default has been changed in</span>
-<span class="g g-Whitespace">   </span><span class="mi">1500</span> <span class="c1">#  Categorical (GH51645).</span>
-<span class="g g-Whitespace">   </span><span class="mi">1501</span> <span class="n">action</span> <span class="o">=</span> <span class="s2">&quot;ignore&quot;</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">CategoricalDtype</span><span class="p">)</span> <span class="k">else</span> <span class="kc">None</span>
-<span class="ne">-&gt; </span><span class="mi">1502</span> <span class="n">mapped</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">_map_values</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1503</span>     <span class="n">mapper</span><span class="o">=</span><span class="n">curried</span><span class="p">,</span> <span class="n">na_action</span><span class="o">=</span><span class="n">action</span><span class="p">,</span> <span class="n">convert</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">convert_dtype</span>
-<span class="g g-Whitespace">   </span><span class="mi">1504</span> <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1506</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">mapped</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">mapped</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">ABCSeries</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1507</span>     <span class="c1"># GH#43986 Need to do list(mapped) in order to get treated as nested</span>
-<span class="g g-Whitespace">   </span><span class="mi">1508</span>     <span class="c1">#  See also GH#25959 regarding EA support</span>
-<span class="g g-Whitespace">   </span><span class="mi">1509</span>     <span class="k">return</span> <span class="n">obj</span><span class="o">.</span><span class="n">_constructor_expanddim</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">mapped</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="n">obj</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\pandas\core\base.py:925,</span> in <span class="ni">IndexOpsMixin._map_values</span><span class="nt">(self, mapper, na_action, convert)</span>
-<span class="g g-Whitespace">    </span><span class="mi">922</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">ExtensionArray</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">923</span>     <span class="k">return</span> <span class="n">arr</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">mapper</span><span class="p">,</span> <span class="n">na_action</span><span class="o">=</span><span class="n">na_action</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">925</span> <span class="k">return</span> <span class="n">algorithms</span><span class="o">.</span><span class="n">map_array</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">mapper</span><span class="p">,</span> <span class="n">na_action</span><span class="o">=</span><span class="n">na_action</span><span class="p">,</span> <span class="n">convert</span><span class="o">=</span><span class="n">convert</span><span class="p">)</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\pandas\core\algorithms.py:1743,</span> in <span class="ni">map_array</span><span class="nt">(arr, mapper, na_action, convert)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1741</span> <span class="n">values</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">object</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1742</span> <span class="k">if</span> <span class="n">na_action</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1743</span>     <span class="k">return</span> <span class="n">lib</span><span class="o">.</span><span class="n">map_infer</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">mapper</span><span class="p">,</span> <span class="n">convert</span><span class="o">=</span><span class="n">convert</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1744</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1745</span>     <span class="k">return</span> <span class="n">lib</span><span class="o">.</span><span class="n">map_infer_mask</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1746</span>         <span class="n">values</span><span class="p">,</span> <span class="n">mapper</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="n">isna</span><span class="p">(</span><span class="n">values</span><span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">),</span> <span class="n">convert</span><span class="o">=</span><span class="n">convert</span>
-<span class="g g-Whitespace">   </span><span class="mi">1747</span>     <span class="p">)</span>
-
-<span class="nn">File pandas/_libs/lib.pyx:2999,</span> in <span class="ni">pandas._libs.lib.map_infer</span><span class="nt">()</span>
-
-<span class="nn">Cell In[11], line 9,</span> in <span class="ni">stem_tokens</span><span class="nt">(tokens)</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="k">def</span><span class="w"> </span><span class="nf">stem_tokens</span><span class="p">(</span><span class="n">tokens</span><span class="p">):</span>
-<span class="ne">----&gt; </span><span class="mi">9</span>     <span class="k">return</span> <span class="p">[</span><span class="n">stemmer</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">token</span><span class="p">)</span> <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">tokens</span><span class="p">]</span>
-
-<span class="nn">Cell In[11], line 9,</span> in <span class="ni">&lt;listcomp&gt;</span><span class="nt">(.0)</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="k">def</span><span class="w"> </span><span class="nf">stem_tokens</span><span class="p">(</span><span class="n">tokens</span><span class="p">):</span>
-<span class="ne">----&gt; </span><span class="mi">9</span>     <span class="k">return</span> <span class="p">[</span><span class="n">stemmer</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">token</span><span class="p">)</span> <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">tokens</span><span class="p">]</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\Sastrawi\Stemmer\CachedStemmer.py:20,</span> in <span class="ni">CachedStemmer.stem</span><span class="nt">(self, text)</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span>     <span class="n">stems</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cache</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">word</span><span class="p">))</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">20</span>     <span class="n">stem</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">delegatedStemmer</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span>     <span class="bp">self</span><span class="o">.</span><span class="n">cache</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">stem</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span>     <span class="n">stems</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stem</span><span class="p">)</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\Sastrawi\Stemmer\Stemmer.py:27,</span> in <span class="ni">Stemmer.stem</span><span class="nt">(self, text)</span>
-<span class="g g-Whitespace">     </span><span class="mi">24</span> <span class="n">stems</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="g g-Whitespace">     </span><span class="mi">26</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">27</span>     <span class="n">stems</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">stem_word</span><span class="p">(</span><span class="n">word</span><span class="p">))</span>
-<span class="g g-Whitespace">     </span><span class="mi">29</span> <span class="k">return</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">stems</span><span class="p">)</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\Sastrawi\Stemmer\Stemmer.py:36,</span> in <span class="ni">Stemmer.stem_word</span><span class="nt">(self, word)</span>
-<span class="g g-Whitespace">     </span><span class="mi">34</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">stem_plural_word</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">35</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">36</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">stem_singular_word</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\Sastrawi\Stemmer\Stemmer.py:84,</span> in <span class="ni">Stemmer.stem_singular_word</span><span class="nt">(self, word)</span>
-<span class="g g-Whitespace">     </span><span class="mi">82</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Stem a singular word to its common stem form.&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">83</span> <span class="n">context</span> <span class="o">=</span> <span class="n">Context</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dictionary</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">visitor_provider</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">84</span> <span class="n">context</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">86</span> <span class="k">return</span> <span class="n">context</span><span class="o">.</span><span class="n">result</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\Sastrawi\Stemmer\Context\Context.py:37,</span> in <span class="ni">Context.execute</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">34</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Execute stemming process; the result can be retrieved with result&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">36</span> <span class="c1">#step 1 - 5</span>
-<span class="ne">---&gt; </span><span class="mi">37</span> <span class="bp">self</span><span class="o">.</span><span class="n">start_stemming_process</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">39</span> <span class="c1">#step 6</span>
-<span class="g g-Whitespace">     </span><span class="mi">40</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dictionary</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_word</span><span class="p">):</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\Sastrawi\Stemmer\Context\Context.py:80,</span> in <span class="ni">Context.start_stemming_process</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">77</span>     <span class="k">return</span>
-<span class="g g-Whitespace">     </span><span class="mi">79</span> <span class="c1">#step 4, 5</span>
-<span class="ne">---&gt; </span><span class="mi">80</span> <span class="bp">self</span><span class="o">.</span><span class="n">remove_prefixes</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">81</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dictionary</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_word</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">82</span>     <span class="k">return</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\Sastrawi\Stemmer\Context\Context.py:89,</span> in <span class="ni">Context.remove_prefixes</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">87</span> <span class="k">def</span><span class="w"> </span><span class="nf">remove_prefixes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">88</span>     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">89</span>         <span class="bp">self</span><span class="o">.</span><span class="n">accept_prefix_visitors</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">prefix_pisitors</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">90</span>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dictionary</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_word</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">91</span>             <span class="k">return</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\Sastrawi\Stemmer\Context\Context.py:110,</span> in <span class="ni">Context.accept_prefix_visitors</span><span class="nt">(self, visitors)</span>
-<span class="g g-Whitespace">    </span><span class="mi">108</span> <span class="n">removalCount</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">removals</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">109</span> <span class="k">for</span> <span class="n">visitor</span> <span class="ow">in</span> <span class="n">visitors</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">110</span>     <span class="bp">self</span><span class="o">.</span><span class="n">accept</span><span class="p">(</span><span class="n">visitor</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">111</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dictionary</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_word</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">112</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_word</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\Sastrawi\Stemmer\Context\Context.py:97,</span> in <span class="ni">Context.accept</span><span class="nt">(self, visitor)</span>
-<span class="g g-Whitespace">     </span><span class="mi">96</span> <span class="k">def</span><span class="w"> </span><span class="nf">accept</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">visitor</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">97</span>     <span class="n">visitor</span><span class="o">.</span><span class="n">visit</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\Sastrawi\Stemmer\Context\Visitor\AbstractDisambiguatePrefixRule.py:15,</span> in <span class="ni">AbstractDisambiguatePrefixRule.visit</span><span class="nt">(self, context)</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="k">for</span> <span class="n">disambiguator</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">disambiguators</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">disambiguator</span><span class="o">.</span><span class="n">disambiguate</span><span class="p">(</span><span class="n">context</span><span class="o">.</span><span class="n">current_word</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">15</span>     <span class="k">if</span> <span class="n">context</span><span class="o">.</span><span class="n">dictionary</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">result</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span>         <span class="k">break</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">result</span><span class="p">:</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
 </div>
 </div>

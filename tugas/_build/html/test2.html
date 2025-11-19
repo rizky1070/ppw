@@ -187,8 +187,6 @@
 <li class="toctree-l1"><a class="reference internal" href="tugas2_2.html">Crawling Link Dalam Page</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas2_3_crawling_berita.html">Crawling Berita</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas2_3_crawlingPTA_manajemen.html">Crawling PTA Manajemen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas3_1_preprocessing_berita.html">Preprocessing berita</a></li>
-
 <li class="toctree-l1"><a class="reference internal" href="tugas3_1_preprocessing_manajemen.html">Preprocessing Prodi Manajemen</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="tugas4_1_ekstraksi_fitur_tfidf_berita.html">Ekstraksi fitur TFID berita</a></li>
@@ -197,6 +195,8 @@
 <li class="toctree-l1"><a class="reference internal" href="tugas4_1_cbow_PTA_manajemen.html">CBOW PTA Manajemen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas6_LDA_klasifikasi_berita.html">LDA Klasifikasi Berita</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UTS.html">UTS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas8_1_analisisdatsetwebusage.html">Analisis dataset webusage.csv</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas8_2_analisisdatasetnasa.html">Analisis dataset NASA</a></li>
 </ul>
 
     </div>
@@ -482,37 +482,12 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\laragon\bin\python\python-3.10\lib\site-packages\soupsieve\css_parser.py:876: FutureWarning: The pseudo class &#39;:contains&#39; is deprecated, &#39;:-soup-contains&#39; should be used moving forward.
-  warnings.warn(  # noqa: B028
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                 penulis                                              judul  \
-0     A.Ubaidillah S.Kom  PERANCANGAN DAN IMPLEMENTASI SISTEM DATABASE \...   
-1    M. Basith Ardianto,  APLIKASI KONTROL DAN MONITORING JARINGAN KOMPU...   
-2  Akhmad Suyandi, S.Kom  RANCANG BANGUN APLIKASI PROXY SERVER UNTUK\r\n...   
-3        Heri Supriyanto  SISTEM PENDUKUNG KEPUTUSAN OPTIMASI PENJADWALA...   
-4   Septian Rahman Hakim  SISTEM AUGMENTED REALITY ANIMASI BENDA BERGERA...   
-
-              pembimbing_pertama           pembimbing_kedua  \
-0               Budi Setyono M.T               Hermawan S.T   
-1          Drs. Budi Soesilo, MT              Koko Joni, ST   
-2         Drs. Budi Soesilo, M.T           Hermawan, ST, MT   
-3           Mulaab, S.Si., M.Kom  Firli Irhamni, ST., M.Kom   
-4  Arik Kurniawati, S.Kom., M.T.       Haryanto, S.T., M.T.   
-
-                                             abstrak  \
-0  Sistem  informasi  akademik  (SIAKAD) merupaka...   
-1  Berjalannya koneksi jaringan komputer dengan l...   
-2  Web server adalah sebuah perangkat lunak serve...   
-3  Penjadwalan  kuliah  di  Perguruan  Tinggi  me...   
-4  Seiring perkembangan teknologi yang ada diduni...   
-
-                                     abstrak_inggris  
-0  Academic information systems (SIAKAD) is an in...  
-1                                                  -  
-2  Web server is a server software functioning to...  
-3  Scheduling  courses  in  universities  is  a  ...  
-4  As the development of technology existing in t...  
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Terjadi error: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443): Max retries exceeded with url: /c_search/byprod/10/1 (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPSConnection object at 0x0000021577F44A30&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno 11001] getaddrinfo failed)&quot;))
+Terjadi error: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443): Max retries exceeded with url: /c_search/byprod/10/2 (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPSConnection object at 0x0000021577F45270&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno 11001] getaddrinfo failed)&quot;))
+Terjadi error: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443): Max retries exceeded with url: /c_search/byprod/10/3 (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPSConnection object at 0x0000021577F45A50&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno 11001] getaddrinfo failed)&quot;))
+Empty DataFrame
+Columns: [penulis, judul, pembimbing_pertama, pembimbing_kedua, abstrak, abstrak_inggris]
+Index: []
 </pre></div>
 </div>
 </div>
@@ -524,6 +499,11 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Terjadi error: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443): Max retries exceeded with url: /c_search/byprod/10/1 (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPSConnection object at 0x000002155FB1FB80&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno 11001] getaddrinfo failed)&quot;))
+Terjadi error: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443): Max retries exceeded with url: /c_search/byprod/10/2 (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPSConnection object at 0x000002155FB3B280&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno 11001] getaddrinfo failed)&quot;))
+Terjadi error: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443): Max retries exceeded with url: /c_search/byprod/10/3 (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPSConnection object at 0x000002155FB39780&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno 11001] getaddrinfo failed)&quot;))
+</pre></div>
+</div>
 <div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -551,141 +531,6 @@ document.write(`
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th>0</th>
-      <td>A.Ubaidillah S.Kom</td>
-      <td>PERANCANGAN DAN IMPLEMENTASI SISTEM DATABASE \...</td>
-      <td>Budi Setyono M.T</td>
-      <td>Hermawan S.T</td>
-      <td>Sistem  informasi  akademik  (SIAKAD) merupaka...</td>
-      <td>Academic information systems (SIAKAD) is an in...</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>M. Basith Ardianto,</td>
-      <td>APLIKASI KONTROL DAN MONITORING JARINGAN KOMPU...</td>
-      <td>Drs. Budi Soesilo, MT</td>
-      <td>Koko Joni, ST</td>
-      <td>Berjalannya koneksi jaringan komputer dengan l...</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Akhmad Suyandi, S.Kom</td>
-      <td>RANCANG BANGUN APLIKASI PROXY SERVER UNTUK\r\n...</td>
-      <td>Drs. Budi Soesilo, M.T</td>
-      <td>Hermawan, ST, MT</td>
-      <td>Web server adalah sebuah perangkat lunak serve...</td>
-      <td>Web server is a server software functioning to...</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Heri Supriyanto</td>
-      <td>SISTEM PENDUKUNG KEPUTUSAN OPTIMASI PENJADWALA...</td>
-      <td>Mulaab, S.Si., M.Kom</td>
-      <td>Firli Irhamni, ST., M.Kom</td>
-      <td>Penjadwalan  kuliah  di  Perguruan  Tinggi  me...</td>
-      <td>Scheduling  courses  in  universities  is  a  ...</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Septian Rahman Hakim</td>
-      <td>SISTEM AUGMENTED REALITY ANIMASI BENDA BERGERA...</td>
-      <td>Arik Kurniawati, S.Kom., M.T.</td>
-      <td>Haryanto, S.T., M.T.</td>
-      <td>Seiring perkembangan teknologi yang ada diduni...</td>
-      <td>As the development of technology existing in t...</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Adi Chandra Laksono</td>
-      <td>Gerak Pekerja Pada Game Real Time Strategy Men...</td>
-      <td>Kurniawan Eka P, S.Kom., Msc</td>
-      <td>Arik Kurniawati, S.Kom., M.T.</td>
-      <td>Gerak pekerja ada pada game yang memiliki genr...</td>
-      <td>Workers' movements in the game that has no gen...</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>NURRACHMAT</td>
-      <td>RANCANG BANGUN GAME PERAWATAN SAPI KARAPAN MEN...</td>
-      <td>Arik Kurniawati, S.Kom., M.T.</td>
-      <td>Kurniawan Eka Permana, S.Kom., MSc.</td>
-      <td>Perkembangan game yang semakin pesat, memberik...</td>
-      <td>The rapid development of the game, providing a...</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>Muhammad Choirur Rozi</td>
-      <td>EKSTRAKSI FITUR BERBASIS TWO DIMENSIONAL LINEA...</td>
-      <td>Dr. Arif Muntasa, S.Si.,M.T</td>
-      <td>Fitri Damayanti, S.Kom.,M.kom</td>
-      <td>Sistem pengenalan wajah adalah suatu sistem un...</td>
-      <td>Face recognition system is a system to recogni...</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>M Khoiril Anwar</td>
-      <td>IMPLEMENTASI  ALGORITMA PRIM  DAN DEPTH FIRST ...</td>
-      <td>Cucun Very Angkoso, S.T., M.T.</td>
-      <td>Arik Kurniawati S. Kom., M.T.</td>
-      <td>Teknologi mobile game beroperating system open...</td>
-      <td>Mobile technology is an open source game devel...</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>MALIKUL HAMZAH</td>
-      <td>Perancangan Sistem Informasi Badan Kepegawaian...</td>
-      <td>Moch. Kautsar Sophan, S.Kom., M.MT.</td>
-      <td>Yeni Kustiyaningsih, S.Kom., M.Kom.</td>
-      <td>Kantor Badan Kepegawaian kota Bangkalan adalah...</td>
-      <td>Office of Personnel Agency is Bangkalan city g...</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>Norman</td>
-      <td>PEMANFAATAN TOGAF ADM UNTUK PERANCANGAN SISTEM...</td>
-      <td>M. Kautsar Sophan, S.Kom., M. MT.</td>
-      <td>Yeni Kustiyahningsih S.Kom., M.Kom.</td>
-      <td>Penyusunan Sistem Informasi Dinas Perindustria...</td>
-      <td>Preparation of the Information Systems Dinas P...</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>Robiatul Adawiyah, S.Kom</td>
-      <td>APLIKASI METODE FUZZY ANALYTIC NETWORK PROCESS...</td>
-      <td>Diana Rahmawati, S.T, M.T</td>
-      <td>Budi Dwi Satoto, S.T, M.Kom</td>
-      <td>Perusahaan pemerintah maupun swasta mempunyai ...</td>
-      <td>Government and private companies have a goal t...</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>Desy Mariana S. Kom</td>
-      <td>SISTEM PENDUKUNG KEPUTUSAN REKOMENDASI MENU DI...</td>
-      <td>Haryanto ST, MT</td>
-      <td>Firli Irhamni ST, M. Kom</td>
-      <td>Pelayanan makanan bagi pasien rawat inap di Ru...</td>
-      <td>Food service for patients hospitalized at the ...</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>Lia Fransiska</td>
-      <td>RANCANG BANGUN APLIKASI PEMILIHAN TEKNIK REKAY...</td>
-      <td>Firli Irhamni S.T, M.Kom</td>
-      <td>Budi Dwi Satoto S.T, M.Kom</td>
-      <td>Penyusunan Sistem Pendukung Keputusan pemiliha...</td>
-      <td>Preparation of Decision Support System selecti...</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>Erwina Safitri</td>
-      <td>DETEKSI COREPOINT SIDIK JARI MENGGUNAKAN METOD...</td>
-      <td>Dr. Indah Agustien, S.Kom., M.Kom</td>
-      <td>Fitri Damayanti, S.Kom., M.Kom</td>
-      <td>Sidik jari adalah salah satu karakteristik fis...</td>
-      <td>Fingerprints are one of the physical character...</td>
-    </tr>
   </tbody>
 </table>
 </div></div></div>
@@ -875,207 +720,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Hukum - Ilmu Hukum (ID: 1) | Berhasil mengambil 1 jurnal.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gagal mengambil daftar fakultas dan prodi: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443): Max retries exceeded with url: /c_search/byfac (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPSConnection object at 0x000002155FB3B640&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno 11001] getaddrinfo failed)&quot;))
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Hukum - Magister Ilmu Hukum (ID: 24) | Berhasil mengambil 1 jurnal.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Pertanian - Teknologi Industri Pertanian (ID: 2) | Berhasil mengambil 1 jurnal.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Pertanian - Agribisnis (ID: 3) | Berhasil mengambil 1 jurnal.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Pertanian - Agroteknologi (ID: 4) | Berhasil mengambil 1 jurnal.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Pertanian - Ilmu Kelautan (ID: 5) | Berhasil mengambil 1 jurnal.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Pertanian - Manajemen Sumberdaya Perairan (ID: 35) | Berhasil mengambil 1 jurnal.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Pertanian - Magister Pengelolaan Sumber Daya Alam (ID: 37) | Berhasil mengambil 1 jurnal.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Ekonomi Dan Bisnis - Ekonomi Pembangunan (ID: 6) | Berhasil mengambil 1 jurnal.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Ekonomi Dan Bisnis - Manajemen (ID: 7) | Berhasil mengambil 1 jurnal.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Ekonomi Dan Bisnis - Akuntansi (ID: 8) | Berhasil mengambil 1 jurnal.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Ekonomi Dan Bisnis - D3 Akuntansi (ID: 21) | Berhasil mengambil 1 jurnal.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Ekonomi Dan Bisnis - Magister Manajemen (ID: 22) | Berhasil mengambil 1 jurnal.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Ekonomi Dan Bisnis - Magister Akuntansi (ID: 25) | Berhasil mengambil 1 jurnal.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Ekonomi Dan Bisnis - D3 Enterpreneurship (ID: 26) | Berhasil mengambil 1 jurnal.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Ekonomi Dan Bisnis - Magister Ilmu Ekonomi (ID: 36) | Berhasil mengambil 1 jurnal.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Ekonomi Dan Bisnis - Doktor Ilmu Manajemen (ID: 41) | Berhasil mengambil 0 jurnal.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Teknik - Teknik Industri (ID: 9) | Berhasil mengambil 1 jurnal.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Teknik - Teknik Informatika (ID: 10) | Berhasil mengambil 1 jurnal.
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">scrape_all</span><span class="p">()</span>
-
-<span class="nn">Cell In[3], line 105,</span> in <span class="ni">scrape_all</span><span class="nt">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">101</span> <span class="c1"># --- AKHIR PERUBAHAN ---</span>
-<span class="g g-Whitespace">    </span><span class="mi">102</span> 
-<span class="g g-Whitespace">    </span><span class="mi">103</span> <span class="c1"># Proses scraping detail (tetap sama)</span>
-<span class="g g-Whitespace">    </span><span class="mi">104</span> <span class="n">jurnal_url</span> <span class="o">=</span> <span class="n">jurnal</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;a.gray.button&#39;</span><span class="p">)[</span><span class="s1">&#39;href&#39;</span><span class="p">]</span>
-<span class="ne">--&gt; </span><span class="mi">105</span> <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">jurnal_url</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">106</span> <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">107</span> <span class="n">isi</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;div#content_journal&#39;</span><span class="p">)</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\requests\api.py:73,</span> in <span class="ni">get</span><span class="nt">(url, params, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">62</span> <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">63</span><span class="w">     </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Sends a GET request.</span>
-<span class="g g-Whitespace">     </span><span class="mi">64</span><span class="sd"> </span>
-<span class="g g-Whitespace">     </span><span class="mi">65</span><span class="sd">     :param url: URL for the new :class:`Request` object.</span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">     </span><span class="mi">70</span><span class="sd">     :rtype: requests.Response</span>
-<span class="g g-Whitespace">     </span><span class="mi">71</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">73</span>     <span class="k">return</span> <span class="n">request</span><span class="p">(</span><span class="s2">&quot;get&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\requests\api.py:59,</span> in <span class="ni">request</span><span class="nt">(method, url, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">55</span> <span class="c1"># By using the &#39;with&#39; statement we are sure the session is closed, thus we</span>
-<span class="g g-Whitespace">     </span><span class="mi">56</span> <span class="c1"># avoid leaving sockets open which can trigger a ResourceWarning in some</span>
-<span class="g g-Whitespace">     </span><span class="mi">57</span> <span class="c1"># cases, and look like a memory leak in others.</span>
-<span class="g g-Whitespace">     </span><span class="mi">58</span> <span class="k">with</span> <span class="n">sessions</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">59</span>     <span class="k">return</span> <span class="n">session</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\requests\sessions.py:589,</span> in <span class="ni">Session.request</span><span class="nt">(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)</span>
-<span class="g g-Whitespace">    </span><span class="mi">584</span> <span class="n">send_kwargs</span> <span class="o">=</span> <span class="p">{</span>
-<span class="g g-Whitespace">    </span><span class="mi">585</span>     <span class="s2">&quot;timeout&quot;</span><span class="p">:</span> <span class="n">timeout</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">586</span>     <span class="s2">&quot;allow_redirects&quot;</span><span class="p">:</span> <span class="n">allow_redirects</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">587</span> <span class="p">}</span>
-<span class="g g-Whitespace">    </span><span class="mi">588</span> <span class="n">send_kwargs</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">589</span> <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">prep</span><span class="p">,</span> <span class="o">**</span><span class="n">send_kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">591</span> <span class="k">return</span> <span class="n">resp</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\requests\sessions.py:703,</span> in <span class="ni">Session.send</span><span class="nt">(self, request, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">700</span> <span class="n">start</span> <span class="o">=</span> <span class="n">preferred_clock</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span> <span class="c1"># Send the request</span>
-<span class="ne">--&gt; </span><span class="mi">703</span> <span class="n">r</span> <span class="o">=</span> <span class="n">adapter</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">705</span> <span class="c1"># Total elapsed time of the request (approximately)</span>
-<span class="g g-Whitespace">    </span><span class="mi">706</span> <span class="n">elapsed</span> <span class="o">=</span> <span class="n">preferred_clock</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\requests\adapters.py:644,</span> in <span class="ni">HTTPAdapter.send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
-<span class="g g-Whitespace">    </span><span class="mi">641</span>     <span class="n">timeout</span> <span class="o">=</span> <span class="n">TimeoutSauce</span><span class="p">(</span><span class="n">connect</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span> <span class="n">read</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">643</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">644</span>     <span class="n">resp</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">645</span>         <span class="n">method</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">method</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">646</span>         <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">647</span>         <span class="n">body</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">body</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">648</span>         <span class="n">headers</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">headers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">649</span>         <span class="n">redirect</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">650</span>         <span class="n">assert_same_host</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">651</span>         <span class="n">preload_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">652</span>         <span class="n">decode_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">653</span>         <span class="n">retries</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_retries</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">654</span>         <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">655</span>         <span class="n">chunked</span><span class="o">=</span><span class="n">chunked</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">656</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">658</span> <span class="k">except</span> <span class="p">(</span><span class="n">ProtocolError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">)</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">659</span>     <span class="k">raise</span> <span class="ne">ConnectionError</span><span class="p">(</span><span class="n">err</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\urllib3\connectionpool.py:787,</span> in <span class="ni">HTTPConnectionPool.urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">784</span> <span class="n">response_conn</span> <span class="o">=</span> <span class="n">conn</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">release_conn</span> <span class="k">else</span> <span class="kc">None</span>
-<span class="g g-Whitespace">    </span><span class="mi">786</span> <span class="c1"># Make the request on the HTTPConnection object</span>
-<span class="ne">--&gt; </span><span class="mi">787</span> <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_request</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">788</span>     <span class="n">conn</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">789</span>     <span class="n">method</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">790</span>     <span class="n">url</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">791</span>     <span class="n">timeout</span><span class="o">=</span><span class="n">timeout_obj</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">792</span>     <span class="n">body</span><span class="o">=</span><span class="n">body</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">793</span>     <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">794</span>     <span class="n">chunked</span><span class="o">=</span><span class="n">chunked</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">795</span>     <span class="n">retries</span><span class="o">=</span><span class="n">retries</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">796</span>     <span class="n">response_conn</span><span class="o">=</span><span class="n">response_conn</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">797</span>     <span class="n">preload_content</span><span class="o">=</span><span class="n">preload_content</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">798</span>     <span class="n">decode_content</span><span class="o">=</span><span class="n">decode_content</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">799</span>     <span class="o">**</span><span class="n">response_kw</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">800</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">802</span> <span class="c1"># Everything went great!</span>
-<span class="g g-Whitespace">    </span><span class="mi">803</span> <span class="n">clean_exit</span> <span class="o">=</span> <span class="kc">True</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\urllib3\connectionpool.py:534,</span> in <span class="ni">HTTPConnectionPool._make_request</span><span class="nt">(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)</span>
-<span class="g g-Whitespace">    </span><span class="mi">532</span> <span class="c1"># Receive the response from the server</span>
-<span class="g g-Whitespace">    </span><span class="mi">533</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">534</span>     <span class="n">response</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">535</span> <span class="k">except</span> <span class="p">(</span><span class="n">BaseSSLError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">536</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_raise_timeout</span><span class="p">(</span><span class="n">err</span><span class="o">=</span><span class="n">e</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">timeout_value</span><span class="o">=</span><span class="n">read_timeout</span><span class="p">)</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\urllib3\connection.py:565,</span> in <span class="ni">HTTPConnection.getresponse</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">562</span> <span class="n">_shutdown</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sock</span><span class="p">,</span> <span class="s2">&quot;shutdown&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">564</span> <span class="c1"># Get the response from http.client.HTTPConnection</span>
-<span class="ne">--&gt; </span><span class="mi">565</span> <span class="n">httplib_response</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">567</span> <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">568</span>     <span class="n">assert_header_parsing</span><span class="p">(</span><span class="n">httplib_response</span><span class="o">.</span><span class="n">msg</span><span class="p">)</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\http\client.py:1374,</span> in <span class="ni">HTTPConnection.getresponse</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1372</span> <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1373</span>     <span class="k">try</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1374</span>         <span class="n">response</span><span class="o">.</span><span class="n">begin</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1375</span>     <span class="k">except</span> <span class="ne">ConnectionError</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1376</span>         <span class="bp">self</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\http\client.py:318,</span> in <span class="ni">HTTPResponse.begin</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">316</span> <span class="c1"># read until we get a non-100 response</span>
-<span class="g g-Whitespace">    </span><span class="mi">317</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">318</span>     <span class="n">version</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">reason</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_status</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">319</span>     <span class="k">if</span> <span class="n">status</span> <span class="o">!=</span> <span class="n">CONTINUE</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">320</span>         <span class="k">break</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\http\client.py:279,</span> in <span class="ni">HTTPResponse._read_status</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">278</span> <span class="k">def</span><span class="w"> </span><span class="nf">_read_status</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">279</span>     <span class="n">line</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fp</span><span class="o">.</span><span class="n">readline</span><span class="p">(</span><span class="n">_MAXLINE</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;iso-8859-1&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">280</span>     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">_MAXLINE</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">281</span>         <span class="k">raise</span> <span class="n">LineTooLong</span><span class="p">(</span><span class="s2">&quot;status line&quot;</span><span class="p">)</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\socket.py:705,</span> in <span class="ni">SocketIO.readinto</span><span class="nt">(self, b)</span>
-<span class="g g-Whitespace">    </span><span class="mi">703</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">704</span>     <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">705</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sock</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">706</span>     <span class="k">except</span> <span class="n">timeout</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">707</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_timeout_occurred</span> <span class="o">=</span> <span class="kc">True</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\ssl.py:1274,</span> in <span class="ni">SSLSocket.recv_into</span><span class="nt">(self, buffer, nbytes, flags)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1270</span>     <span class="k">if</span> <span class="n">flags</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1271</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1272</span>           <span class="s2">&quot;non-zero flags not allowed in calls to recv_into() on </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span>
-<span class="g g-Whitespace">   </span><span class="mi">1273</span>           <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1274</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">nbytes</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1275</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1276</span>     <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">nbytes</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\ssl.py:1130,</span> in <span class="ni">SSLSocket.read</span><span class="nt">(self, len, buffer)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1128</span> <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1129</span>     <span class="k">if</span> <span class="n">buffer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1130</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1131</span>     <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1132</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tidak ada prodi yang bisa di-scrape. Program berhenti.
 </pre></div>
 </div>
 </div>
@@ -1232,44 +880,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Pertanian - Agroteknologi | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Hukum - Ilmu Hukum | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Pertanian - Ilmu Kelautan | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Pertanian - Teknologi Industri Pertanian | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Pertanian - Manajemen Sumberdaya Perairan | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - Ekonomi Pembangunan | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - Manajemen | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Hukum - Magister Ilmu Hukum | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Pertanian - Agribisnis | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Pertanian - Magister Pengelolaan Sumber Daya Alam | Berhasil mengambil 3 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - Akuntansi | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - D3 Akuntansi | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - Magister Manajemen | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - Magister Akuntansi | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - D3 Enterpreneurship | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - Magister Ilmu Ekonomi | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Teknik - Teknik Informatika | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Teknik - Teknik Industri | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Teknik - Manajemen Informatika | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Teknik - Teknik Multimedia Dan Jaringan | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Teknik - Mekatronika | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Teknik - Teknik Elektro | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Teknik - Teknik Mekatronika | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ilmu Sosial Dan Ilmu Budaya - Sosiologi | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ilmu Sosial Dan Ilmu Budaya - Psikologi | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ilmu Sosial Dan Ilmu Budaya - Ilmu Komunikasi | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ilmu Sosial Dan Ilmu Budaya - Sastra Inggris | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Keislaman - Hukum Bisnis Syariah | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Keislaman - Ekonomi Syariah | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ilmu Pendidikan - Pgsd | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ilmu Pendidikan - Pendidikan Bhs Dan Sastra Indonesia | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ilmu Pendidikan - Pendidikan Informatika | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ilmu Pendidikan - Pendidikan Ipa | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ilmu Pendidikan - Pgpaud | Berhasil mengambil 4 jurnal.
-
-✅ Proses scraping selesai.
-Total data yang berhasil diambil: 135 jurnal.
-Total waktu eksekusi: 63.06 detik.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gagal mengambil daftar prodi: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443): Max retries exceeded with url: /c_search/byfac (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPSConnection object at 0x000002155FB3BAF0&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno 11001] getaddrinfo failed)&quot;))
 </pre></div>
 </div>
 </div>
@@ -1417,44 +1028,7 @@ Total waktu eksekusi: 63.06 detik.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Ekonomi Dan Bisnis - Ekonomi Pembangunan | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Pertanian - Agroteknologi | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Hukum - Ilmu Hukum | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Pertanian - Ilmu Kelautan | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Pertanian - Agribisnis | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Hukum - Magister Ilmu Hukum | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Pertanian - Teknologi Industri Pertanian | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - Manajemen | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Pertanian - Manajemen Sumberdaya Perairan | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Pertanian - Magister Pengelolaan Sumber Daya Alam | Berhasil mengambil 3 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - Akuntansi | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - D3 Akuntansi | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - Magister Manajemen | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - Magister Ilmu Ekonomi | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - D3 Enterpreneurship | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - Magister Akuntansi | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Teknik - Teknik Industri | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Teknik - Teknik Informatika | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Teknik - Manajemen Informatika | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Teknik - Teknik Multimedia Dan Jaringan | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Teknik - Mekatronika | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Teknik - Teknik Elektro | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Teknik - Teknik Mekatronika | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ilmu Sosial Dan Ilmu Budaya - Sosiologi | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ilmu Sosial Dan Ilmu Budaya - Psikologi | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ilmu Sosial Dan Ilmu Budaya - Ilmu Komunikasi | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ilmu Sosial Dan Ilmu Budaya - Sastra Inggris | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Keislaman - Ekonomi Syariah | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Keislaman - Hukum Bisnis Syariah | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ilmu Pendidikan - Pgsd | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ilmu Pendidikan - Pendidikan Bhs Dan Sastra Indonesia | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ilmu Pendidikan - Pendidikan Informatika | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ilmu Pendidikan - Pendidikan Ipa | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ilmu Pendidikan - Pgpaud | Berhasil mengambil 4 jurnal.
-
-✅ Proses scraping selesai.
-Total data yang berhasil diambil: 135 jurnal.
-Total waktu eksekusi: 63.39 detik.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gagal mengambil daftar prodi: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443): Max retries exceeded with url: /c_search/byfac (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPSConnection object at 0x000002155FB38D60&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno 11001] getaddrinfo failed)&quot;))
 </pre></div>
 </div>
 </div>
@@ -1466,36 +1040,7 @@ Total waktu eksekusi: 63.39 detik.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Hukum - Ilmu Hukum | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Hukum - Magister Ilmu Hukum | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - Ekonomi Pembangunan | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Pertanian - Manajemen Sumberdaya Perairan | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - Manajemen | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Pertanian - Ilmu Kelautan | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Pertanian - Agroteknologi | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Pertanian - Teknologi Industri Pertanian | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Pertanian - Agribisnis | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Pertanian - Magister Pengelolaan Sumber Daya Alam | Berhasil mengambil 3 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - Magister Ilmu Ekonomi | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Teknik - Teknik Industri | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Teknik - Teknik Informatika | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Teknik - Manajemen Informatika | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Teknik - Teknik Multimedia Dan Jaringan | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Teknik - Mekatronika | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Teknik - Teknik Elektro | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Teknik - Teknik Mekatronika | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ilmu Sosial Dan Ilmu Budaya - Sastra Inggris | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Keislaman - Ekonomi Syariah | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Keislaman - Hukum Bisnis Syariah | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ilmu Pendidikan - Pgsd | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ilmu Pendidikan - Pendidikan Bhs Dan Sastra Indonesia | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ilmu Pendidikan - Pendidikan Informatika | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ilmu Pendidikan - Pgpaud | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ilmu Pendidikan - Pendidikan Ipa | Berhasil mengambil 4 jurnal.
-
-✅ Proses scraping selesai.
-Total data yang berhasil diambil: 103 jurnal.
-Total waktu eksekusi: 57.99 detik.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gagal mengambil daftar prodi: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443): Max retries exceeded with url: /c_search/byfac (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPSConnection object at 0x000002155FB3B730&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno 11001] getaddrinfo failed)&quot;))
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -1516,153 +1061,11 @@ Total waktu eksekusi: 57.99 detik.
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>nama_fakultas</th>
-      <th>id_prodi</th>
-      <th>nama_prodi</th>
-      <th>judul</th>
-      <th>penulis</th>
-      <th>pembimbing_pertama</th>
-      <th>pembimbing_kedua</th>
-      <th>abstrak</th>
-      <th>abstrak_inggris</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th>0</th>
-      <td>Hukum</td>
-      <td>1</td>
-      <td>Ilmu Hukum</td>
-      <td>Implementasi Fungsi Legislasi Dewan Perwakilan...</td>
-      <td>Dyah Ayu Citra Seza</td>
-      <td>Yudi Widagdo Harimurti, SH., MH</td>
-      <td>Safi', SH., MH</td>
-      <td>ABSTRAK Implementasi Fungsi Legislasi DPRD Kab...</td>
-      <td>ABSTRACT Implementation of Legislation Parliam...</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Hukum</td>
-      <td>1</td>
-      <td>Ilmu Hukum</td>
-      <td>Pertanggungjawaban Pidana Direksi BUMN (Perser...</td>
-      <td>Maulina Nurlaily</td>
-      <td>Tolib Effendi, SH., MH.</td>
-      <td>Dr. Eni Suastuti, SH., Mhum.</td>
-      <td>Badan Usaha Milik Negara (BUMN) adalah Badan u...</td>
-      <td>State Owned Enterprises (SOEs) are business en...</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Hukum</td>
-      <td>1</td>
-      <td>Ilmu Hukum</td>
-      <td>Analisis Terhadap Kekosongan Hukum dalam Penga...</td>
-      <td>Moh. Samsul Hidayat</td>
-      <td>Tolib Effendi, SH., MH.</td>
-      <td>Agus Ramdlany, SH., MH.</td>
-      <td>Kasus narkoba tidak henti-hentinya terdengar d...</td>
-      <td>Drug cases endlessly heard on television, radi...</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Hukum</td>
-      <td>1</td>
-      <td>Ilmu Hukum</td>
-      <td>PERLINDUNGAN HUKUM BAGI KONSUMEN ATAS PRODUK E...</td>
-      <td>TOMMY ADITYA PARLINDUNGAN MARBUN</td>
-      <td>DR. DJULAEKA, S.H., M.HUM</td>
-      <td>DR.USWATUN HASANAH, S.H., M. HUM</td>
-      <td>Produk elektronik adalah suatu benda bergerak ...</td>
-      <td>Electronic products is an object moves through...</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Hukum</td>
-      <td>24</td>
-      <td>Magister Ilmu Hukum</td>
-      <td>PERTANGGUNG JAWABAN HUKUM PEJABAT PEMBUAT KOMI...</td>
-      <td>MOCHAMAD SAICHU</td>
-      <td>Dr. Nunuk Nuswardani S.H., M.H</td>
-      <td>Dr. Deni SB Yuherawan S.H., Msi</td>
-      <td>Korupsi tergolong ke dalam kejahatan yang luar...</td>
-      <td>Korupsi tergolong ke dalam kejahatan yang luar...</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>98</th>
-      <td>Ilmu Pendidikan</td>
-      <td>29</td>
-      <td>Pendidikan Ipa</td>
-      <td>PENGEMBANGAN LEMBAR KERJA SISWABERORIENTASI \n...</td>
-      <td>Aden Toyyib</td>
-      <td>Yunin Hidayati,  S.Si., M.Si</td>
-      <td>Irsad Rosidi, S.Pd., M.Pd</td>
-      <td>Penelitian ini merupakan penelitian pengembang...</td>
-      <td>The research aims to know validity of socio sc...</td>
-    </tr>
-    <tr>
-      <th>99</th>
-      <td>Ilmu Pendidikan</td>
-      <td>30</td>
-      <td>Pgpaud</td>
-      <td>Hubungan Antara Aktivitas Fisik Dengan Kedisip...</td>
-      <td>Indri Wulan Suryani</td>
-      <td>Titin Faridatun Nisa', M.Pd</td>
-      <td>Yulias Wulani Fajar, M.Pd</td>
-      <td>Pembelajaran pada anak usia dini dilakukan mel...</td>
-      <td>ABSTRAK Learning in early childhood has been d...</td>
-    </tr>
-    <tr>
-      <th>100</th>
-      <td>Ilmu Pendidikan</td>
-      <td>30</td>
-      <td>Pgpaud</td>
-      <td>Efektivitas Penanaman  Nilai Agama untuk Membe...</td>
-      <td>Endang Ratnasari</td>
-      <td>Titin Faridatun Nisa', M.Pd</td>
-      <td>Yulias Wulani Fajar, M.Pd</td>
-      <td>Penanaman nilai agama merupakan salah satu pem...</td>
-      <td>Applying religion value is one of the more dom...</td>
-    </tr>
-    <tr>
-      <th>101</th>
-      <td>Ilmu Pendidikan</td>
-      <td>30</td>
-      <td>Pgpaud</td>
-      <td>PENGARUH METODE DEMONSTRASI TERHADAP PERILAKU ...</td>
-      <td>Lischa Dwi Christin Niya Ningrum</td>
-      <td>Muhammad Busyro Karim, S.Ag., M.Si.</td>
-      <td>Dewi Mayangsari, M.Psi</td>
-      <td>Kesehatan mempunyai pengaruh terhadap pencapai...</td>
-      <td>Health has an influence on the achievement of ...</td>
-    </tr>
-    <tr>
-      <th>102</th>
-      <td>Ilmu Pendidikan</td>
-      <td>30</td>
-      <td>Pgpaud</td>
-      <td>Pengaruh Strategi Meaningful Instructional Des...</td>
-      <td>Siti Herlinah Wifroh</td>
-      <td>Yulias Wulani Fajar, M.Pd</td>
-      <td>Titin Faridatun Nisa', S.Pd., M.Pd</td>
-      <td>Tujuan penelitian ini untuk mengetahui pengaru...</td>
-      <td>The purpose of this study is to reveal the inf...</td>
-    </tr>
   </tbody>
 </table>
-<p>103 rows × 9 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -1828,51 +1231,7 @@ Total waktu eksekusi: 57.99 detik.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Pertanian - Agroteknologi | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Hukum - Magister Ilmu Hukum | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Hukum - Ilmu Hukum | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Pertanian - Teknologi Industri Pertanian | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Pertanian - Manajemen Sumberdaya Perairan | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Pertanian - Agribisnis | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - Ekonomi Pembangunan | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - Manajemen | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Pertanian - Ilmu Kelautan | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - Akuntansi | Ditemukan 0 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - D3 Akuntansi | Ditemukan 0 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - Magister Manajemen | Ditemukan 0 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - Magister Akuntansi | Ditemukan 0 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - D3 Enterpreneurship | Ditemukan 0 jurnal.
-✔️ Selesai: Pertanian - Magister Pengelolaan Sumber Daya Alam | Berhasil mengambil 3 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - Magister Ilmu Ekonomi | Ditemukan 0 jurnal.
-✔️ Selesai: Ekonomi Dan Bisnis - Doktor Ilmu Manajemen | Ditemukan 0 jurnal.
-✔️ Selesai: Teknik - Teknik Informatika | Ditemukan 0 jurnal.
-✔️ Selesai: Teknik - Teknik Elektro | Ditemukan 0 jurnal.
-✔️ Selesai: Teknik - Sistem Informasi | Ditemukan 0 jurnal.
-✔️ Selesai: Teknik - Teknik Mesin | Ditemukan 0 jurnal.
-✔️ Selesai: Teknik - Teknik Mekatronika | Ditemukan 0 jurnal.
-✔️ Selesai: Ilmu Sosial Dan Ilmu Budaya - Sosiologi | Ditemukan 0 jurnal.
-✔️ Selesai: Teknik - Teknik Industri | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Teknik - Manajemen Informatika | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Teknik - Teknik Multimedia Dan Jaringan | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Teknik - Mekatronika | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ilmu Sosial Dan Ilmu Budaya - Psikologi | Ditemukan 0 jurnal.
-✔️ Selesai: Ilmu Sosial Dan Ilmu Budaya - Sastra Inggris | Ditemukan 0 jurnal.
-✔️ Selesai: Keislaman - Ekonomi Syariah | Ditemukan 0 jurnal.
-✔️ Selesai: Keislaman - Hukum Bisnis Syariah | Ditemukan 0 jurnal.
-✔️ Selesai: Ilmu Pendidikan - Pgsd | Ditemukan 0 jurnal.
-✔️ Selesai: Ilmu Pendidikan - Pendidikan Bhs Dan Sastra Indonesia | Ditemukan 0 jurnal.
-✔️ Selesai: Ilmu Sosial Dan Ilmu Budaya - Ilmu Komunikasi | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ilmu Pendidikan - Pendidikan Informatika | Ditemukan 0 jurnal.
-✔️ Selesai: Ilmu Pendidikan - Pendidikan Profesi Guru | Ditemukan 0 jurnal.
-✔️ Selesai: Mbkm - Mbkm | Ditemukan 0 jurnal.
-✔️ Selesai: Pascasarjana - Magister Pendidikan Dasar | Ditemukan 0 jurnal.
-✔️ Selesai: Pascasarjana - Doktor Pengelolaan Sumber Daya Alam | Ditemukan 0 jurnal.
-✔️ Selesai: Ilmu Pendidikan - Pendidikan Ipa | Berhasil mengambil 4 jurnal.
-✔️ Selesai: Ilmu Pendidikan - Pgpaud | Berhasil mengambil 4 jurnal.
-
-✅ Proses scraping selesai.
-Total baris data yang dihasilkan: 91.
-Total waktu eksekusi: 68.94 detik.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gagal mengambil daftar prodi: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443): Max retries exceeded with url: /c_search/byfac (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPSConnection object at 0x000002155FB3A440&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno 11001] getaddrinfo failed)&quot;))
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -1893,153 +1252,11 @@ Total waktu eksekusi: 68.94 detik.
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>nama_fakultas</th>
-      <th>id_prodi</th>
-      <th>nama_prodi</th>
-      <th>judul</th>
-      <th>penulis</th>
-      <th>pembimbing_pertama</th>
-      <th>pembimbing_kedua</th>
-      <th>abstrak</th>
-      <th>abstrak_inggris</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th>0</th>
-      <td>Hukum</td>
-      <td>1</td>
-      <td>Ilmu Hukum</td>
-      <td>Implementasi Fungsi Legislasi Dewan Perwakilan...</td>
-      <td>Dyah Ayu Citra Seza</td>
-      <td>Yudi Widagdo Harimurti, SH., MH</td>
-      <td>Safi', SH., MH</td>
-      <td>ABSTRAK Implementasi Fungsi Legislasi DPRD Kab...</td>
-      <td>ABSTRACT Implementation of Legislation Parliam...</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Hukum</td>
-      <td>1</td>
-      <td>Ilmu Hukum</td>
-      <td>Pertanggungjawaban Pidana Direksi BUMN (Perser...</td>
-      <td>Maulina Nurlaily</td>
-      <td>Tolib Effendi, SH., MH.</td>
-      <td>Dr. Eni Suastuti, SH., Mhum.</td>
-      <td>Badan Usaha Milik Negara (BUMN) adalah Badan u...</td>
-      <td>State Owned Enterprises (SOEs) are business en...</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Hukum</td>
-      <td>1</td>
-      <td>Ilmu Hukum</td>
-      <td>Analisis Terhadap Kekosongan Hukum dalam Penga...</td>
-      <td>Moh. Samsul Hidayat</td>
-      <td>Tolib Effendi, SH., MH.</td>
-      <td>Agus Ramdlany, SH., MH.</td>
-      <td>Kasus narkoba tidak henti-hentinya terdengar d...</td>
-      <td>Drug cases endlessly heard on television, radi...</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Hukum</td>
-      <td>1</td>
-      <td>Ilmu Hukum</td>
-      <td>PERLINDUNGAN HUKUM BAGI KONSUMEN ATAS PRODUK E...</td>
-      <td>TOMMY ADITYA PARLINDUNGAN MARBUN</td>
-      <td>DR. DJULAEKA, S.H., M.HUM</td>
-      <td>DR.USWATUN HASANAH, S.H., M. HUM</td>
-      <td>Produk elektronik adalah suatu benda bergerak ...</td>
-      <td>Electronic products is an object moves through...</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Hukum</td>
-      <td>24</td>
-      <td>Magister Ilmu Hukum</td>
-      <td>PERTANGGUNG JAWABAN HUKUM PEJABAT PEMBUAT KOMI...</td>
-      <td>MOCHAMAD SAICHU</td>
-      <td>Dr. Nunuk Nuswardani S.H., M.H</td>
-      <td>Dr. Deni SB Yuherawan S.H., Msi</td>
-      <td>Korupsi tergolong ke dalam kejahatan yang luar...</td>
-      <td>Korupsi tergolong ke dalam kejahatan yang luar...</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>86</th>
-      <td>Ilmu Pendidikan</td>
-      <td>30</td>
-      <td>Pgpaud</td>
-      <td>Pengaruh Strategi Meaningful Instructional Des...</td>
-      <td>Siti Herlinah Wifroh</td>
-      <td>Yulias Wulani Fajar, M.Pd</td>
-      <td>Titin Faridatun Nisa', S.Pd., M.Pd</td>
-      <td>Tujuan penelitian ini untuk mengetahui pengaru...</td>
-      <td>The purpose of this study is to reveal the inf...</td>
-    </tr>
-    <tr>
-      <th>87</th>
-      <td>Ilmu Pendidikan</td>
-      <td>38</td>
-      <td>Pendidikan Profesi Guru</td>
-      <td>Tidak ada jurnal</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>88</th>
-      <td>Mbkm</td>
-      <td>99</td>
-      <td>Mbkm</td>
-      <td>Tidak ada jurnal</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>89</th>
-      <td>Pascasarjana</td>
-      <td>39</td>
-      <td>Magister Pendidikan Dasar</td>
-      <td>Tidak ada jurnal</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>90</th>
-      <td>Pascasarjana</td>
-      <td>40</td>
-      <td>Doktor Pengelolaan Sumber Daya Alam</td>
-      <td>Tidak ada jurnal</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-    </tr>
   </tbody>
 </table>
-<p>91 rows × 9 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -2197,92 +1414,7 @@ Total waktu eksekusi: 68.94 detik.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✔️ Selesai: Hukum - Magister Ilmu Hukum | Berhasil mengambil 4 jurnal.
-
-✔️ Selesai: Pertanian - Teknologi Industri Pertanian | Berhasil mengambil 4 jurnal.
-
-✔️ Selesai: Ekonomi Dan Bisnis - Ekonomi Pembangunan | Berhasil mengambil 4 jurnal.
-
-✔️ Selesai: Pertanian - Agroteknologi | Berhasil mengambil 4 jurnal.
-
-✔️ Selesai: Pertanian - Ilmu Kelautan | Berhasil mengambil 4 jurnal.
-
-✔️ Selesai: Pertanian - Agribisnis | Berhasil mengambil 4 jurnal.
-
-✔️ Selesai: Pertanian - Manajemen Sumberdaya Perairan | Berhasil mengambil 4 jurnal.
-
-✔️ Selesai: Hukum - Ilmu Hukum | Berhasil mengambil 4 jurnal.
-
-✔️ Selesai: Ekonomi Dan Bisnis - Manajemen | Berhasil mengambil 4 jurnal.
-
-✔️ Selesai: Pertanian - Magister Pengelolaan Sumber Daya Alam | Berhasil mengambil 3 jurnal.
-
-✔️ Selesai: Ekonomi Dan Bisnis - Doktor Ilmu Manajemen | Ditemukan 0 jurnal.
-
-✔️ Selesai: Ekonomi Dan Bisnis - Akuntansi | Berhasil mengambil 4 jurnal.
-
-✔️ Selesai: Ekonomi Dan Bisnis - D3 Akuntansi | Berhasil mengambil 4 jurnal.
-
-✔️ Selesai: Ekonomi Dan Bisnis - Magister Manajemen | Berhasil mengambil 4 jurnal.
-
-✔️ Selesai: Ekonomi Dan Bisnis - Magister Akuntansi | Berhasil mengambil 4 jurnal.
-
-✔️ Selesai: Ekonomi Dan Bisnis - D3 Enterpreneurship | Berhasil mengambil 4 jurnal.
-
-✔️ Selesai: Ekonomi Dan Bisnis - Magister Ilmu Ekonomi | Berhasil mengambil 4 jurnal.
-
-✔️ Selesai: Teknik - Teknik Industri | Berhasil mengambil 4 jurnal.
-
-✔️ Selesai: Teknik - Teknik Informatika | Berhasil mengambil 4 jurnal.
-
-✔️ Selesai: Teknik - Sistem Informasi | Ditemukan 0 jurnal.
-
-✔️ Selesai: Teknik - Teknik Mesin | Ditemukan 0 jurnal.
-
-✔️ Selesai: Teknik - Manajemen Informatika | Berhasil mengambil 4 jurnal.
-
-✔️ Selesai: Teknik - Teknik Multimedia Dan Jaringan | Berhasil mengambil 4 jurnal.
-
-✔️ Selesai: Teknik - Mekatronika | Berhasil mengambil 4 jurnal.
-
-✔️ Selesai: Teknik - Teknik Elektro | Berhasil mengambil 4 jurnal.
-
-✔️ Selesai: Teknik - Teknik Mekatronika | Berhasil mengambil 4 jurnal.
-
-✔️ Selesai: Ilmu Sosial Dan Ilmu Budaya - Sosiologi | Berhasil mengambil 4 jurnal.
-
-✔️ Selesai: Ilmu Sosial Dan Ilmu Budaya - Ilmu Komunikasi | Berhasil mengambil 4 jurnal.
-
-✔️ Selesai: Ilmu Sosial Dan Ilmu Budaya - Psikologi | Berhasil mengambil 4 jurnal.
-
-✔️ Selesai: Ilmu Sosial Dan Ilmu Budaya - Sastra Inggris | Berhasil mengambil 4 jurnal.
-
-✔️ Selesai: Keislaman - Ekonomi Syariah | Berhasil mengambil 4 jurnal.
-
-✔️ Selesai: Keislaman - Hukum Bisnis Syariah | Berhasil mengambil 4 jurnal.
-
-✔️ Selesai: Ilmu Pendidikan - Pgsd | Berhasil mengambil 4 jurnal.
-
-✔️ Selesai: Ilmu Pendidikan - Pendidikan Profesi Guru | Ditemukan 0 jurnal.
-
-✔️ Selesai: Mbkm - Mbkm | Ditemukan 0 jurnal.
-
-✔️ Selesai: Ilmu Pendidikan - Pendidikan Bhs Dan Sastra Indonesia | Berhasil mengambil 4 jurnal.
-
-✔️ Selesai: Ilmu Pendidikan - Pendidikan Informatika | Berhasil mengambil 4 jurnal.
-
-✔️ Selesai: Pascasarjana - Magister Pendidikan Dasar | Ditemukan 0 jurnal.
-
-✔️ Selesai: Pascasarjana - Doktor Pengelolaan Sumber Daya Alam | Ditemukan 0 jurnal.
-
-✔️ Selesai: Ilmu Pendidikan - Pendidikan Ipa | Berhasil mengambil 4 jurnal.
-
-✔️ Selesai: Ilmu Pendidikan - Pgpaud | Berhasil mengambil 4 jurnal.
-
-
-✅ Proses scraping selesai.
-Total baris data yang dihasilkan: 142.
-Total waktu eksekusi: 61.91 detik.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gagal mengambil daftar prodi: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443): Max retries exceeded with url: /c_search/byfac (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPSConnection object at 0x0000021577F44AF0&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno 11001] getaddrinfo failed)&quot;))
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -2303,153 +1435,11 @@ Total waktu eksekusi: 61.91 detik.
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>nama_fakultas</th>
-      <th>id_prodi</th>
-      <th>nama_prodi</th>
-      <th>judul</th>
-      <th>penulis</th>
-      <th>pembimbing_pertama</th>
-      <th>pembimbing_kedua</th>
-      <th>abstrak</th>
-      <th>abstrak_inggris</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th>0</th>
-      <td>Hukum</td>
-      <td>1</td>
-      <td>Ilmu Hukum</td>
-      <td>Implementasi Fungsi Legislasi Dewan Perwakilan...</td>
-      <td>Dyah Ayu Citra Seza</td>
-      <td>Yudi Widagdo Harimurti, SH., MH</td>
-      <td>Safi', SH., MH</td>
-      <td>ABSTRAK Implementasi Fungsi Legislasi DPRD Kab...</td>
-      <td>ABSTRACT Implementation of Legislation Parliam...</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Hukum</td>
-      <td>1</td>
-      <td>Ilmu Hukum</td>
-      <td>Pertanggungjawaban Pidana Direksi BUMN (Perser...</td>
-      <td>Maulina Nurlaily</td>
-      <td>Tolib Effendi, SH., MH.</td>
-      <td>Dr. Eni Suastuti, SH., Mhum.</td>
-      <td>Badan Usaha Milik Negara (BUMN) adalah Badan u...</td>
-      <td>State Owned Enterprises (SOEs) are business en...</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Hukum</td>
-      <td>1</td>
-      <td>Ilmu Hukum</td>
-      <td>Analisis Terhadap Kekosongan Hukum dalam Penga...</td>
-      <td>Moh. Samsul Hidayat</td>
-      <td>Tolib Effendi, SH., MH.</td>
-      <td>Agus Ramdlany, SH., MH.</td>
-      <td>Kasus narkoba tidak henti-hentinya terdengar d...</td>
-      <td>Drug cases endlessly heard on television, radi...</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Hukum</td>
-      <td>1</td>
-      <td>Ilmu Hukum</td>
-      <td>PERLINDUNGAN HUKUM BAGI KONSUMEN ATAS PRODUK E...</td>
-      <td>TOMMY ADITYA PARLINDUNGAN MARBUN</td>
-      <td>DR. DJULAEKA, S.H., M.HUM</td>
-      <td>DR.USWATUN HASANAH, S.H., M. HUM</td>
-      <td>Produk elektronik adalah suatu benda bergerak ...</td>
-      <td>Electronic products is an object moves through...</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Hukum</td>
-      <td>24</td>
-      <td>Magister Ilmu Hukum</td>
-      <td>PERTANGGUNG JAWABAN HUKUM PEJABAT PEMBUAT KOMI...</td>
-      <td>MOCHAMAD SAICHU</td>
-      <td>Dr. Nunuk Nuswardani S.H., M.H</td>
-      <td>Dr. Deni SB Yuherawan S.H., Msi</td>
-      <td>Korupsi tergolong ke dalam kejahatan yang luar...</td>
-      <td>Korupsi tergolong ke dalam kejahatan yang luar...</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>137</th>
-      <td>Ilmu Pendidikan</td>
-      <td>30</td>
-      <td>Pgpaud</td>
-      <td>Pengaruh Strategi Meaningful Instructional Des...</td>
-      <td>Siti Herlinah Wifroh</td>
-      <td>Yulias Wulani Fajar, M.Pd</td>
-      <td>Titin Faridatun Nisa', S.Pd., M.Pd</td>
-      <td>Tujuan penelitian ini untuk mengetahui pengaru...</td>
-      <td>The purpose of this study is to reveal the inf...</td>
-    </tr>
-    <tr>
-      <th>138</th>
-      <td>Ilmu Pendidikan</td>
-      <td>38</td>
-      <td>Pendidikan Profesi Guru</td>
-      <td>Tidak ada jurnal</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>139</th>
-      <td>Mbkm</td>
-      <td>99</td>
-      <td>Mbkm</td>
-      <td>Tidak ada jurnal</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>140</th>
-      <td>Pascasarjana</td>
-      <td>39</td>
-      <td>Magister Pendidikan Dasar</td>
-      <td>Tidak ada jurnal</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>141</th>
-      <td>Pascasarjana</td>
-      <td>40</td>
-      <td>Doktor Pengelolaan Sumber Daya Alam</td>
-      <td>Tidak ada jurnal</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-    </tr>
   </tbody>
 </table>
-<p>142 rows × 9 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -2608,6 +1598,14 @@ Total waktu eksekusi: 61.91 detik.
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">df_hasil_semua</span> <span class="o">=</span> <span class="n">main</span><span class="p">()</span>
     <span class="n">df_hasil_semua</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gagal mengambil daftar prodi: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443): Max retries exceeded with url: /c_search/byfac (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPSConnection object at 0x000002155FB3B160&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno 11001] getaddrinfo failed)&quot;))
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>

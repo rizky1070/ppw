@@ -1,0 +1,816 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c72bb274" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tugas7_2_graphberita';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="tugas7_2_graphPTA.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="tugas7_1_datasetpagerankPTA.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/pp.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/pp.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Profile
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="pengantar.html">Pengantar Penambangan Website</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crawling.html">Crawling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_1.html">Crawling PTA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_2.html">Crawling Link Dalam Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_3_crawling_berita.html">Crawling Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_3_crawlingPTA_manajemen.html">Crawling PTA Manajemen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas3_1_preprocessing_manajemen.html">Preprocessing Prodi Manajemen</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="tugas4_1_ekstraksi_fitur_tfidf_berita.html">Ekstraksi fitur TFID berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas4_1_ekstraksi_fitur_tfidf_pta_manajemen.html">Ekstraksi fitur TFID PTA Manajemen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas4_1_cbow_beritacopy.html">CBOW Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas4_1_cbow_PTA_manajemen.html">CBOW PTA Manajemen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas6_LDA_klasifikasi_berita.html">LDA Klasifikasi Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UTS.html">UTS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas8_1_analisisdatsetwebusage.html">Analisis dataset webusage.csv</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas8_2_analisisdatasetnasa.html">Analisis dataset NASA</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftugas7_2_graphberita.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/tugas7_2_graphberita.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">networkx</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nx</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="c1"># -------------------------------------------------------------------</span>
+<span class="c1"># Memuat Data </span>
+<span class="c1"># -------------------------------------------------------------------</span>
+
+<span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;pagerank500_edges_berita_new.csv&#39;</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+        <span class="n">file_path</span><span class="p">,</span>
+        <span class="n">comment</span><span class="o">=</span><span class="s1">&#39;#&#39;</span><span class="p">,</span>
+        <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span>  
+    <span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data berhasil dimuat. Berikut 5 baris pertama:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Info DataFrame:&quot;</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+
+<span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error: File &#39;</span><span class="si">{</span><span class="n">file_path</span><span class="si">}</span><span class="s2">&#39; tidak ditemukan.&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Terjadi error saat membaca file: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># -------------------------------------------------------------------</span>
+<span class="c1"># Membuat Graf Penuh (untuk Analisis)</span>
+<span class="c1"># -------------------------------------------------------------------</span>
+<span class="c1"># buat graf berarah (DiGraph) dari DataFrame pandas</span>
+<span class="c1"># -------------------------------------------------------------------</span>
+
+<span class="k">if</span> <span class="s1">&#39;df&#39;</span> <span class="ow">in</span> <span class="nb">locals</span><span class="p">():</span>
+    <span class="n">G_full</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">from_pandas_edgelist</span><span class="p">(</span>
+        <span class="n">df</span><span class="p">,</span>
+        <span class="n">source</span><span class="o">=</span><span class="s1">&#39;Halaman Sumber&#39;</span><span class="p">,</span>
+        <span class="n">target</span><span class="o">=</span><span class="s1">&#39;Link Keluar (Internal)&#39;</span><span class="p">,</span>
+        <span class="n">create_using</span><span class="o">=</span><span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span> <span class="c1"># Penting: create_using=nx.DiGraph()</span>
+    <span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Informasi Graf Penuh ---&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah Node (halaman): </span><span class="si">{</span><span class="n">G_full</span><span class="o">.</span><span class="n">number_of_nodes</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah Edge (tautan): </span><span class="si">{</span><span class="n">G_full</span><span class="o">.</span><span class="n">number_of_edges</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># -------------------------------------------------------------------</span>
+<span class="c1"># Membuat Subgraph (untuk Visualisasi)</span>
+<span class="c1"># -------------------------------------------------------------------</span>
+<span class="c1"># ambil 100 edge pertama dari data untuk digambar</span>
+<span class="c1"># -------------------------------------------------------------------</span>
+
+<span class="k">if</span> <span class="s1">&#39;df&#39;</span> <span class="ow">in</span> <span class="nb">locals</span><span class="p">():</span>
+    <span class="n">df_sample</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">G_sample</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">from_pandas_edgelist</span><span class="p">(</span>
+        <span class="n">df_sample</span><span class="p">,</span>
+        <span class="n">source</span><span class="o">=</span><span class="s1">&#39;Halaman Sumber&#39;</span><span class="p">,</span>
+        <span class="n">target</span><span class="o">=</span><span class="s1">&#39;Link Keluar (Internal)&#39;</span><span class="p">,</span>
+        <span class="n">create_using</span><span class="o">=</span><span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
+    <span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Informasi Subgraph (untuk Visualisasi) ---&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah Node (sample): </span><span class="si">{</span><span class="n">G_sample</span><span class="o">.</span><span class="n">number_of_nodes</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah Edge (sample): </span><span class="si">{</span><span class="n">G_sample</span><span class="o">.</span><span class="n">number_of_edges</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># -------------------------------------------------------------------</span>
+<span class="c1"># Visualisasi Subgraph</span>
+<span class="c1"># -------------------------------------------------------------------</span>
+<span class="c1"># Menggambar G_sample (bukan G_full)</span>
+<span class="c1"># -------------------------------------------------------------------</span>
+
+<span class="k">if</span> <span class="s1">&#39;G_sample&#39;</span> <span class="ow">in</span> <span class="nb">locals</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Membuat visualisasi subgraph...&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># Mengatur ukuran gambar</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+    
+    <span class="c1"># Menentukan layout</span>
+    <span class="c1"># &#39;spring_layout&#39; adalah layout yang baik untuk graf umum</span>
+    <span class="c1"># k=0.5 dan iterations=50 membantu &#39;menyebarkan&#39; node</span>
+    <span class="n">pos</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">spring_layout</span><span class="p">(</span><span class="n">G_sample</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">iterations</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+    
+    <span class="c1"># Menggambar graf</span>
+    <span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span>
+        <span class="n">G_sample</span><span class="p">,</span>
+        <span class="n">pos</span><span class="p">,</span>
+        <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>      <span class="c1"># Tampilkan label (ID node)</span>
+        <span class="n">node_color</span><span class="o">=</span><span class="s1">&#39;skyblue&#39;</span><span class="p">,</span>  <span class="c1"># Warna node</span>
+        <span class="n">node_size</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span>         <span class="c1"># Ukuran node</span>
+        <span class="n">font_size</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span>           <span class="c1"># Ukuran font label</span>
+        <span class="n">edge_color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span>     <span class="c1"># Warna edge</span>
+        <span class="n">arrows</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>           <span class="c1"># Tampilkan panah (karena ini DiGraph)</span>
+        <span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;-|&gt;&#39;</span><span class="p">,</span>      <span class="c1"># Gaya panah</span>
+        <span class="n">arrowsize</span><span class="o">=</span><span class="mi">15</span>           <span class="c1"># Ukuran panah</span>
+    <span class="p">)</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Visualisasi Subgraph (100 Tautan Pertama)&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># Menyimpan gambar ke file</span>
+    <span class="n">output_image_path</span> <span class="o">=</span> <span class="s2">&quot;subgraph.png&quot;</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">output_image_path</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Visualisasi subgraph telah disimpan ke &#39;</span><span class="si">{</span><span class="n">output_image_path</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+    
+<span class="c1"># -------------------------------------------------------------------</span>
+<span class="c1"># Analisis Graf Penuh (Menghitung PageRank)</span>
+<span class="c1"># -------------------------------------------------------------------</span>
+<span class="c1"># gunakan graf penuh (G_full) untuk analisis</span>
+<span class="c1"># -------------------------------------------------------------------</span>
+
+<span class="k">if</span> <span class="s1">&#39;G_full&#39;</span> <span class="ow">in</span> <span class="nb">locals</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Menghitung PageRank pada GRAF PENUH...&quot;</span><span class="p">)</span>
+    <span class="c1"># Ini mungkin butuh beberapa detik</span>
+    <span class="n">pagerank_scores</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">pagerank</span><span class="p">(</span><span class="n">G_full</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.85</span><span class="p">)</span>
+    
+    <span class="c1"># Mengurutkan node berdasarkan skor PageRank</span>
+    <span class="n">sorted_pagerank</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">pagerank_scores</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">item</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- 5 Node Teratas Berdasarkan PageRank ---&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">score</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sorted_pagerank</span><span class="p">[:</span><span class="mi">5</span><span class="p">]):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">. Node </span><span class="si">{</span><span class="n">node</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">score</span><span class="si">:</span><span class="s2">.8f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Variabel baru untuk menyimpan ID node teratas</span>
+    <span class="n">top_node_id</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">if</span> <span class="n">sorted_pagerank</span><span class="p">:</span>
+        <span class="n">top_node_id</span> <span class="o">=</span> <span class="n">sorted_pagerank</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Node teratas adalah: </span><span class="si">{</span><span class="n">top_node_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># -------------------------------------------------------------------</span>
+<span class="c1"># Analisis Pengikut (In-Degree) dan Diikuti (Out-Degree)</span>
+<span class="c1"># -------------------------------------------------------------------</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Menghitung Jumlah Pengikut (In-Degree) dan Diikuti (Out-Degree)...&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># Menghitung in-degree (link masuk / pengikut)</span>
+    <span class="c1"># Ini adalah DegreeView: (node, jumlah_pengikut)</span>
+    <span class="n">in_degrees</span> <span class="o">=</span> <span class="n">G_full</span><span class="o">.</span><span class="n">in_degree</span><span class="p">()</span>
+    
+    <span class="c1"># Menghitung out-degree (link keluar / diikuti)</span>
+    <span class="c1"># Ini adalah DegreeView: (node, jumlah_diikuti)</span>
+    <span class="n">out_degrees</span> <span class="o">=</span> <span class="n">G_full</span><span class="o">.</span><span class="n">out_degree</span><span class="p">()</span>
+    
+    <span class="c1"># Mengurutkan berdasarkan &#39;Pengikut&#39; (In-Degree) terbanyak</span>
+    <span class="n">sorted_in_degree</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">in_degrees</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">item</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+    <span class="c1"># Mengurutkan berdasarkan &#39;Diikuti&#39; (Out-Degree) terbanyak</span>
+    <span class="n">sorted_out_degree</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">out_degrees</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">item</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- 5 Node Teratas Berdasarkan Jumlah Pengikut (In-Degree) ---&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;(Node yang paling banyak di-link oleh halaman lain)&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">degree</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sorted_in_degree</span><span class="p">[:</span><span class="mi">5</span><span class="p">]):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">. Node </span><span class="si">{</span><span class="n">node</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">degree</span><span class="si">}</span><span class="s2"> pengikut&quot;</span><span class="p">)</span>
+        
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- 5 Node Teratas Berdasarkan Jumlah Diikuti (Out-Degree) ---&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;(Node yang paling banyak me-link ke halaman lain)&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">degree</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sorted_out_degree</span><span class="p">[:</span><span class="mi">5</span><span class="p">]):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">. Node </span><span class="si">{</span><span class="n">node</span><span class="si">}</span><span class="s2">: mengikuti </span><span class="si">{</span><span class="n">degree</span><span class="si">}</span><span class="s2"> halaman&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># Menampilkan info untuk node teratas dari PageRank (jika ada)</span>
+    <span class="k">if</span> <span class="n">top_node_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Analisis Detail Node PageRank Teratas (Node </span><span class="si">{</span><span class="n">top_node_id</span><span class="si">}</span><span class="s2">) ---&quot;</span><span class="p">)</span>
+        <span class="c1"># G_full.in_degree(node) mengambil nilai spesifik untuk node itu</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah Pengikut (In-Degree): </span><span class="si">{</span><span class="n">G_full</span><span class="o">.</span><span class="n">in_degree</span><span class="p">(</span><span class="n">top_node_id</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah Diikuti (Out-Degree): </span><span class="si">{</span><span class="n">G_full</span><span class="o">.</span><span class="n">out_degree</span><span class="p">(</span><span class="n">top_node_id</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">networkx</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nx</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># -------------------------------------------------------------------</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># Memuat Data </span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># -------------------------------------------------------------------</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;networkx&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -------------------------------------------------------------------</span>
+<span class="c1"># Analisis Koneksi Node Teratas</span>
+<span class="c1"># -------------------------------------------------------------------</span>
+<span class="c1"># Menampilkan node yang terhubung KE dan DARI node teratas</span>
+<span class="c1"># -------------------------------------------------------------------</span>
+
+<span class="k">if</span> <span class="s1">&#39;top_node_id&#39;</span> <span class="ow">in</span> <span class="nb">locals</span><span class="p">()</span> <span class="ow">and</span> <span class="n">top_node_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Menganalisis Koneksi untuk Node Teratas (</span><span class="si">{</span><span class="n">top_node_id</span><span class="si">}</span><span class="s2">) ---&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Predecessors = Node yang menaut KE top_node_id (Pengikut/Fans)</span>
+    <span class="c1"># Ini adalah node-node yang &quot;memberikan suara&quot; PageRank-nya</span>
+    <span class="n">predecessors</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">G_full</span><span class="o">.</span><span class="n">predecessors</span><span class="p">(</span><span class="n">top_node_id</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Jumlah &#39;Pengikut&#39; (Predecessors): </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">predecessors</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Daftar Pengikut: </span><span class="si">{</span><span class="n">predecessors</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Successors = Node yang DITAUT oleh top_node_id (Yang Diikuti)</span>
+    <span class="c1"># Ini adalah node-node ke mana top_node_id &quot;memberikan suaranya&quot;</span>
+    <span class="n">successors</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">G_full</span><span class="o">.</span><span class="n">successors</span><span class="p">(</span><span class="n">top_node_id</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Jumlah &#39;Yang Diikuti&#39; (Successors): </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">successors</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Daftar Yang Diikuti: </span><span class="si">{</span><span class="n">successors</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># Menyimpan daftar node ini untuk visualisasi</span>
+    <span class="n">nodes_to_visualize</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">predecessors</span> <span class="o">+</span> <span class="n">successors</span> <span class="o">+</span> <span class="p">[</span><span class="n">top_node_id</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Total node unik untuk divisualisasikan: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">nodes_to_visualize</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># -------------------------------------------------------------------</span>
+<span class="c1"># Visualisasi Lingkungan Node Teratas</span>
+<span class="c1"># -------------------------------------------------------------------</span>
+<span class="c1"># Membuat subgraph khusus untuk node teratas dan koneksinya</span>
+<span class="c1"># -------------------------------------------------------------------</span>
+
+<span class="k">if</span> <span class="s1">&#39;nodes_to_visualize&#39;</span> <span class="ow">in</span> <span class="nb">locals</span><span class="p">()</span> <span class="ow">and</span> <span class="n">nodes_to_visualize</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Membuat visualisasi untuk lingkungan node teratas...&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># Membuat subgraph HANYA dari node yang relevan</span>
+    <span class="n">H</span> <span class="o">=</span> <span class="n">G_full</span><span class="o">.</span><span class="n">subgraph</span><span class="p">(</span><span class="n">nodes_to_visualize</span><span class="p">)</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">18</span><span class="p">))</span>
+    
+    <span class="c1"># Membuat layout</span>
+    <span class="n">pos</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">spring_layout</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">iterations</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+    
+    <span class="c1"># Membuat peta warna untuk menyorot node</span>
+    <span class="n">color_map</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">H</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="n">top_node_id</span><span class="p">:</span>
+            <span class="n">color_map</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>      <span class="c1"># Node Teratas = Merah</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">predecessors</span><span class="p">:</span>
+            <span class="n">color_map</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;skyblue&#39;</span><span class="p">)</span>  <span class="c1"># Pengikut = Biru</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">successors</span><span class="p">:</span>
+            <span class="n">color_map</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;lightgreen&#39;</span><span class="p">)</span> <span class="c1"># Yang Diikuti = Hijau</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">color_map</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span> <span class="c1"># (Seharusnya tidak terjadi)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Menggambar graf dengan </span><span class="si">{</span><span class="n">H</span><span class="o">.</span><span class="n">number_of_nodes</span><span class="p">()</span><span class="si">}</span><span class="s2"> node dan </span><span class="si">{</span><span class="n">H</span><span class="o">.</span><span class="n">number_of_edges</span><span class="p">()</span><span class="si">}</span><span class="s2"> edge.&quot;</span><span class="p">)</span>
+
+    <span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span>
+        <span class="n">H</span><span class="p">,</span>
+        <span class="n">pos</span><span class="p">,</span>
+        <span class="n">node_color</span><span class="o">=</span><span class="n">color_map</span><span class="p">,</span>
+        <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">node_size</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+        <span class="n">font_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+        <span class="n">font_color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span>
+        <span class="n">edge_color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span>
+        <span class="n">arrows</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">arrowsize</span><span class="o">=</span><span class="mi">15</span>
+    <span class="p">)</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Visualisasi Lingkungan Node PageRank Teratas (</span><span class="si">{</span><span class="n">top_node_id</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># Menambahkan legenda sederhana</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="s1">&#39;Merah = Node Teratas</span><span class="se">\n</span><span class="s1">Biru = Pengikut (Predecessors)</span><span class="se">\n</span><span class="s1">Hijau = Yang Diikuti (Successors)&#39;</span><span class="p">,</span>
+             <span class="n">transform</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">transAxes</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
+             <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">boxstyle</span><span class="o">=</span><span class="s1">&#39;round,pad=0.5&#39;</span><span class="p">,</span> <span class="n">fc</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">))</span>
+    
+    <span class="c1"># Menyimpan gambar ke file</span>
+    <span class="n">output_image_path_top</span> <span class="o">=</span> <span class="s2">&quot;top_pagerank_node_graph.png&quot;</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">output_image_path_top</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Visualisasi node teratas telah disimpan ke &#39;</span><span class="si">{</span><span class="n">output_image_path_top</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Menganalisis Koneksi untuk Node Teratas (https://bangsaonline.com/feed/) ---
+
+Jumlah &#39;Pengikut&#39; (Predecessors): 497
+Daftar Pengikut: [&#39;https://bangsaonline.com/&#39;, &#39;https://bangsaonline.com&#39;, &#39;https://bangsaonline.com/live&#39;, &#39;https://bangsaonline.com/kanal/jawa-timur&#39;, &#39;https://bangsaonline.com/kanal/jatim-metro&#39;, &#39;https://bangsaonline.com/kanal/jatim-tengah&#39;, &#39;https://bangsaonline.com/kanal/jatim-utara&#39;, &#39;https://bangsaonline.com/kanal/jatim-selatan&#39;, &#39;https://bangsaonline.com/kanal/jatim-timur&#39;, &#39;https://bangsaonline.com/kanal/jatim-barat&#39;, &#39;https://bangsaonline.com/kanal/jatim-madura&#39;, &#39;https://bangsaonline.com/kanal/nasional&#39;, &#39;https://bangsaonline.com/kanal/nusantara&#39;, &#39;https://bangsaonline.com/kanal/politik&#39;, &#39;https://bangsaonline.com/kanal/birokrasi&#39;, &#39;https://bangsaonline.com/kanal/religia&#39;, &#39;https://bangsaonline.com/kanal/tj-islam-sehari-hari&#39;, &#39;https://bangsaonline.com/kanal/tafsir-al-quran-aktual&#39;, &#39;https://bangsaonline.com/kanal/pesantren&#39;, &#39;https://bangsaonline.com/kanal/ormas&#39;, &#39;https://bangsaonline.com/kanal/hukum-dan-kriminal&#39;, &#39;https://bangsaonline.com/kanal/ekonomi&#39;, &#39;https://bangsaonline.com/kanal/entrepreneur&#39;, &#39;https://bangsaonline.com/kanal/entertain-sport&#39;, &#39;https://bangsaonline.com/kanal/selebriti&#39;, &#39;https://bangsaonline.com/kanal/wisata&#39;, &#39;https://bangsaonline.com/kanal/lifestyle&#39;, &#39;https://bangsaonline.com/kanal/olahraga&#39;, &#39;https://bangsaonline.com/kanal/otomotif&#39;, &#39;http://www.bangsaonline.com/berita-video&#39;, &#39;https://bangsaonline.com/kanal/pendidikan&#39;, &#39;https://bangsaonline.com/kanal/kesehatan&#39;, &#39;https://bangsaonline.com/kanal/tren&#39;, &#39;https://bangsaonline.com/kanal/kuliner&#39;, &#39;https://bangsaonline.com/kanal/figur&#39;, &#39;https://bangsaonline.com/kanal/sejarah-dan-budaya&#39;, &#39;https://bangsaonline.com/kanal/internasional&#39;, &#39;https://bangsaonline.com/kanal/unik-aneh&#39;, &#39;https://bangsaonline.com/kanal/peristiwa&#39;, &#39;https://bangsaonline.com/kanal/teknologi&#39;, &#39;https://bangsaonline.com/kanal/komunitas-dan-lingkungan&#39;, &#39;http://www.bangsaonline.com/indeks&#39;, &#39;https://bangsaonline.com/berita/154596/kesiapan-pesantren-dalam-menjalankan-program-makan-begizi-gratis&#39;, &#39;https://bangsaonline.com/kanal/opini&#39;, &#39;https://bangsaonline.com/berita/154633/tafsir-al-hajj-27-haji-nunut&#39;, &#39;https://bangsaonline.com/berita-video/153813/ditjen-bea-cukai-ditegur-menkeu-terkait-oknum-penjual-pita-rokok&#39;, &#39;https://bangsaonline.com/berita-video/&#39;, &#39;https://bangsaonline.com/berita/154277/tafsir-al-hajj-24-25-fiqh-al-haram&#39;, &#39;https://bangsaonline.com/berita/154680/diduga-ada-gratifikasi-penebangan-pohon-beringin-di-singosari-malang-dilaporkan-ke-kejati&#39;, &#39;https://bangsaonline.com/berita/154683/cemburu-istri-sering-di-whatsapp-perangkat-desa-di-tuban-dibacok-tetangga-hingga-tewas&#39;, &#39;https://bangsaonline.com/berita/154672/catat-nomor-whatsapp-contact-center-kai121-resmi-berubah-jadi-begini&#39;, &#39;https://bangsaonline.com/berita/154667/ikuti-tka-penuh-konsentrasi-santri-amanatul-ummah-dikawal-ke-ptn-luar-negeri-tak-repotkan-orang-tua&#39;, &#39;https://bangsaonline.com/berita/154662/cegah-stunting-dan-hidup-sehat-wali-kota-pasuruan-ajak-warga-gemar-makan-ikan&#39;, &#39;https://bangsaonline.com/berita/154655/jawa-timur-gelar-apel-siaga-hadapi-bencana-hidrometeorologi-di-puncak-musim-hujan&#39;, &#39;https://bangsaonline.com/berita/154681/jabatan-strategis-di-pemkab-malang-banyak-yang-kosong-lsm-lira-pemda-abaikan-aturan-bkn&#39;, &#39;https://bangsaonline.com/berita/154679/gubernur-jatim-sambut-baik-rencana-presiden-soal-kereta-cepat-sampai-banyuwangi&#39;, &#39;https://bangsaonline.com/berita/154678/wabup-blitar-jadi-tokoh-muda-nahdliyin-inspiratif-2025-ketua-fjn-santri-gus-iqdam-yang-dermawan&#39;, &#39;https://bangsaonline.com/berita/154677/ditjenpas-dorong-lapas-sidoarjo-kembangkan-produk-unggulan-warga-binaan-agar-tembus-pasar-nasional&#39;, &#39;https://bangsaonline.com/berita/154676/gelar-operasi-satpol-pp-magetan-dan-bea-cukai-madiun-sita-ratusan-bungkus-rokok-ilegal&#39;, &#39;https://bangsaonline.com/berita/154675/pn-surabaya-tunda-sidang-dugaan-pengedaran-obat-dan-kosmetik-tanpa-izin-ini-sebabnya&#39;, &#39;https://bangsaonline.com/berita/154674/operasi-sikat-semeru-2025-polda-jatim-ungkap-1-443-kasus-dengan-1-135-tersangka&#39;, &#39;https://bangsaonline.com/berita/154673/bupati-ingatkan-pentingnya-regenerasi-di-acara-musda-dekopinda-kabupaten-kediri&#39;, &#39;https://bangsaonline.com/berita/154671/ketua-tp-pkk-kabupaten-kediri-mewisuda-ribuan-lansia-dari-program-selantang&#39;, &#39;https://bangsaonline.com/berita/154670/pemkab-gresik-teken-nphd-bersama-34-lembaga-keagamaan-dan-ormas&#39;, &#39;https://bangsaonline.com/berita/154669/kapolda-dan-gubernur-jatim-tinjau-kesiapan-peralatan-sar-hadapi-potensi-bencana&#39;, &#39;https://bangsaonline.com/berita/154668/ylbh-ft-gelar-safari-penyuluhan-bantuan-hukum-gratis-tujuh-kecamatan-di-gresik&#39;, &#39;https://bangsaonline.com/berita/154666/warga-keluhkan-parkir-truk-dekat-lampu-merah-jagalan-dishub-surabaya-diminta-bertindak&#39;, &#39;https://bangsaonline.com/berita/154665/kapolres-pasuruan-pimpin-apel-siaga-darurat-bencana-pastikan-keselamatan-anak-hingga-disabilitas&#39;, &#39;https://bangsaonline.com/berita/154664/pameran-perumahan-dan-perizinan-perdana-meriahkan-hut-ke-24-kota-batu&#39;, &#39;https://bangsaonline.com/berita/154663/respons-keluhan-masyarakat-disperdagin-kota-kediri-sidak-bengkel&#39;, &#39;https://bangsaonline.com/berita/154661/dprd-situbondo-bahas-raperda-insentif-investasi-dorong-iklim-usaha-yang-kondusif&#39;, &#39;https://bangsaonline.com/berita/154660/siswa-asal-turki-belajar-budaya-indonesia-di-sman-2-batu-lewat-program-afs&#39;, &#39;https://bangsaonline.com/berita/154659/satreskrim-polres-jombang-ungkap-kasus-pembunuhan-nenek-pelaku-ditangkap&#39;, &#39;https://bangsaonline.com/berita/154658/vinanda-prameswati-nostalgia-di-dies-natalis-ke-75-smpn-1-kota-kediri&#39;, &#39;https://bangsaonline.com/berita/154657/tka-2025-di-jatim-berjalan-lancar-peserta-terdampak-listrik-padam-dapat-ujian-susulan&#39;, &#39;https://bangsaonline.com/berita/154656/pemkab-sidoarjo-fasilitasi-polemik-tembok-perumahan-keputusan-final-pekan-depan&#39;, &#39;https://bangsaonline.com/berita/154654/kemenkum-jatim-dukung-legalitas-pembangunan-ponpes-al-khoziny-sidoarjo&#39;, &#39;https://bangsaonline.com/berita/154653/polres-situbondo-ungkap-6-kasus-kriminal-selama-operasi-sikat-semeru-2025&#39;, &#39;https://bangsaonline.com/berita/154652/respons-motor-brebet-usai-isi-pertalite-pertamina-buka-bengkel-gratis-di-kota-pasuruan&#39;, &#39;https://bangsaonline.com/berita/154651/polresta-sidoarjo-gelar-apel-kesiapsiagaan-hadapi-bencana-hidrometeorologi-musim-hujan&#39;, &#39;https://bangsaonline.com/berita/154650/dprd-kabupaten-blitar-dorong-peningkatan-kualitas-pendidikan-dan-pengawasan-di-sekolah&#39;, &#39;https://bangsaonline.com/berita/154649/harga-sembako-di-surabaya-hari-ini-cenderung-stabil-tomat-hanya-naik-tipis&#39;, &#39;https://bangsaonline.com/berita/154648/dprd-blitar-gelar-paripurna-jawaban-bupati-atas-pandangan-fraksi-raperda-apbd-2026&#39;, &#39;https://bangsaonline.com/tag/bmkg&#39;, &#39;https://bangsaonline.com/tag/pemkab-gresik&#39;, &#39;https://bangsaonline.com/tag/dprd-gresik&#39;, &#39;https://bangsaonline.com/tag/kriminal-sidoarjo&#39;, &#39;https://bangsaonline.com/tag/khofifah&#39;, &#39;https://bangsaonline.com/ekoran&#39;, &#39;https://bangsaonline.com/berita/154634/pimpin-shalat-malam-istighatsah-kiai-asep-doakan-kiai-yusuf-hasyim-kiai-abbas-dan-presiden-prabowo&#39;, &#39;https://bangsaonline.com/berita/154586/pemerintah-siapkan-diskon-tarif-tol-untuk-libur-natal-dan-tahun-baru-2025–2026&#39;, &#39;https://bangsaonline.com/kanal/jawa-barat&#39;, &#39;https://bangsaonline.com/kanal/jawa-tengah&#39;, &#39;https://bangsaonline.com/kanal/dki-jakarta&#39;, &#39;https://bangsaonline.com/kanal/di-yogyakarta&#39;, &#39;https://bangsaonline.com/kanal/banten&#39;, &#39;https://bangsaonline.com/kanal/bali&#39;, &#39;https://bangsaonline.com/kanal/advertorial&#39;, &#39;http://www.bangsaonline.com/headline/index&#39;, &#39;https://bangsaonline.com/tentang-kami&#39;, &#39;https://bangsaonline.com/kontak-kami&#39;, &#39;https://bangsaonline.com/tarif-iklan&#39;, &#39;https://bangsaonline.com/disclaimer&#39;, &#39;https://bangsaonline.com/pedoman-media-siber&#39;, &#39;https://bangsaonline.com/terms-of-use&#39;, &#39;https://bangsaonline.com/privacy-policy&#39;, &#39;https://bangsaonline.com/berita-video/153808/bmkg-beri-pernyataan-tentang-penyebab-panas-terik-di-wilayah-indonesia&#39;, &#39;https://bangsaonline.com/berita-video/153806/liam-gallagher-akhirnya-jadi-kakek-di-usia-53-tahun&#39;, &#39;https://bangsaonline.com/berita-video/153805/justin-kluivert-turut-sedih-akan-kegagalan-ayahnya-membawa-timnas-ke-piala-dunia&#39;, &#39;https://bangsaonline.com/berita-video/153804/suzuki-burgman-150-katanya-bakal-saingi-pcx-dan-nmax&#39;, &#39;https://bangsaonline.com/berita-video/153596/ternyata-13-oktober-peringati-hari-kegagalan-sedunia&#39;, &#39;https://bangsaonline.com/berita-video/152497/presiden-susun-komite-reformasi-kepolisian&#39;, &#39;https://bangsaonline.com/berita-video/152396/phil-foden-jadi-pemain-kunci-untuk-manchester-city&#39;, &#39;https://bangsaonline.com/berita-video/152395/presiden-ri-prabowo-subianto-siapkan-strategi-ciptakan-lapangan-kerja&#39;, &#39;https://bangsaonline.com/berita-video/152245/pasutri-sedang-asik-pesta-sabu-di-gresik-tiba-tiba-digrebek-polisi&#39;, &#39;https://bangsaonline.com/berita-video/152244/banjir-bali-menimbulkan-belasan-korban-jiwa&#39;, &#39;https://bangsaonline.com/berita-video/152226/terdeksi-mengandung-zat-radioaktif-petambak-udang-lokal-terpaksa-jual-murah&#39;, &#39;https://bangsaonline.com/berita-video/152191/diduga-melakukan-tindak-pidana-ferry-irwandi-angkat-bicara&#39;, &#39;https://bangsaonline.com/berita-video/152102/respon-soal-eksekusi-silfester-matutina-mahfud-md-langkah-kejagung-sudah-seharusnya&#39;, &#39;https://bangsaonline.com/berita-video/152094/samsung-dan-apple-layangkan-surat-teguran-ke-xiaomi&#39;, &#39;https://bangsaonline.com/live/index&#39;, &#39;https://bangsaonline.com/live/index?page=2&#39;, &#39;https://bangsaonline.com/live/index?page=3&#39;, &#39;https://bangsaonline.com/live/index?page=4&#39;, &#39;https://bangsaonline.com/live/index?page=5&#39;, &#39;https://bangsaonline.com/live/index?page=35&#39;, &#39;https://bangsaonline.com/berita/154616/5-cara-jaga-kesehatan-saat-musim-hujan-hindari-dbd-dan-infeksi-pernapasan&#39;, &#39;https://bangsaonline.com/berita/154607/dprd-gresik-bahas-raperda-modal-rp15-m-untuk-perseroda-migas-fokus-pad-dan-nelayan&#39;, &#39;https://bangsaonline.com/berita/154600/tinjau-jalan-rusak-di-ngampel-dewan-minta-dputr-gresik-bangun-tpt&#39;, &#39;https://bangsaonline.com/berita/154618/remaja-di-bawah-umur-disetubuhi-pria-tetangganya-sendiri-warga-wonoayu-sidoarjo&#39;, &#39;https://bangsaonline.com/berita/154589/raih-penghargaan-peduli-mangrove-utm-teguhkan-komitmen-kampus-hijau-berkelanjutan&#39;, &#39;https://bangsaonline.com/berita/154623/ramah-lingkungan-dafam-pacific-caesar-surabaya-jadi-hotel-bebas-botol-plastik-sekali-pakai&#39;, &#39;https://bangsaonline.com/berita/154587/hari-ini-zohran-mamdani-muslim-pertama-diprediksi-terpilih-sebagai-wali-kota-new-york&#39;, &#39;https://bangsaonline.com/berita/154588/the-souls-bar-diduga-langgar-izin-pemkot-malang-didesak-bertindak-tegas&#39;, &#39;https://bangsaonline.com/berita/154612/ratusan-ojol-geruduk-dprd-kota-pasuruan-buntut-motor-rusak-usai-beli-pertalite&#39;, &#39;https://bangsaonline.com/indeks&#39;, &#39;https://bangsaonline.com/kanal/jawa-timur?page=2&#39;, &#39;https://bangsaonline.com/kanal/jawa-timur?page=3&#39;, &#39;https://bangsaonline.com/kanal/jawa-timur?page=4&#39;, &#39;https://bangsaonline.com/kanal/jawa-timur?page=5&#39;, &#39;https://bangsaonline.com/kanal/jawa-timur?page=6&#39;, &#39;https://bangsaonline.com/kanal/jawa-timur?page=7&#39;, &#39;https://bangsaonline.com/kanal/jawa-timur?page=8&#39;, &#39;https://bangsaonline.com/kanal/jawa-timur?page=9&#39;, &#39;https://bangsaonline.com/kanal/jawa-timur?page=10&#39;, &#39;https://bangsaonline.com/kanal/jawa-timur?page=11097&#39;, &#39;https://bangsaonline.com/kanal/jatim-metro?page=2&#39;, &#39;https://bangsaonline.com/kanal/jatim-metro?page=3&#39;, &#39;https://bangsaonline.com/kanal/jatim-metro?page=4&#39;, &#39;https://bangsaonline.com/kanal/jatim-metro?page=5&#39;, &#39;https://bangsaonline.com/kanal/jatim-metro?page=6&#39;, &#39;https://bangsaonline.com/kanal/jatim-metro?page=7&#39;, &#39;https://bangsaonline.com/kanal/jatim-metro?page=8&#39;, &#39;https://bangsaonline.com/kanal/jatim-metro?page=9&#39;, &#39;https://bangsaonline.com/kanal/jatim-metro?page=10&#39;, &#39;https://bangsaonline.com/kanal/jatim-metro?page=2837&#39;, &#39;https://bangsaonline.com/berita/154639/jelang-persik-vs-persebaya-ong-kim-swee-minta-pemain-fokus-dan-bangkit&#39;, &#39;https://bangsaonline.com/berita/154637/pemkot-kediri-latih-tenaga-medis-tangani-ppok-dan-asma-lewat-ojt-selama-3-hari&#39;, &#39;https://bangsaonline.com/berita/154635/emas-perhiasan-dan-telur-ayam-dorong-inflasi-kota-kediri-oktober-2025-naik-040-persen&#39;, &#39;https://bangsaonline.com/berita/154624/langkah-antisipasi-satlantas-polres-kediri-kota-survei-jalur-rawan-longsor-di-lereng-wilis&#39;, &#39;https://bangsaonline.com/berita/154609/super-air-jet-buka-rute-jakarta-kediri-bandara-dhoho-kembali-beroperasi-10-november-2025&#39;, &#39;https://bangsaonline.com/berita/154604/wali-kota-kediri-bahas-advokasi-pro-rakyat-di-forum-talkvo-2025-fakultas-hukum-ub&#39;, &#39;https://bangsaonline.com/kanal/jatim-tengah?page=2&#39;, &#39;https://bangsaonline.com/kanal/jatim-tengah?page=3&#39;, &#39;https://bangsaonline.com/kanal/jatim-tengah?page=4&#39;, &#39;https://bangsaonline.com/kanal/jatim-tengah?page=5&#39;, &#39;https://bangsaonline.com/kanal/jatim-tengah?page=6&#39;, &#39;https://bangsaonline.com/kanal/jatim-tengah?page=7&#39;, &#39;https://bangsaonline.com/kanal/jatim-tengah?page=8&#39;, &#39;https://bangsaonline.com/kanal/jatim-tengah?page=9&#39;, &#39;https://bangsaonline.com/kanal/jatim-tengah?page=10&#39;, &#39;https://bangsaonline.com/kanal/jatim-tengah?page=1968&#39;, &#39;https://bangsaonline.com/berita/154627/disekat-tim-jatanras-pelaku-penganiayaan-di-tuban-serahkan-diri-ke-polsek&#39;, &#39;https://bangsaonline.com/berita/154626/pertamina-patra-niaga-minta-maaf-atas-fenomena-motor-brebet-massal-usai-isi-bbm-pertalite&#39;, &#39;https://bangsaonline.com/berita/154621/polres-gresik-tangkap-marbot-masjid-terduga-pelaku-asusila-terhadap-anak-di-driyorejo&#39;, &#39;https://bangsaonline.com/berita/154584/harga-pupuk-subsidi-turun-ketua-dprd-tuban-minta-kios-dan-ppts-pasang-daftar-harga&#39;, &#39;https://bangsaonline.com/berita/154579/bengkel-motor-mitra-pertamina-di-tuban-diserbu-konsumen&#39;, &#39;https://bangsaonline.com/berita/154578/stok-beras-di-gudang-bulog-bojonegoro-capai-50-ribu-ton&#39;, &#39;https://bangsaonline.com/kanal/jatim-utara?page=2&#39;, &#39;https://bangsaonline.com/kanal/jatim-utara?page=3&#39;, &#39;https://bangsaonline.com/kanal/jatim-utara?page=4&#39;, &#39;https://bangsaonline.com/kanal/jatim-utara?page=5&#39;, &#39;https://bangsaonline.com/kanal/jatim-utara?page=6&#39;, &#39;https://bangsaonline.com/kanal/jatim-utara?page=7&#39;, &#39;https://bangsaonline.com/kanal/jatim-utara?page=8&#39;, &#39;https://bangsaonline.com/kanal/jatim-utara?page=9&#39;, &#39;https://bangsaonline.com/kanal/jatim-utara?page=10&#39;, &#39;https://bangsaonline.com/kanal/jatim-utara?page=2147&#39;, &#39;https://bangsaonline.com/berita/154644/dprd-kabupaten-blitar-bahas-pandangan-fraksi-terhadap-raperda-apbd-2026-dalam-rapat-paripurna&#39;, &#39;https://bangsaonline.com/berita/154629/gus-iqdam-ajak-fjn-kolaborasi-tebar-narasi-positif-dan-fakta-tentang-pondok-pesantren&#39;, &#39;https://bangsaonline.com/berita/154610/warga-griya-shanta-tolak-pembongkaran-tembok-kirim-surat-terbuka-ke-wali-kota-malang&#39;, &#39;https://bangsaonline.com/berita/154608/banjir-dan-longsor-landa-2-titik-bpbd-kota-batu-imbau-warga-jaga-saluran-drainase&#39;, &#39;https://bangsaonline.com/kanal/jatim-selatan?page=2&#39;, &#39;https://bangsaonline.com/kanal/jatim-selatan?page=3&#39;, &#39;https://bangsaonline.com/kanal/jatim-selatan?page=4&#39;, &#39;https://bangsaonline.com/kanal/jatim-selatan?page=5&#39;, &#39;https://bangsaonline.com/kanal/jatim-selatan?page=6&#39;, &#39;https://bangsaonline.com/kanal/jatim-selatan?page=7&#39;, &#39;https://bangsaonline.com/kanal/jatim-selatan?page=8&#39;, &#39;https://bangsaonline.com/kanal/jatim-selatan?page=9&#39;, &#39;https://bangsaonline.com/kanal/jatim-selatan?page=10&#39;, &#39;https://bangsaonline.com/kanal/jatim-selatan?page=1250&#39;, &#39;https://bangsaonline.com/berita/154641/kantah-kota-pasuruan-supervisi-peta-znt&#39;, &#39;https://bangsaonline.com/berita/154638/lokamodal-dorong-umkm-di-kota-pasuruan-perkuat-akses-permodalan-lewat-sertifikat-tanah&#39;, &#39;https://bangsaonline.com/berita/154636/kantah-kota-pasuruan-verifikasi-fasum-perumahan&#39;, &#39;https://bangsaonline.com/berita/154597/apbmi-kota-probolinggo-tegaskan-pt-dabn-tak-boleh-bongkar-muat-di-pelabuhan-umum&#39;, &#39;https://bangsaonline.com/berita/154583/bupati-fawait-ajak-kader-posyandu-gumukmas-bersinergi-wujudkan-jember-sehat-dan-maju&#39;, &#39;https://bangsaonline.com/kanal/jatim-timur?page=2&#39;, &#39;https://bangsaonline.com/kanal/jatim-timur?page=3&#39;, &#39;https://bangsaonline.com/kanal/jatim-timur?page=4&#39;, &#39;https://bangsaonline.com/kanal/jatim-timur?page=5&#39;, &#39;https://bangsaonline.com/kanal/jatim-timur?page=6&#39;, &#39;https://bangsaonline.com/kanal/jatim-timur?page=7&#39;, &#39;https://bangsaonline.com/kanal/jatim-timur?page=8&#39;, &#39;https://bangsaonline.com/kanal/jatim-timur?page=9&#39;, &#39;https://bangsaonline.com/kanal/jatim-timur?page=10&#39;, &#39;https://bangsaonline.com/kanal/jatim-timur?page=1524&#39;, &#39;https://bangsaonline.com/berita/154632/layani-1-003-penerima-manfaat-sppg-polres-ngawi-launching-program-makan-bergizi-gratis-mbg&#39;, &#39;https://bangsaonline.com/berita/154630/diikuti-puluhan-tim-turnamen-bola-voli-sartono-cup-ke-7-di-magetan-resmi-dimulai&#39;, &#39;https://bangsaonline.com/berita/154603/naik-ka-dapat-diskon-hotel-hingga-kuliner-ini-daftar-mitra-bptv-daop-7-madiun&#39;, &#39;https://bangsaonline.com/berita/154456/dprd-kota-madiun-sahkan-dua-perda-baru-fokus-pada-pendidikan-inklusif-dan-teknologi-informasi&#39;, &#39;https://bangsaonline.com/berita/154439/peserta-jkn-tak-perlu-khawatir-bpjs-kesehatan-pastikan-obat-tetap-tersedia-sesuai-ketentuan-fornas&#39;, &#39;https://bangsaonline.com/berita/154437/kepala-bpjs-kesehatan-madiun-generasi-muda-sebagai-agen-perubahan-untuk-indonesia-yang-lebih-sehat&#39;, &#39;https://bangsaonline.com/berita/154335/pengurus-awdi-magetan-sowan-ke-kh-ahmad-zahni&#39;, &#39;https://bangsaonline.com/berita/154326/cuaca-ekstrem-ganggu-jalur-kereta-daop-4-semarang-kai-berlakukan-operasi-memutar&#39;, &#39;https://bangsaonline.com/berita/154195/booth-kai-daop-7-madiun-ramaikan-cfd-tawarkan-diskon-tiket-dan-cek-kesehatan-gratis&#39;, &#39;https://bangsaonline.com/kanal/jatim-barat?page=2&#39;, &#39;https://bangsaonline.com/kanal/jatim-barat?page=3&#39;, &#39;https://bangsaonline.com/kanal/jatim-barat?page=4&#39;, &#39;https://bangsaonline.com/kanal/jatim-barat?page=5&#39;, &#39;https://bangsaonline.com/kanal/jatim-barat?page=6&#39;, &#39;https://bangsaonline.com/kanal/jatim-barat?page=7&#39;, &#39;https://bangsaonline.com/kanal/jatim-barat?page=8&#39;, &#39;https://bangsaonline.com/kanal/jatim-barat?page=9&#39;, &#39;https://bangsaonline.com/kanal/jatim-barat?page=10&#39;, &#39;https://bangsaonline.com/kanal/jatim-barat?page=973&#39;, &#39;https://bangsaonline.com/berita/154619/dorong-perekonomian-dinas-perikanan-sumenep-beri-3-bentuk-dukungan-fasilitasi-sarana-produksi&#39;, &#39;https://bangsaonline.com/berita/154611/24-sppg-di-bangkalan-produksi-mbg-tanpa-kantongi-slhs-makanan-diklaim-aman&#39;, &#39;https://bangsaonline.com/berita/154582/gubernur-khofifah-ajak-masyarakat-terus-nandur-di-festival-mangrove-jatim-viii-bangkalan&#39;, &#39;https://bangsaonline.com/berita/154539/semarak-puncak-hari-santri-2025-di-sampang&#39;, &#39;https://bangsaonline.com/berita/154519/dihadiri-berbagai-elemen-masyarakat-pcnu-sumenep-gelar-rembuk-nahdliyin-bahas-isu-keumatan&#39;, &#39;https://bangsaonline.com/berita/154511/semalam-di-madura-meriahkan-hari-jadi-ke-495-pamekasan-ajang-pesona-budaya&#39;, &#39;https://bangsaonline.com/berita/154487/perbaiki-1-000-rumah-lebih-hingga-donasi-palestina-bmc-raih-penghargaan-dari-cnn-indonesia&#39;, &#39;https://bangsaonline.com/berita/154480/festival-semalam-di-madura-sediakan-3-000-porsi-makanan-khas-daerah-gratis&#39;, &#39;https://bangsaonline.com/berita/154438/komisi-ii-dprd-bangkalan-dorong-pasar-modern-fasilitasi-produk-lokal&#39;, &#39;https://bangsaonline.com/berita/154397/dispusip-bangkalan-sosialisasikan-pelestarian-naskah-kuno&#39;, &#39;https://bangsaonline.com/kanal/jatim-madura?page=2&#39;, &#39;https://bangsaonline.com/kanal/jatim-madura?page=3&#39;, &#39;https://bangsaonline.com/kanal/jatim-madura?page=4&#39;, &#39;https://bangsaonline.com/kanal/jatim-madura?page=5&#39;, &#39;https://bangsaonline.com/kanal/jatim-madura?page=6&#39;, &#39;https://bangsaonline.com/kanal/jatim-madura?page=7&#39;, &#39;https://bangsaonline.com/kanal/jatim-madura?page=8&#39;, &#39;https://bangsaonline.com/kanal/jatim-madura?page=9&#39;, &#39;https://bangsaonline.com/kanal/jatim-madura?page=10&#39;, &#39;https://bangsaonline.com/kanal/jatim-madura?page=1015&#39;, &#39;https://bangsaonline.com/berita/154538/kick-off-harlah-ke-58-kopri-pmii-di-uac-pacet-kiai-asep-minta-tekankan-spiritualitas-transformasi&#39;, &#39;https://bangsaonline.com/berita/154400/di-tanwir-xxxiii-umm-malang-khofifah-ajak-imm-bangun-sinergi-nu-muhammadiyah&#39;, &#39;https://bangsaonline.com/berita/154386/gus-ipul-bukan-putra-kiai-yusuf-hasyim-sejarawan-prof-asvi-salah-soal-calon-pahlawan-nasional&#39;, &#39;https://bangsaonline.com/berita/154325/gus-habib-anggota-dpr-ri-dapil-viii-apresiasi-kebijakan-presiden-turunkan-harga-pupuk-20-persen&#39;, &#39;https://bangsaonline.com/berita/154278/ini-hasil-penelitian-tentang-wahabijihadi-menolak-pancasila-harakati-aktif-di-hti-pks-dan&#39;, &#39;https://bangsaonline.com/berita/154247/jksn-dan-pergunu-minta-presiden-tetapkan-kiai-yusuf-hasyim-dan-kiai-abbas-sebagai-pahlawan-nasional&#39;, &#39;https://bangsaonline.com/berita/154204/kiai-wahab-hasbullah-miliki-banyak-julukan-kiai-asep-dalam-2-abad-pp-bahrul-ulum-tambak-beras&#39;, &#39;https://bangsaonline.com/berita/154114/nur-khalik-ridwan-wahabi-anti-kebudayaan-suka-menyesatkan-kelompok-islam-lain&#39;, &#39;https://bangsaonline.com/berita/154077/chairul-tanjung-ahirnya-datang-ke-pondok-pesantren-lirboyo&#39;, &#39;https://bangsaonline.com/kanal/nasional?page=2&#39;, &#39;https://bangsaonline.com/kanal/nasional?page=3&#39;, &#39;https://bangsaonline.com/kanal/nasional?page=4&#39;, &#39;https://bangsaonline.com/kanal/nasional?page=5&#39;, &#39;https://bangsaonline.com/kanal/nasional?page=6&#39;, &#39;https://bangsaonline.com/kanal/nasional?page=7&#39;, &#39;https://bangsaonline.com/kanal/nasional?page=8&#39;, &#39;https://bangsaonline.com/kanal/nasional?page=9&#39;, &#39;https://bangsaonline.com/kanal/nasional?page=10&#39;, &#39;https://bangsaonline.com/kanal/nasional?page=597&#39;, &#39;https://bangsaonline.com/berita/152979/gubernur-sumut-razia-truck-plat-aceh-nasir-apa-bobby-masih-ngakui-bendera-merah-putih&#39;, &#39;https://bangsaonline.com/berita/152811/oknum-tni-ngamuk-hingga-lepaskan-tembakan-di-bank-nyaris-timbulkan-korban-jiwa&#39;, &#39;https://bangsaonline.com/berita/152622/kementerian-atrbpn-perkuat-komitmen-lindungi-tanah-ulayat&#39;, &#39;https://bangsaonline.com/berita/152620/kementerian-atrbpn-sosialisasikan-pendaftaran-tanah-ulayat-di-tts-suku-boti-jadi-fokus-utama&#39;, &#39;https://bangsaonline.com/berita/152580/kementerian-atrbpn-dorong-sertifikasi-tanah-ulayat-untuk-lindungi-hak-masyarakat-adat&#39;, &#39;https://bangsaonline.com/berita/152459/wamen-atrbpn-dan-menko-ahy-serahkan-184-sertifikat-elektronik-tanah-di-bengkulu&#39;, &#39;https://bangsaonline.com/berita/152414/peringati-harhubnas-2025-gubernur-khofifah-komitmen-perkuat-konektivitas-transportasi&#39;, &#39;https://bangsaonline.com/berita/152403/perkuat-persatuan-dan-konektivitas-ekonomi-gubernur-khofifah-dorong-sinergi-jatim-kalsel&#39;, &#39;https://bangsaonline.com/berita/152207/5-aktivitas-seru-yang-bisa-anda-lakukan-di-kota-medan-saat-liburan-bersama-keluarga&#39;, &#39;https://bangsaonline.com/berita/151154/freeport-gelar-upacara-hut-ke-80-ri-serentak-di-6-lokasi-tampilkan-tarian-kolosal&#39;, &#39;https://bangsaonline.com/berita/148228/bom-siap-meledak-dua-pimpinan-pondok-gontor-kiai-zarkasyi-kiai-sahal-dikepung-tentara-pki&#39;, &#39;https://bangsaonline.com/kanal/nusantara?page=2&#39;, &#39;https://bangsaonline.com/kanal/nusantara?page=3&#39;, &#39;https://bangsaonline.com/kanal/nusantara?page=4&#39;, &#39;https://bangsaonline.com/kanal/nusantara?page=5&#39;, &#39;https://bangsaonline.com/kanal/nusantara?page=6&#39;, &#39;https://bangsaonline.com/kanal/nusantara?page=7&#39;, &#39;https://bangsaonline.com/kanal/nusantara?page=8&#39;, &#39;https://bangsaonline.com/kanal/nusantara?page=9&#39;, &#39;https://bangsaonline.com/kanal/nusantara?page=10&#39;, &#39;https://bangsaonline.com/kanal/nusantara?page=82&#39;, &#39;https://bangsaonline.com/berita/154625/ansor-surabaya-apresiasi-eri-cahyadi-yang-maafkan-blunder-tim-medsosnya&#39;, &#39;https://bangsaonline.com/berita/154521/peringati-harlah-partai-ke-6-ketua-gelora-sidoarjo-optimis-punya-8-kursi-di-dprd-pada-2029&#39;, &#39;https://bangsaonline.com/berita/154505/golkar-kritik-r-apbd-sidoarjo-2026-anggaran-pendidikan-dianggap-langgar-konstitusi&#39;, &#39;https://bangsaonline.com/berita/154504/mau-hapus-wajah-jokowi-dari-logo-bantah-projo-singkatan-pro-jokowi-budi-arie-takut-kasus-judol&#39;, &#39;https://bangsaonline.com/berita/154486/cium-tangan-megawati-mujid-riduan-bentuk-takzim-kepada-ibunya-kader-pdip-se-indonesia&#39;, &#39;https://bangsaonline.com/berita/154475/launching-rumah-aspirasi-partai-golkar-surabaya-wadah-baru-serap-suara-rakyat&#39;, &#39;https://bangsaonline.com/berita/154460/megawati-beri-arahan-kepala-daerah-pdip-se-jatim-di-blitar-tekankan-semangat-bela-rakyat&#39;, &#39;https://bangsaonline.com/berita/154445/calon-ketua-dpc-dpd-pdip-kumpul-di-blitar-mujid-riduan-dan-fandi-akhmad-yani-disebut-peluang-kuat&#39;, &#39;https://bangsaonline.com/kanal/politik?page=2&#39;, &#39;https://bangsaonline.com/kanal/politik?page=3&#39;, &#39;https://bangsaonline.com/kanal/politik?page=4&#39;, &#39;https://bangsaonline.com/kanal/politik?page=5&#39;, &#39;https://bangsaonline.com/kanal/politik?page=6&#39;, &#39;https://bangsaonline.com/kanal/politik?page=7&#39;, &#39;https://bangsaonline.com/kanal/politik?page=8&#39;, &#39;https://bangsaonline.com/kanal/politik?page=9&#39;, &#39;https://bangsaonline.com/kanal/politik?page=10&#39;, &#39;https://bangsaonline.com/kanal/politik?page=5944&#39;, &#39;https://bangsaonline.com/kanal/birokrasi?page=2&#39;, &#39;https://bangsaonline.com/kanal/birokrasi?page=3&#39;, &#39;https://bangsaonline.com/kanal/birokrasi?page=4&#39;, &#39;https://bangsaonline.com/kanal/birokrasi?page=5&#39;, &#39;https://bangsaonline.com/kanal/birokrasi?page=6&#39;, &#39;https://bangsaonline.com/kanal/birokrasi?page=7&#39;, &#39;https://bangsaonline.com/kanal/birokrasi?page=8&#39;, &#39;https://bangsaonline.com/kanal/birokrasi?page=9&#39;, &#39;https://bangsaonline.com/kanal/birokrasi?page=10&#39;, &#39;https://bangsaonline.com/kanal/birokrasi?page=329&#39;, &#39;https://bangsaonline.com/berita/154534/tafsir-al-hajj-27-haji-itu-panggilan&#39;, &#39;https://bangsaonline.com/berita/154510/haul-kh-abdurrahman-legi-jejak-pendiri-nu-pasuruan-dan-anggota-mahkamah-islam-tinggi&#39;, &#39;https://bangsaonline.com/berita/154478/tafsir-al-hajj-26-syariah-napak-tilas&#39;, &#39;https://bangsaonline.com/berita/154170/hadiri-seminar-di-tambakberas-menko-pm-cak-imin-santri-jadi-motor-perubahan-bangsa&#39;, &#39;https://bangsaonline.com/kanal/religia?page=2&#39;, &#39;https://bangsaonline.com/kanal/religia?page=3&#39;, &#39;https://bangsaonline.com/kanal/religia?page=4&#39;, &#39;https://bangsaonline.com/kanal/religia?page=5&#39;, &#39;https://bangsaonline.com/kanal/religia?page=6&#39;, &#39;https://bangsaonline.com/kanal/religia?page=7&#39;, &#39;https://bangsaonline.com/kanal/religia?page=8&#39;, &#39;https://bangsaonline.com/kanal/religia?page=9&#39;, &#39;https://bangsaonline.com/kanal/religia?page=10&#39;, &#39;https://bangsaonline.com/kanal/religia?page=270&#39;, &#39;https://bangsaonline.com/berita/153425/dua-gadis-katolik-maria-dan-margareta-ikrar-syahadat-di-masjid-al-akbar-surabaya&#39;, &#39;https://bangsaonline.com/berita/151946/muhammadiyah-pun-instruksikan-peringati-maulid-nabi-kenapa-ustadz-skripturalis-sibuk-membidahkan&#39;, &#39;https://bangsaonline.com/berita/151935/maulid-nabi-tak-ada-dalilnya-ini-tiga-poin-penting-peringatan-maulid-nabi-saw&#39;, &#39;https://bangsaonline.com/berita/150464/unik-ulama-ulama-besar-sunni-ternyata-berasal-dari-iran-siapa-saja&#39;, &#39;https://bangsaonline.com/berita/150030/inilah-tiga-teks-suci-tentang-tambang-dan-penambangan-harus-jauh-dari-kerakusan&#39;, &#39;https://bangsaonline.com/berita/149818/larangan-syarifah-nikah-dengan-pria-indonesia-hadits-palsu&#39;, &#39;https://bangsaonline.com/berita/149552/haji-furoda-itu-bisnisnya-para-pangeran-kini-ada-fatwa-haji-tak-sah-jika-tanpa-izin&#39;, &#39;https://bangsaonline.com/berita/149360/gus-kikin-dzurriyah-pesantren-tebuireng-tak-terlibat-pengelolaan-kotak-amal-makam-gus-dur&#39;, &#39;https://bangsaonline.com/berita/148188/gagal-naik-haji-tapi-ibadah-haji-tukang-sol-sepatu-ini-diterima-allah-swt-lho-kok-bisa&#39;, &#39;https://bangsaonline.com/berita/148137/tak-wajib-shalat-jumat-karena-idul-adlha-jatuh-hari-jumat-ini-penjelasan-kiai-afifuddin-muhajir&#39;, &#39;https://bangsaonline.com/kanal/tj-islam-sehari-hari?page=2&#39;, &#39;https://bangsaonline.com/kanal/tj-islam-sehari-hari?page=3&#39;, &#39;https://bangsaonline.com/kanal/tj-islam-sehari-hari?page=4&#39;, &#39;https://bangsaonline.com/kanal/tj-islam-sehari-hari?page=5&#39;, &#39;https://bangsaonline.com/kanal/tj-islam-sehari-hari?page=6&#39;, &#39;https://bangsaonline.com/kanal/tj-islam-sehari-hari?page=7&#39;, &#39;https://bangsaonline.com/kanal/tj-islam-sehari-hari?page=8&#39;, &#39;https://bangsaonline.com/kanal/tj-islam-sehari-hari?page=9&#39;, &#39;https://bangsaonline.com/kanal/tj-islam-sehari-hari?page=10&#39;, &#39;https://bangsaonline.com/kanal/tj-islam-sehari-hari?page=27&#39;, &#39;https://bangsaonline.com/berita/153757/tafsir-al-hajj-24-25-menyewakan-hotel-haram&#39;, &#39;https://bangsaonline.com/berita/153281/tafsir-al-hajj-24-25-dulu-rumah-di-makkah-tidak-ada-pintunya&#39;, &#39;https://bangsaonline.com/berita/152921/tafsir-al-hajj-23-tampilan-penghuni-surga-serba-mewah&#39;, &#39;https://bangsaonline.com/berita/152641/tafsir-al-hajj-22-koruptor-yang-bertobat&#39;, &#39;https://bangsaonline.com/berita/152317/tafsir-al-hajj-22-hukuman-potong-tangan-lebih-mashlahah&#39;, &#39;https://bangsaonline.com/berita/150644/tafsir-al-hajj-22-berusaha-kabur-dari-neraka&#39;, &#39;https://bangsaonline.com/berita/150200/tafsir-al-hajj-19-21-pendeta-duluan-yang-mengolok&#39;, &#39;https://bangsaonline.com/berita/150071/tafsir-al-hajj-19-21-duel-satu-lawan-satu-sebelum-perang-badar&#39;, &#39;https://bangsaonline.com/kanal/tafsir-al-quran-aktual?page=2&#39;, &#39;https://bangsaonline.com/kanal/tafsir-al-quran-aktual?page=3&#39;, &#39;https://bangsaonline.com/kanal/tafsir-al-quran-aktual?page=4&#39;, &#39;https://bangsaonline.com/kanal/tafsir-al-quran-aktual?page=5&#39;, &#39;https://bangsaonline.com/kanal/tafsir-al-quran-aktual?page=6&#39;, &#39;https://bangsaonline.com/kanal/tafsir-al-quran-aktual?page=7&#39;, &#39;https://bangsaonline.com/kanal/tafsir-al-quran-aktual?page=8&#39;, &#39;https://bangsaonline.com/kanal/tafsir-al-quran-aktual?page=9&#39;, &#39;https://bangsaonline.com/kanal/tafsir-al-quran-aktual?page=10&#39;, &#39;https://bangsaonline.com/kanal/tafsir-al-quran-aktual?page=56&#39;, &#39;https://bangsaonline.com/berita/154556/dlh-jatim-tinjau-eco-pesantren-wali-barokah-kediri-dorong-zero-waste-dan-energi-terbarukan&#39;, &#39;https://bangsaonline.com/berita/154512/siapkan-sdm-unggul-hadapi-era-digital-ponpes-ibnu-kholdun-situbondo-gelar-sekolah-guru&#39;, &#39;https://bangsaonline.com/berita/154435/kerja-bakti-santri-dibully-perbudakan-di-jepang-justru-ditekankan-sejak-usia-dini&#39;, &#39;https://bangsaonline.com/berita/154421/rembug-pendidikan-pergunu-kiai-asep-pemimpin-akan-lahir-dari-bojonegoro-jika-peduli-pendidikan&#39;, &#39;https://bangsaonline.com/kanal/pesantren?page=2&#39;, &#39;https://bangsaonline.com/kanal/pesantren?page=3&#39;, &#39;https://bangsaonline.com/kanal/pesantren?page=4&#39;, &#39;https://bangsaonline.com/kanal/pesantren?page=5&#39;, &#39;https://bangsaonline.com/kanal/pesantren?page=6&#39;, &#39;https://bangsaonline.com/kanal/pesantren?page=7&#39;, &#39;https://bangsaonline.com/kanal/pesantren?page=8&#39;, &#39;https://bangsaonline.com/kanal/pesantren?page=9&#39;, &#39;https://bangsaonline.com/kanal/pesantren?page=10&#39;, &#39;https://bangsaonline.com/kanal/pesantren?page=66&#39;, &#39;https://bangsaonline.com/berita/154259/lsm-lira-keluhkan-sound-horeg-ke-pcnu-kabupaten-pasuruan&#39;, &#39;https://bangsaonline.com/berita/154190/sarbumusi-probolinggo-desak-pt-klaseman-penuhi-hak-buruh-dan-bayar-upah-sesuai-umk&#39;, &#39;https://bangsaonline.com/berita/154159/pemilik-trans7-kunjungi-lirboyo-ketum-bkn-saya-desak-pak-chairul-tanjung-ke-sana&#39;, &#39;https://bangsaonline.com/berita/154022/ldii-kota-kediri-tegaskan-peran-santri-dalam-membangun-peradaban-di-era-digital&#39;, &#39;https://bangsaonline.com/berita/153833/ketua-pemuda-ldii-kota-kediri-kembali-dipercaya-sebagai-wakil-ketua-pemuda-ldii-jawa-timur&#39;, &#39;https://bangsaonline.com/berita/153735/trans7-framing-ponpes-lirboyo-ingat-pendiri-negeri-ini-kiai-pesantren-dan-nu&#39;, &#39;https://bangsaonline.com/berita/153621/fasilitasi-muskercab-gp-ansor-begini-harapan-ketua-dprd-gresik&#39;, &#39;https://bangsaonline.com/berita/153471/mui-gresik-bersama-9-lembaga-filantropi-siap-kolaborasi-untuk-kemanusiaan-dan-keumatan&#39;, &#39;https://bangsaonline.com/berita/153414/sikap-menlu-tak-jelas-ormas-dpr-gubernur-dki-tolak-atlet-israel-ikut-kejuaraan-senam-artistik&#39;, &#39;https://bangsaonline.com/kanal/ormas?page=2&#39;, &#39;https://bangsaonline.com/kanal/ormas?page=3&#39;, &#39;https://bangsaonline.com/kanal/ormas?page=4&#39;, &#39;https://bangsaonline.com/kanal/ormas?page=5&#39;, &#39;https://bangsaonline.com/kanal/ormas?page=6&#39;, &#39;https://bangsaonline.com/kanal/ormas?page=7&#39;, &#39;https://bangsaonline.com/kanal/ormas?page=8&#39;, &#39;https://bangsaonline.com/kanal/ormas?page=9&#39;, &#39;https://bangsaonline.com/berita/154622/pn-surabaya-vonis-pengecer-narkoba-5-tahun-penjara-dan-denda-rp1-m-subsider-3-bulan-kurungan&#39;, &#39;https://bangsaonline.com/berita/154620/polresta-sidoarjo-ungkap-pelaku-dan-motif-penembakan-pria-di-kedungboto-porong&#39;, &#39;https://bangsaonline.com/berita/154617/pengendara-motor-diduga-mabuk-keroyok-sopir-mobil-yang-lawan-arus-di-surabaya&#39;, &#39;https://bangsaonline.com/kanal/hukum-dan-kriminal?page=2&#39;, &#39;https://bangsaonline.com/kanal/hukum-dan-kriminal?page=3&#39;, &#39;https://bangsaonline.com/kanal/hukum-dan-kriminal?page=4&#39;, &#39;https://bangsaonline.com/kanal/hukum-dan-kriminal?page=5&#39;, &#39;https://bangsaonline.com/kanal/hukum-dan-kriminal?page=6&#39;, &#39;https://bangsaonline.com/kanal/hukum-dan-kriminal?page=7&#39;, &#39;https://bangsaonline.com/kanal/hukum-dan-kriminal?page=8&#39;, &#39;https://bangsaonline.com/kanal/hukum-dan-kriminal?page=9&#39;, &#39;https://bangsaonline.com/kanal/hukum-dan-kriminal?page=10&#39;, &#39;https://bangsaonline.com/kanal/hukum-dan-kriminal?page=1740&#39;, &#39;https://bangsaonline.com/berita/154647/update-daftar-harga-sembako-aceh-hari-ini-cabai-merah-keriting-turun-drastis&#39;, &#39;https://bangsaonline.com/berita/154646/turun-semua-simak-daftar-harga-emas-galeri24-ubs-dan-antam-terbaru-hari-ini&#39;, &#39;https://bangsaonline.com/berita/154643/merosot-lagi-harga-emas-antam-per-5-november-2025-turun-jadi-segini&#39;, &#39;https://bangsaonline.com/berita/154640/update-harga-sembako-jatim-5-november-2025-cabai-besar-merangkak-daging-sapi-dan-ayam-turun-tipis&#39;, &#39;https://bangsaonline.com/berita/154628/pt-megasurya-mas-gelontorkan-ratusan-beasiswa-untuk-pelajar-sd-di-sidoarjo-dan-gresik&#39;, &#39;https://bangsaonline.com/berita/154599/pertamina-jatimbalinus-operasikan-21-bengkel-rekomendasi-tangani-kasus-bbm-bikin-brebet&#39;, &#39;https://bangsaonline.com/berita/154594/harga-sembako-di-surabaya-hari-ini-cenderung-stabil-cabai-besar-dan-rawit-hanyak-naik-tipis&#39;, &#39;https://bangsaonline.com/berita/154595/daftar-harga-emas-galeri24-dan-buyback-terbaru-hari-ini-1-gram-turun-hingga-rp130-ribu&#39;, &#39;https://bangsaonline.com/kanal/ekonomi?page=2&#39;, &#39;https://bangsaonline.com/kanal/ekonomi?page=3&#39;, &#39;https://bangsaonline.com/kanal/ekonomi?page=4&#39;, &#39;https://bangsaonline.com/kanal/ekonomi?page=5&#39;, &#39;https://bangsaonline.com/kanal/ekonomi?page=6&#39;, &#39;https://bangsaonline.com/kanal/ekonomi?page=7&#39;, &#39;https://bangsaonline.com/kanal/ekonomi?page=8&#39;, &#39;https://bangsaonline.com/kanal/ekonomi?page=9&#39;, &#39;https://bangsaonline.com/kanal/ekonomi?page=10&#39;, &#39;https://bangsaonline.com/kanal/ekonomi?page=834&#39;, &#39;https://bangsaonline.com/berita/154196/bisantren-2025-di-unhasy-tebuireng-santri-tampil-jadi-penggerak-ekonomi-kreatif&#39;, &#39;https://bangsaonline.com/berita/154154/gus-lilur-pengusaha-asal-situbondo-akan-luncurkan-dolomit-merek-satara-di-hari-pahlawan&#39;, &#39;https://bangsaonline.com/berita/153282/peternak-pasuruan-sukses-budidaya-sapi-australia-dengan-cara-ini&#39;, &#39;https://bangsaonline.com/berita/151442/pengusaha-dari-situbondo-ini-dukung-keputusan-presiden-prabowo-soal-tata-kelola-ekspor-bbl&#39;, &#39;https://bangsaonline.com/berita/150276/ekspansi-bisnis-beras-vietnam-gus-lilur-soroti-mafia-pupuk-di-indonesia&#39;, &#39;https://bangsaonline.com/berita/150145/alfamart-beri-bantuan-ke-perajin-intako&#39;, &#39;https://bangsaonline.com/berita/149789/lewat-shehacks-innovate-2025-indosat-dukung-pengembangan-umkm-di-pamekasan&#39;, &#39;https://bangsaonline.com/berita/149245/bantu-warga-kurang-mampu-ceo-bawang-mas-group-dukung-program-presiden-prabowo&#39;, &#39;https://bangsaonline.com/berita/148012/pesanan-melonjak-perajin-pisau-di-kediri-kewalahan-jelang-idul-adha&#39;, &#39;https://bangsaonline.com/berita/147698/diskominfo-kota-malang-gelar-pelatihan-mc-wali-kota-wahyu-hidayat-upaya-kurangi-pengangguran&#39;, &#39;https://bangsaonline.com/kanal/entrepreneur?page=2&#39;, &#39;https://bangsaonline.com/kanal/entrepreneur?page=3&#39;, &#39;https://bangsaonline.com/kanal/entrepreneur?page=4&#39;, &#39;https://bangsaonline.com/kanal/entrepreneur?page=5&#39;, &#39;https://bangsaonline.com/kanal/entrepreneur?page=6&#39;, &#39;https://bangsaonline.com/kanal/entrepreneur?page=7&#39;, &#39;https://bangsaonline.com/kanal/entrepreneur?page=8&#39;, &#39;https://bangsaonline.com/kanal/entrepreneur?page=9&#39;, &#39;https://bangsaonline.com/kanal/entrepreneur?page=10&#39;, &#39;https://bangsaonline.com/berita/154585/unity-through-sports-how-asias-love-for-the-game-builds-cultural-connections&#39;, &#39;https://bangsaonline.com/berita/153279/5-pemain-asia-yang-patut-diperhatikan-di-musim-epl-ini-menurut-1xbet&#39;, &#39;https://bangsaonline.com/berita/153179/setelah-wigi-pratama-kini-rifqi-ray-juga-dapat-panggilan-timnas-u-23&#39;, &#39;https://bangsaonline.com/berita/153146/persatu-tuban-diakuisisi-anggota-dpr-ri-eko-wahyudi-komitmen-4-perjanjian&#39;, &#39;https://bangsaonline.com/berita/153100/sukses-esport-mobile-legends-kini-gelar-turnamen-futsal-riski-sadig-championship&#39;, &#39;https://bangsaonline.com/berita/153021/23-32-dan-angka-angka-legendaris-lainnya-dalam-sejarah-basket&#39;, &#39;https://bangsaonline.com/berita/153004/tiba-di-bandara-soekarno-hatta-valentino-rossi-disambut-hangat-para-fans-indonesia&#39;, &#39;https://bangsaonline.com/berita/152756/hasil-turnamen-esports-the-international-2025-kemenangan-dramatis-falcons-medali-perak-ketiga-ame&#39;, &#39;https://bangsaonline.com/berita/152427/muhammad-arsul-majid-peraih-juara-1-tunggal-putra-cabor-bulutangkis-porseni-jawa-timur-2025&#39;, &#39;https://bangsaonline.com/kanal/entertain-sport?page=2&#39;, &#39;https://bangsaonline.com/kanal/entertain-sport?page=3&#39;, &#39;https://bangsaonline.com/kanal/entertain-sport?page=4&#39;, &#39;https://bangsaonline.com/kanal/entertain-sport?page=5&#39;, &#39;https://bangsaonline.com/kanal/entertain-sport?page=6&#39;, &#39;https://bangsaonline.com/kanal/entertain-sport?page=7&#39;, &#39;https://bangsaonline.com/kanal/entertain-sport?page=8&#39;, &#39;https://bangsaonline.com/kanal/entertain-sport?page=9&#39;, &#39;https://bangsaonline.com/kanal/entertain-sport?page=10&#39;, &#39;https://bangsaonline.com/kanal/entertain-sport?page=257&#39;, &#39;https://bangsaonline.com/berita/153680/resmi-jadi-kakek-putri-liam-gallagher-lahirkan-bayi-pertama&#39;, &#39;https://bangsaonline.com/berita/152103/ferry-irwandi-santai-tanggapi-dugaan-tindak-pidana-yang-diungkap-dansat-siber-tni&#39;, &#39;https://bangsaonline.com/berita/150083/ozzy-osbourne-vokalis-black-sabbath-tutup-usia-ini-rangkaian-penyakit-yang-dideritanya&#39;, &#39;https://bangsaonline.com/berita/148589/marak-rhoma-palsu-lucu-dan-menarik-bagaimana-respons-rhoma-irama-asli&#39;, &#39;https://bangsaonline.com/berita/147665/5-fakta-soal-album-folklore-taylor-swift&#39;, &#39;https://bangsaonline.com/berita/147670/sabet-penghargaan-di-ama-2025-ini-lagu-hits-lady-gaga-yang-wajib-diputar-ulang&#39;, &#39;https://bangsaonline.com/berita/147376/marselino-ferdinan-tampak-bergaya-dalam-setelan-daur-ulang&#39;, &#39;https://bangsaonline.com/berita/147434/ini-sejumlah-penghargaan-olivia-rodrigo-dengan-album-sour&#39;, &#39;https://bangsaonline.com/berita/147432/austin-butler-dan-zoe-kravitz-bintangi-film-caught-stealing&#39;, &#39;https://bangsaonline.com/berita/147489/sederet-fakta-taylor-swift-rilis-kembali-album-albumnya&#39;, &#39;https://bangsaonline.com/berita/147486/conan-gray-ungkap-tracklist-album-barunya-yang-siap-meluncur-agustus-2025&#39;, &#39;https://bangsaonline.com/kanal/selebriti?page=2&#39;, &#39;https://bangsaonline.com/kanal/selebriti?page=3&#39;, &#39;https://bangsaonline.com/kanal/selebriti?page=4&#39;, &#39;https://bangsaonline.com/kanal/selebriti?page=5&#39;, &#39;https://bangsaonline.com/kanal/selebriti?page=6&#39;, &#39;https://bangsaonline.com/kanal/selebriti?page=7&#39;, &#39;https://bangsaonline.com/kanal/selebriti?page=8&#39;, &#39;https://bangsaonline.com/kanal/selebriti?page=9&#39;, &#39;https://bangsaonline.com/kanal/selebriti?page=10&#39;, &#39;https://bangsaonline.com/kanal/selebriti?page=97&#39;]
+
+Jumlah &#39;Yang Diikuti&#39; (Successors): 0
+Daftar Yang Diikuti: []
+
+Total node unik untuk divisualisasikan: 498
+
+Membuat visualisasi untuk lingkungan node teratas...
+Menggambar graf dengan 498 node dan 44752 edge.
+Visualisasi node teratas telah disimpan ke &#39;top_pagerank_node_graph.png&#39;
+</pre></div>
+</div>
+<img alt="_images/6824ac431fd8c254a80aac5764dff77bfd498e4d86f3f7f33f3c727add9c7d6b.png" src="_images/6824ac431fd8c254a80aac5764dff77bfd498e4d86f3f7f33f3c727add9c7d6b.png" />
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="tugas7_1_datasetpagerankPTA.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="tugas7_2_graphPTA.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
