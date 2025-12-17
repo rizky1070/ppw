@@ -61,7 +61,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'tugas4_1_cbow_PTA_manajemen';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="LDA Klasifikasi Berita" href="tugas6_LDA_klasifikasi_berita.html" />
+    <link rel="next" title="BERTopic Berita" href="tugas5_berita.html" />
     <link rel="prev" title="CBOW Berita" href="tugas4_1_cbow_beritacopy.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -193,10 +193,18 @@
 <li class="toctree-l1"><a class="reference internal" href="tugas4_1_ekstraksi_fitur_tfidf_pta_manajemen.html">Ekstraksi fitur TFID PTA Manajemen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas4_1_cbow_beritacopy.html">CBOW Berita</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">CBOW PTA Manajemen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas5_berita.html">BERTopic Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas5_manajemen.html">BERTopic Manajemen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas6_LDA_klasifikasi_berita.html">LDA Klasifikasi Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas6_LDA_klasifikasi_beritaWithOutStemming.html">LDA Klasifikasi Berita Tanpa Stemming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UTS.html">UTS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas8_1_analisisdatsetwebusage.html">Analisis dataset webusage.csv</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas8_2_analisisdatasetnasa.html">Analisis dataset NASA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_1_datasetpagerankberita.html">Pagerank Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_1_datasetpagerankPTA.html">Pagerank PTA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_2_graphberita.html">Graph Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_2_graphPTA.html">Graph PTA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas8_2_analisisnasa.html">Analisis Dataset Log Nasa July</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas10_1_komuditasfb.html">Komuditas FB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas11_1_dokumen.html">Dokumen Analisis</a></li>
 </ul>
 
     </div>
@@ -473,16 +481,22 @@ Berikut adalah contoh 1 abstrak yang sudah diubah menjadi daftar token:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-11-20 01:20:56,257 : INFO : collecting all words and their counts
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-12-18 00:53:07,949 : INFO : collecting all words and their counts
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-11-20 01:20:56,261 : INFO : PROGRESS: at sentence #0, processed 0 words, keeping 0 word types
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-12-18 00:53:07,954 : INFO : PROGRESS: at sentence #0, processed 0 words, keeping 0 word types
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-11-20 01:20:56,347 : INFO : collected 6497 word types from a corpus of 147875 raw words and 1026 sentences
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-12-18 00:53:08,032 : INFO : collected 6497 word types from a corpus of 147875 raw words and 1026 sentences
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-11-20 01:20:56,350 : INFO : Creating a fresh vocabulary
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-12-18 00:53:08,037 : INFO : Creating a fresh vocabulary
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-12-18 00:53:08,072 : INFO : Word2Vec lifecycle event {&#39;msg&#39;: &#39;effective_min_count=2 retains 3543 unique words (54.53% of original 6497, drops 2954)&#39;, &#39;datetime&#39;: &#39;2025-12-18T00:53:08.069448&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;prepare_vocab&#39;}
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-12-18 00:53:08,075 : INFO : Word2Vec lifecycle event {&#39;msg&#39;: &#39;effective_min_count=2 leaves 144921 word corpus (98.00% of original 147875, drops 2954)&#39;, &#39;datetime&#39;: &#39;2025-12-18T00:53:08.075447&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;prepare_vocab&#39;}
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- TAHAP 2: MELATIH MODEL WORD2VEC (CBOW) ---
@@ -490,52 +504,46 @@ Parameter: Dimensi vektor = 150, Arsitektur = CBOW
 Gensim akan menampilkan log proses training di bawah ini:
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-11-20 01:20:56,395 : INFO : Word2Vec lifecycle event {&#39;msg&#39;: &#39;effective_min_count=2 retains 3543 unique words (54.53% of original 6497, drops 2954)&#39;, &#39;datetime&#39;: &#39;2025-11-20T01:20:56.395128&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;prepare_vocab&#39;}
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-12-18 00:53:08,178 : INFO : deleting the raw counts dictionary of 6497 items
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-11-20 01:20:56,400 : INFO : Word2Vec lifecycle event {&#39;msg&#39;: &#39;effective_min_count=2 leaves 144921 word corpus (98.00% of original 147875, drops 2954)&#39;, &#39;datetime&#39;: &#39;2025-11-20T01:20:56.400166&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;prepare_vocab&#39;}
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-12-18 00:53:08,180 : INFO : sample=0.001 downsamples 67 most-common words
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-11-20 01:20:56,479 : INFO : deleting the raw counts dictionary of 6497 items
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-12-18 00:53:08,181 : INFO : Word2Vec lifecycle event {&#39;msg&#39;: &#39;downsampling leaves estimated 108540.54174002048 word corpus (74.9%% of prior 144921)&#39;, &#39;datetime&#39;: &#39;2025-12-18T00:53:08.181447&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;prepare_vocab&#39;}
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-11-20 01:20:56,481 : INFO : sample=0.001 downsamples 67 most-common words
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-12-18 00:53:08,288 : INFO : estimated required memory for 3543 words and 150 dimensions: 6023100 bytes
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-11-20 01:20:56,483 : INFO : Word2Vec lifecycle event {&#39;msg&#39;: &#39;downsampling leaves estimated 108540.54174002048 word corpus (74.9%% of prior 144921)&#39;, &#39;datetime&#39;: &#39;2025-11-20T01:20:56.483677&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;prepare_vocab&#39;}
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-12-18 00:53:08,290 : INFO : resetting layer weights
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-11-20 01:20:56,575 : INFO : estimated required memory for 3543 words and 150 dimensions: 6023100 bytes
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-12-18 00:53:08,296 : INFO : Word2Vec lifecycle event {&#39;update&#39;: False, &#39;trim_rule&#39;: &#39;None&#39;, &#39;datetime&#39;: &#39;2025-12-18T00:53:08.296447&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;build_vocab&#39;}
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-11-20 01:20:56,577 : INFO : resetting layer weights
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-12-18 00:53:08,299 : INFO : Word2Vec lifecycle event {&#39;msg&#39;: &#39;training model with 4 workers on 3543 vocabulary and 150 features, using sg=0 hs=0 sample=0.001 negative=5 window=5 shrink_windows=True&#39;, &#39;datetime&#39;: &#39;2025-12-18T00:53:08.299448&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;train&#39;}
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-11-20 01:20:56,592 : INFO : Word2Vec lifecycle event {&#39;update&#39;: False, &#39;trim_rule&#39;: &#39;None&#39;, &#39;datetime&#39;: &#39;2025-11-20T01:20:56.592308&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;build_vocab&#39;}
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-12-18 00:53:08,454 : INFO : EPOCH 0: training on 147875 raw words (108443 effective words) took 0.1s, 745984 effective words/s
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-11-20 01:20:56,595 : INFO : Word2Vec lifecycle event {&#39;msg&#39;: &#39;training model with 4 workers on 3543 vocabulary and 150 features, using sg=0 hs=0 sample=0.001 negative=5 window=5 shrink_windows=True&#39;, &#39;datetime&#39;: &#39;2025-11-20T01:20:56.595868&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;train&#39;}
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-12-18 00:53:08,635 : INFO : EPOCH 1: training on 147875 raw words (108582 effective words) took 0.2s, 688383 effective words/s
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-11-20 01:20:56,797 : INFO : EPOCH 0: training on 147875 raw words (108526 effective words) took 0.2s, 594546 effective words/s
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-12-18 00:53:08,787 : INFO : EPOCH 2: training on 147875 raw words (108397 effective words) took 0.1s, 748577 effective words/s
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-11-20 01:20:56,949 : INFO : EPOCH 1: training on 147875 raw words (108417 effective words) took 0.1s, 739133 effective words/s
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-12-18 00:53:08,964 : INFO : EPOCH 3: training on 147875 raw words (108313 effective words) took 0.2s, 637073 effective words/s
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-11-20 01:20:57,152 : INFO : EPOCH 2: training on 147875 raw words (108479 effective words) took 0.2s, 546313 effective words/s
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-12-18 00:53:09,116 : INFO : EPOCH 4: training on 147875 raw words (108416 effective words) took 0.1s, 746832 effective words/s
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-11-20 01:20:57,269 : INFO : EPOCH 3: training on 147875 raw words (108378 effective words) took 0.1s, 992806 effective words/s
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-12-18 00:53:09,119 : INFO : Word2Vec lifecycle event {&#39;msg&#39;: &#39;training on 739375 raw words (542151 effective words) took 0.8s, 662891 effective words/s&#39;, &#39;datetime&#39;: &#39;2025-12-18T00:53:09.118547&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;train&#39;}
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-11-20 01:20:57,401 : INFO : EPOCH 4: training on 147875 raw words (108685 effective words) took 0.1s, 862570 effective words/s
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-11-20 01:20:57,403 : INFO : Word2Vec lifecycle event {&#39;msg&#39;: &#39;training on 739375 raw words (542485 effective words) took 0.8s, 673996 effective words/s&#39;, &#39;datetime&#39;: &#39;2025-11-20T01:20:57.403423&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;train&#39;}
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-11-20 01:20:57,405 : INFO : Word2Vec lifecycle event {&#39;params&#39;: &#39;Word2Vec&lt;vocab=3543, vector_size=150, alpha=0.025&gt;&#39;, &#39;datetime&#39;: &#39;2025-11-20T01:20:57.405205&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;created&#39;}
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-12-18 00:53:09,120 : INFO : Word2Vec lifecycle event {&#39;params&#39;: &#39;Word2Vec&lt;vocab=3543, vector_size=150, alpha=0.025&gt;&#39;, &#39;datetime&#39;: &#39;2025-12-18T00:53:09.120547&#39;, &#39;gensim&#39;: &#39;4.3.3&#39;, &#39;python&#39;: &#39;3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]&#39;, &#39;platform&#39;: &#39;Windows-10-10.0.26100-SP0&#39;, &#39;event&#39;: &#39;created&#39;}
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pelatihan model selesai!
@@ -544,7 +552,7 @@ Gensim akan menampilkan log proses training di bawah ini:
 Model berhasil mempelajari 3543 kata unik.
 
 Contoh kata yang paling mirip dengan &#39;pengaruh&#39;:
-[(&#39;bersamasama&#39;, 0.9273151159286499), (&#39;signifikan&#39;, 0.8999229669570923), (&#39;kunci&#39;, 0.8963904976844788), (&#39;positif&#39;, 0.8942988514900208), (&#39;biologis&#39;, 0.8915672898292542)]
+[(&#39;bersamasama&#39;, 0.9283832907676697), (&#39;signifikan&#39;, 0.9103097915649414), (&#39;positif&#39;, 0.9099257588386536), (&#39;fisik&#39;, 0.8881965279579163), (&#39;kunci&#39;, 0.8881596922874451)]
 
 Contoh kata yang paling mirip dengan &#39;kinerja&#39;:
 
@@ -592,12 +600,12 @@ Isi abstrak (token): [&#39;satiyah&#39;, &#39;pengaruh&#39;, &#39;faktorfaktor&#
 
 Vektor untuk 3 kata pertama dalam abstrak:
   - Kata &#39;satiyah&#39; tidak ada di vocabulary model.
-  - Vektor kata &#39;pengaruh&#39;: [-0.07978486  0.4066606   0.37756243  0.2823083  -0.47878298]...
-  - Vektor kata &#39;faktorfaktor&#39;: [ 0.08501998 -0.12014724  0.05745527  0.06222149  0.03119349]...
+  - Vektor kata &#39;pengaruh&#39;: [-0.10664529  0.30778137  0.3315537   0.20288011 -0.36993635]...
+  - Vektor kata &#39;faktorfaktor&#39;: [ 0.06077266 -0.1068537   0.04843553  0.08987109  0.02231412]...
 
 Hasil vektor dokumen (setelah dirata-ratakan):
-[-0.01168865 -0.16779615  0.10190278  0.00693134 -0.03002119 -0.51117563
- -0.12154346  0.28969717 -0.2872991   0.24891403]...
+[-0.0025733  -0.1663977   0.09121451 -0.01747127 -0.01404653 -0.54194194
+  0.02086792  0.23354983 -0.28056917  0.17876166]...
 Panjang vektor: 150 dimensi.
 </pre></div>
 </div>
@@ -630,25 +638,25 @@ Panjang vektor: 150 dimensi.
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Proses pembuatan DataFrame selesai.
 Berikut adalah contoh hasil akhirnya:
       dim_1     dim_2     dim_3     dim_4     dim_5     dim_6     dim_7  \
-0 -0.011689 -0.167796  0.101903  0.006931 -0.030021 -0.511176 -0.121543   
-1  0.053480 -0.072773 -0.425195 -0.225163  0.075919 -0.399745 -0.237720   
-2  0.115189 -0.139849 -0.209551 -0.073180 -0.028159 -0.301480 -0.074885   
-3 -0.225450  0.092724  0.146690  0.102900 -0.193762 -0.666933 -0.346598   
-4 -0.073286 -0.055756 -0.045714  0.048448 -0.061666 -0.452156 -0.275294   
+0 -0.002573 -0.166398  0.091215 -0.017471 -0.014047 -0.541942  0.020868   
+1 -0.016196 -0.068412 -0.388747 -0.185408  0.018239 -0.357254 -0.245832   
+2  0.058849 -0.118896 -0.187949 -0.043075 -0.055005 -0.297819 -0.047301   
+3 -0.215193  0.068748  0.101351  0.012700 -0.173159 -0.758479 -0.201013   
+4 -0.109005 -0.074542 -0.052460  0.008620 -0.092550 -0.516360 -0.185922   
 
       dim_8     dim_9    dim_10  ...   dim_142   dim_143   dim_144   dim_145  \
-0  0.289697 -0.287299  0.248914  ... -0.103329 -0.115763  0.178092  0.211705   
-1  0.561768 -0.181600  0.131626  ... -0.173444 -0.150825  0.541534  0.204408   
-2  0.423276 -0.086340  0.260349  ... -0.120948 -0.071337  0.270422  0.138754   
-3  0.268578 -0.622742  0.111770  ... -0.114823 -0.343222  0.027460  0.197129   
-4  0.445592 -0.324592  0.248377  ... -0.151042 -0.305177  0.195152  0.136492   
+0  0.233550 -0.280569  0.178762  ... -0.084022 -0.108453  0.142161  0.249372   
+1  0.462022 -0.172528  0.093829  ... -0.247743 -0.152257  0.527953  0.293812   
+2  0.360901 -0.066559  0.222086  ... -0.177619 -0.089992  0.252267  0.178595   
+3  0.149533 -0.639040 -0.015951  ... -0.046706 -0.293508  0.020059  0.230295   
+4  0.330942 -0.342715  0.157077  ... -0.165183 -0.269878  0.192523  0.206771   
 
     dim_146   dim_147   dim_148   dim_149   dim_150  \
-0 -0.086021 -0.359600 -0.082587  0.524449 -0.019300   
-1 -0.186766 -0.271294 -0.218210  0.303535 -0.202284   
-2 -0.128263 -0.178436 -0.156042  0.350877 -0.215213   
-3 -0.112946 -0.533177 -0.161318  0.610546  0.077753   
-4 -0.104106 -0.442497 -0.109657  0.566920 -0.125137   
+0 -0.020524 -0.357620 -0.129622  0.597634  0.023209   
+1 -0.160331 -0.296196 -0.227600  0.312404 -0.157002   
+2 -0.097801 -0.211596 -0.161416  0.386598 -0.185110   
+3 -0.033987 -0.509782 -0.252006  0.694477  0.131782   
+4 -0.069320 -0.433871 -0.152150  0.630329 -0.074194   
 
                                           abstrak_id  
 0  ABSTRAK\r\nSatiyah, Pengaruh Faktor-faktor Pel...  
@@ -707,11 +715,11 @@ Berikut adalah contoh hasil akhirnya:
       </div>
     </a>
     <a class="right-next"
-       href="tugas6_LDA_klasifikasi_berita.html"
+       href="tugas5_berita.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">LDA Klasifikasi Berita</p>
+        <p class="prev-next-title">BERTopic Berita</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

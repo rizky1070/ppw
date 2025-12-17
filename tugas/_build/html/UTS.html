@@ -61,8 +61,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'UTS';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="tugas7_1_datasetpagerankberita.html" />
-    <link rel="prev" title="LDA Klasifikasi Berita" href="tugas6_LDA_klasifikasi_berita.html" />
+    <link rel="next" title="Pagerank Berita" href="tugas7_1_datasetpagerankberita.html" />
+    <link rel="prev" title="LDA Klasifikasi Berita Tanpa Stemming" href="tugas6_LDA_klasifikasi_beritaWithOutStemming.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -193,10 +193,18 @@
 <li class="toctree-l1"><a class="reference internal" href="tugas4_1_ekstraksi_fitur_tfidf_pta_manajemen.html">Ekstraksi fitur TFID PTA Manajemen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas4_1_cbow_beritacopy.html">CBOW Berita</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas4_1_cbow_PTA_manajemen.html">CBOW PTA Manajemen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas5_berita.html">BERTopic Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas5_manajemen.html">BERTopic Manajemen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas6_LDA_klasifikasi_berita.html">LDA Klasifikasi Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas6_LDA_klasifikasi_beritaWithOutStemming.html">LDA Klasifikasi Berita Tanpa Stemming</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">UTS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas8_1_analisisdatsetwebusage.html">Analisis dataset webusage.csv</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas8_2_analisisdatasetnasa.html">Analisis dataset NASA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_1_datasetpagerankberita.html">Pagerank Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_1_datasetpagerankPTA.html">Pagerank PTA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_2_graphberita.html">Graph Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_2_graphPTA.html">Graph PTA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas8_2_analisisnasa.html">Analisis Dataset Log Nasa July</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas10_1_komuditasfb.html">Komuditas FB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas11_1_dokumen.html">Dokumen Analisis</a></li>
 </ul>
 
     </div>
@@ -1232,15 +1240,7 @@ Frekuensi kata disimpan di &#39;frekuensi_kata_beritaUTS.csv&#39;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">],</span> <span class="n">line</span> <span class="mi">20</span>
-<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">classification_report</span><span class="p">,</span> <span class="n">accuracy_score</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="c1"># Import untuk Visualisasi</span>
-<span class="ne">---&gt; </span><span class="mi">20</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Semua library berhasil diimpor.&quot;</span><span class="p">)</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Semua library berhasil diimpor.
 </pre></div>
 </div>
 </div>
@@ -1377,43 +1377,11 @@ Contoh data awal:
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Kamus dibuat dan difilter. Jumlah kata unik: 2509
 
 --- Menjalankan HDP untuk estimasi jumlah topik... ---
-✅ HDP mengestimasi ada sekitar: 20 topik.
-
---- Menjalankan pencarian koherensi dari 5 hingga 40 topik... ---
-Selesai menghitung untuk 5 topik. Skor Koherensi: 0.6568
-Selesai menghitung untuk 10 topik. Skor Koherensi: 0.5083
-Selesai menghitung untuk 15 topik. Skor Koherensi: 0.5970
-Selesai menghitung untuk 20 topik. Skor Koherensi: 0.5935
-Selesai menghitung untuk 25 topik. Skor Koherensi: 0.5969
-Selesai menghitung untuk 30 topik. Skor Koherensi: 0.6130
-Selesai menghitung untuk 35 topik. Skor Koherensi: 0.6028
-
-Total waktu pencarian koherensi: 5.46 menit
 </pre></div>
 </div>
-<img alt="_images/6f0b05a93df9e583c1ced7c69313b12bfd68298e3e3cb2c218c132b4264735fb.png" src="_images/6f0b05a93df9e583c1ced7c69313b12bfd68298e3e3cb2c218c132b4264735fb.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅ Jumlah topik optimal yang ditemukan: 5
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅ HDP mengestimasi ada sekitar: 20 topik.
 
---- Melatih model LDA final dengan topik optimal... ---
-
---- Topik-topik yang Ditemukan oleh Model LDA ---
-Topik: 0
-Kata-kata: 0.017*&quot;&#39;rp&#39;,&quot; + 0.016*&quot;&#39;persen&#39;,&quot; + 0.011*&quot;&#39;prabowo&#39;,&quot; + 0.011*&quot;&#39;program&#39;,&quot; + 0.010*&quot;&#39;indonesia&#39;,&quot; + 0.009*&quot;&#39;pemerintah&#39;,&quot; + 0.009*&quot;&#39;jakarta&#39;,&quot; + 0.007*&quot;&#39;ppn&#39;,&quot; + 0.007*&quot;&#39;juta&#39;,&quot; + 0.007*&quot;&#39;presiden&#39;,&quot; + 0.007*&quot;&#39;masyarakat&#39;,&quot; + 0.007*&quot;&#39;makan&#39;,&quot; + 0.006*&quot;&#39;harga&#39;,&quot; + 0.005*&quot;&#39;pajak&#39;,&quot; + 0.005*&quot;&#39;bergizi&#39;,&quot;
-
-Topik: 1
-Kata-kata: 0.017*&quot;&#39;korban&#39;,&quot; + 0.014*&quot;&#39;kebakaran&#39;,&quot; + 0.013*&quot;&#39;orang&#39;,&quot; + 0.010*&quot;&#39;warga&#39;,&quot; + 0.009*&quot;&#39;air&#39;,&quot; + 0.009*&quot;&#39;rumah&#39;,&quot; + 0.009*&quot;&#39;banjir&#39;,&quot; + 0.008*&quot;&#39;pesawat&#39;,&quot; + 0.008*&quot;&#39;los&#39;,&quot; + 0.008*&quot;&#39;angeles&#39;,&quot; + 0.007*&quot;&#39;jalan&#39;,&quot; + 0.007*&quot;&#39;kota&#39;,&quot; + 0.007*&quot;&#39;api&#39;,&quot; + 0.007*&quot;&#39;wilayah&#39;,&quot; + 0.006*&quot;&#39;mobil&#39;,&quot;
-
-Topik: 2
-Kata-kata: 0.029*&quot;&#39;indonesia&#39;,&quot; + 0.019*&quot;&#39;timnas&#39;,&quot; + 0.017*&quot;&#39;pemain&#39;,&quot; + 0.016*&quot;&#39;piala&#39;,&quot; + 0.012*&quot;&#39;gol&#39;,&quot; + 0.012*&quot;&#39;menit&#39;,&quot; + 0.010*&quot;&#39;laga&#39;,&quot; + 0.010*&quot;&#39;pelatih&#39;,&quot; + 0.010*&quot;&#39;liga&#39;,&quot; + 0.009*&quot;&#39;tim&#39;,&quot; + 0.009*&quot;&#39;pertandingan&#39;,&quot; + 0.009*&quot;&#39;poin&#39;,&quot; + 0.009*&quot;&#39;aff&#39;,&quot; + 0.008*&quot;&#39;red&#39;,&quot; + 0.008*&quot;&#39;sparks&#39;,&quot;
-
-Topik: 3
-Kata-kata: 0.017*&quot;&#39;israel&#39;,&quot; + 0.010*&quot;&#39;negara&#39;,&quot; + 0.010*&quot;&#39;senjata&#39;,&quot; + 0.010*&quot;&#39;gencatan&#39;,&quot; + 0.010*&quot;&#39;presiden&#39;,&quot; + 0.009*&quot;&#39;gaza&#39;,&quot; + 0.007*&quot;&#39;indonesia&#39;,&quot; + 0.007*&quot;&#39;kpk&#39;,&quot; + 0.007*&quot;&#39;trump&#39;,&quot; + 0.006*&quot;&#39;as&#39;,&quot; + 0.006*&quot;&#39;hamas&#39;,&quot; + 0.006*&quot;&#39;anggota&#39;,&quot; + 0.006*&quot;&#39;palestina&#39;,&quot; + 0.006*&quot;&#39;warga&#39;,&quot; + 0.006*&quot;&#39;menteri&#39;,&quot;
-
-Topik: 4
-Kata-kata: 0.050*&quot;&#39;laut&#39;,&quot; + 0.039*&quot;&#39;pagar&#39;,&quot; + 0.017*&quot;&#39;tangerang&#39;,&quot; + 0.011*&quot;&#39;nelayan&#39;,&quot; + 0.011*&quot;&#39;kkp&#39;,&quot; + 0.010*&quot;&#39;misterius&#39;,&quot; + 0.010*&quot;&#39;pt&#39;,&quot; + 0.008*&quot;&#39;perikanan&#39;,&quot; + 0.008*&quot;&#39;kelautan&#39;,&quot; + 0.008*&quot;&#39;sertifikat&#39;,&quot; + 0.007*&quot;&#39;hgb&#39;,&quot; + 0.007*&quot;&#39;proyek&#39;,&quot; + 0.007*&quot;&#39;km&#39;,&quot; + 0.007*&quot;&#39;tni&#39;,&quot; + 0.007*&quot;&#39;desa&#39;,&quot;
-
-Ekstraksi fitur LDA selesai.
-Bentuk matriks fitur (X): (1500, 5)
+--- Menjalankan pencarian koherensi dari 5 hingga 40 topik... ---
 </pre></div>
 </div>
 </div>
@@ -2722,12 +2690,12 @@ Contoh email dari setiap cluster yang ditemukan:
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="tugas6_LDA_klasifikasi_berita.html"
+       href="tugas6_LDA_klasifikasi_beritaWithOutStemming.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">LDA Klasifikasi Berita</p>
+        <p class="prev-next-title">LDA Klasifikasi Berita Tanpa Stemming</p>
       </div>
     </a>
     <a class="right-next"
@@ -2735,7 +2703,7 @@ Contoh email dari setiap cluster yang ditemukan:
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title">Pagerank Berita</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

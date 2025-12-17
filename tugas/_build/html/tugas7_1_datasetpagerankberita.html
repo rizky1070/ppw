@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>&lt;no title&gt; &#8212; My sample book</title>
+    <title>Pagerank Berita &#8212; My sample book</title>
   
   
   
@@ -61,7 +61,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'tugas7_1_datasetpagerankberita';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="tugas7_1_datasetpagerankPTA.html" />
+    <link rel="next" title="Pagerank PTA" href="tugas7_1_datasetpagerankPTA.html" />
     <link rel="prev" title="UTS" href="UTS.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -180,7 +180,7 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="pengantar.html">Pengantar Penambangan Website</a></li>
 <li class="toctree-l1"><a class="reference internal" href="crawling.html">Crawling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas2_1.html">Crawling PTA</a></li>
@@ -193,10 +193,18 @@
 <li class="toctree-l1"><a class="reference internal" href="tugas4_1_ekstraksi_fitur_tfidf_pta_manajemen.html">Ekstraksi fitur TFID PTA Manajemen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas4_1_cbow_beritacopy.html">CBOW Berita</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas4_1_cbow_PTA_manajemen.html">CBOW PTA Manajemen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas5_berita.html">BERTopic Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas5_manajemen.html">BERTopic Manajemen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas6_LDA_klasifikasi_berita.html">LDA Klasifikasi Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas6_LDA_klasifikasi_beritaWithOutStemming.html">LDA Klasifikasi Berita Tanpa Stemming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UTS.html">UTS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas8_1_analisisdatsetwebusage.html">Analisis dataset webusage.csv</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas8_2_analisisdatasetnasa.html">Analisis dataset NASA</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Pagerank Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_1_datasetpagerankPTA.html">Pagerank PTA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_2_graphberita.html">Graph Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_2_graphPTA.html">Graph PTA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas8_2_analisisnasa.html">Analisis Dataset Log Nasa July</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas10_1_komuditasfb.html">Komuditas FB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas11_1_dokumen.html">Dokumen Analisis</a></li>
 </ul>
 
     </div>
@@ -369,9 +377,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -382,19 +388,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>Pagerank Berita</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -404,7 +402,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="cell docutils container">
+  <section class="tex2jax_ignore mathjax_ignore" id="pagerank-berita">
+<h1>Pagerank Berita<a class="headerlink" href="#pagerank-berita" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">bs4</span><span class="w"> </span><span class="kn">import</span> <span class="n">BeautifulSoup</span>
@@ -686,8 +686,24 @@ Batas halaman: 500
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[32/500] Crawling: http://www.bangsaonline.com/berita-video
 </pre></div>
 </div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[33/500] Crawling: https://bangsaonline.com/kanal/pendidikan
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[34/500] Crawling: https://bangsaonline.com/kanal/kesehatan
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[35/500] Crawling: https://bangsaonline.com/kanal/tren
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[36/500] Crawling: https://bangsaonline.com/kanal/kuliner
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[37/500] Crawling: https://bangsaonline.com/kanal/figur
+</pre></div>
 </div>
 </div>
+</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -733,7 +749,7 @@ Batas halaman: 500
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title">Pagerank PTA</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -743,21 +759,6 @@ Batas halaman: 500
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-  </nav></div>
-
-</div></div>
               
             
           </div>

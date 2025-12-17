@@ -193,10 +193,18 @@
 <li class="toctree-l1"><a class="reference internal" href="tugas4_1_ekstraksi_fitur_tfidf_pta_manajemen.html">Ekstraksi fitur TFID PTA Manajemen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas4_1_cbow_beritacopy.html">CBOW Berita</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas4_1_cbow_PTA_manajemen.html">CBOW PTA Manajemen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas5_berita.html">BERTopic Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas5_manajemen.html">BERTopic Manajemen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas6_LDA_klasifikasi_berita.html">LDA Klasifikasi Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas6_LDA_klasifikasi_beritaWithOutStemming.html">LDA Klasifikasi Berita Tanpa Stemming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UTS.html">UTS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas8_1_analisisdatsetwebusage.html">Analisis dataset webusage.csv</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas8_2_analisisdatasetnasa.html">Analisis dataset NASA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_1_datasetpagerankberita.html">Pagerank Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_1_datasetpagerankPTA.html">Pagerank PTA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_2_graphberita.html">Graph Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_2_graphPTA.html">Graph PTA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas8_2_analisisnasa.html">Analisis Dataset Log Nasa July</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas10_1_komuditasfb.html">Komuditas FB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas11_1_dokumen.html">Dokumen Analisis</a></li>
 </ul>
 
     </div>
@@ -482,9 +490,13 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Terjadi error: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443): Max retries exceeded with url: /c_search/byprod/10/1 (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPSConnection object at 0x0000021577F44A30&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno 11001] getaddrinfo failed)&quot;))
-Terjadi error: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443): Max retries exceeded with url: /c_search/byprod/10/2 (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPSConnection object at 0x0000021577F45270&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno 11001] getaddrinfo failed)&quot;))
-Terjadi error: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443): Max retries exceeded with url: /c_search/byprod/10/3 (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPSConnection object at 0x0000021577F45A50&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno 11001] getaddrinfo failed)&quot;))
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Terjadi error: 403 Client Error: Forbidden for url: https://pta.trunojoyo.ac.id/c_search/byprod/10/1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Terjadi error: 403 Client Error: Forbidden for url: https://pta.trunojoyo.ac.id/c_search/byprod/10/2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Terjadi error: 403 Client Error: Forbidden for url: https://pta.trunojoyo.ac.id/c_search/byprod/10/3
 Empty DataFrame
 Columns: [penulis, judul, pembimbing_pertama, pembimbing_kedua, abstrak, abstrak_inggris]
 Index: []
@@ -499,9 +511,11 @@ Index: []
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Terjadi error: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443): Max retries exceeded with url: /c_search/byprod/10/1 (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPSConnection object at 0x000002155FB1FB80&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno 11001] getaddrinfo failed)&quot;))
-Terjadi error: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443): Max retries exceeded with url: /c_search/byprod/10/2 (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPSConnection object at 0x000002155FB3B280&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno 11001] getaddrinfo failed)&quot;))
-Terjadi error: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443): Max retries exceeded with url: /c_search/byprod/10/3 (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPSConnection object at 0x000002155FB39780&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno 11001] getaddrinfo failed)&quot;))
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Terjadi error: 403 Client Error: Forbidden for url: https://pta.trunojoyo.ac.id/c_search/byprod/10/1
+Terjadi error: 403 Client Error: Forbidden for url: https://pta.trunojoyo.ac.id/c_search/byprod/10/2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Terjadi error: 403 Client Error: Forbidden for url: https://pta.trunojoyo.ac.id/c_search/byprod/10/3
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -720,10 +734,8 @@ Terjadi error: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gagal mengambil daftar fakultas dan prodi: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443): Max retries exceeded with url: /c_search/byfac (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPSConnection object at 0x000002155FB3B640&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno 11001] getaddrinfo failed)&quot;))
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tidak ada prodi yang bisa di-scrape. Program berhenti.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gagal mengambil daftar fakultas dan prodi: 403 Client Error: Forbidden for url: https://pta.trunojoyo.ac.id/c_search/byfac
+Tidak ada prodi yang bisa di-scrape. Program berhenti.
 </pre></div>
 </div>
 </div>
@@ -880,7 +892,7 @@ Terjadi error: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gagal mengambil daftar prodi: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443): Max retries exceeded with url: /c_search/byfac (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPSConnection object at 0x000002155FB3BAF0&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno 11001] getaddrinfo failed)&quot;))
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gagal mengambil daftar prodi: 403 Client Error: Forbidden for url: https://pta.trunojoyo.ac.id/c_search/byfac
 </pre></div>
 </div>
 </div>
@@ -1028,7 +1040,7 @@ Terjadi error: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gagal mengambil daftar prodi: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443): Max retries exceeded with url: /c_search/byfac (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPSConnection object at 0x000002155FB38D60&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno 11001] getaddrinfo failed)&quot;))
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gagal mengambil daftar prodi: 403 Client Error: Forbidden for url: https://pta.trunojoyo.ac.id/c_search/byfac
 </pre></div>
 </div>
 </div>
@@ -1040,7 +1052,7 @@ Terjadi error: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gagal mengambil daftar prodi: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443): Max retries exceeded with url: /c_search/byfac (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPSConnection object at 0x000002155FB3B730&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno 11001] getaddrinfo failed)&quot;))
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gagal mengambil daftar prodi: 403 Client Error: Forbidden for url: https://pta.trunojoyo.ac.id/c_search/byfac
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -1231,7 +1243,10 @@ Terjadi error: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gagal mengambil daftar prodi: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443): Max retries exceeded with url: /c_search/byfac (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPSConnection object at 0x000002155FB3A440&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno 11001] getaddrinfo failed)&quot;))
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gagal mengambil daftar prodi: 403 Client Error: Forbidden for url: https://pta.trunojoyo.ac.id/c_search/byfac
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -1414,7 +1429,7 @@ Terjadi error: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gagal mengambil daftar prodi: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443): Max retries exceeded with url: /c_search/byfac (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPSConnection object at 0x0000021577F44AF0&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno 11001] getaddrinfo failed)&quot;))
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gagal mengambil daftar prodi: 403 Client Error: Forbidden for url: https://pta.trunojoyo.ac.id/c_search/byfac
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -1602,10 +1617,7 @@ Terjadi error: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gagal mengambil daftar prodi: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443): Max retries exceeded with url: /c_search/byfac (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPSConnection object at 0x000002155FB3B160&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno 11001] getaddrinfo failed)&quot;))
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gagal mengambil daftar prodi: 403 Client Error: Forbidden for url: https://pta.trunojoyo.ac.id/c_search/byfac
 </pre></div>
 </div>
 </div>

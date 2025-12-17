@@ -1,0 +1,799 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Dokumen Analisis &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c72bb274" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tugas11_1_dokumen';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Komuditas FB" href="tugas10_1_komuditasfb.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/pp.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/pp.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Profile
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="pengantar.html">Pengantar Penambangan Website</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crawling.html">Crawling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_1.html">Crawling PTA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_2.html">Crawling Link Dalam Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_3_crawling_berita.html">Crawling Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_3_crawlingPTA_manajemen.html">Crawling PTA Manajemen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas3_1_preprocessing_manajemen.html">Preprocessing Prodi Manajemen</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="tugas4_1_ekstraksi_fitur_tfidf_berita.html">Ekstraksi fitur TFID berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas4_1_ekstraksi_fitur_tfidf_pta_manajemen.html">Ekstraksi fitur TFID PTA Manajemen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas4_1_cbow_beritacopy.html">CBOW Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas4_1_cbow_PTA_manajemen.html">CBOW PTA Manajemen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas5_berita.html">BERTopic Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas5_manajemen.html">BERTopic Manajemen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas6_LDA_klasifikasi_berita.html">LDA Klasifikasi Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas6_LDA_klasifikasi_beritaWithOutStemming.html">LDA Klasifikasi Berita Tanpa Stemming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UTS.html">UTS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_1_datasetpagerankberita.html">Pagerank Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_1_datasetpagerankPTA.html">Pagerank PTA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_2_graphberita.html">Graph Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_2_graphPTA.html">Graph PTA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas8_2_analisisnasa.html">Analisis Dataset Log Nasa July</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas10_1_komuditasfb.html">Komuditas FB</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Dokumen Analisis</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftugas11_1_dokumen.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/tugas11_1_dokumen.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Dokumen Analisis</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="dokumen-analisis">
+<h1>Dokumen Analisis<a class="headerlink" href="#dokumen-analisis" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pymupdf4llm</span> <span class="n">nltk</span> <span class="n">networkx</span> <span class="n">matplotlib</span> <span class="n">numpy</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pymupdf4llm in c:\laragon\bin\python\python-3.10\lib\site-packages (0.2.7)
+Requirement already satisfied: nltk in c:\laragon\bin\python\python-3.10\lib\site-packages (3.9.1)
+Requirement already satisfied: networkx in c:\laragon\bin\python\python-3.10\lib\site-packages (3.4.2)
+Requirement already satisfied: matplotlib in c:\laragon\bin\python\python-3.10\lib\site-packages (3.10.8)
+Requirement already satisfied: numpy in c:\laragon\bin\python\python-3.10\lib\site-packages (1.26.4)
+Requirement already satisfied: pymupdf&gt;=1.26.6 in c:\laragon\bin\python\python-3.10\lib\site-packages (from pymupdf4llm) (1.26.7)
+Requirement already satisfied: tabulate in c:\laragon\bin\python\python-3.10\lib\site-packages (from pymupdf4llm) (0.9.0)
+Requirement already satisfied: click in c:\laragon\bin\python\python-3.10\lib\site-packages (from nltk) (8.2.1)
+Requirement already satisfied: joblib in c:\laragon\bin\python\python-3.10\lib\site-packages (from nltk) (1.5.2)
+Requirement already satisfied: regex&gt;=2021.8.3 in c:\laragon\bin\python\python-3.10\lib\site-packages (from nltk) (2025.9.1)
+Requirement already satisfied: tqdm in c:\laragon\bin\python\python-3.10\lib\site-packages (from nltk) (4.67.1)
+Requirement already satisfied: contourpy&gt;=1.0.1 in c:\laragon\bin\python\python-3.10\lib\site-packages (from matplotlib) (1.3.2)
+Requirement already satisfied: cycler&gt;=0.10 in c:\laragon\bin\python\python-3.10\lib\site-packages (from matplotlib) (0.12.1)
+Requirement already satisfied: fonttools&gt;=4.22.0 in c:\laragon\bin\python\python-3.10\lib\site-packages (from matplotlib) (4.61.1)
+Requirement already satisfied: kiwisolver&gt;=1.3.1 in c:\laragon\bin\python\python-3.10\lib\site-packages (from matplotlib) (1.4.9)
+Requirement already satisfied: packaging&gt;=20.0 in c:\users\rizky\appdata\roaming\python\python310\site-packages (from matplotlib) (25.0)
+Requirement already satisfied: pillow&gt;=8 in c:\laragon\bin\python\python-3.10\lib\site-packages (from matplotlib) (12.0.0)
+Requirement already satisfied: pyparsing&gt;=3 in c:\laragon\bin\python\python-3.10\lib\site-packages (from matplotlib) (3.2.5)
+Requirement already satisfied: python-dateutil&gt;=2.7 in c:\users\rizky\appdata\roaming\python\python310\site-packages (from matplotlib) (2.9.0.post0)
+Requirement already satisfied: six&gt;=1.5 in c:\users\rizky\appdata\roaming\python\python310\site-packages (from python-dateutil&gt;=2.7-&gt;matplotlib) (1.17.0)
+Requirement already satisfied: colorama in c:\users\rizky\appdata\roaming\python\python310\site-packages (from click-&gt;nltk) (0.4.6)
+Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[notice] A new release of pip is available: 25.2 -&gt; 25.3
+[notice] To update, run: C:\laragon\bin\python\python-3.10\python.exe -m pip install --upgrade pip
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">fitz</span>  <span class="c1"># PyMuPDF</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">nltk</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">networkx</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nx</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk.tokenize</span><span class="w"> </span><span class="kn">import</span> <span class="n">sent_tokenize</span><span class="p">,</span> <span class="n">word_tokenize</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk.corpus</span><span class="w"> </span><span class="kn">import</span> <span class="n">stopwords</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">defaultdict</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pymupdf4llm</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span> <span class="c1"># Import pandas for matrix display</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span> <span class="c1"># Import numpy</span>
+
+<span class="c1"># --- Konfigurasi Awal ---</span>
+<span class="c1"># Mengunduh resource NLTK yang diperlukan</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt&#39;</span><span class="p">)</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt_tab&#39;</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">pdf_path</span> <span class="o">=</span> <span class="s2">&quot;Nasi_goreng_food_and_wine_pairing_Fried_rice_food_.pdf&quot;</span>
+
+    <span class="c1"># ==========================================</span>
+    <span class="c1"># TAHAP 1: Ekstrak Text dari PDF</span>
+    <span class="c1"># ==========================================</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;--- 1. Mengekstrak teks dari </span><span class="si">{</span><span class="n">pdf_path</span><span class="si">}</span><span class="s2"> ---&quot;</span><span class="p">)</span>
+    <span class="n">text_content</span> <span class="o">=</span> <span class="n">extract_text_from_pdf</span><span class="p">(</span><span class="n">pdf_path</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Berhasil mengekstrak </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">text_content</span><span class="p">)</span><span class="si">}</span><span class="s2"> karakter.&quot;</span><span class="p">)</span>
+
+    <span class="c1"># ==========================================</span>
+    <span class="c1"># TAHAP 2: Ekstrak Kalimat menggunakan NLTK</span>
+    <span class="c1"># ==========================================</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- 2. Mengekstrak kalimat &amp; Preprocessing ---&quot;</span><span class="p">)</span>
+    <span class="n">sentences</span> <span class="o">=</span> <span class="n">sent_tokenize</span><span class="p">(</span><span class="n">text_content</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ditemukan </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">sentences</span><span class="p">)</span><span class="si">}</span><span class="s2"> kalimat mentah.&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Tambahan: Menampilkan beberapa kalimat asli</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Contoh 5 Kalimat Asli:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sentences</span><span class="p">[:</span><span class="mi">5</span><span class="p">]):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">sentence</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Preprocessing (Membersihkan teks untuk hasil graph yang lebih baik)</span>
+    <span class="c1"># Kita menghapus stopwords (kata umum seperti &#39;dan&#39;, &#39;yang&#39;, &#39;the&#39;)</span>
+    <span class="n">clean_sentences_tokens</span> <span class="o">=</span> <span class="n">preprocess_text</span><span class="p">(</span><span class="n">sentences</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ditemukan </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">clean_sentences_tokens</span><span class="p">)</span><span class="si">}</span><span class="s2"> kalimat setelah preprocessing.&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Tambahan: Menampilkan beberapa kalimat hasil tokenisasi</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Contoh 5 Kalimat Hasil Tokenisasi (setelah Preprocessing):&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">tokens</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">clean_sentences_tokens</span><span class="p">[:</span><span class="mi">5</span><span class="p">]):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># ==========================================</span>
+    <span class="c1"># TAHAP 3: Membuat Graph menggunakan Co-occurrence Matrix</span>
+    <span class="c1"># ==========================================</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- 3. Membangun Word Graph (Co-occurrence) ---&quot;</span><span class="p">)</span>
+    <span class="c1"># Menggunakan Window Size = 2</span>
+    <span class="n">window_size</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">G</span> <span class="o">=</span> <span class="n">build_co_occurrence_graph</span><span class="p">(</span><span class="n">clean_sentences_tokens</span><span class="p">,</span> <span class="n">window_size</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Graph terbentuk dengan </span><span class="si">{</span><span class="n">G</span><span class="o">.</span><span class="n">number_of_nodes</span><span class="p">()</span><span class="si">}</span><span class="s2"> node (kata) dan </span><span class="si">{</span><span class="n">G</span><span class="o">.</span><span class="n">number_of_edges</span><span class="p">()</span><span class="si">}</span><span class="s2"> edge (hubungan).&quot;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Contoh 10 Pasangan Kata Co-occurrence Teratas:&quot;</span><span class="p">)</span>
+    <span class="c1"># Mengurutkan edge berdasarkan weight (co-occurrence count) secara menurun</span>
+    <span class="n">sorted_edges</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">edges</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="s1">&#39;weight&#39;</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sorted_edges</span><span class="p">[:</span><span class="mi">10</span><span class="p">]):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">. (&#39;</span><span class="si">{</span><span class="n">u</span><span class="si">}</span><span class="s2">&#39;, &#39;</span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s2">&#39;): </span><span class="si">{</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;weight&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> kali&quot;</span><span class="p">)</span>
+
+    <span class="c1"># ==========================================</span>
+    <span class="c1"># TAHAP 4: Analisa PageRank</span>
+    <span class="c1"># ==========================================</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- 4. Menghitung PageRank ---&quot;</span><span class="p">)</span>
+    <span class="n">pagerank_scores</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">pagerank</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="s1">&#39;weight&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Mengurutkan kata berdasarkan skor tertinggi</span>
+    <span class="n">sorted_ranking</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">pagerank_scores</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Top 10 Kata Kunci (Berdasarkan PageRank):&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">score</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sorted_ranking</span><span class="p">[:</span><span class="mi">10</span><span class="p">],</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">word</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">score</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># ==========================================</span>
+    <span class="c1"># MENAMPILKAN CO-OCCURRENCE MATRIX</span>
+    <span class="c1"># ==========================================</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Full Co-occurrence Matrix ---&quot;</span><span class="p">)</span>
+    <span class="n">all_words_for_matrix</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">nodes</span><span class="p">())</span>
+    <span class="n">co_occurrence_matrix</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">all_words_for_matrix</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">all_words_for_matrix</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">G</span><span class="o">.</span><span class="n">edges</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="n">co_occurrence_matrix</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;weight&#39;</span><span class="p">]</span>
+        <span class="n">co_occurrence_matrix</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">v</span><span class="p">,</span> <span class="n">u</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;weight&#39;</span><span class="p">]</span> <span class="c1"># Matriks simetris</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">co_occurrence_matrix</span><span class="p">)</span>
+
+
+    <span class="c1"># ==========================================</span>
+    <span class="c1"># VISUALISASI</span>
+    <span class="c1"># ==========================================</span>
+    <span class="n">visualize_graph</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+
+<span class="c1"># --- Fungsi Pendukung ---</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">extract_text_from_pdf</span><span class="p">(</span><span class="n">filepath</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Ekstrak teks mentah dari PDF menggunakan PyMuPDF (fitz).</span>
+<span class="sd">    Diperbarui untuk menggunakan pymupdf4llm.to_markdown().</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">fitz</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">pymupdf4llm</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
+    <span class="n">doc</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">text</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">preprocess_text</span><span class="p">(</span><span class="n">sentences</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Membersihkan kalimat: lowercase, hapus tanda baca, hapus stopwords.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">cleaned_tokens_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="c1"># Gabungan stopword Indonesia dan Inggris karena dokumen bilingual</span>
+    <span class="n">stop_words</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;indonesian&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;english&#39;</span><span class="p">))</span>
+
+    <span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">sentences</span><span class="p">:</span>
+        <span class="c1"># Hapus karakter non-huruf dan ubah ke huruf kecil</span>
+        <span class="n">sentence</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[^a-zA-Z\s]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">sentence</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+        <span class="n">tokens</span> <span class="o">=</span> <span class="n">word_tokenize</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span>
+
+        <span class="c1"># Filter stopwords dan kata pendek</span>
+        <span class="n">filtered_tokens</span> <span class="o">=</span> <span class="p">[</span><span class="n">w</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">tokens</span> <span class="k">if</span> <span class="n">w</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stop_words</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">filtered_tokens</span><span class="p">:</span>
+            <span class="n">cleaned_tokens_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">filtered_tokens</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">cleaned_tokens_list</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">build_co_occurrence_graph</span><span class="p">(</span><span class="n">tokens_list</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Membangun Graph dari co-occurrence matrix.</span>
+<span class="sd">    Node = Kata, Edge = Kemunculan bersama dalam window size.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+    <span class="n">vocab</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">tokens</span> <span class="ow">in</span> <span class="n">tokens_list</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tokens</span><span class="p">)):</span>
+            <span class="n">token</span> <span class="o">=</span> <span class="n">tokens</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">vocab</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">window_size</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">i</span> <span class="o">+</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">tokens</span><span class="p">):</span>
+                    <span class="n">next_token</span> <span class="o">=</span> <span class="n">tokens</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="n">j</span><span class="p">]</span>
+                    <span class="c1"># Urutkan pasangan agar (A, B) sama dengan (B, A) (Undirected Graph)</span>
+                    <span class="n">pair</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">sorted</span><span class="p">((</span><span class="n">token</span><span class="p">,</span> <span class="n">next_token</span><span class="p">)))</span>
+                    <span class="n">d</span><span class="p">[</span><span class="n">pair</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="c1"># Buat Graph menggunakan NetworkX</span>
+    <span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">w1</span><span class="p">,</span> <span class="n">w2</span><span class="p">),</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">w1</span><span class="p">,</span> <span class="n">w2</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="n">count</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">G</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">visualize_graph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">top_nodes_data</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span>  <span class="c1"># 1. Perbesar ukuran kanvas</span>
+
+    <span class="n">graph_to_draw</span> <span class="o">=</span> <span class="n">G</span>
+
+    <span class="c1"># Cek statistik graph</span>
+    <span class="n">num_nodes</span> <span class="o">=</span> <span class="n">graph_to_draw</span><span class="o">.</span><span class="n">number_of_nodes</span><span class="p">()</span>
+    <span class="n">num_edges</span> <span class="o">=</span> <span class="n">graph_to_draw</span><span class="o">.</span><span class="n">number_of_edges</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Menampilkan Graph: </span><span class="si">{</span><span class="n">num_nodes</span><span class="si">}</span><span class="s2"> node, </span><span class="si">{</span><span class="n">num_edges</span><span class="si">}</span><span class="s2"> edge&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">num_edges</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;PERINGATAN: Graph tidak memiliki garis penghubung!&quot;</span><span class="p">)</span>
+        <span class="k">return</span>
+
+    <span class="c1"># 2. Atur tata letak (Layout)</span>
+    <span class="c1"># k=0.5 memberikan jarak yang cukup antar node (semakin kecil k, semakin rapat)</span>
+    <span class="n">pos</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">spring_layout</span><span class="p">(</span><span class="n">graph_to_draw</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">iterations</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+    <span class="c1"># 3. Tentukan ukuran node berdasarkan jumlah kata</span>
+    <span class="c1"># Jika kata sedikit (&lt;50), node besar (1000). Jika banyak, node kecil (100-300).</span>
+    <span class="n">dynamic_node_size</span> <span class="o">=</span> <span class="mi">300</span> <span class="k">if</span> <span class="n">num_nodes</span> <span class="o">&gt;</span> <span class="mi">50</span> <span class="k">else</span> <span class="mi">1000</span>
+    <span class="n">dynamic_font_size</span> <span class="o">=</span> <span class="mi">8</span> <span class="k">if</span> <span class="n">num_nodes</span> <span class="o">&gt;</span> <span class="mi">50</span> <span class="k">else</span> <span class="mi">10</span>
+
+    <span class="c1"># Gambar Nodes</span>
+    <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_nodes</span><span class="p">(</span><span class="n">graph_to_draw</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">node_size</span><span class="o">=</span><span class="n">dynamic_node_size</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="s1">&#39;lightgreen&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.9</span><span class="p">)</span>
+
+    <span class="c1"># Gambar Edges (Garis)</span>
+    <span class="c1"># width=1.0 agar garis jelas, alpha=0.6 agar tidak terlalu pekat jika tumpang tindih</span>
+    <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edges</span><span class="p">(</span><span class="n">graph_to_draw</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">edge_color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Gambar Label</span>
+    <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_labels</span><span class="p">(</span><span class="n">graph_to_draw</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="n">dynamic_font_size</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Full Word Graph (</span><span class="si">{</span><span class="n">num_nodes</span><span class="si">}</span><span class="s2"> words)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Consider using the pymupdf_layout package for a greatly improved page layout analysis.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\Rizky\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package stopwords to
+[nltk_data]     C:\Users\Rizky\AppData\Roaming\nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package punkt_tab to
+[nltk_data]     C:\Users\Rizky\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- 1. Mengekstrak teks dari Nasi_goreng_food_and_wine_pairing_Fried_rice_food_.pdf ---
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="nn">~\AppData\Local\Temp\ipykernel_30580\2940036121.py</span> in <span class="ni">?</span><span class="nt">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">191</span>     <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Full Word Graph (</span><span class="si">{</span><span class="n">num_nodes</span><span class="si">}</span><span class="s2"> words)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">192</span>     <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">193</span>     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">194</span> <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">195</span>     <span class="n">main</span><span class="p">()</span>
+
+<span class="nn">~\AppData\Local\Temp\ipykernel_30580\2940036121.py</span> in <span class="ni">?</span><span class="nt">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">22</span>     <span class="c1"># ==========================================</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span>     <span class="c1"># TAHAP 1: Ekstrak Text dari PDF</span>
+<span class="g g-Whitespace">     </span><span class="mi">24</span>     <span class="c1"># ==========================================</span>
+<span class="g g-Whitespace">     </span><span class="mi">25</span>     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;--- 1. Mengekstrak teks dari </span><span class="si">{</span><span class="n">pdf_path</span><span class="si">}</span><span class="s2"> ---&quot;</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">26</span>     <span class="n">text_content</span> <span class="o">=</span> <span class="n">extract_text_from_pdf</span><span class="p">(</span><span class="n">pdf_path</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">27</span>     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Berhasil mengekstrak </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">text_content</span><span class="p">)</span><span class="si">}</span><span class="s2"> karakter.&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">28</span> 
+<span class="g g-Whitespace">     </span><span class="mi">29</span>     <span class="c1"># ==========================================</span>
+
+<span class="nn">~\AppData\Local\Temp\ipykernel_30580\2940036121.py</span> in <span class="ni">?</span><span class="nt">(filepath)</span>
+<span class="g g-Whitespace">    </span><span class="mi">100</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">101</span><span class="sd">     Ekstrak teks mentah dari PDF menggunakan PyMuPDF (fitz).</span>
+<span class="g g-Whitespace">    </span><span class="mi">102</span><span class="sd">     Diperbarui untuk menggunakan pymupdf4llm.to_markdown().</span>
+<span class="g g-Whitespace">    </span><span class="mi">103</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">104</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">fitz</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">105</span>     <span class="n">text</span> <span class="o">=</span> <span class="n">pymupdf4llm</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">106</span>     <span class="n">doc</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">107</span>     <span class="k">return</span> <span class="n">text</span>
+
+<span class="nn">C:\laragon\bin\python\python-3.10\lib\site-packages\pymupdf\__init__.py</span> in <span class="ni">?</span><span class="nt">(self, filename, stream, filetype, rect, width, height, fontsize)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3061</span>                     <span class="bp">self</span><span class="o">.</span><span class="n">page_count2</span> <span class="o">=</span> <span class="n">extra</span><span class="o">.</span><span class="n">page_count_pdf</span>
+<span class="g g-Whitespace">   </span><span class="mi">3062</span>                 <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">3063</span>                     <span class="bp">self</span><span class="o">.</span><span class="n">page_count2</span> <span class="o">=</span> <span class="n">extra</span><span class="o">.</span><span class="n">page_count_fz</span>
+<span class="g g-Whitespace">   </span><span class="mi">3064</span>         <span class="k">finally</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3065</span>             <span class="n">JM_mupdf_show_errors</span> <span class="o">=</span> <span class="n">JM_mupdf_show_errors_old</span>
+
+<span class="ne">FileNotFoundError</span>: no such file: &#39;Nasi_goreng_food_and_wine_pairing_Fried_rice_food_.pdf&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="tugas10_1_komuditasfb.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Komuditas FB</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

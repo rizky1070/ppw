@@ -1,0 +1,1687 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Crawl Data Twitter &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c72bb274" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tugas9_1_crawldatatwitter';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/pp.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/pp.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Profile
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="pengantar.html">Pengantar Penambangan Website</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crawling.html">Crawling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_1.html">Crawling PTA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_2.html">Crawling Link Dalam Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_3_crawling_berita.html">Crawling Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_3_crawlingPTA_manajemen.html">Crawling PTA Manajemen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas3_1_preprocessing_manajemen.html">Preprocessing Prodi Manajemen</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="tugas4_1_ekstraksi_fitur_tfidf_berita.html">Ekstraksi fitur TFID berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas4_1_ekstraksi_fitur_tfidf_pta_manajemen.html">Ekstraksi fitur TFID PTA Manajemen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas4_1_cbow_beritacopy.html">CBOW Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas4_1_cbow_PTA_manajemen.html">CBOW PTA Manajemen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas5_berita.html">BERTopic Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas5_manajemen.html">BERTopic Manajemen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas6_LDA_klasifikasi_berita.html">LDA Klasifikasi Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas6_LDA_klasifikasi_beritaWithOutStemming.html">LDA Klasifikasi Berita Tanpa Stemming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UTS.html">UTS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_1_datasetpagerankberita.html">Pagerank Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_1_datasetpagerankPTA.html">Pagerank PTA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_2_graphberita.html">Graph Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_2_graphPTA.html">Graph PTA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas8_2_analisisnasa.html">Analisis Dataset Log Nasa July</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas10_1_komuditasfb.html">Komuditas FB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas11_1_dokumen.html">Dokumen Analisis</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftugas9_1_crawldatatwitter.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/tugas9_1_crawldatatwitter.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Crawl Data Twitter</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="crawl-data-twitter">
+<h1>Crawl Data Twitter<a class="headerlink" href="#crawl-data-twitter" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title Twitter Auth Token</span>
+
+<span class="n">twitter_auth_token</span> <span class="o">=</span> <span class="s1">&#39;dd5de34a37bb4e062b1a9214f819e2a25b6ddfac&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import required Python package</span>
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>pandas
+
+<span class="c1"># Install Node.js (because tweet-harvest built using Node.js)</span>
+<span class="o">!</span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+<span class="o">!</span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>ca-certificates<span class="w"> </span>curl<span class="w"> </span>gnupg
+<span class="o">!</span>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/etc/apt/keyrings
+<span class="o">!</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span>-o<span class="w"> </span>/etc/apt/keyrings/nodesource.gpg
+
+<span class="o">!</span><span class="nv">NODE_MAJOR</span><span class="o">=</span><span class="m">20</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_</span><span class="nv">$NODE_MAJOR</span><span class="s2">.x nodistro main&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/keyrings/nodesource.list
+
+<span class="o">!</span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+<span class="o">!</span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>nodejs<span class="w"> </span>-y
+
+<span class="c1"># Install missing dependencies for chromium_headless_shell</span>
+<span class="o">!</span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>libatk1.0-0<span class="w"> </span>libatk-bridge2.0-0<span class="w"> </span>libxcomposite1
+
+<span class="o">!</span>node<span class="w"> </span>-v
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pandas in c:\users\rizky\appdata\local\programs\python\python310\lib\site-packages (2.3.3)
+Requirement already satisfied: tzdata&gt;=2022.7 in c:\users\rizky\appdata\local\programs\python\python310\lib\site-packages (from pandas) (2025.2)
+Requirement already satisfied: numpy&gt;=1.22.4 in c:\users\rizky\appdata\local\programs\python\python310\lib\site-packages (from pandas) (2.2.6)
+Requirement already satisfied: pytz&gt;=2020.1 in c:\users\rizky\appdata\local\programs\python\python310\lib\site-packages (from pandas) (2025.2)
+Requirement already satisfied: python-dateutil&gt;=2.8.2 in c:\users\rizky\appdata\roaming\python\python310\site-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: six&gt;=1.5 in c:\users\rizky\appdata\roaming\python\python310\site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas) (1.17.0)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[notice] A new release of pip is available: 23.0.1 -&gt; 25.3
+[notice] To update, run: python.exe -m pip install --upgrade pip
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sudo is disabled on this machine. To enable it, go to the <span class="err"></span>]8;;ms-settings:developers<span class="err"></span>\Developer Settings page<span class="err"></span>]8;;<span class="err"></span>\ in the Settings app
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sudo is disabled on this machine. To enable it, go to the <span class="err"></span>]8;;ms-settings:developers<span class="err"></span>\Developer Settings page<span class="err"></span>]8;;<span class="err"></span>\ in the Settings app
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sudo is disabled on this machine. To enable it, go to the <span class="err"></span>]8;;ms-settings:developers<span class="err"></span>\Developer Settings page<span class="err"></span>]8;;<span class="err"></span>\ in the Settings app
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sudo is disabled on this machine. To enable it, go to the <span class="err"></span>]8;;ms-settings:developers<span class="err"></span>\Developer Settings page<span class="err"></span>]8;;<span class="err"></span>\ in the Settings app
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;NODE_MAJOR&#39; is not recognized as an internal or external command,
+operable program or batch file.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sudo is disabled on this machine. To enable it, go to the <span class="err"></span>]8;;ms-settings:developers<span class="err"></span>\Developer Settings page<span class="err"></span>]8;;<span class="err"></span>\ in the Settings app
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sudo is disabled on this machine. To enable it, go to the <span class="err"></span>]8;;ms-settings:developers<span class="err"></span>\Developer Settings page<span class="err"></span>]8;;<span class="err"></span>\ in the Settings app
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sudo is disabled on this machine. To enable it, go to the <span class="err"></span>]8;;ms-settings:developers<span class="err"></span>\Developer Settings page<span class="err"></span>]8;;<span class="err"></span>\ in the Settings app
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>v20.19.5
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Removing existing Node.js packages...&quot;</span><span class="p">)</span>
+<span class="o">!</span>sudo<span class="w"> </span>apt-get<span class="w"> </span>purge<span class="w"> </span>nodejs<span class="w"> </span>-y
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Removing existing NodeSource repository file...&quot;</span><span class="p">)</span>
+<span class="o">!</span>sudo<span class="w"> </span>rm<span class="w"> </span>/etc/apt/keyrings/nodesource.list<span class="w"> </span><span class="o">||</span><span class="w"> </span>true
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Re-installing Node.js version 20...&quot;</span><span class="p">)</span>
+<span class="c1"># Import required Python package</span>
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>pandas
+
+<span class="c1"># Install Node.js (because tweet-harvest built using Node.js)</span>
+<span class="o">!</span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+<span class="o">!</span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>ca-certificates<span class="w"> </span>curl<span class="w"> </span>gnupg
+<span class="o">!</span>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/etc/apt/keyrings
+<span class="o">!</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span>-o<span class="w"> </span>/etc/apt/keyrings/nodesource.gpg
+
+<span class="o">!</span><span class="nv">NODE_MAJOR</span><span class="o">=</span><span class="m">20</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_</span><span class="nv">$NODE_MAJOR</span><span class="s2">.x nodistro main&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/keyrings/nodesource.list
+
+<span class="o">!</span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+<span class="o">!</span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>nodejs<span class="w"> </span>-y
+
+<span class="c1"># Install missing dependencies for chromium_headless_shell</span>
+<span class="o">!</span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>libatk1.0-0<span class="w"> </span>libatk-bridge2.0-0<span class="w"> </span>libxcomposite1
+
+<span class="o">!</span>node<span class="w"> </span>-v
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Removing existing Node.js packages...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Removing existing NodeSource repository file...
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sudo is disabled on this machine. To enable it, go to the <span class="err"></span>]8;;ms-settings:developers<span class="err"></span>\Developer Settings page<span class="err"></span>]8;;<span class="err"></span>\ in the Settings app
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Re-installing Node.js version 20...
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sudo is disabled on this machine. To enable it, go to the <span class="err"></span>]8;;ms-settings:developers<span class="err"></span>\Developer Settings page<span class="err"></span>]8;;<span class="err"></span>\ in the Settings app
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pandas in c:\users\rizky\appdata\local\programs\python\python310\lib\site-packages (2.3.3)
+Requirement already satisfied: pytz&gt;=2020.1 in c:\users\rizky\appdata\local\programs\python\python310\lib\site-packages (from pandas) (2025.2)
+Requirement already satisfied: python-dateutil&gt;=2.8.2 in c:\users\rizky\appdata\roaming\python\python310\site-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: numpy&gt;=1.22.4 in c:\users\rizky\appdata\local\programs\python\python310\lib\site-packages (from pandas) (2.2.6)
+Requirement already satisfied: tzdata&gt;=2022.7 in c:\users\rizky\appdata\local\programs\python\python310\lib\site-packages (from pandas) (2025.2)
+Requirement already satisfied: six&gt;=1.5 in c:\users\rizky\appdata\roaming\python\python310\site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas) (1.17.0)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[notice] A new release of pip is available: 23.0.1 -&gt; 25.3
+[notice] To update, run: python.exe -m pip install --upgrade pip
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sudo is disabled on this machine. To enable it, go to the <span class="err"></span>]8;;ms-settings:developers<span class="err"></span>\Developer Settings page<span class="err"></span>]8;;<span class="err"></span>\ in the Settings app
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sudo is disabled on this machine. To enable it, go to the <span class="err"></span>]8;;ms-settings:developers<span class="err"></span>\Developer Settings page<span class="err"></span>]8;;<span class="err"></span>\ in the Settings app
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sudo is disabled on this machine. To enable it, go to the <span class="err"></span>]8;;ms-settings:developers<span class="err"></span>\Developer Settings page<span class="err"></span>]8;;<span class="err"></span>\ in the Settings app
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sudo is disabled on this machine. To enable it, go to the <span class="err"></span>]8;;ms-settings:developers<span class="err"></span>\Developer Settings page<span class="err"></span>]8;;<span class="err"></span>\ in the Settings app
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;NODE_MAJOR&#39; is not recognized as an internal or external command,
+operable program or batch file.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sudo is disabled on this machine. To enable it, go to the <span class="err"></span>]8;;ms-settings:developers<span class="err"></span>\Developer Settings page<span class="err"></span>]8;;<span class="err"></span>\ in the Settings app
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sudo is disabled on this machine. To enable it, go to the <span class="err"></span>]8;;ms-settings:developers<span class="err"></span>\Developer Settings page<span class="err"></span>]8;;<span class="err"></span>\ in the Settings app
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sudo is disabled on this machine. To enable it, go to the <span class="err"></span>]8;;ms-settings:developers<span class="err"></span>\Developer Settings page<span class="err"></span>]8;;<span class="err"></span>\ in the Settings app
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>v20.19.5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Removing existing Node.js packages and configuration files...&quot;</span><span class="p">)</span>
+<span class="o">!</span>sudo<span class="w"> </span>apt-get<span class="w"> </span>purge<span class="w"> </span>nodejs<span class="w"> </span>-y
+<span class="o">!</span>sudo<span class="w"> </span>rm<span class="w"> </span>-f<span class="w"> </span>/etc/apt/sources.list.d/nodesource.list<span class="w"> </span>/etc/apt/keyrings/nodesource.gpg<span class="w"> </span><span class="o">||</span><span class="w"> </span>true
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Re-installing Node.js version 20...&quot;</span><span class="p">)</span>
+<span class="c1"># Install Node.js prerequisites</span>
+<span class="o">!</span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+<span class="o">!</span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>ca-certificates<span class="w"> </span>curl<span class="w"> </span>gnupg
+
+<span class="c1"># Ensure the keyrings directory exists</span>
+<span class="o">!</span>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/etc/apt/keyrings
+
+<span class="c1"># Download and dearmor the GPG key, ensuring a proper output file</span>
+<span class="o">!</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span>-o<span class="w"> </span>/etc/apt/keyrings/nodesource.gpg
+
+<span class="c1"># Add the NodeSource repository for Node.js 20.x</span>
+<span class="c1"># Important: ensure this file is placed in sources.list.d</span>
+<span class="o">!</span><span class="nv">NODE_MAJOR</span><span class="o">=</span><span class="m">20</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_</span><span class="nv">$NODE_MAJOR</span><span class="s2">.x nodistro main&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/nodesource.list
+
+<span class="c1"># Update apt package index with new repository</span>
+<span class="o">!</span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+
+<span class="c1"># Install Node.js</span>
+<span class="o">!</span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>nodejs<span class="w"> </span>-y
+
+<span class="c1"># Install missing dependencies for chromium_headless_shell</span>
+<span class="o">!</span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>libatk1.0-0<span class="w"> </span>libatk-bridge2.0-0<span class="w"> </span>libxcomposite1
+
+<span class="c1"># Verify Node.js version</span>
+<span class="o">!</span>node<span class="w"> </span>-v
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Removing existing Node.js packages and configuration files...
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sudo is disabled on this machine. To enable it, go to the <span class="err"></span>]8;;ms-settings:developers<span class="err"></span>\Developer Settings page<span class="err"></span>]8;;<span class="err"></span>\ in the Settings app
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Re-installing Node.js version 20...
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sudo is disabled on this machine. To enable it, go to the <span class="err"></span>]8;;ms-settings:developers<span class="err"></span>\Developer Settings page<span class="err"></span>]8;;<span class="err"></span>\ in the Settings app
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sudo is disabled on this machine. To enable it, go to the <span class="err"></span>]8;;ms-settings:developers<span class="err"></span>\Developer Settings page<span class="err"></span>]8;;<span class="err"></span>\ in the Settings app
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sudo is disabled on this machine. To enable it, go to the <span class="err"></span>]8;;ms-settings:developers<span class="err"></span>\Developer Settings page<span class="err"></span>]8;;<span class="err"></span>\ in the Settings app
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sudo is disabled on this machine. To enable it, go to the <span class="err"></span>]8;;ms-settings:developers<span class="err"></span>\Developer Settings page<span class="err"></span>]8;;<span class="err"></span>\ in the Settings app
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sudo is disabled on this machine. To enable it, go to the <span class="err"></span>]8;;ms-settings:developers<span class="err"></span>\Developer Settings page<span class="err"></span>]8;;<span class="err"></span>\ in the Settings app
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;NODE_MAJOR&#39; is not recognized as an internal or external command,
+operable program or batch file.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sudo is disabled on this machine. To enable it, go to the <span class="err"></span>]8;;ms-settings:developers<span class="err"></span>\Developer Settings page<span class="err"></span>]8;;<span class="err"></span>\ in the Settings app
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sudo is disabled on this machine. To enable it, go to the <span class="err"></span>]8;;ms-settings:developers<span class="err"></span>\Developer Settings page<span class="err"></span>]8;;<span class="err"></span>\ in the Settings app
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sudo is disabled on this machine. To enable it, go to the <span class="err"></span>]8;;ms-settings:developers<span class="err"></span>\Developer Settings page<span class="err"></span>]8;;<span class="err"></span>\ in the Settings app
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>v20.19.5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="c1"># Crawl Data</span>
+
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;datasettwitter.csv&#39;</span>
+<span class="n">search_keyword</span> <span class="o">=</span> <span class="s1">&#39;makan bergizi gratis lang:id&#39;</span>
+<span class="n">limit</span> <span class="o">=</span> <span class="mi">5000</span> <span class="c1"># Keeping the limit as it was initially, or increasing it if needed for more data.</span>
+
+<span class="c1"># Adding --delay 5 to introduce a 5-second delay between requests</span>
+<span class="o">!</span>npx<span class="w"> </span>--yes<span class="w"> </span>tweet-harvest@2.6.1<span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;{filename}&quot;</span><span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;{search_keyword}&quot;</span><span class="w"> </span>-l<span class="w"> </span><span class="o">{</span>limit<span class="o">}</span><span class="w"> </span>--token<span class="w"> </span><span class="o">{</span>twitter_auth_token<span class="o">}</span><span class="w"> </span>--delay<span class="w"> </span><span class="m">240</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="c1"># Specify the path to your CSV file</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/content/tweets-data/datasettwitter.csv&quot;</span>
+
+<span class="c1"># Read the CSV file into a pandas DataFrame</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+
+<span class="c1"># Rename the &#39;name&#39; column to &#39;username&#39; if it exists</span>
+<span class="k">if</span> <span class="s1">&#39;name&#39;</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;username&#39;</span><span class="p">})</span>
+
+<span class="c1"># Display the DataFrame</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="c1"># Check the length of the DataFrame</span>
+<span class="n">num_rows</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The number of rows in the DataFrame is: </span><span class="si">{</span><span class="n">num_rows</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-7dd4b670-c82f-4e59-9e1a-6167a488251f" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>conversation_id_str</th>
+      <th>created_at</th>
+      <th>favorite_count</th>
+      <th>full_text</th>
+      <th>id_str</th>
+      <th>image_url</th>
+      <th>in_reply_to_screen_name</th>
+      <th>lang</th>
+      <th>location</th>
+      <th>quote_count</th>
+      <th>reply_count</th>
+      <th>retweet_count</th>
+      <th>tweet_url</th>
+      <th>user_id_str</th>
+      <th>username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1995511090479071574</td>
+      <td>Mon Dec 01 15:11:33 +0000 2025</td>
+      <td>375</td>
+      <td>Saat negeri butuh kesiagaan dan mitigasi benca...</td>
+      <td>1995511090479071574</td>
+      <td>https://pbs.twimg.com/ext_tw_video_thumb/19955...</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>37</td>
+      <td>217</td>
+      <td>https://x.com/undefined/status/199551109047907...</td>
+      <td>2959310304</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1994979298059637172</td>
+      <td>Sun Nov 30 03:58:24 +0000 2025</td>
+      <td>141</td>
+      <td>52 SPPG Aceh Distribusikan 185 Ribu Paket Maka...</td>
+      <td>1994979298059637172</td>
+      <td>https://pbs.twimg.com/media/G6-XF5SbUAAd7Kl.jpg</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>29</td>
+      <td>34</td>
+      <td>https://x.com/undefined/status/199497929805963...</td>
+      <td>1334853481019056128</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1996128069355233362</td>
+      <td>Wed Dec 03 08:03:12 +0000 2025</td>
+      <td>2</td>
+      <td>Puluhan pelajar dari sejumlah sekolah di Kecam...</td>
+      <td>1996128069355233362</td>
+      <td>https://pbs.twimg.com/media/G7OqkI3aEAAPsKh.jpg</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>0</td>
+      <td>4</td>
+      <td>https://x.com/undefined/status/199612806935523...</td>
+      <td>80559922</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1995032389056090135</td>
+      <td>Sun Nov 30 07:29:22 +0000 2025</td>
+      <td>28</td>
+      <td>Bencana yang melanda Aceh beberapa hari terakh...</td>
+      <td>1995032389056090135</td>
+      <td>https://pbs.twimg.com/media/G6_HYYObkAARHn_.jpg</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>3</td>
+      <td>21</td>
+      <td>https://x.com/undefined/status/199503238905609...</td>
+      <td>382522068</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1991813840669987265</td>
+      <td>Fri Nov 21 10:20:00 +0000 2025</td>
+      <td>16</td>
+      <td>Pemerintah membuka opsi strategis untuk mendir...</td>
+      <td>1991813840669987265</td>
+      <td>https://pbs.twimg.com/amplify_video_thumb/1991...</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>5</td>
+      <td>14</td>
+      <td>6</td>
+      <td>https://x.com/undefined/status/199181384066998...</td>
+      <td>57261519</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>102</th>
+      <td>1993139012677058776</td>
+      <td>Tue Nov 25 02:05:46 +0000 2025</td>
+      <td>5</td>
+      <td>Wapres Gibran menegaskan kepada peserta KTT G2...</td>
+      <td>1993139012677058776</td>
+      <td>https://pbs.twimg.com/media/G6kNXoCWIAAxC6E.jpg</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>5</td>
+      <td>https://x.com/undefined/status/199313901267705...</td>
+      <td>1984246241203818496</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>103</th>
+      <td>1993141443733655786</td>
+      <td>Tue Nov 25 02:15:25 +0000 2025</td>
+      <td>5</td>
+      <td>Dalam agenda KTT G20 Wapres Gibran menegaskan ...</td>
+      <td>1993141443733655786</td>
+      <td>https://pbs.twimg.com/media/G6kPkrNa8AAxM2E.jpg</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4</td>
+      <td>https://x.com/undefined/status/199314144373365...</td>
+      <td>1941896342739234816</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>104</th>
+      <td>1993570666143162735</td>
+      <td>Wed Nov 26 06:41:00 +0000 2025</td>
+      <td>1</td>
+      <td>Sebanyak 204 siswa SMPN 1 Blora mengalami kera...</td>
+      <td>1993570666143162735</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>44</td>
+      <td>3</td>
+      <td>https://x.com/undefined/status/199357066614316...</td>
+      <td>69183155</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>105</th>
+      <td>1990673073100722292</td>
+      <td>Tue Nov 18 06:47:00 +0000 2025</td>
+      <td>1</td>
+      <td>Polemik program Makan Bergizi Gratis (MBG) men...</td>
+      <td>1990673073100722292</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>https://x.com/undefined/status/199067307310072...</td>
+      <td>69183155</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>106</th>
+      <td>1995310349709725810</td>
+      <td>Mon Dec 01 01:53:53 +0000 2025</td>
+      <td>5</td>
+      <td>Ratusan ribu paket Makan Bergizi Gratis MBG ba...</td>
+      <td>1995310349709725810</td>
+      <td>https://pbs.twimg.com/media/G7DEMFIa4AAQ9oi.jpg</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>0</td>
+      <td>3</td>
+      <td>https://x.com/undefined/status/199531034970972...</td>
+      <td>1440314501023236109</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>107 rows × 15 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-7dd4b670-c82f-4e59-9e1a-6167a488251f')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-7dd4b670-c82f-4e59-9e1a-6167a488251f button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-7dd4b670-c82f-4e59-9e1a-6167a488251f');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+    <div id="df-119bdfb3-a52c-4d47-9753-f3cb02e5a4d2">
+      <button class="colab-df-quickchart" onclick="quickchart('df-119bdfb3-a52c-4d47-9753-f3cb02e5a4d2')"
+                title="Suggest charts"
+                style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+      </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+      <script>
+        async function quickchart(key) {
+          const quickchartButtonEl =
+            document.querySelector('#' + key + ' button');
+          quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+          quickchartButtonEl.classList.add('colab-df-spinner');
+          try {
+            const charts = await google.colab.kernel.invokeFunction(
+                'suggestCharts', [key], {});
+          } catch (error) {
+            console.error('Error during call to suggestCharts:', error);
+          }
+          quickchartButtonEl.classList.remove('colab-df-spinner');
+          quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+        }
+        (() => {
+          let quickchartButtonEl =
+            document.querySelector('#df-119bdfb3-a52c-4d47-9753-f3cb02e5a4d2 button');
+          quickchartButtonEl.style.display =
+            google.colab.kernel.accessAllowed ? 'block' : 'none';
+        })();
+      </script>
+    </div>
+
+  <div id="id_c15b5620-1db2-4969-8fb6-f6b271179fb8">
+    <style>
+      .colab-df-generate {
+        background-color: #E8F0FE;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+        fill: #1967D2;
+        height: 32px;
+        padding: 0 0 0 0;
+        width: 32px;
+      }
+
+      .colab-df-generate:hover {
+        background-color: #E2EBFA;
+        box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+        fill: #174EA6;
+      }
+
+      [theme=dark] .colab-df-generate {
+        background-color: #3B4455;
+        fill: #D2E3FC;
+      }
+
+      [theme=dark] .colab-df-generate:hover {
+        background-color: #434B5C;
+        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+        filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+        fill: #FFFFFF;
+      }
+    </style>
+    <button class="colab-df-generate" onclick="generateWithVariable('df')"
+            title="Generate code using this dataframe."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M7,19H8.4L18.45,9,17,7.55,7,17.6ZM5,21V16.75L18.45,3.32a2,2,0,0,1,2.83,0l1.4,1.43a1.91,1.91,0,0,1,.58,1.4,1.91,1.91,0,0,1-.58,1.4L9.25,21ZM18.45,9,17,7.55Zm-12,3A5.31,5.31,0,0,0,4.9,8.1,5.31,5.31,0,0,0,1,6.5,5.31,5.31,0,0,0,4.9,4.9,5.31,5.31,0,0,0,6.5,1,5.31,5.31,0,0,0,8.1,4.9,5.31,5.31,0,0,0,12,6.5,5.46,5.46,0,0,0,6.5,12Z"/>
+  </svg>
+    </button>
+    <script>
+      (() => {
+      const buttonEl =
+        document.querySelector('#id_c15b5620-1db2-4969-8fb6-f6b271179fb8 button.colab-df-generate');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      buttonEl.onclick = () => {
+        google.colab.notebook.generateWithVariable('df');
+      }
+      })();
+    </script>
+  </div>
+
+    </div>
+  </div>
+</div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The number of rows in the DataFrame is: 107
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="c1"># Display general information about the DataFrame, including columns and non-null counts</span>
+<span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+
+<span class="c1"># Set display option to see all columns</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_columns&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="c1"># Display the first few rows of the DataFrame to inspect data content</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 107 entries, 0 to 106
+Data columns (total 15 columns):
+ #   Column                   Non-Null Count  Dtype  
+---  ------                   --------------  -----  
+ 0   conversation_id_str      107 non-null    int64  
+ 1   created_at               107 non-null    object 
+ 2   favorite_count           107 non-null    int64  
+ 3   full_text                107 non-null    object 
+ 4   id_str                   107 non-null    int64  
+ 5   image_url                94 non-null     object 
+ 6   in_reply_to_screen_name  7 non-null      object 
+ 7   lang                     107 non-null    object 
+ 8   location                 0 non-null      float64
+ 9   quote_count              107 non-null    int64  
+ 10  reply_count              107 non-null    int64  
+ 11  retweet_count            107 non-null    int64  
+ 12  tweet_url                107 non-null    object 
+ 13  user_id_str              107 non-null    int64  
+ 14  username                 0 non-null      float64
+dtypes: float64(2), int64(7), object(6)
+memory usage: 12.7+ KB
+</pre></div>
+</div>
+<div class="output text_html">
+  <div id="df-4bce0dd2-f8e3-4635-86fc-bc2b530cd388" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>conversation_id_str</th>
+      <th>created_at</th>
+      <th>favorite_count</th>
+      <th>full_text</th>
+      <th>id_str</th>
+      <th>image_url</th>
+      <th>in_reply_to_screen_name</th>
+      <th>lang</th>
+      <th>location</th>
+      <th>quote_count</th>
+      <th>reply_count</th>
+      <th>retweet_count</th>
+      <th>tweet_url</th>
+      <th>user_id_str</th>
+      <th>username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1995511090479071574</td>
+      <td>Mon Dec 01 15:11:33 +0000 2025</td>
+      <td>375</td>
+      <td>Saat negeri butuh kesiagaan dan mitigasi benca...</td>
+      <td>1995511090479071574</td>
+      <td>https://pbs.twimg.com/ext_tw_video_thumb/19955...</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>37</td>
+      <td>217</td>
+      <td>https://x.com/undefined/status/199551109047907...</td>
+      <td>2959310304</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1994979298059637172</td>
+      <td>Sun Nov 30 03:58:24 +0000 2025</td>
+      <td>141</td>
+      <td>52 SPPG Aceh Distribusikan 185 Ribu Paket Maka...</td>
+      <td>1994979298059637172</td>
+      <td>https://pbs.twimg.com/media/G6-XF5SbUAAd7Kl.jpg</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>29</td>
+      <td>34</td>
+      <td>https://x.com/undefined/status/199497929805963...</td>
+      <td>1334853481019056128</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1996128069355233362</td>
+      <td>Wed Dec 03 08:03:12 +0000 2025</td>
+      <td>2</td>
+      <td>Puluhan pelajar dari sejumlah sekolah di Kecam...</td>
+      <td>1996128069355233362</td>
+      <td>https://pbs.twimg.com/media/G7OqkI3aEAAPsKh.jpg</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>0</td>
+      <td>4</td>
+      <td>https://x.com/undefined/status/199612806935523...</td>
+      <td>80559922</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1995032389056090135</td>
+      <td>Sun Nov 30 07:29:22 +0000 2025</td>
+      <td>28</td>
+      <td>Bencana yang melanda Aceh beberapa hari terakh...</td>
+      <td>1995032389056090135</td>
+      <td>https://pbs.twimg.com/media/G6_HYYObkAARHn_.jpg</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>3</td>
+      <td>21</td>
+      <td>https://x.com/undefined/status/199503238905609...</td>
+      <td>382522068</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1991813840669987265</td>
+      <td>Fri Nov 21 10:20:00 +0000 2025</td>
+      <td>16</td>
+      <td>Pemerintah membuka opsi strategis untuk mendir...</td>
+      <td>1991813840669987265</td>
+      <td>https://pbs.twimg.com/amplify_video_thumb/1991...</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>5</td>
+      <td>14</td>
+      <td>6</td>
+      <td>https://x.com/undefined/status/199181384066998...</td>
+      <td>57261519</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-4bce0dd2-f8e3-4635-86fc-bc2b530cd388')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-4bce0dd2-f8e3-4635-86fc-bc2b530cd388 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-4bce0dd2-f8e3-4635-86fc-bc2b530cd388');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+    <div id="df-a7d2b9f5-0c30-4089-a4e0-5f4dfe879713">
+      <button class="colab-df-quickchart" onclick="quickchart('df-a7d2b9f5-0c30-4089-a4e0-5f4dfe879713')"
+                title="Suggest charts"
+                style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+      </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+      <script>
+        async function quickchart(key) {
+          const quickchartButtonEl =
+            document.querySelector('#' + key + ' button');
+          quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+          quickchartButtonEl.classList.add('colab-df-spinner');
+          try {
+            const charts = await google.colab.kernel.invokeFunction(
+                'suggestCharts', [key], {});
+          } catch (error) {
+            console.error('Error during call to suggestCharts:', error);
+          }
+          quickchartButtonEl.classList.remove('colab-df-spinner');
+          quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+        }
+        (() => {
+          let quickchartButtonEl =
+            document.querySelector('#df-a7d2b9f5-0c30-4089-a4e0-5f4dfe879713 button');
+          quickchartButtonEl.style.display =
+            google.colab.kernel.accessAllowed ? 'block' : 'none';
+        })();
+      </script>
+    </div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>tugas 5 berita &#8212; My sample book</title>
+    <title>BERTopic Berita &#8212; My sample book</title>
   
   
   
@@ -61,6 +61,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'tugas5_berita';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="BERTopic Manajemen" href="tugas5_manajemen.html" />
+    <link rel="prev" title="CBOW PTA Manajemen" href="tugas4_1_cbow_PTA_manajemen.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -123,8 +125,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -180,7 +180,7 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="pengantar.html">Pengantar Penambangan Website</a></li>
 <li class="toctree-l1"><a class="reference internal" href="crawling.html">Crawling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas2_1.html">Crawling PTA</a></li>
@@ -193,10 +193,18 @@
 <li class="toctree-l1"><a class="reference internal" href="tugas4_1_ekstraksi_fitur_tfidf_pta_manajemen.html">Ekstraksi fitur TFID PTA Manajemen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas4_1_cbow_beritacopy.html">CBOW Berita</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas4_1_cbow_PTA_manajemen.html">CBOW PTA Manajemen</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">BERTopic Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas5_manajemen.html">BERTopic Manajemen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas6_LDA_klasifikasi_berita.html">LDA Klasifikasi Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas6_LDA_klasifikasi_beritaWithOutStemming.html">LDA Klasifikasi Berita Tanpa Stemming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UTS.html">UTS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas8_1_analisisdatsetwebusage.html">Analisis dataset webusage.csv</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas8_2_analisisdatasetnasa.html">Analisis dataset NASA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_1_datasetpagerankberita.html">Pagerank Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_1_datasetpagerankPTA.html">Pagerank PTA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_2_graphberita.html">Graph Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_2_graphPTA.html">Graph PTA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas8_2_analisisnasa.html">Analisis Dataset Log Nasa July</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas10_1_komuditasfb.html">Komuditas FB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas11_1_dokumen.html">Dokumen Analisis</a></li>
 </ul>
 
     </div>
@@ -380,7 +388,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>tugas 5 berita</h1>
+    <h1>BERTopic Berita</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -394,8 +402,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="tugas-5-berita">
-<h1>tugas 5 berita<a class="headerlink" href="#tugas-5-berita" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="bertopic-berita">
+<h1>BERTopic Berita<a class="headerlink" href="#bertopic-berita" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
@@ -408,21 +416,21 @@ document.write(`
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting bertopic
-  Using cached bertopic-0.17.3-py3-none-any.whl.metadata (24 kB)
+  Using cached bertopic-0.17.4-py3-none-any.whl.metadata (24 kB)
 Requirement already satisfied: gensim in c:\laragon\bin\python\python-3.10\lib\site-packages (4.3.3)
 Requirement already satisfied: numpy in c:\laragon\bin\python\python-3.10\lib\site-packages (1.26.4)
 Collecting hdbscan&gt;=0.8.29 (from bertopic)
-  Using cached hdbscan-0.8.40-cp310-cp310-win_amd64.whl.metadata (15 kB)
+  Using cached hdbscan-0.8.41-cp310-cp310-win_amd64.whl.metadata (15 kB)
 Collecting umap-learn&gt;=0.5.0 (from bertopic)
   Using cached umap_learn-0.5.9.post2-py3-none-any.whl.metadata (25 kB)
 Requirement already satisfied: pandas&gt;=1.1.5 in c:\laragon\bin\python\python-3.10\lib\site-packages (from bertopic) (2.3.2)
 Requirement already satisfied: plotly&gt;=4.7.0 in c:\laragon\bin\python\python-3.10\lib\site-packages (from bertopic) (6.3.0)
 Requirement already satisfied: scikit-learn&gt;=1.0 in c:\laragon\bin\python\python-3.10\lib\site-packages (from bertopic) (1.7.2)
 Collecting sentence-transformers&gt;=0.4.1 (from bertopic)
-  Downloading sentence_transformers-5.1.2-py3-none-any.whl.metadata (16 kB)
+  Using cached sentence_transformers-5.2.0-py3-none-any.whl.metadata (16 kB)
 Requirement already satisfied: tqdm&gt;=4.41.1 in c:\laragon\bin\python\python-3.10\lib\site-packages (from bertopic) (4.67.1)
 Collecting llvmlite&gt;0.36.0 (from bertopic)
-  Using cached llvmlite-0.45.1-cp310-cp310-win_amd64.whl.metadata (5.0 kB)
+  Using cached llvmlite-0.46.0-cp310-cp310-win_amd64.whl.metadata (4.9 kB)
 Requirement already satisfied: scipy&lt;1.14.0,&gt;=1.7.0 in c:\laragon\bin\python\python-3.10\lib\site-packages (from gensim) (1.13.1)
 Requirement already satisfied: smart-open&gt;=1.8.1 in c:\laragon\bin\python\python-3.10\lib\site-packages (from gensim) (7.3.1)
 Requirement already satisfied: joblib&gt;=1.0 in c:\laragon\bin\python\python-3.10\lib\site-packages (from hdbscan&gt;=0.8.29-&gt;bertopic) (1.5.2)
@@ -433,123 +441,156 @@ Requirement already satisfied: narwhals&gt;=1.15.1 in c:\laragon\bin\python\pyth
 Requirement already satisfied: packaging in c:\users\rizky\appdata\roaming\python\python310\site-packages (from plotly&gt;=4.7.0-&gt;bertopic) (25.0)
 Requirement already satisfied: six&gt;=1.5 in c:\users\rizky\appdata\roaming\python\python310\site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas&gt;=1.1.5-&gt;bertopic) (1.17.0)
 Requirement already satisfied: threadpoolctl&gt;=3.1.0 in c:\laragon\bin\python\python-3.10\lib\site-packages (from scikit-learn&gt;=1.0-&gt;bertopic) (3.6.0)
-Collecting transformers&lt;5.0.0,&gt;=4.41.0 (from sentence-transformers&gt;=0.4.1-&gt;bertopic)
-  Using cached transformers-4.57.1-py3-none-any.whl.metadata (43 kB)
+Collecting transformers&lt;6.0.0,&gt;=4.41.0 (from sentence-transformers&gt;=0.4.1-&gt;bertopic)
+  Using cached transformers-4.57.3-py3-none-any.whl.metadata (43 kB)
 Collecting torch&gt;=1.11.0 (from sentence-transformers&gt;=0.4.1-&gt;bertopic)
-  Downloading torch-2.9.1-cp310-cp310-win_amd64.whl.metadata (30 kB)
+  Using cached torch-2.9.1-cp310-cp310-win_amd64.whl.metadata (30 kB)
 Collecting huggingface-hub&gt;=0.20.0 (from sentence-transformers&gt;=0.4.1-&gt;bertopic)
-  Downloading huggingface_hub-1.1.4-py3-none-any.whl.metadata (13 kB)
-Collecting Pillow (from sentence-transformers&gt;=0.4.1-&gt;bertopic)
-  Using cached pillow-12.0.0-cp310-cp310-win_amd64.whl.metadata (9.0 kB)
+  Using cached huggingface_hub-1.2.3-py3-none-any.whl.metadata (13 kB)
 Requirement already satisfied: typing_extensions&gt;=4.5.0 in c:\users\rizky\appdata\roaming\python\python310\site-packages (from sentence-transformers&gt;=0.4.1-&gt;bertopic) (4.15.0)
-Collecting filelock (from transformers&lt;5.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic)
-  Using cached filelock-3.20.0-py3-none-any.whl.metadata (2.1 kB)
+Collecting filelock (from transformers&lt;6.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic)
+  Using cached filelock-3.20.1-py3-none-any.whl.metadata (2.1 kB)
 Collecting huggingface-hub&gt;=0.20.0 (from sentence-transformers&gt;=0.4.1-&gt;bertopic)
-  Downloading huggingface_hub-0.36.0-py3-none-any.whl.metadata (14 kB)
-Requirement already satisfied: pyyaml&gt;=5.1 in c:\laragon\bin\python\python-3.10\lib\site-packages (from transformers&lt;5.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (6.0.2)
-Requirement already satisfied: regex!=2019.12.17 in c:\laragon\bin\python\python-3.10\lib\site-packages (from transformers&lt;5.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (2025.9.1)
-Requirement already satisfied: requests in c:\laragon\bin\python\python-3.10\lib\site-packages (from transformers&lt;5.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (2.32.5)
-Collecting tokenizers&lt;=0.23.0,&gt;=0.22.0 (from transformers&lt;5.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic)
+  Using cached huggingface_hub-0.36.0-py3-none-any.whl.metadata (14 kB)
+Requirement already satisfied: pyyaml&gt;=5.1 in c:\laragon\bin\python\python-3.10\lib\site-packages (from transformers&lt;6.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (6.0.2)
+Requirement already satisfied: regex!=2019.12.17 in c:\laragon\bin\python\python-3.10\lib\site-packages (from transformers&lt;6.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (2025.9.1)
+Requirement already satisfied: requests in c:\laragon\bin\python\python-3.10\lib\site-packages (from transformers&lt;6.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (2.32.5)
+Collecting tokenizers&lt;=0.23.0,&gt;=0.22.0 (from transformers&lt;6.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic)
   Using cached tokenizers-0.22.1-cp39-abi3-win_amd64.whl.metadata (6.9 kB)
-Collecting safetensors&gt;=0.4.3 (from transformers&lt;5.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic)
-  Downloading safetensors-0.7.0-cp38-abi3-win_amd64.whl.metadata (4.2 kB)
+Collecting safetensors&gt;=0.4.3 (from transformers&lt;6.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic)
+  Using cached safetensors-0.7.0-cp38-abi3-win_amd64.whl.metadata (4.2 kB)
 Collecting fsspec&gt;=2023.5.0 (from huggingface-hub&gt;=0.20.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic)
-  Downloading fsspec-2025.10.0-py3-none-any.whl.metadata (10 kB)
+  Using cached fsspec-2025.12.0-py3-none-any.whl.metadata (10 kB)
 Requirement already satisfied: wrapt in c:\laragon\bin\python\python-3.10\lib\site-packages (from smart-open&gt;=1.8.1-&gt;gensim) (1.17.3)
 Collecting sympy&gt;=1.13.3 (from torch&gt;=1.11.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic)
   Using cached sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
-Collecting networkx&gt;=2.5.1 (from torch&gt;=1.11.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic)
-  Using cached networkx-3.4.2-py3-none-any.whl.metadata (6.3 kB)
+Requirement already satisfied: networkx&gt;=2.5.1 in c:\laragon\bin\python\python-3.10\lib\site-packages (from torch&gt;=1.11.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (3.4.2)
 Requirement already satisfied: jinja2 in c:\laragon\bin\python\python-3.10\lib\site-packages (from torch&gt;=1.11.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (3.1.6)
 Collecting mpmath&lt;1.4,&gt;=1.1.0 (from sympy&gt;=1.13.3-&gt;torch&gt;=1.11.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic)
   Using cached mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
 Requirement already satisfied: colorama in c:\users\rizky\appdata\roaming\python\python310\site-packages (from tqdm&gt;=4.41.1-&gt;bertopic) (0.4.6)
 Collecting numba&gt;=0.51.2 (from umap-learn&gt;=0.5.0-&gt;bertopic)
-  Using cached numba-0.62.1-cp310-cp310-win_amd64.whl.metadata (2.9 kB)
+  Using cached numba-0.63.1-cp310-cp310-win_amd64.whl.metadata (2.8 kB)
 Collecting pynndescent&gt;=0.5 (from umap-learn&gt;=0.5.0-&gt;bertopic)
   Using cached pynndescent-0.5.13-py3-none-any.whl.metadata (6.8 kB)
 Requirement already satisfied: MarkupSafe&gt;=2.0 in c:\laragon\bin\python\python-3.10\lib\site-packages (from jinja2-&gt;torch&gt;=1.11.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (3.0.2)
-Requirement already satisfied: charset_normalizer&lt;4,&gt;=2 in c:\laragon\bin\python\python-3.10\lib\site-packages (from requests-&gt;transformers&lt;5.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (3.4.3)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in c:\laragon\bin\python\python-3.10\lib\site-packages (from requests-&gt;transformers&lt;5.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (3.10)
-Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in c:\laragon\bin\python\python-3.10\lib\site-packages (from requests-&gt;transformers&lt;5.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (2.5.0)
-Requirement already satisfied: certifi&gt;=2017.4.17 in c:\laragon\bin\python\python-3.10\lib\site-packages (from requests-&gt;transformers&lt;5.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (2025.8.3)
-Using cached bertopic-0.17.3-py3-none-any.whl (153 kB)
-Using cached hdbscan-0.8.40-cp310-cp310-win_amd64.whl (730 kB)
-Using cached llvmlite-0.45.1-cp310-cp310-win_amd64.whl (38.1 MB)
-Downloading sentence_transformers-5.1.2-py3-none-any.whl (488 kB)
-Using cached transformers-4.57.1-py3-none-any.whl (12.0 MB)
-Downloading huggingface_hub-0.36.0-py3-none-any.whl (566 kB)
-   ---------------------------------------- 0.0/566.1 kB ? eta -:--:--
-   ---------------------------------------- 566.1/566.1 kB 4.8 MB/s  0:00:00
+Requirement already satisfied: charset_normalizer&lt;4,&gt;=2 in c:\laragon\bin\python\python-3.10\lib\site-packages (from requests-&gt;transformers&lt;6.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (3.4.3)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in c:\laragon\bin\python\python-3.10\lib\site-packages (from requests-&gt;transformers&lt;6.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (3.10)
+Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in c:\laragon\bin\python\python-3.10\lib\site-packages (from requests-&gt;transformers&lt;6.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (2.5.0)
+Requirement already satisfied: certifi&gt;=2017.4.17 in c:\laragon\bin\python\python-3.10\lib\site-packages (from requests-&gt;transformers&lt;6.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (2025.8.3)
+Using cached bertopic-0.17.4-py3-none-any.whl (154 kB)
+Using cached hdbscan-0.8.41-cp310-cp310-win_amd64.whl (687 kB)
+Using cached llvmlite-0.46.0-cp310-cp310-win_amd64.whl (38.1 MB)
+Using cached sentence_transformers-5.2.0-py3-none-any.whl (493 kB)
+Using cached transformers-4.57.3-py3-none-any.whl (12.0 MB)
+Using cached huggingface_hub-0.36.0-py3-none-any.whl (566 kB)
 Using cached tokenizers-0.22.1-cp39-abi3-win_amd64.whl (2.7 MB)
-Downloading fsspec-2025.10.0-py3-none-any.whl (200 kB)
-Downloading safetensors-0.7.0-cp38-abi3-win_amd64.whl (341 kB)
+Using cached fsspec-2025.12.0-py3-none-any.whl (201 kB)
+Using cached safetensors-0.7.0-cp38-abi3-win_amd64.whl (341 kB)
 Downloading torch-2.9.1-cp310-cp310-win_amd64.whl (111.0 MB)
    ---------------------------------------- 0.0/111.0 MB ? eta -:--:--
-    --------------------------------------- 1.6/111.0 MB 7.6 MB/s eta 0:00:15
-   - -------------------------------------- 3.4/111.0 MB 7.7 MB/s eta 0:00:14
-   - -------------------------------------- 5.2/111.0 MB 8.0 MB/s eta 0:00:14
-   -- ------------------------------------- 7.1/111.0 MB 8.2 MB/s eta 0:00:13
-   -- ------------------------------------- 7.9/111.0 MB 7.3 MB/s eta 0:00:15
-   --- ------------------------------------ 8.7/111.0 MB 6.8 MB/s eta 0:00:16
-   --- ------------------------------------ 9.4/111.0 MB 6.4 MB/s eta 0:00:16
-   --- ------------------------------------ 10.2/111.0 MB 6.0 MB/s eta 0:00:17
-   --- ------------------------------------ 11.0/111.0 MB 5.6 MB/s eta 0:00:18
-   ---- ----------------------------------- 11.5/111.0 MB 5.3 MB/s eta 0:00:19
-   ---- ----------------------------------- 12.1/111.0 MB 5.1 MB/s eta 0:00:20
-   ---- ----------------------------------- 12.8/111.0 MB 4.9 MB/s eta 0:00:20
-   ---- ----------------------------------- 13.6/111.0 MB 4.8 MB/s eta 0:00:21
-   ----- ---------------------------------- 14.4/111.0 MB 4.7 MB/s eta 0:00:21
-   ----- ---------------------------------- 15.2/111.0 MB 4.7 MB/s eta 0:00:21
-   ----- ---------------------------------- 16.0/111.0 MB 4.6 MB/s eta 0:00:21
-   ------ --------------------------------- 16.8/111.0 MB 4.6 MB/s eta 0:00:21
-   ------ --------------------------------- 17.8/111.0 MB 4.6 MB/s eta 0:00:21
-   ------ --------------------------------- 18.9/111.0 MB 4.6 MB/s eta 0:00:21
-   ------- -------------------------------- 19.7/111.0 MB 4.5 MB/s eta 0:00:21
-   ------- -------------------------------- 20.2/111.0 MB 4.4 MB/s eta 0:00:21
-   ------- -------------------------------- 20.7/111.0 MB 4.4 MB/s eta 0:00:21
-   ------- -------------------------------- 21.2/111.0 MB 4.3 MB/s eta 0:00:21
-   ------- -------------------------------- 22.0/111.0 MB 4.2 MB/s eta 0:00:22
-   -------- ------------------------------- 22.8/111.0 MB 4.2 MB/s eta 0:00:22
-   -------- ------------------------------- 23.6/111.0 MB 4.2 MB/s eta 0:00:22
-   -------- ------------------------------- 24.4/111.0 MB 4.1 MB/s eta 0:00:21
-   --------- ------------------------------ 25.2/111.0 MB 4.1 MB/s eta 0:00:21
-   --------- ------------------------------ 26.0/111.0 MB 4.1 MB/s eta 0:00:21
-   --------- ------------------------------ 26.7/111.0 MB 4.1 MB/s eta 0:00:21
-   ---------- ----------------------------- 27.8/111.0 MB 4.1 MB/s eta 0:00:21
-   ---------- ----------------------------- 28.8/111.0 MB 4.1 MB/s eta 0:00:20
-   ---------- ----------------------------- 29.9/111.0 MB 4.2 MB/s eta 0:00:20
-   ----------- ---------------------------- 30.7/111.0 MB 4.1 MB/s eta 0:00:20
-   ----------- ---------------------------- 31.5/111.0 MB 4.1 MB/s eta 0:00:20
-   ----------- ---------------------------- 32.0/111.0 MB 4.1 MB/s eta 0:00:20
-   ----------- ---------------------------- 32.8/111.0 MB 4.1 MB/s eta 0:00:20
-   ------------ --------------------------- 33.3/111.0 MB 4.1 MB/s eta 0:00:20
-   ------------ --------------------------- 34.1/111.0 MB 4.0 MB/s eta 0:00:20
-   ------------ --------------------------- 34.9/111.0 MB 4.0 MB/s eta 0:00:19
-   ------------ --------------------------- 35.7/111.0 MB 4.0 MB/s eta 0:00:19
-   ------------- -------------------------- 36.7/111.0 MB 4.0 MB/s eta 0:00:19
-   ------------- -------------------------- 37.5/111.0 MB 4.0 MB/s eta 0:00:19
-   ------------- -------------------------- 38.3/111.0 MB 4.0 MB/s eta 0:00:19
-   -------------- ------------------------- 39.1/111.0 MB 4.0 MB/s eta 0:00:18
-   -------------- ------------------------- 39.8/111.0 MB 4.0 MB/s eta 0:00:18
-   -------------- ------------------------- 40.6/111.0 MB 4.0 MB/s eta 0:00:18
-   -------------- ------------------------- 41.4/111.0 MB 4.0 MB/s eta 0:00:18
-   --------------- ------------------------ 42.5/111.0 MB 4.0 MB/s eta 0:00:18
-   --------------- ------------------------ 43.0/111.0 MB 4.0 MB/s eta 0:00:18
-   --------------- ------------------------ 43.5/111.0 MB 3.9 MB/s eta 0:00:18
-   --------------- ------------------------ 44.0/111.0 MB 3.9 MB/s eta 0:00:18
-   ---------------- ----------------------- 44.6/111.0 MB 3.9 MB/s eta 0:00:18
-   ---------------- ----------------------- 45.4/111.0 MB 3.9 MB/s eta 0:00:18
-   ---------------- ----------------------- 45.9/111.0 MB 3.9 MB/s eta 0:00:17
-   ---------------- ----------------------- 46.7/111.0 MB 3.8 MB/s eta 0:00:17
-   ----------------- ---------------------- 47.4/111.0 MB 3.8 MB/s eta 0:00:17
-   ----------------- ---------------------- 48.2/111.0 MB 3.8 MB/s eta 0:00:17
-   ----------------- ---------------------- 49.3/111.0 MB 3.8 MB/s eta 0:00:17
-   ------------------ --------------------- 50.1/111.0 MB 3.8 MB/s eta 0:00:16
-   ------------------ --------------------- 50.9/111.0 MB 3.8 MB/s eta 0:00:16
-   ------------------ --------------------- 51.9/111.0 MB 3.9 MB/s eta 0:00:16
-   ------------------- -------------------- 53.0/111.0 MB 3.9 MB/s eta 0:00:16
-   ------------------- -------------------- 53.7/111.0 MB 3.9 MB/s eta 0:00:15
+   ---------------------------------------- 1.3/111.0 MB 8.4 MB/s eta 0:00:14
+   - -------------------------------------- 2.9/111.0 MB 8.4 MB/s eta 0:00:13
+   - -------------------------------------- 4.5/111.0 MB 8.1 MB/s eta 0:00:14
+   -- ------------------------------------- 6.6/111.0 MB 8.4 MB/s eta 0:00:13
+   --- ------------------------------------ 8.7/111.0 MB 8.7 MB/s eta 0:00:12
+   --- ------------------------------------ 9.7/111.0 MB 8.2 MB/s eta 0:00:13
+   --- ------------------------------------ 10.5/111.0 MB 7.5 MB/s eta 0:00:14
+   ---- ----------------------------------- 11.3/111.0 MB 7.1 MB/s eta 0:00:15
+   ---- ----------------------------------- 12.1/111.0 MB 6.7 MB/s eta 0:00:15
+   ---- ----------------------------------- 12.8/111.0 MB 6.3 MB/s eta 0:00:16
+   ---- ----------------------------------- 13.6/111.0 MB 6.2 MB/s eta 0:00:16
+   ----- ---------------------------------- 14.4/111.0 MB 5.8 MB/s eta 0:00:17
+   ----- ---------------------------------- 14.9/111.0 MB 5.6 MB/s eta 0:00:18
+   ----- ---------------------------------- 15.5/111.0 MB 5.5 MB/s eta 0:00:18
+   ----- ---------------------------------- 16.3/111.0 MB 5.3 MB/s eta 0:00:18
+   ------ --------------------------------- 17.0/111.0 MB 5.2 MB/s eta 0:00:19
+   ------ --------------------------------- 17.8/111.0 MB 5.1 MB/s eta 0:00:19
+   ------ --------------------------------- 18.6/111.0 MB 5.0 MB/s eta 0:00:19
+   ------ --------------------------------- 19.4/111.0 MB 5.0 MB/s eta 0:00:19
+   ------- -------------------------------- 20.4/111.0 MB 4.9 MB/s eta 0:00:19
+   ------- -------------------------------- 21.2/111.0 MB 4.9 MB/s eta 0:00:19
+   ------- -------------------------------- 22.0/111.0 MB 4.9 MB/s eta 0:00:19
+   -------- ------------------------------- 22.5/111.0 MB 4.8 MB/s eta 0:00:19
+   -------- ------------------------------- 23.1/111.0 MB 4.7 MB/s eta 0:00:19
+   -------- ------------------------------- 23.6/111.0 MB 4.6 MB/s eta 0:00:19
+   -------- ------------------------------- 24.4/111.0 MB 4.5 MB/s eta 0:00:20
+   -------- ------------------------------- 24.9/111.0 MB 4.5 MB/s eta 0:00:20
+   --------- ------------------------------ 25.7/111.0 MB 4.5 MB/s eta 0:00:20
+   --------- ------------------------------ 26.5/111.0 MB 4.4 MB/s eta 0:00:20
+   --------- ------------------------------ 27.3/111.0 MB 4.4 MB/s eta 0:00:20
+   ---------- ----------------------------- 28.0/111.0 MB 4.4 MB/s eta 0:00:19
+   ---------- ----------------------------- 28.8/111.0 MB 4.4 MB/s eta 0:00:19
+   ---------- ----------------------------- 29.9/111.0 MB 4.4 MB/s eta 0:00:19
+   ----------- ---------------------------- 30.7/111.0 MB 4.4 MB/s eta 0:00:19
+   ----------- ---------------------------- 31.7/111.0 MB 4.4 MB/s eta 0:00:19
+   ----------- ---------------------------- 32.8/111.0 MB 4.4 MB/s eta 0:00:18
+   ------------ --------------------------- 33.8/111.0 MB 4.4 MB/s eta 0:00:18
+   ------------ --------------------------- 34.6/111.0 MB 4.4 MB/s eta 0:00:18
+   ------------ --------------------------- 35.1/111.0 MB 4.3 MB/s eta 0:00:18
+   ------------ --------------------------- 35.7/111.0 MB 4.3 MB/s eta 0:00:18
+   ------------- -------------------------- 36.4/111.0 MB 4.3 MB/s eta 0:00:18
+   ------------- -------------------------- 37.2/111.0 MB 4.2 MB/s eta 0:00:18
+   ------------- -------------------------- 38.0/111.0 MB 4.2 MB/s eta 0:00:18
+   ------------- -------------------------- 38.8/111.0 MB 4.2 MB/s eta 0:00:18
+   -------------- ------------------------- 39.8/111.0 MB 4.2 MB/s eta 0:00:17
+   -------------- ------------------------- 40.6/111.0 MB 4.2 MB/s eta 0:00:17
+   -------------- ------------------------- 41.4/111.0 MB 4.2 MB/s eta 0:00:17
+   --------------- ------------------------ 42.5/111.0 MB 4.2 MB/s eta 0:00:17
+   --------------- ------------------------ 43.5/111.0 MB 4.2 MB/s eta 0:00:16
+   --------------- ------------------------ 44.3/111.0 MB 4.2 MB/s eta 0:00:16
+   ---------------- ----------------------- 45.1/111.0 MB 4.2 MB/s eta 0:00:16
+   ---------------- ----------------------- 45.4/111.0 MB 4.2 MB/s eta 0:00:16
+   ---------------- ----------------------- 45.9/111.0 MB 4.1 MB/s eta 0:00:16
+   ---------------- ----------------------- 46.1/111.0 MB 4.1 MB/s eta 0:00:16
+   ---------------- ----------------------- 46.7/111.0 MB 4.0 MB/s eta 0:00:16
+   ----------------- ---------------------- 47.2/111.0 MB 4.0 MB/s eta 0:00:16
+   ----------------- ---------------------- 47.7/111.0 MB 4.0 MB/s eta 0:00:16
+   ----------------- ---------------------- 48.5/111.0 MB 4.0 MB/s eta 0:00:16
+   ----------------- ---------------------- 48.8/111.0 MB 4.0 MB/s eta 0:00:16
+   ----------------- ---------------------- 49.0/111.0 MB 3.9 MB/s eta 0:00:16
+   ----------------- ---------------------- 49.0/111.0 MB 3.9 MB/s eta 0:00:16
+   ----------------- ---------------------- 49.0/111.0 MB 3.9 MB/s eta 0:00:16
+   ----------------- ---------------------- 49.0/111.0 MB 3.9 MB/s eta 0:00:16
+   ----------------- ---------------------- 49.0/111.0 MB 3.9 MB/s eta 0:00:16
+   ----------------- ---------------------- 49.0/111.0 MB 3.9 MB/s eta 0:00:16
+   ----------------- ---------------------- 49.3/111.0 MB 3.5 MB/s eta 0:00:18
+   ----------------- ---------------------- 49.3/111.0 MB 3.5 MB/s eta 0:00:18
+   ----------------- ---------------------- 49.5/111.0 MB 3.4 MB/s eta 0:00:18
+   ----------------- ---------------------- 49.8/111.0 MB 3.4 MB/s eta 0:00:18
+   ------------------ --------------------- 50.1/111.0 MB 3.4 MB/s eta 0:00:19
+   ------------------ --------------------- 50.3/111.0 MB 3.3 MB/s eta 0:00:19
+   ------------------ --------------------- 50.6/111.0 MB 3.3 MB/s eta 0:00:19
+   ------------------ --------------------- 50.9/111.0 MB 3.3 MB/s eta 0:00:19
+   ------------------ --------------------- 51.4/111.0 MB 3.3 MB/s eta 0:00:19
+   ------------------ --------------------- 51.9/111.0 MB 3.3 MB/s eta 0:00:19
+   ------------------ --------------------- 52.4/111.0 MB 3.2 MB/s eta 0:00:19
+   ------------------- -------------------- 53.0/111.0 MB 3.2 MB/s eta 0:00:18
+   ------------------- -------------------- 53.5/111.0 MB 3.2 MB/s eta 0:00:18
+   ------------------- -------------------- 54.0/111.0 MB 3.2 MB/s eta 0:00:18
+   ------------------- -------------------- 54.5/111.0 MB 3.2 MB/s eta 0:00:18
+   ------------------- -------------------- 55.3/111.0 MB 3.2 MB/s eta 0:00:18
+   -------------------- ------------------- 55.8/111.0 MB 3.2 MB/s eta 0:00:18
+   -------------------- ------------------- 56.6/111.0 MB 3.2 MB/s eta 0:00:17
+   -------------------- ------------------- 57.4/111.0 MB 3.2 MB/s eta 0:00:17
+   -------------------- ------------------- 58.2/111.0 MB 3.2 MB/s eta 0:00:17
+   --------------------- ------------------ 59.0/111.0 MB 3.2 MB/s eta 0:00:17
+   --------------------- ------------------ 59.8/111.0 MB 3.2 MB/s eta 0:00:16
+   --------------------- ------------------ 60.3/111.0 MB 3.2 MB/s eta 0:00:16
+   ---------------------- ----------------- 61.1/111.0 MB 3.2 MB/s eta 0:00:16
+   ---------------------- ----------------- 61.9/111.0 MB 3.2 MB/s eta 0:00:16
+   ---------------------- ----------------- 62.7/111.0 MB 3.2 MB/s eta 0:00:15
+   ---------------------- ----------------- 63.7/111.0 MB 3.2 MB/s eta 0:00:15
+   ----------------------- ---------------- 64.5/111.0 MB 3.2 MB/s eta 0:00:15
+   ----------------------- ---------------- 65.5/111.0 MB 3.3 MB/s eta 0:00:14
+   ----------------------- ---------------- 66.3/111.0 MB 3.3 MB/s eta 0:00:14
+   ------------------------ --------------- 67.1/111.0 MB 3.3 MB/s eta 0:00:14
+   ------------------------ --------------- 67.9/111.0 MB 3.3 MB/s eta 0:00:14
+   ------------------------ --------------- 68.7/111.0 MB 3.3 MB/s eta 0:00:13
+   ------------------------- -------------- 69.5/111.0 MB 3.3 MB/s eta 0:00:13
+   ------------------------- -------------- 70.5/111.0 MB 3.3 MB/s eta 0:00:13
+   ------------------------- -------------- 71.0/111.0 MB 3.3 MB/s eta 0:00:13
+   ------------------------- -------------- 71.8/111.0 MB 3.3 MB/s eta 0:00:12
 </pre></div>
 </div>
 </div>
@@ -770,6 +811,24 @@ Proses selesai!
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="tugas4_1_cbow_PTA_manajemen.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">CBOW PTA Manajemen</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="tugas5_manajemen.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">BERTopic Manajemen</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               

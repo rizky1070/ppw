@@ -1,0 +1,1662 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Analisis Dataset Log Nasa July &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c72bb274" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tugas8_2_analisisnasa';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Komuditas FB" href="tugas10_1_komuditasfb.html" />
+    <link rel="prev" title="Graph PTA" href="tugas7_2_graphPTA.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/pp.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/pp.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Profile
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="pengantar.html">Pengantar Penambangan Website</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crawling.html">Crawling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_1.html">Crawling PTA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_2.html">Crawling Link Dalam Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_3_crawling_berita.html">Crawling Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_3_crawlingPTA_manajemen.html">Crawling PTA Manajemen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas3_1_preprocessing_manajemen.html">Preprocessing Prodi Manajemen</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="tugas4_1_ekstraksi_fitur_tfidf_berita.html">Ekstraksi fitur TFID berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas4_1_ekstraksi_fitur_tfidf_pta_manajemen.html">Ekstraksi fitur TFID PTA Manajemen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas4_1_cbow_beritacopy.html">CBOW Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas4_1_cbow_PTA_manajemen.html">CBOW PTA Manajemen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas5_berita.html">BERTopic Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas5_manajemen.html">BERTopic Manajemen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas6_LDA_klasifikasi_berita.html">LDA Klasifikasi Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas6_LDA_klasifikasi_beritaWithOutStemming.html">LDA Klasifikasi Berita Tanpa Stemming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UTS.html">UTS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_1_datasetpagerankberita.html">Pagerank Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_1_datasetpagerankPTA.html">Pagerank PTA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_2_graphberita.html">Graph Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_2_graphPTA.html">Graph PTA</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Analisis Dataset Log Nasa July</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas10_1_komuditasfb.html">Komuditas FB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas11_1_dokumen.html">Dokumen Analisis</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftugas8_2_analisisnasa.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/tugas8_2_analisisnasa.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Analisis Dataset Log Nasa July</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="analisis-dataset-log-nasa-july">
+<h1>Analisis Dataset Log Nasa July<a class="headerlink" href="#analisis-dataset-log-nasa-july" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">timedelta</span>
+
+<span class="c1"># --- Ganti &#39;path/ke/file_log_anda.csv&#39; dengan lokasi file Anda ---</span>
+<span class="n">log_file_path</span> <span class="o">=</span> <span class="s1">&#39;NASA_Jul95_cleaned.csv&#39;</span>
+<span class="c1"># -----------------------------------------------------------------</span>
+
+<span class="c1"># Tentukan batas waktu sesi</span>
+<span class="n">SESSION_TIMEOUT</span> <span class="o">=</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+
+<span class="c1"># Daftar ekstensi file aset yang akan difilter (dibuang)</span>
+<span class="n">ASSET_EXTENSIONS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;.css&#39;</span><span class="p">,</span> <span class="s1">&#39;.js&#39;</span><span class="p">,</span> <span class="s1">&#39;.jpg&#39;</span><span class="p">,</span> <span class="s1">&#39;.jpeg&#39;</span><span class="p">,</span> <span class="s1">&#39;.png&#39;</span><span class="p">,</span> <span class="s1">&#39;.gif&#39;</span><span class="p">,</span> <span class="s1">&#39;.ico&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;.svg&#39;</span><span class="p">,</span> <span class="s1">&#39;.woff&#39;</span><span class="p">,</span> <span class="s1">&#39;.woff2&#39;</span><span class="p">,</span> <span class="s1">&#39;.ttf&#39;</span><span class="p">,</span> <span class="s1">&#39;.eot&#39;</span><span class="p">,</span> <span class="s1">&#39;.zip&#39;</span>
+<span class="p">]</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load_data</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Memuat data log dari file CSV dan melakukan pengecekan awal.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Membaca log dari </span><span class="si">{</span><span class="n">file_path</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+
+    <span class="n">col_names</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s1">&#39;IP&#39;</span><span class="p">,</span> <span class="s1">&#39;Logname&#39;</span><span class="p">,</span> <span class="s1">&#39;User&#39;</span><span class="p">,</span> <span class="s1">&#39;Time&#39;</span><span class="p">,</span> <span class="s1">&#39;Method&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;URI&#39;</span><span class="p">,</span> <span class="s1">&#39;Protocol&#39;</span><span class="p">,</span> <span class="s1">&#39;Status&#39;</span><span class="p">,</span> <span class="s1">&#39;Size&#39;</span>
+    <span class="p">]</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+            <span class="n">file_path</span><span class="p">,</span>
+            <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="n">col_names</span><span class="p">,</span>
+            <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">quotechar</span><span class="o">=</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="n">on_bad_lines</span><span class="o">=</span><span class="s1">&#39;skip&#39;</span><span class="p">,</span>
+            <span class="n">engine</span><span class="o">=</span><span class="s1">&#39;python&#39;</span>
+        <span class="p">)</span>
+    <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error: File tidak ditemukan di </span><span class="si">{</span><span class="n">file_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error saat membaca file: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="k">if</span> <span class="n">df</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dataframe could not be loaded. Stopping execution.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pratinjau data mentah berhasil dibaca.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">50</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;📊 Jumlah baris data mentah (Awal): </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">ip_counts</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;IP&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🏆 Top 10 IP dengan akses terbanyak:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ip_counts</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+
+    <span class="n">dupe_ips</span> <span class="o">=</span> <span class="n">ip_counts</span><span class="p">[</span><span class="n">ip_counts</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">⚠️ Jumlah Unik IP: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">ip_counts</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;⚠️ Jumlah IP yang &#39;Duplikat&#39; (akses &gt; 1 kali): </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">dupe_ips</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">50</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🔍 Mengecek nilai NaN dalam dataset mentah...&quot;</span><span class="p">)</span>
+    <span class="n">nan_counts</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="n">nan_percentages</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="n">nan_info</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;NaN Count&#39;</span><span class="p">:</span> <span class="n">nan_counts</span><span class="p">,</span> <span class="s1">&#39;NaN Percentage&#39;</span><span class="p">:</span> <span class="n">nan_percentages</span><span class="p">})</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">nan_info</span><span class="p">[</span><span class="n">nan_info</span><span class="p">[</span><span class="s1">&#39;NaN Count&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total NaN values in raw data:&quot;</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">50</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">preprocess_data</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">asset_extensions</span><span class="o">=</span><span class="n">ASSET_EXTENSIONS</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Melakukan pembersihan dan filtering data log.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">df</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Memulai preprocessing (filter GET, 200, dan aset)... &quot;</span><span class="p">)</span>
+
+    <span class="c1"># 1. Filter: Hanya ambil Request Method &#39;GET&#39;</span>
+    <span class="n">df_filtered</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Method&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;GET&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="c1"># 2. Filter: Hanya ambil Status &#39;200&#39; (OK)</span>
+    <span class="n">df_filtered</span><span class="p">[</span><span class="s1">&#39;Status&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df_filtered</span><span class="p">[</span><span class="s1">&#39;Status&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+    <span class="n">df_filtered</span> <span class="o">=</span> <span class="n">df_filtered</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Status&#39;</span><span class="p">])</span>
+    <span class="n">df_filtered</span> <span class="o">=</span> <span class="n">df_filtered</span><span class="p">[</span><span class="n">df_filtered</span><span class="p">[</span><span class="s1">&#39;Status&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">200</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="c1"># 3. Filter: Hanya ambil yang berakhiran .html</span>
+    <span class="n">df_clean</span> <span class="o">=</span> <span class="n">df_filtered</span><span class="p">[</span><span class="n">df_filtered</span><span class="p">[</span><span class="s1">&#39;URI&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.html&#39;</span><span class="p">)]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="c1"># Konversi kolom &#39;Time&#39; ke format datetime</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mengonversi waktu (dengan format ISO8601)...&quot;</span><span class="p">)</span>
+    <span class="n">df_clean</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df_clean</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;ISO8601&#39;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data setelah preprocessing (sebelum pengelompokan sesi):&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">df_clean</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">50</span><span class="p">)</span>
+
+    <span class="n">jumlah_awal</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+    <span class="n">jumlah_akhir</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_clean</span><span class="p">)</span>
+    <span class="n">jumlah_dibuang</span> <span class="o">=</span> <span class="n">jumlah_awal</span> <span class="o">-</span> <span class="n">jumlah_akhir</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;✅ Jumlah data setelah diproses (df_clean): </span><span class="si">{</span><span class="n">jumlah_akhir</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;🗑️ Jumlah data &#39;sampah&#39; (aset/error) yang dibuang: </span><span class="si">{</span><span class="n">jumlah_dibuang</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;📉 Persentase penyusutan data: </span><span class="si">{</span><span class="p">(</span><span class="n">jumlah_dibuang</span><span class="o">/</span><span class="n">jumlah_awal</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">50</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df_clean</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">sessionize_data</span><span class="p">(</span><span class="n">df_clean</span><span class="p">,</span> <span class="n">session_timeout</span><span class="o">=</span><span class="n">SESSION_TIMEOUT</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Mengelompokkan data menjadi sesi berdasarkan IP dan batas waktu.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">df_clean</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mengelompokkan sesi (timeout: </span><span class="si">{</span><span class="n">session_timeout</span><span class="si">}</span><span class="s2">)...&quot;</span><span class="p">)</span>
+
+    <span class="n">df_clean</span> <span class="o">=</span> <span class="n">df_clean</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;IP&#39;</span><span class="p">,</span> <span class="s1">&#39;Time&#39;</span><span class="p">])</span>
+
+    <span class="c1"># Mengelompokkan berdasarkan IP dan menghitung SessionID secara terpisah untuk setiap IP</span>
+    <span class="n">df_clean</span><span class="p">[</span><span class="s1">&#39;SessionID&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_clean</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;IP&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+        <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">((</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">session_timeout</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span><span class="o">.</span><span class="n">isna</span><span class="p">()))</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- PRATINJAU LOG DENGAN SESI ---&quot;</span><span class="p">)</span>
+    <span class="n">cols_to_show</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;SessionID&#39;</span><span class="p">,</span> <span class="s1">&#39;IP&#39;</span><span class="p">,</span> <span class="s1">&#39;Time&#39;</span><span class="p">,</span> <span class="s1">&#39;URI&#39;</span><span class="p">,</span> <span class="s1">&#39;Status&#39;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">df_clean</span><span class="p">[</span><span class="n">cols_to_show</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">50</span><span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">df_clean</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;hasil_log_dengan_sesiNASA.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Data log yang sudah dikelompokkan disimpan ke &#39;hasil_log_dengan_sesiNASA.csv&#39;&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Gagal menyimpan file &#39;hasil_log_dengan_sesiNASA.csv&#39;: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df_clean</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">create_matrix</span><span class="p">(</span><span class="n">df_sessionized</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Membuat matriks Sesi x Halaman dari data yang sudah disesikan.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">df_sessionized</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Membuat matriks Sesi x Halaman...&quot;</span><span class="p">)</span>
+
+    <span class="n">matrix</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span>
+        <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="n">df_sessionized</span><span class="p">[</span><span class="s1">&#39;SessionID&#39;</span><span class="p">],</span> <span class="n">df_sessionized</span><span class="p">[</span><span class="s1">&#39;IP&#39;</span><span class="p">]],</span>
+        <span class="n">columns</span><span class="o">=</span><span class="n">df_sessionized</span><span class="p">[</span><span class="s1">&#39;URI&#39;</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="n">matrix_binary</span> <span class="o">=</span> <span class="p">(</span><span class="n">matrix</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+    <span class="n">final_output</span> <span class="o">=</span> <span class="n">matrix_binary</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;SessionID&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">final_output</span> <span class="o">=</span> <span class="n">final_output</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;IP&#39;</span><span class="p">)</span> <span class="c1"># Tambahkan baris ini untuk mengurutkan berdasarkan IP</span>
+
+    <span class="c1"># print(&quot;\n--- HASIL AKHIR (MATRIKS) ---&quot;)</span>
+    <span class="c1"># print(final_output.to_string())</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">final_output</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;hasil_matriks_sesiNASA.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Matriks hasil juga disimpan ke &#39;hasil_matriks_sesiNASA.csv&#39;&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Gagal menyimpan file &#39;hasil_matriks_sesiNASA.csv&#39;: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">final_output</span>
+
+<span class="c1"># Removed the main() call from here as it will be orchestrated by new cells</span>
+<span class="c1"># main()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_raw</span> <span class="o">=</span> <span class="n">load_data</span><span class="p">(</span><span class="n">log_file_path</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df_raw</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Membaca log dari NASA_Jul95_cleaned.csv...
+Error: File tidak ditemukan di NASA_Jul95_cleaned.csv
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">df_raw</span> <span class="o">=</span> <span class="n">load_data</span><span class="p">(</span><span class="n">log_file_path</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">display</span><span class="p">(</span><span class="n">df_raw</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+<span class="ne">AttributeError</span>: &#39;NoneType&#39; object has no attribute &#39;head&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_cleaned</span> <span class="o">=</span> <span class="n">preprocess_data</span><span class="p">(</span><span class="n">df_raw</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df_cleaned</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Memulai preprocessing (filter GET, 200, dan aset)... 
+Mengonversi waktu (dengan format ISO8601)...
+Data setelah preprocessing (sebelum pengelompokan sesi):
+                           IP Logname User                      Time Method                                           URI  Protocol  Status   Size
+2              199.120.110.21       -    - 1995-07-01 00:00:09+00:00    GET  /shuttle/missions/sts-73/mission-sts-73.html  HTTP/1.0     200   4085
+7             205.212.115.106       -    - 1995-07-01 00:00:12+00:00    GET             /shuttle/countdown/countdown.html  HTTP/1.0     200   3985
+18  ppptky391.asahi-net.or.jp       -    - 1995-07-01 00:00:18+00:00    GET                         /facts/about_ksc.html  HTTP/1.0     200   3977
+22   waters-gw.starway.net.au       -    - 1995-07-01 00:00:25+00:00    GET      /shuttle/missions/51-l/mission-51-l.html  HTTP/1.0     200   6723
+37     gayle-gaston.tenet.edu       -    - 1995-07-01 00:00:50+00:00    GET  /shuttle/missions/sts-71/mission-sts-71.html  HTTP/1.0     200  12040
+--------------------------------------------------
+✅ Jumlah data setelah diproses (df_clean): 395507
+🗑️ Jumlah data &#39;sampah&#39; (aset/error) yang dibuang: 1496207
+📉 Persentase penyusutan data: 79.09%
+--------------------------------------------------
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>IP</th>
+      <th>Logname</th>
+      <th>User</th>
+      <th>Time</th>
+      <th>Method</th>
+      <th>URI</th>
+      <th>Protocol</th>
+      <th>Status</th>
+      <th>Size</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2</th>
+      <td>199.120.110.21</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1995-07-01 00:00:09+00:00</td>
+      <td>GET</td>
+      <td>/shuttle/missions/sts-73/mission-sts-73.html</td>
+      <td>HTTP/1.0</td>
+      <td>200</td>
+      <td>4085</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>205.212.115.106</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1995-07-01 00:00:12+00:00</td>
+      <td>GET</td>
+      <td>/shuttle/countdown/countdown.html</td>
+      <td>HTTP/1.0</td>
+      <td>200</td>
+      <td>3985</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>ppptky391.asahi-net.or.jp</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1995-07-01 00:00:18+00:00</td>
+      <td>GET</td>
+      <td>/facts/about_ksc.html</td>
+      <td>HTTP/1.0</td>
+      <td>200</td>
+      <td>3977</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>waters-gw.starway.net.au</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1995-07-01 00:00:25+00:00</td>
+      <td>GET</td>
+      <td>/shuttle/missions/51-l/mission-51-l.html</td>
+      <td>HTTP/1.0</td>
+      <td>200</td>
+      <td>6723</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>gayle-gaston.tenet.edu</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1995-07-01 00:00:50+00:00</td>
+      <td>GET</td>
+      <td>/shuttle/missions/sts-71/mission-sts-71.html</td>
+      <td>HTTP/1.0</td>
+      <td>200</td>
+      <td>12040</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_session</span> <span class="o">=</span> <span class="n">sessionize_data</span><span class="p">(</span><span class="n">df_cleaned</span><span class="p">,</span> <span class="n">SESSION_TIMEOUT</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df_session</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mengelompokkan sesi (timeout: 0:30:00)...
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Rizky\AppData\Local\Temp\ipykernel_20224\3788115607.py:123: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  df_clean[&#39;SessionID&#39;] = df_clean.groupby(&#39;IP&#39;).apply(
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- PRATINJAU LOG DENGAN SESI ---
+         SessionID                               IP                      Time                                                     URI  Status
+727799           1                      ***.novo.dk 1995-07-11 08:17:09+00:00                                               /ksc.html     200
+727853           1                      ***.novo.dk 1995-07-11 08:17:48+00:00                         /shuttle/missions/missions.html     200
+728070           1                      ***.novo.dk 1995-07-11 08:21:05+00:00            /shuttle/missions/sts-35/mission-sts-35.html     200
+728078           1                      ***.novo.dk 1995-07-11 08:21:19+00:00            /shuttle/missions/sts-35/mission-sts-35.html     200
+728185           1                      ***.novo.dk 1995-07-11 08:23:01+00:00               /shuttle/resources/orbiters/columbia.html     200
+452773           1                   007.thegap.com 1995-07-06 17:24:28+00:00            /shuttle/missions/sts-71/mission-sts-71.html     200
+452946           1                   007.thegap.com 1995-07-06 17:26:24+00:00  /shuttle/missions/sts-71/sts-71-day-09-highlights.html     200
+453128           1                   007.thegap.com 1995-07-06 17:28:35+00:00            /shuttle/missions/sts-71/mission-sts-71.html     200
+454019           1                   007.thegap.com 1995-07-06 17:37:44+00:00             /shuttle/missions/sts-71/images/images.html     200
+462535           2                   007.thegap.com 1995-07-06 19:23:26+00:00                            /shuttle/countdown/tour.html     200
+462738           2                   007.thegap.com 1995-07-06 19:26:24+00:00                                   /facilities/mila.html     200
+463280           2                   007.thegap.com 1995-07-06 19:34:36+00:00            /shuttle/technology/sts-newsref/sts-jsc.html     200
+1889725          1  01-dynamic-c.rotterdam.luna.net 1995-07-28 12:58:33+00:00                                       /facts/faq10.html     200
+299938           1  01-dynamic-c.wokingham.luna.net 1995-07-05 07:36:59+00:00             /shuttle/missions/sts-71/movies/movies.html     200
+652537           2  01-dynamic-c.wokingham.luna.net 1995-07-10 08:18:27+00:00                                   /history/history.html     200
+--------------------------------------------------
+
+Data log yang sudah dikelompokkan disimpan ke &#39;hasil_log_dengan_sesiNASA.csv&#39;
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>IP</th>
+      <th>Logname</th>
+      <th>User</th>
+      <th>Time</th>
+      <th>Method</th>
+      <th>URI</th>
+      <th>Protocol</th>
+      <th>Status</th>
+      <th>Size</th>
+      <th>SessionID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>727799</th>
+      <td>***.novo.dk</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1995-07-11 08:17:09+00:00</td>
+      <td>GET</td>
+      <td>/ksc.html</td>
+      <td>HTTP/1.0</td>
+      <td>200</td>
+      <td>7067</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>727853</th>
+      <td>***.novo.dk</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1995-07-11 08:17:48+00:00</td>
+      <td>GET</td>
+      <td>/shuttle/missions/missions.html</td>
+      <td>HTTP/1.0</td>
+      <td>200</td>
+      <td>8678</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>728070</th>
+      <td>***.novo.dk</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1995-07-11 08:21:05+00:00</td>
+      <td>GET</td>
+      <td>/shuttle/missions/sts-35/mission-sts-35.html</td>
+      <td>HTTP/1.0</td>
+      <td>200</td>
+      <td>12118</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>728078</th>
+      <td>***.novo.dk</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1995-07-11 08:21:19+00:00</td>
+      <td>GET</td>
+      <td>/shuttle/missions/sts-35/mission-sts-35.html</td>
+      <td>HTTP/1.0</td>
+      <td>200</td>
+      <td>12118</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>728185</th>
+      <td>***.novo.dk</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1995-07-11 08:23:01+00:00</td>
+      <td>GET</td>
+      <td>/shuttle/resources/orbiters/columbia.html</td>
+      <td>HTTP/1.0</td>
+      <td>200</td>
+      <td>6922</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">final_matrix</span> <span class="o">=</span> <span class="n">create_matrix</span><span class="p">(</span><span class="n">df_session</span><span class="p">)</span>
+<span class="c1"># display(final_matrix.head())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Membuat matriks Sesi x Halaman...
+
+Matriks hasil juga disimpan ke &#39;hasil_matriks_sesiNASA.csv&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hitung frekuensi setiap IP</span>
+<span class="n">ip_counts_final_matrix</span> <span class="o">=</span> <span class="n">final_matrix</span><span class="p">[</span><span class="s1">&#39;IP&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+
+<span class="c1"># Filter IP yang muncul lebih dari satu kali</span>
+<span class="n">duplicate_ips</span> <span class="o">=</span> <span class="n">ip_counts_final_matrix</span><span class="p">[</span><span class="n">ip_counts_final_matrix</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">]</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">duplicate_ips</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;IP yang muncul lebih dari satu kali dalam matriks akhir:&quot;</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">duplicate_ips</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tidak ada IP yang muncul lebih dari satu kali dalam matriks akhir.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>IP yang muncul lebih dari satu kali dalam matriks akhir:
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>IP
+piweba3y.prodigy.com    291
+piweba1y.prodigy.com    288
+www-d1.proxy.aol.com    268
+www-a2.proxy.aol.com    265
+www-b3.proxy.aol.com    259
+                       ... 
+158.44.25.177             2
+194.65.6.10               2
+156.79.6.46               2
+157.253.104.189           2
+134.39.2.181              2
+Name: count, Length: 18172, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Simpan IP yang muncul lebih dari satu kali ke file CSV</span>
+<span class="n">duplicate_ips</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;duplicate_ipsNASA.csv&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Count&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Daftar IP yang muncul lebih dari satu kali telah disimpan ke &#39;duplicate_ipsNASA.csv&#39;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Daftar IP yang muncul lebih dari satu kali telah disimpan ke &#39;duplicate_ipsNASA.csv&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="c1"># Muat kembali file hasil_matriks_sesiNASA.csv</span>
+<span class="n">final_matrix_loaded</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;hasil_matriks_sesiNASA.csv&#39;</span><span class="p">)</span>
+
+<span class="c1"># Mengelompokkan berdasarkan IP dan mengambil nilai maksimum untuk setiap URI</span>
+<span class="c1"># Ini akan menghasilkan 1 jika IP mengunjungi URI tersebut setidaknya sekali</span>
+<span class="n">summarized_matrix</span> <span class="o">=</span> <span class="n">final_matrix_loaded</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;IP&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ringkasan Matriks Akhir dengan IP unik:&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">summarized_matrix</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Bentuk Matriks (Baris x Kolom) setelah dirangkum: </span><span class="si">{</span><span class="n">summarized_matrix</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Simpan hasil ringkasan ke file CSV baru</span>
+<span class="n">summarized_matrix</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;hasil_matriks_dirangkumNASA.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Matriks yang sudah dirangkum disimpan ke &#39;hasil_matriks_dirangkumNASA.csv&#39;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ringkasan Matriks Akhir dengan IP unik:
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>IP</th>
+      <th>/%7Edowns/home.html</th>
+      <th>/%7edowns/home.html</th>
+      <th>/.ksc.html</th>
+      <th>//facilities/spaceport.html</th>
+      <th>//ksc.html</th>
+      <th>//shuttle/missions/missions.html</th>
+      <th>/Harvest/brokers/WWW/admin/admin.html</th>
+      <th>/Harvest/brokers/WWW/query.html</th>
+      <th>/Harvest/brokers/WWW/summary.html</th>
+      <th>...</th>
+      <th>/~downs/harvest-1.2/INSTRUCTIONS.html</th>
+      <th>/~downs/harvest-1.2/brokers/Attributes.html</th>
+      <th>/~downs/harvest-1.2/brokers/www/admin/admin.html</th>
+      <th>/~downs/harvest-1.2/brokers/www/index.html</th>
+      <th>/~downs/harvest-1.2/brokers/www/query-glimpse.html</th>
+      <th>/~downs/harvest-1.2/brokers/www/query.html</th>
+      <th>/~downs/home.html</th>
+      <th>/~downs/www/index.html</th>
+      <th>/~downs/www/query.html</th>
+      <th>/~downs/www/summary.html</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>***.novo.dk</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>007.thegap.com</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>01-dynamic-c.rotterdam.luna.net</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>01-dynamic-c.wokingham.luna.net</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>02-dynamic-c.wokingham.luna.net</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 746 columns</p>
+</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bentuk Matriks (Baris x Kolom) setelah dirangkum: (68286, 746)
+
+Matriks yang sudah dirangkum disimpan ke &#39;hasil_matriks_dirangkumNASA.csv&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Setelah Anda menjalankan sel-sel yang disebutkan di atas, <code class="docutils literal notranslate"><span class="pre">hasil_matriks_sesiNASA.csv</span></code> akan diperbarui. Sekarang, mari kita muat file tersebut dan lihat ringkasannya:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="c1"># Muat file CSV yang sudah diperbarui</span>
+<span class="n">final_matrix_loaded</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;hasil_matriks_dirangkumNASA.csv&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pratinjau Matriks Sesi x Halaman yang sudah diurutkan berdasarkan IP:&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">final_matrix_loaded</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pratinjau Matriks Sesi x Halaman yang sudah diurutkan berdasarkan IP:
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>IP</th>
+      <th>/%7Edowns/home.html</th>
+      <th>/%7edowns/home.html</th>
+      <th>/.ksc.html</th>
+      <th>//facilities/spaceport.html</th>
+      <th>//ksc.html</th>
+      <th>//shuttle/missions/missions.html</th>
+      <th>/Harvest/brokers/WWW/admin/admin.html</th>
+      <th>/Harvest/brokers/WWW/query.html</th>
+      <th>/Harvest/brokers/WWW/summary.html</th>
+      <th>...</th>
+      <th>/~downs/harvest-1.2/INSTRUCTIONS.html</th>
+      <th>/~downs/harvest-1.2/brokers/Attributes.html</th>
+      <th>/~downs/harvest-1.2/brokers/www/admin/admin.html</th>
+      <th>/~downs/harvest-1.2/brokers/www/index.html</th>
+      <th>/~downs/harvest-1.2/brokers/www/query-glimpse.html</th>
+      <th>/~downs/harvest-1.2/brokers/www/query.html</th>
+      <th>/~downs/home.html</th>
+      <th>/~downs/www/index.html</th>
+      <th>/~downs/www/query.html</th>
+      <th>/~downs/www/summary.html</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>***.novo.dk</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>007.thegap.com</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>01-dynamic-c.rotterdam.luna.net</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>01-dynamic-c.wokingham.luna.net</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>02-dynamic-c.wokingham.luna.net</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 746 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Ringkasan Matriks Akhir ---&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Bentuk Matriks (Baris x Kolom): </span><span class="si">{</span><span class="n">final_matrix_loaded</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah IP Unik: </span><span class="si">{</span><span class="n">final_matrix_loaded</span><span class="p">[</span><span class="s1">&#39;IP&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Daftar Kolom (URI):</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">final_matrix_loaded</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="mi">1</span><span class="p">:])</span>
+
+<span class="c1"># Menghitung jumlah sesi yang mengunjungi setiap URI (kolom)</span>
+<span class="c1"># Kecuali kolom &#39;IP&#39; itu sendiri</span>
+<span class="n">uri_counts</span> <span class="o">=</span> <span class="n">final_matrix_loaded</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;IP&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Top 5 URI yang paling banyak diakses:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">uri_counts</span><span class="o">.</span><span class="n">nlargest</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">5 URI yang paling sedikit diakses (jika ada lebih dari 5):&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">uri_counts</span><span class="o">.</span><span class="n">nsmallest</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Ringkasan Matriks Akhir ---
+Bentuk Matriks (Baris x Kolom): (68286, 746)
+Jumlah IP Unik: 68286
+Daftar Kolom (URI):
+ [&#39;/%7Edowns/home.html&#39;, &#39;/%7edowns/home.html&#39;, &#39;/.ksc.html&#39;, &#39;//facilities/spaceport.html&#39;, &#39;//ksc.html&#39;, &#39;//shuttle/missions/missions.html&#39;, &#39;/Harvest/brokers/WWW/admin/admin.html&#39;, &#39;/Harvest/brokers/WWW/query.html&#39;, &#39;/Harvest/brokers/WWW/summary.html&#39;, &#39;/Harvest/brokers/queryhelp.html&#39;, &#39;/Harvest/gatherers/WWW/tmp/index.html&#39;, &#39;/base-ops/procurement/procurement.html&#39;, &#39;/biomed/bibliography/biblio.html&#39;, &#39;/biomed/climate/airqual.html&#39;, &#39;/biomed/climate/climate.html&#39;, &#39;/biomed/env.html&#39;, &#39;/biomed/fire/fire.html&#39;, &#39;/biomed/glossary/glossary.html&#39;, &#39;/biomed/groundwater/groundwater.html&#39;, &#39;/biomed/history/history.html&#39;, &#39;/biomed/intro.html&#39;, &#39;/biomed/lan/lan4.html&#39;, &#39;/biomed/lan/lan6.html&#39;, &#39;/biomed/program.html&#39;, &#39;/biomed/soils/soils.html&#39;, &#39;/biomed/threat/animals.html&#39;, &#39;/biomed/threat/bldeagle.html&#39;, &#39;/biomed/threat/indigo.html&#39;, &#39;/biomed/threat/manatee.html&#39;, &#39;/biomed/threat/plants.html&#39;, &#39;/biomed/threat/seaturtl.html&#39;, &#39;/biomed/threat/tande.html&#39;, &#39;/biomed/threat/wdstork.html&#39;, &#39;/biomed/vegetation/aquatic.html&#39;, &#39;/biomed/vegetation/freshmrs.html&#39;, &#39;/biomed/vegetation/hammock.html&#39;, &#39;/biomed/vegetation/impound.html&#39;, &#39;/biomed/vegetation/islands.html&#39;, &#39;/biomed/vegetation/saltmrsh.html&#39;, &#39;/biomed/vegetation/scrub.html&#39;, &#39;/biomed/vegetation/teresveg.html&#39;, &#39;/biomed/vegetation/vegetation.html&#39;, &#39;/biomed/wetlands/wetlands.html&#39;, &#39;/cgi-bin/imagemap/Glance/Backgrnd.html&#39;, &#39;/facilities/canister.html&#39;, &#39;/facilities/cdsc.html&#39;, &#39;/facilities/cif.html&#39;, &#39;/facilities/crawler.html&#39;, &#39;/facilities/crawlerway.html&#39;, &#39;/facilities/hmf.html&#39;, &#39;/facilities/hq.html&#39;, &#39;/facilities/lc39a.html&#39;, &#39;/facilities/lcc.html&#39;, &#39;/facilities/letf.html&#39;, &#39;/facilities/lf.html&#39;, &#39;/facilities/lps.html&#39;, &#39;/facilities/mila.html&#39;, &#39;/facilities/mlp.html&#39;, &#39;/facilities/oc.html&#39;, &#39;/facilities/opf.html&#39;, &#39;/facilities/osb.html&#39;, &#39;/facilities/phsf.html&#39;, &#39;/facilities/press.html&#39;, &#39;/facilities/prf.html&#39;, &#39;/facilities/saef2.html&#39;, &#39;/facilities/slf.html&#39;, &#39;/facilities/spaceport.html&#39;, &#39;/facilities/sspf.html&#39;, &#39;/facilities/tour.html&#39;, &#39;/facilities/vab.html&#39;, &#39;/facilities/vpf.html&#39;, &#39;/facts/about_ksc.html&#39;, &#39;/facts/facts.html&#39;, &#39;/facts/faq.html&#39;, &#39;/facts/faq01.html&#39;, &#39;/facts/faq02.html&#39;, &#39;/facts/faq03.html&#39;, &#39;/facts/faq04.html&#39;, &#39;/facts/faq05.html&#39;, &#39;/facts/faq06.html&#39;, &#39;/facts/faq07.html&#39;, &#39;/facts/faq08.html&#39;, &#39;/facts/faq09.html&#39;, &#39;/facts/faq10.html&#39;, &#39;/facts/faq11.html&#39;, &#39;/facts/faq12.html&#39;, &#39;/facts/faq13.html&#39;, &#39;/facts/internet/bdgtti-1.01.html&#39;, &#39;/facts/internet/bdgtti-1.01_foot.html&#39;, &#39;/facts/internet/bdgtti-1.01_toc.html&#39;, &#39;/facts/internet/html-primer.html&#39;, &#39;/facts/internet/url-primer.html&#39;, &#39;/facts/space_congress_95.html&#39;, &#39;/facts/wais-readme.html&#39;, &#39;/history//apollo/apollo-13/apollo-13-info.html&#39;, &#39;/history//apollo/apollo-13/apollo-13.html&#39;, &#39;/history//history.html&#39;, &#39;/history/apollo//apollo-13/apollo-13.html&#39;, &#39;/history/apollo/a-001/a-001-info.html&#39;, &#39;/history/apollo/a-001/a-001.html&#39;, &#39;/history/apollo/a-002/a-002-info.html&#39;, &#39;/history/apollo/a-002/a-002.html&#39;, &#39;/history/apollo/a-003/a-003-info.html&#39;, &#39;/history/apollo/a-003/a-003.html&#39;, &#39;/history/apollo/a-004/a-004-info.html&#39;, &#39;/history/apollo/a-004/a-004.html&#39;, &#39;/history/apollo/apollo-1/apollo-1-info.html&#39;, &#39;/history/apollo/apollo-1/apollo-1.html&#39;, &#39;/history/apollo/apollo-10/apollo-10-info.html&#39;, &#39;/history/apollo/apollo-10/apollo-10.html&#39;, &#39;/history/apollo/apollo-11/apollo-11-info.html&#39;, &#39;/history/apollo/apollo-11/apollo-11.html&#39;, &#39;/history/apollo/apollo-12/apollo-12-info.html&#39;, &#39;/history/apollo/apollo-12/apollo-12.html&#39;, &#39;/history/apollo/apollo-13//apollo-13.html&#39;, &#39;/history/apollo/apollo-13/apollo-13-info.html&#39;, &#39;/history/apollo/apollo-13/apollo-13.html&#39;, &#39;/history/apollo/apollo-14/apollo-14-info.html&#39;, &#39;/history/apollo/apollo-14/apollo-14.html&#39;, &#39;/history/apollo/apollo-15/apollo-15-info.html&#39;, &#39;/history/apollo/apollo-15/apollo-15.html&#39;, &#39;/history/apollo/apollo-16/apollo-16-info.html&#39;, &#39;/history/apollo/apollo-16/apollo-16.html&#39;, &#39;/history/apollo/apollo-17/apollo-17-info.html&#39;, &#39;/history/apollo/apollo-17/apollo-17.html&#39;, &#39;/history/apollo/apollo-4/apollo-4-info.html&#39;, &#39;/history/apollo/apollo-4/apollo-4.html&#39;, &#39;/history/apollo/apollo-5/apollo-5-info.html&#39;, &#39;/history/apollo/apollo-5/apollo-5.html&#39;, &#39;/history/apollo/apollo-6/apollo-6-info.html&#39;, &#39;/history/apollo/apollo-6/apollo-6.html&#39;, &#39;/history/apollo/apollo-7/apollo-7-info.html&#39;, &#39;/history/apollo/apollo-7/apollo-7.html&#39;, &#39;/history/apollo/apollo-8/apollo-8-info.html&#39;, &#39;/history/apollo/apollo-8/apollo-8.html&#39;, &#39;/history/apollo/apollo-9/apollo-9-info.html&#39;, &#39;/history/apollo/apollo-9/apollo-9.html&#39;, &#39;/history/apollo/apollo-sa.html&#39;, &#39;/history/apollo/apollo.html&#39;, &#39;/history/apollo/as-201/as-201-info.html&#39;, &#39;/history/apollo/as-201/as-201.html&#39;, &#39;/history/apollo/as-202/as-202-info.html&#39;, &#39;/history/apollo/as-202/as-202.html&#39;, &#39;/history/apollo/as-203/as-203-info.html&#39;, &#39;/history/apollo/as-203/as-203.html&#39;, &#39;/history/apollo/pad-abort-test-1/pad-abort-test-1-info.html&#39;, &#39;/history/apollo/pad-abort-test-1/pad-abort-test-1.html&#39;, &#39;/history/apollo/pad-abort-test-2/pad-abort-test-2-info.html&#39;, &#39;/history/apollo/pad-abort-test-2/pad-abort-test-2.html&#39;, &#39;/history/apollo/sa-1/sa-1-info.html&#39;, &#39;/history/apollo/sa-1/sa-1.html&#39;, &#39;/history/apollo/sa-10/sa-10-info.html&#39;, &#39;/history/apollo/sa-10/sa-10.html&#39;, &#39;/history/apollo/sa-2/sa-2-info.html&#39;, &#39;/history/apollo/sa-2/sa-2.html&#39;, &#39;/history/apollo/sa-3/sa-3-info.html&#39;, &#39;/history/apollo/sa-3/sa-3.html&#39;, &#39;/history/apollo/sa-4/sa-4-info.html&#39;, &#39;/history/apollo/sa-4/sa-4.html&#39;, &#39;/history/apollo/sa-5/sa-5-info.html&#39;, &#39;/history/apollo/sa-5/sa-5.html&#39;, &#39;/history/apollo/sa-6/sa-6-info.html&#39;, &#39;/history/apollo/sa-6/sa-6.html&#39;, &#39;/history/apollo/sa-7/sa-7-info.html&#39;, &#39;/history/apollo/sa-7/sa-7.html&#39;, &#39;/history/apollo/sa-8/sa-8-info.html&#39;, &#39;/history/apollo/sa-8/sa-8.html&#39;, &#39;/history/apollo/sa-9/sa-9-info.html&#39;, &#39;/history/apollo/sa-9/sa-9.html&#39;, &#39;/history/astp/astp.html&#39;, &#39;/history/gemini/gemini-1/gemini-1-info.html&#39;, &#39;/history/gemini/gemini-1/gemini-1.html&#39;, &#39;/history/gemini/gemini-2/gemini-2-info.html&#39;, &#39;/history/gemini/gemini-2/gemini-2.html&#39;, &#39;/history/gemini/gemini-3/gemini-3-info.html&#39;, &#39;/history/gemini/gemini-3/gemini-3.html&#39;, &#39;/history/gemini/gemini-4/gemini-4-info.html&#39;, &#39;/history/gemini/gemini-4/gemini-4.html&#39;, &#39;/history/gemini/gemini-ix-a/gemini-ix-a-info.html&#39;, &#39;/history/gemini/gemini-ix-a/gemini-ix-a.html&#39;, &#39;/history/gemini/gemini-v/gemini-v-info.html&#39;, &#39;/history/gemini/gemini-v/gemini-v.html&#39;, &#39;/history/gemini/gemini-vi-a/gemini-vi-a-info.html&#39;, &#39;/history/gemini/gemini-vi-a/gemini-vi-a.html&#39;, &#39;/history/gemini/gemini-vii/gemini-vii-info.html&#39;, &#39;/history/gemini/gemini-vii/gemini-vii.html&#39;, &#39;/history/gemini/gemini-viii/gemini-viii-info.html&#39;, &#39;/history/gemini/gemini-viii/gemini-viii.html&#39;, &#39;/history/gemini/gemini-x/gemini-x-info.html&#39;, &#39;/history/gemini/gemini-x/gemini-x.html&#39;, &#39;/history/gemini/gemini-xi/gemini-xi-info.html&#39;, &#39;/history/gemini/gemini-xi/gemini-xi.html&#39;, &#39;/history/gemini/gemini-xii/gemini-xii-info.html&#39;, &#39;/history/gemini/gemini-xii/gemini-xii.html&#39;, &#39;/history/gemini/gemini.html&#39;, &#39;/history/gemini/gemini_inwork.html&#39;, &#39;/history/history.html&#39;, &#39;/history/mercury/ma-6/ma-6.html&#39;, &#39;/history/mercury/ma-7/ma-7.html&#39;, &#39;/history/mercury/ma-8/ma-8.html&#39;, &#39;/history/mercury/ma-9/ma-9.html&#39;, &#39;/history/mercury/mercury.html&#39;, &#39;/history/mercury/mr-3/mr-3.html&#39;, &#39;/history/mercury/mr-4/mr-4.html&#39;, &#39;/history/skylab/skylab-1.html&#39;, &#39;/history/skylab/skylab-2-backup.html&#39;, &#39;/history/skylab/skylab-2.html&#39;, &#39;/history/skylab/skylab-3.html&#39;, &#39;/history/skylab/skylab-4.html&#39;, &#39;/history/skylab/skylab.html&#39;, &#39;/ksc.html&#39;, &#39;/mdss/MDSS.html&#39;, &#39;/mdss/apd/apd.html&#39;, &#39;/mdss/org.html&#39;, &#39;/mdss/ped/acs/ACS_homepage.html&#39;, &#39;/mdss/ped/acs/acshistory.html&#39;, &#39;/mdss/ped/acs/cmu.html&#39;, &#39;/mdss/ped/acs/othersites.html&#39;, &#39;/mdss/shuttleproc.html&#39;, &#39;/mdss/srqa/../MDSS.html&#39;, &#39;/mdss/srqa/qpa/qpa.html&#39;, &#39;/mdss/srqa/qpa/tools.html&#39;, &#39;/mdss/stationproc.html&#39;, &#39;/msfc/astro_correct.html&#39;, &#39;/msfc/astro_home.html&#39;, &#39;/msfc/crew/astronaut.html&#39;, &#39;/msfc/crew/crew.html&#39;, &#39;/msfc/crew/durrance.html&#39;, &#39;/msfc/crew/food.html&#39;, &#39;/msfc/crew/gregory.html&#39;, &#39;/msfc/crew/grunsfeld.html&#39;, &#39;/msfc/crew/jernigan.html&#39;, &#39;/msfc/crew/lawrence.html&#39;, &#39;/msfc/crew/oswald.html&#39;, &#39;/msfc/crew/parise.html&#39;, &#39;/msfc/crew/patches.html&#39;, &#39;/msfc/crew/training.html&#39;, &#39;/msfc/crew/trivia.html&#39;, &#39;/msfc/crew/vangen.html&#39;, &#39;/msfc/crew/wannabe.html&#39;, &#39;/msfc/description/description.html&#39;, &#39;/msfc/description/instruments/hut-tech.html&#39;, &#39;/msfc/description/instruments/hut.html&#39;, &#39;/msfc/description/instruments/imaging.html&#39;, &#39;/msfc/description/instruments/uit-tech.html&#39;, &#39;/msfc/description/instruments/uit.html&#39;, &#39;/msfc/description/instruments/wuppe.html&#39;, &#39;/msfc/description/shuttle/endeavour.html&#39;, &#39;/msfc/description/spacelab/spacelab.html&#39;, &#39;/msfc/description/starview.html&#39;, &#39;/msfc/description/ultraviolet.html&#39;, &#39;/msfc/onboard/onboard.html&#39;, &#39;/msfc/other.html&#39;, &#39;/msfc/team/hq.html&#39;, &#39;/msfc/team/jsc.html&#39;, &#39;/msfc/team/ksc.html&#39;, &#39;/msfc/team/msfc/cadre.html&#39;, &#39;/msfc/team/msfc/msfc.html&#39;, &#39;/msfc/team/msfc/pap.html&#39;, &#39;/msfc/team/msfc/pctc.html&#39;, &#39;/msfc/team/nasa_team.html&#39;, &#39;/msfc/visitor/visitors.html&#39;, &#39;/msfc/who.html&#39;, &#39;/pao/pao-test.html&#39;, &#39;/payloads/cm-systems.html&#39;, &#39;/payloads/org/cg-esd.html&#39;, &#39;/payloads/org/cg-iso.html&#39;, &#39;/payloads/org/cg-lmd.html&#39;, &#39;/payloads/org/cg-lso.html&#39;, &#39;/payloads/org/cg.html&#39;, &#39;/payloads/org/cm-cas.html&#39;, &#39;/payloads/org/cm-int.html&#39;, &#39;/payloads/org/cm-org.html&#39;, &#39;/payloads/org/cm-pmo.html&#39;, &#39;/payloads/org/cm.html&#39;, &#39;/payloads/org/cs-exd.html&#39;, &#39;/payloads/org/cs-ote.html&#39;, &#39;/payloads/org/cs-ped.html&#39;, &#39;/payloads/org/cs-pts.html&#39;, &#39;/payloads/org/cs.html&#39;, &#39;/payloads/org/cv-kvr.html&#39;, &#39;/payloads/org/cv-lod.html&#39;, &#39;/payloads/org/cv-pso.html&#39;, &#39;/payloads/org/cv.html&#39;, &#39;/payloads/processing/paylproc.html&#39;, &#39;/payloads/processing/ppart0.html&#39;, &#39;/payloads/processing/ppart1.html&#39;, &#39;/payloads/processing/ppart10.html&#39;, &#39;/payloads/processing/ppart11.html&#39;, &#39;/payloads/processing/ppart12.html&#39;, &#39;/payloads/processing/ppart2.html&#39;, &#39;/payloads/processing/ppart3.html&#39;, &#39;/payloads/processing/ppart4.html&#39;, &#39;/payloads/processing/ppart5.html&#39;, &#39;/payloads/processing/ppart6.html&#39;, &#39;/payloads/processing/ppart7.html&#39;, &#39;/payloads/processing/ppart8.html&#39;, &#39;/payloads/processing/ppart9.html&#39;, &#39;/payloads/processing/vpart0.html&#39;, &#39;/payloads/processing/vpart1.html&#39;, &#39;/payloads/processing/vpart10.html&#39;, &#39;/payloads/processing/vpart11.html&#39;, &#39;/payloads/processing/vpart2.html&#39;, &#39;/payloads/processing/vpart3.html&#39;, &#39;/payloads/processing/vpart4.html&#39;, &#39;/payloads/processing/vpart5.html&#39;, &#39;/payloads/processing/vpart6.html&#39;, &#39;/payloads/processing/vpart7.html&#39;, &#39;/payloads/processing/vpart8.html&#39;, &#39;/payloads/processing/vpart9.html&#39;, &#39;/persons/astronauts/a-to-d/DurranceST.html&#39;, &#39;/persons/astronauts/m-to-p/PariseRA.html&#39;, &#39;/persons/astronauts/u-to-z/VangenSD.html&#39;, &#39;/persons/nasa-cm/hec.html&#39;, &#39;/persons/nasa-cm/jmd.html&#39;, &#39;/persons/nasa-cm/mtd.html&#39;, &#39;/persons/nasa-cm/smr.html&#39;, &#39;/persons/nasa-cm/tnn.html&#39;, &#39;/persons/people.html&#39;, &#39;/procurement/procurement.html&#39;, &#39;/shuttle/countdown/count.html&#39;, &#39;/shuttle/countdown/count2.html&#39;, &#39;/shuttle/countdown/countdown.html&#39;, &#39;/shuttle/countdown/countdown70.html&#39;, &#39;/shuttle/countdown/countdown71.html&#39;, &#39;/shuttle/countdown/ksc.html&#39;, &#39;/shuttle/countdown/launch-team.html&#39;, &#39;/shuttle/countdown/liftoff.html&#39;, &#39;/shuttle/countdown/liftoff71.html&#39;, &#39;/shuttle/countdown/lps/aa/aa.html&#39;, &#39;/shuttle/countdown/lps/ab/ab.html&#39;, &#39;/shuttle/countdown/lps/ac/ac.html&#39;, &#39;/shuttle/countdown/lps/bkup-intg/bkup-intg.html&#39;, &#39;/shuttle/countdown/lps/c-1/c-1.html&#39;, &#39;/shuttle/countdown/lps/c-11-12/c-11-12.html&#39;, &#39;/shuttle/countdown/lps/c-2/c-2.html&#39;, &#39;/shuttle/countdown/lps/c-3-4/c-3-4.html&#39;, &#39;/shuttle/countdown/lps/c-5-6/c-5-6.html&#39;, &#39;/shuttle/countdown/lps/c-7-8/c-7-8.html&#39;, &#39;/shuttle/countdown/lps/c-9-10/c-9-10.html&#39;, &#39;/shuttle/countdown/lps/consoles.html&#39;, &#39;/shuttle/countdown/lps/fr.html&#39;, &#39;/shuttle/countdown/lps/hsp/hsp.html&#39;, &#39;/shuttle/countdown/lps/mpeg.html&#39;, &#39;/shuttle/countdown/lps/mstr/mstr.html&#39;, &#39;/shuttle/countdown/lps/omr/omr.html&#39;, &#39;/shuttle/countdown/lps/osr/osr.html&#39;, &#39;/shuttle/countdown/ocount.html&#39;, &#39;/shuttle/countdown/tour.html&#39;, &#39;/shuttle/countdown/video/video.html&#39;, &#39;/shuttle/missions/100th.html&#39;, &#39;/shuttle/missions/41-b/41-b-info.html&#39;, &#39;/shuttle/missions/41-b/mission-41-b.html&#39;, &#39;/shuttle/missions/41-c/41-c-info.html&#39;, &#39;/shuttle/missions/41-c/mission-41-c.html&#39;, &#39;/shuttle/missions/41-d/41-d-info.html&#39;, &#39;/shuttle/missions/41-d/mission-41-d.html&#39;, &#39;/shuttle/missions/41-g/41-g-info.html&#39;, &#39;/shuttle/missions/41-g/mission-41-g.html&#39;, &#39;/shuttle/missions/51-a/51-a-info.html&#39;, &#39;/shuttle/missions/51-a/mission-51-a.html&#39;, &#39;/shuttle/missions/51-b/51-b-info.html&#39;, &#39;/shuttle/missions/51-b/mission-51-b.html&#39;, &#39;/shuttle/missions/51-c/51-c-info.html&#39;, &#39;/shuttle/missions/51-c/mission-51-c.html&#39;, &#39;/shuttle/missions/51-d/51-d-info.html&#39;, &#39;/shuttle/missions/51-d/mission-51-d.html&#39;, &#39;/shuttle/missions/51-f/51-f-info.html&#39;, &#39;/shuttle/missions/51-f/mission-51-f.html&#39;, &#39;/shuttle/missions/51-g/51-g-info.html&#39;, &#39;/shuttle/missions/51-g/mission-51-g.html&#39;, &#39;/shuttle/missions/51-i/51-i-info.html&#39;, &#39;/shuttle/missions/51-i/mission-51-i.html&#39;, &#39;/shuttle/missions/51-j/51-j-info.html&#39;, &#39;/shuttle/missions/51-j/mission-51-j.html&#39;, &#39;/shuttle/missions/51-l/51-l-info.html&#39;, &#39;/shuttle/missions/51-l/mission-51-l.html&#39;, &#39;/shuttle/missions/61-a/61-a-info.html&#39;, &#39;/shuttle/missions/61-a/mission-61-a.html&#39;, &#39;/shuttle/missions/61-b/61-b-info.html&#39;, &#39;/shuttle/missions/61-b/mission-61-b.html&#39;, &#39;/shuttle/missions/61-c/61-c-info.html&#39;, &#39;/shuttle/missions/61-c/mission-61-c.html&#39;, &#39;/shuttle/missions/missions.html&#39;, &#39;/shuttle/missions/rollback.html&#39;, &#39;/shuttle/missions/rollbacks.html&#39;, &#39;/shuttle/missions/sts-1/mission-sts-1.html&#39;, &#39;/shuttle/missions/sts-1/sts-1-info.html&#39;, &#39;/shuttle/missions/sts-2/mission-sts-2.html&#39;, &#39;/shuttle/missions/sts-2/sts-2-info.html&#39;, &#39;/shuttle/missions/sts-26/mission-sts-26.html&#39;, &#39;/shuttle/missions/sts-26/sts-26-info.html&#39;, &#39;/shuttle/missions/sts-27/mission-sts-27.html&#39;, &#39;/shuttle/missions/sts-27/sts-27-info.html&#39;, &#39;/shuttle/missions/sts-28/mission-sts-28.html&#39;, &#39;/shuttle/missions/sts-28/sts-28-info.html&#39;, &#39;/shuttle/missions/sts-29/mission-sts-29.html&#39;, &#39;/shuttle/missions/sts-29/sts-29-info.html&#39;, &#39;/shuttle/missions/sts-3/mission-sts-3.html&#39;, &#39;/shuttle/missions/sts-3/sts-3-info.html&#39;, &#39;/shuttle/missions/sts-30/mission-sts-30.html&#39;, &#39;/shuttle/missions/sts-30/sts-30-info.html&#39;, &#39;/shuttle/missions/sts-31/mission-sts-31.html&#39;, &#39;/shuttle/missions/sts-31/sts-31-info.html&#39;, &#39;/shuttle/missions/sts-32/mission-sts-32.html&#39;, &#39;/shuttle/missions/sts-32/sts-32-info.html&#39;, &#39;/shuttle/missions/sts-33/mission-sts-33.html&#39;, &#39;/shuttle/missions/sts-33/sts-33-info.html&#39;, &#39;/shuttle/missions/sts-34/mission-sts-34.html&#39;, &#39;/shuttle/missions/sts-34/sts-34-info.html&#39;, &#39;/shuttle/missions/sts-35/mission-sts-35.html&#39;, &#39;/shuttle/missions/sts-35/sts-35-info.html&#39;, &#39;/shuttle/missions/sts-36/mission-sts-36.html&#39;, &#39;/shuttle/missions/sts-36/sts-36-info.html&#39;, &#39;/shuttle/missions/sts-37/mission-sts-37.html&#39;, &#39;/shuttle/missions/sts-37/sts-37-info.html&#39;, &#39;/shuttle/missions/sts-38/mission-sts-38.html&#39;, &#39;/shuttle/missions/sts-38/sts-38-info.html&#39;, &#39;/shuttle/missions/sts-39/mission-sts-39.html&#39;, &#39;/shuttle/missions/sts-39/sts-39-info.html&#39;, &#39;/shuttle/missions/sts-4/mission-sts-4.html&#39;, &#39;/shuttle/missions/sts-4/sts-4-info.html&#39;, &#39;/shuttle/missions/sts-40/mission-sts-40.html&#39;, &#39;/shuttle/missions/sts-40/sts-40-info.html&#39;, &#39;/shuttle/missions/sts-41/mission-sts-41.html&#39;, &#39;/shuttle/missions/sts-41/sts-41-info.html&#39;, &#39;/shuttle/missions/sts-42/mission-sts-42.html&#39;, &#39;/shuttle/missions/sts-42/sts-42-info.html&#39;, &#39;/shuttle/missions/sts-43/mission-sts-43.html&#39;, &#39;/shuttle/missions/sts-43/sts-43-info.html&#39;, &#39;/shuttle/missions/sts-44/mission-sts-44.html&#39;, &#39;/shuttle/missions/sts-44/sts-44-info.html&#39;, &#39;/shuttle/missions/sts-45/mission-sts-45.html&#39;, &#39;/shuttle/missions/sts-45/sts-45-info.html&#39;, &#39;/shuttle/missions/sts-46/mission-sts-46.html&#39;, &#39;/shuttle/missions/sts-46/sts-46-info.html&#39;, &#39;/shuttle/missions/sts-47/mission-sts-47.html&#39;, &#39;/shuttle/missions/sts-47/sts-47-info.html&#39;, &#39;/shuttle/missions/sts-48/mission-sts-48.html&#39;, &#39;/shuttle/missions/sts-48/sts-48-info.html&#39;, &#39;/shuttle/missions/sts-49/mission-sts-49.html&#39;, &#39;/shuttle/missions/sts-49/sts-49-info.html&#39;, &#39;/shuttle/missions/sts-5/mission-sts-5.html&#39;, &#39;/shuttle/missions/sts-5/sts-5-info.html&#39;, &#39;/shuttle/missions/sts-50/mission-sts-50.html&#39;, &#39;/shuttle/missions/sts-50/sts-50-info.html&#39;, &#39;/shuttle/missions/sts-51/mission-sts-51.html&#39;, &#39;/shuttle/missions/sts-51/sts-51-info.html&#39;, &#39;/shuttle/missions/sts-52/mission-sts-52.html&#39;, &#39;/shuttle/missions/sts-52/sts-52-info.html&#39;, &#39;/shuttle/missions/sts-53/mission-sts-53.html&#39;, &#39;/shuttle/missions/sts-53/sts-53-info.html&#39;, &#39;/shuttle/missions/sts-54/mission-sts-54.html&#39;, &#39;/shuttle/missions/sts-54/sts-54-info.html&#39;, &#39;/shuttle/missions/sts-55/mission-sts-55.html&#39;, &#39;/shuttle/missions/sts-55/sts-55-info.html&#39;, &#39;/shuttle/missions/sts-56/mission-sts-56.html&#39;, &#39;/shuttle/missions/sts-56/sts-56-info.html&#39;, &#39;/shuttle/missions/sts-57/mission-sts-57.html&#39;, &#39;/shuttle/missions/sts-57/sts-57-info.html&#39;, &#39;/shuttle/missions/sts-58/mission-sts-58.html&#39;, &#39;/shuttle/missions/sts-58/sts-58-info.html&#39;, &#39;/shuttle/missions/sts-59/mission-sts-59.html&#39;, &#39;/shuttle/missions/sts-59/sts-59-info.html&#39;, &#39;/shuttle/missions/sts-6/mission-sts-6.html&#39;, &#39;/shuttle/missions/sts-6/sts-6-info.html&#39;, &#39;/shuttle/missions/sts-60/mission-sts-60.html&#39;, &#39;/shuttle/missions/sts-60/sts-60-info.html&#39;, &#39;/shuttle/missions/sts-61/mission-sts-61.html&#39;, &#39;/shuttle/missions/sts-61/sts-61-info.html&#39;, &#39;/shuttle/missions/sts-62/mission-sts-62.html&#39;, &#39;/shuttle/missions/sts-62/sts-62-info.html&#39;, &#39;/shuttle/missions/sts-63/mission-sts-63.html&#39;, &#39;/shuttle/missions/sts-63/sts-63-info.html&#39;, &#39;/shuttle/missions/sts-64/mission-sts-64.html&#39;, &#39;/shuttle/missions/sts-64/sts-64-info.html&#39;, &#39;/shuttle/missions/sts-65/mission-sts-65.html&#39;, &#39;/shuttle/missions/sts-65/sts-65-info.html&#39;, &#39;/shuttle/missions/sts-66/mission-sts-66.html&#39;, &#39;/shuttle/missions/sts-66/sts-66-info.html&#39;, &#39;/shuttle/missions/sts-67/images/images.html&#39;, &#39;/shuttle/missions/sts-67/mission-sts-67.html&#39;, &#39;/shuttle/missions/sts-67/mission-sts-67a.html&#39;, &#39;/shuttle/missions/sts-67/sts-67-day-01-highlights.html&#39;, &#39;/shuttle/missions/sts-67/sts-67-day-02-highlights.html&#39;, &#39;/shuttle/missions/sts-67/sts-67-day-03-highlights.html&#39;, &#39;/shuttle/missions/sts-67/sts-67-day-04-highlights.html&#39;, &#39;/shuttle/missions/sts-67/sts-67-day-05-highlights.html&#39;, &#39;/shuttle/missions/sts-67/sts-67-day-06-highlights.html&#39;, &#39;/shuttle/missions/sts-67/sts-67-day-07-highlights.html&#39;, &#39;/shuttle/missions/sts-67/sts-67-day-08-highlights.html&#39;, &#39;/shuttle/missions/sts-67/sts-67-day-09-highlights.html&#39;, &#39;/shuttle/missions/sts-67/sts-67-day-10-highlights.html&#39;, &#39;/shuttle/missions/sts-67/sts-67-day-11-highlights.html&#39;, &#39;/shuttle/missions/sts-67/sts-67-day-12-highlights.html&#39;, &#39;/shuttle/missions/sts-67/sts-67-day-13-highlights.html&#39;, &#39;/shuttle/missions/sts-67/sts-67-day-14-highlights.html&#39;, &#39;/shuttle/missions/sts-67/sts-67-info.html&#39;, &#39;/shuttle/missions/sts-68/ksc-srl-image.html&#39;, &#39;/shuttle/missions/sts-68/mission-sts-68.html&#39;, &#39;/shuttle/missions/sts-68/sts-68-info.html&#39;, &#39;/shuttle/missions/sts-69/mission-sts-69.html&#39;, &#39;/shuttle/missions/sts-69/movies/movies.html&#39;, &#39;/shuttle/missions/sts-69/sts-69-info.html&#39;, &#39;/shuttle/missions/sts-7/mission-sts-7.html&#39;, &#39;/shuttle/missions/sts-7/sts-7-info.html&#39;, &#39;/shuttle/missions/sts-70/images/images.html&#39;, &#39;/shuttle/missions/sts-70/images/images1.html&#39;, &#39;/shuttle/missions/sts-70/mission-sts-70.html&#39;, &#39;/shuttle/missions/sts-70/movies/movies.html&#39;, &#39;/shuttle/missions/sts-70/sts-70-day-01-highlights.html&#39;, &#39;/shuttle/missions/sts-70/sts-70-day-02-highlights.html&#39;, &#39;/shuttle/missions/sts-70/sts-70-day-03-highlights.html&#39;, &#39;/shuttle/missions/sts-70/sts-70-day-04-highlights.html&#39;, &#39;/shuttle/missions/sts-70/sts-70-day-05-highlights.html&#39;, &#39;/shuttle/missions/sts-70/sts-70-day-06-highlights.html&#39;, &#39;/shuttle/missions/sts-70/sts-70-day-07-highlights.html&#39;, &#39;/shuttle/missions/sts-70/sts-70-day-08-highlights.html&#39;, &#39;/shuttle/missions/sts-70/sts-70-day-09-highlights.html&#39;, &#39;/shuttle/missions/sts-70/sts-70-day-10-highlights.html&#39;, &#39;/shuttle/missions/sts-70/sts-70-info.html&#39;, &#39;/shuttle/missions/sts-70/woodpecker.html&#39;, &#39;/shuttle/missions/sts-71/images/images.html&#39;, &#39;/shuttle/missions/sts-71/mission-sts-71.html&#39;, &#39;/shuttle/missions/sts-71/movies/movies.html&#39;, &#39;/shuttle/missions/sts-71/sts-71-day-01-highlights.html&#39;, &#39;/shuttle/missions/sts-71/sts-71-day-02-highlights.html&#39;, &#39;/shuttle/missions/sts-71/sts-71-day-03-highlights.html&#39;, &#39;/shuttle/missions/sts-71/sts-71-day-04-highlights.html&#39;, &#39;/shuttle/missions/sts-71/sts-71-day-05-highlights.html&#39;, &#39;/shuttle/missions/sts-71/sts-71-day-06-highlights.html&#39;, &#39;/shuttle/missions/sts-71/sts-71-day-07-highlights.html&#39;, &#39;/shuttle/missions/sts-71/sts-71-day-08-highlights.html&#39;, &#39;/shuttle/missions/sts-71/sts-71-day-09-highlights.html&#39;, &#39;/shuttle/missions/sts-71/sts-71-day-10-highlights.html&#39;, &#39;/shuttle/missions/sts-71/sts-71-day-11-highlights.html&#39;, &#39;/shuttle/missions/sts-71/sts-71-info.html&#39;, &#39;/shuttle/missions/sts-72/mission-sts-72.html&#39;, &#39;/shuttle/missions/sts-72/sts-72-info.html&#39;, &#39;/shuttle/missions/sts-73/mission-sts-73.html&#39;, &#39;/shuttle/missions/sts-73/sts-73-info.html&#39;, &#39;/shuttle/missions/sts-74/mission-sts-74.html&#39;, &#39;/shuttle/missions/sts-74/sts-74-info.html&#39;, &#39;/shuttle/missions/sts-75/mission-sts-75.html&#39;, &#39;/shuttle/missions/sts-75/sts-75-info.html&#39;, &#39;/shuttle/missions/sts-76/mission-sts-76.html&#39;, &#39;/shuttle/missions/sts-76/sts-76-info.html&#39;, &#39;/shuttle/missions/sts-77/mission-sts-77.html&#39;, &#39;/shuttle/missions/sts-77/sts-77-info.html&#39;, &#39;/shuttle/missions/sts-78/mission-sts-78.html&#39;, &#39;/shuttle/missions/sts-78/sts-78-info.html&#39;, &#39;/shuttle/missions/sts-8/mission-sts-8.html&#39;, &#39;/shuttle/missions/sts-8/sts-8-info.html&#39;, &#39;/shuttle/missions/sts-9/mission-sts-9.html&#39;, &#39;/shuttle/missions/sts-9/sts-9-info.html&#39;, &#39;/shuttle/resources/orbiters/atlantis.html&#39;, &#39;/shuttle/resources/orbiters/challenger.html&#39;, &#39;/shuttle/resources/orbiters/columbia.html&#39;, &#39;/shuttle/resources/orbiters/discovery.html&#39;, &#39;/shuttle/resources/orbiters/endeavour.html&#39;, &#39;/shuttle/resources/orbiters/enterprise.html&#39;, &#39;/shuttle/resources/orbiters/mpta-098.html&#39;, &#39;/shuttle/resources/orbiters/orbiters.html&#39;, &#39;/shuttle/resources/orbiters/pathfinder.html&#39;, &#39;/shuttle/technology/sts-newsref/apu_mods.html&#39;, &#39;/shuttle/technology/sts-newsref/carriers.html&#39;, &#39;/shuttle/technology/sts-newsref/centers.html&#39;, &#39;/shuttle/technology/sts-newsref/et.html&#39;, &#39;/shuttle/technology/sts-newsref/mission_profile.html&#39;, &#39;/shuttle/technology/sts-newsref/operations.html&#39;, &#39;/shuttle/technology/sts-newsref/pam-d.html&#39;, &#39;/shuttle/technology/sts-newsref/spacelab.html&#39;, &#39;/shuttle/technology/sts-newsref/srb.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-acronyms.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-airlock.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-apu.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-av.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-caws.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-comm.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-cron-72.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-cron.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-eclss-airlock.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-eclss-wcl.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-eps.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-gear.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-gnnc.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-inst.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-jsc-comm.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-jsc.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-lc39.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-lcc.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-mps.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-msfc.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-oalt.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-oms.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-ovcomm.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-rcs.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-rhc.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-subs.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-tps.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-wcl.html&#39;, &#39;/shuttle/technology/sts-newsref/sts_asm.html&#39;, &#39;/shuttle/technology/sts-newsref/sts_coord.html&#39;, &#39;/shuttle/technology/sts-newsref/sts_eclss.html&#39;, &#39;/shuttle/technology/sts-newsref/sts_egress.html&#39;, &#39;/shuttle/technology/sts-newsref/sts_events.html&#39;, &#39;/shuttle/technology/sts-newsref/sts_mes.html&#39;, &#39;/shuttle/technology/sts-newsref/sts_overview.html&#39;, &#39;/shuttle/technology/sts-newsref/sts_spec.html&#39;, &#39;/shuttle/technology/sts-newsref/sts_sys.html&#39;, &#39;/shuttle/technology/sts-newsref/stsover-acronyms.html&#39;, &#39;/shuttle/technology/sts-newsref/stsover-chron.html&#39;, &#39;/shuttle/technology/sts-newsref/stsover-landing.html&#39;, &#39;/shuttle/technology/sts-newsref/stsover-launch.html&#39;, &#39;/shuttle/technology/sts-newsref/stsover-mgt.html&#39;, &#39;/shuttle/technology/sts-newsref/stsover-missions.html&#39;, &#39;/shuttle/technology/sts-newsref/stsover-prep.html&#39;, &#39;/shuttle/technology/sts-newsref/stsover.html&#39;, &#39;/shuttle/technology/sts-newsref/stsref-toc.html&#39;, &#39;/shuttle/technology/sts-newsref/tps_mods.html&#39;, &#39;/software//viewers/viewers.html&#39;, &#39;/software//winvn/winvn.html&#39;, &#39;/software/techdoc/td-Contents.html&#39;, &#39;/software/techdoc/td-Index.html&#39;, &#39;/software/techdoc/td-REV_.html&#39;, &#39;/software/techdoc/td.html&#39;, &#39;/software/viewers/viewers.html&#39;, &#39;/software/webadmin/faq.html&#39;, &#39;/software/winvn/brydon.html&#39;, &#39;/software/winvn/comment.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-Contents.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-I-1.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-I-10.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-I-11.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-I-2.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-I-3.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-I-4.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-I-5.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-I-6.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-I-7.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-I-8.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-I.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-II-1.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-II-2.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-II-3.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-II-4.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-II.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-III-2.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-III-3.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-III-4.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-III-5.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-III-6.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-III-7.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-III-8.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-III.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-IV-1.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-IV-2.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-IV-3.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-IV.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-V-1.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-V-2.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-V-3.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-V-4.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-V-5.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-V-6.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-V-7.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-V.html&#39;, &#39;/software/winvn/faq/WINVNFAQ.html&#39;, &#39;/software/winvn/userguide/1_1.html&#39;, &#39;/software/winvn/userguide/wvnguide.html&#39;, &#39;/software/winvn/winvn.html&#39;, &#39;/statistics/1993/1993.html&#39;, &#39;/statistics/1993/Dec/Dec93.html&#39;, &#39;/statistics/1993/Dec/Dec93_archive.html&#39;, &#39;/statistics/1993/Nov/Nov93.html&#39;, &#39;/statistics/1993/Nov/Nov93_reverse_domains.html&#39;, &#39;/statistics/1993/Oct/Oct93_archive.html&#39;, &#39;/statistics/1993/Sep/Sep93.html&#39;, &#39;/statistics/1994/Apr/Apr94.html&#39;, &#39;/statistics/1994/Aug/Aug94_archive.html&#39;, &#39;/statistics/1994/Aug/Aug94_reverse_domains.html&#39;, &#39;/statistics/1994/Dec/Dec94.html&#39;, &#39;/statistics/1994/Dec/Dec94_archive.html&#39;, &#39;/statistics/1994/Dec/Dec94_reverse_domains.html&#39;, &#39;/statistics/1994/Feb/Feb94_reverse_domains.html&#39;, &#39;/statistics/1994/Jan/Jan94_archive.html&#39;, &#39;/statistics/1994/Jan/Jan94_reverse_domains.html&#39;, &#39;/statistics/1994/Jul/Jul94.html&#39;, &#39;/statistics/1994/Jul/Jul94_reverse_domains.html&#39;, &#39;/statistics/1994/Mar/Mar94.html&#39;, &#39;/statistics/1994/Mar/Mar94_archive.html&#39;, &#39;/statistics/1994/May/May94.html&#39;, &#39;/statistics/1994/May/May94_reverse_domains.html&#39;, &#39;/statistics/1994/Nov/Nov94.html&#39;, &#39;/statistics/1994/Nov/Nov94_archive.html&#39;, &#39;/statistics/1994/Nov/Nov94_reverse_domains.html&#39;, &#39;/statistics/1994/Oct/Oct94.html&#39;, &#39;/statistics/1994/Oct/Oct94_archive.html&#39;, &#39;/statistics/1994/Oct/Oct94_reverse_domains.html&#39;, &#39;/statistics/1994/Sep/Sep94.html&#39;, &#39;/statistics/1994/Sep/Sep94_archive.html&#39;, &#39;/statistics/1994/Sep/Sep94_reverse_domains.html&#39;, &#39;/statistics/1995/Apr/Apr95.html&#39;, &#39;/statistics/1995/Apr/Apr95_archive.html&#39;, &#39;/statistics/1995/Apr/Apr95_reverse_domains.html&#39;, &#39;/statistics/1995/Feb/Feb95.html&#39;, &#39;/statistics/1995/Feb/Feb95_archive.html&#39;, &#39;/statistics/1995/Feb/Feb95_reverse_domains.html&#39;, &#39;/statistics/1995/Jan/Jan95.html&#39;, &#39;/statistics/1995/Jan/Jan95_archive.html&#39;, &#39;/statistics/1995/Jan/Jan95_reverse_domains.html&#39;, &#39;/statistics/1995/Jul/Jul95.html&#39;, &#39;/statistics/1995/Jul/Jul95_archive.html&#39;, &#39;/statistics/1995/Jul/Jul95_reverse_domains.html&#39;, &#39;/statistics/1995/Jun/Jun95.html&#39;, &#39;/statistics/1995/Jun/Jun95_archive.html&#39;, &#39;/statistics/1995/Jun/Jun95_reverse_domains.html&#39;, &#39;/statistics/1995/Jun/agent.html&#39;, &#39;/statistics/1995/Jun/ref.html&#39;, &#39;/statistics/1995/Mar/Mar95.html&#39;, &#39;/statistics/1995/Mar/Mar95_archive.html&#39;, &#39;/statistics/1995/Mar/Mar95_reverse_domains.html&#39;, &#39;/statistics/1995/May/May95.html&#39;, &#39;/statistics/1995/May/May95_archive.html&#39;, &#39;/statistics/1995/May/May95_reverse_domains.html&#39;, &#39;/statistics/1995/bkup/Apr95.html&#39;, &#39;/statistics/1995/bkup/Apr95_full.html&#39;, &#39;/statistics/1995/bkup/Feb95.html&#39;, &#39;/statistics/1995/bkup/Feb95_full.html&#39;, &#39;/statistics/1995/bkup/Jan95_full.html&#39;, &#39;/statistics/1995/bkup/Mar95.html&#39;, &#39;/statistics/1995/bkup/Mar95_full.html&#39;, &#39;/statistics/statistics.html&#39;, &#39;/welcome.html&#39;, &#39;/whats-new.html&#39;, &#39;/~downs/harvest-1.2/INSTRUCTIONS.html&#39;, &#39;/~downs/harvest-1.2/brokers/Attributes.html&#39;, &#39;/~downs/harvest-1.2/brokers/www/admin/admin.html&#39;, &#39;/~downs/harvest-1.2/brokers/www/index.html&#39;, &#39;/~downs/harvest-1.2/brokers/www/query-glimpse.html&#39;, &#39;/~downs/harvest-1.2/brokers/www/query.html&#39;, &#39;/~downs/home.html&#39;, &#39;/~downs/www/index.html&#39;, &#39;/~downs/www/query.html&#39;, &#39;/~downs/www/summary.html&#39;]
+
+Top 5 URI yang paling banyak diakses:
+/ksc.html                                       16184
+/shuttle/missions/missions.html                 14604
+/shuttle/missions/sts-71/mission-sts-71.html    11008
+/shuttle/missions/sts-71/images/images.html     10714
+/shuttle/countdown/liftoff.html                 10704
+
+5 URI yang paling sedikit diakses (jika ada lebih dari 5):
+//facilities/spaceport.html              1
+/Harvest/brokers/WWW/summary.html        1
+/Harvest/brokers/queryhelp.html          1
+/Harvest/gatherers/WWW/tmp/index.html    1
+/biomed/groundwater/groundwater.html     1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="c1"># Muat file CSV ke dalam DataFrame</span>
+<span class="n">matrix_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;hasil_matriks_dirangkumNASA.csv&#39;</span><span class="p">)</span>
+
+<span class="c1"># Tampilkan 5 data awal</span>
+<span class="n">display</span><span class="p">(</span><span class="n">matrix_df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>IP</th>
+      <th>/%7Edowns/home.html</th>
+      <th>/%7edowns/home.html</th>
+      <th>/.ksc.html</th>
+      <th>//facilities/spaceport.html</th>
+      <th>//ksc.html</th>
+      <th>//shuttle/missions/missions.html</th>
+      <th>/Harvest/brokers/WWW/admin/admin.html</th>
+      <th>/Harvest/brokers/WWW/query.html</th>
+      <th>/Harvest/brokers/WWW/summary.html</th>
+      <th>...</th>
+      <th>/~downs/harvest-1.2/INSTRUCTIONS.html</th>
+      <th>/~downs/harvest-1.2/brokers/Attributes.html</th>
+      <th>/~downs/harvest-1.2/brokers/www/admin/admin.html</th>
+      <th>/~downs/harvest-1.2/brokers/www/index.html</th>
+      <th>/~downs/harvest-1.2/brokers/www/query-glimpse.html</th>
+      <th>/~downs/harvest-1.2/brokers/www/query.html</th>
+      <th>/~downs/home.html</th>
+      <th>/~downs/www/index.html</th>
+      <th>/~downs/www/query.html</th>
+      <th>/~downs/www/summary.html</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>***.novo.dk</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>007.thegap.com</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>01-dynamic-c.rotterdam.luna.net</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>01-dynamic-c.wokingham.luna.net</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>02-dynamic-c.wokingham.luna.net</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 746 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tampilkan informasi DataFrame (total kolom, tipe data, dll.)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Informasi DataFrame (total kolom, tipe data, dll.):&quot;</span><span class="p">)</span>
+<span class="n">matrix_df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+
+<span class="c1"># Tampilkan daftar nama kolom</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Daftar nama kolom:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">matrix_df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Informasi DataFrame (total kolom, tipe data, dll.):
+&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 68286 entries, 0 to 68285
+Columns: 746 entries, IP to /~downs/www/summary.html
+dtypes: int64(745), object(1)
+memory usage: 388.7+ MB
+
+Daftar nama kolom:
+[&#39;IP&#39;, &#39;/%7Edowns/home.html&#39;, &#39;/%7edowns/home.html&#39;, &#39;/.ksc.html&#39;, &#39;//facilities/spaceport.html&#39;, &#39;//ksc.html&#39;, &#39;//shuttle/missions/missions.html&#39;, &#39;/Harvest/brokers/WWW/admin/admin.html&#39;, &#39;/Harvest/brokers/WWW/query.html&#39;, &#39;/Harvest/brokers/WWW/summary.html&#39;, &#39;/Harvest/brokers/queryhelp.html&#39;, &#39;/Harvest/gatherers/WWW/tmp/index.html&#39;, &#39;/base-ops/procurement/procurement.html&#39;, &#39;/biomed/bibliography/biblio.html&#39;, &#39;/biomed/climate/airqual.html&#39;, &#39;/biomed/climate/climate.html&#39;, &#39;/biomed/env.html&#39;, &#39;/biomed/fire/fire.html&#39;, &#39;/biomed/glossary/glossary.html&#39;, &#39;/biomed/groundwater/groundwater.html&#39;, &#39;/biomed/history/history.html&#39;, &#39;/biomed/intro.html&#39;, &#39;/biomed/lan/lan4.html&#39;, &#39;/biomed/lan/lan6.html&#39;, &#39;/biomed/program.html&#39;, &#39;/biomed/soils/soils.html&#39;, &#39;/biomed/threat/animals.html&#39;, &#39;/biomed/threat/bldeagle.html&#39;, &#39;/biomed/threat/indigo.html&#39;, &#39;/biomed/threat/manatee.html&#39;, &#39;/biomed/threat/plants.html&#39;, &#39;/biomed/threat/seaturtl.html&#39;, &#39;/biomed/threat/tande.html&#39;, &#39;/biomed/threat/wdstork.html&#39;, &#39;/biomed/vegetation/aquatic.html&#39;, &#39;/biomed/vegetation/freshmrs.html&#39;, &#39;/biomed/vegetation/hammock.html&#39;, &#39;/biomed/vegetation/impound.html&#39;, &#39;/biomed/vegetation/islands.html&#39;, &#39;/biomed/vegetation/saltmrsh.html&#39;, &#39;/biomed/vegetation/scrub.html&#39;, &#39;/biomed/vegetation/teresveg.html&#39;, &#39;/biomed/vegetation/vegetation.html&#39;, &#39;/biomed/wetlands/wetlands.html&#39;, &#39;/cgi-bin/imagemap/Glance/Backgrnd.html&#39;, &#39;/facilities/canister.html&#39;, &#39;/facilities/cdsc.html&#39;, &#39;/facilities/cif.html&#39;, &#39;/facilities/crawler.html&#39;, &#39;/facilities/crawlerway.html&#39;, &#39;/facilities/hmf.html&#39;, &#39;/facilities/hq.html&#39;, &#39;/facilities/lc39a.html&#39;, &#39;/facilities/lcc.html&#39;, &#39;/facilities/letf.html&#39;, &#39;/facilities/lf.html&#39;, &#39;/facilities/lps.html&#39;, &#39;/facilities/mila.html&#39;, &#39;/facilities/mlp.html&#39;, &#39;/facilities/oc.html&#39;, &#39;/facilities/opf.html&#39;, &#39;/facilities/osb.html&#39;, &#39;/facilities/phsf.html&#39;, &#39;/facilities/press.html&#39;, &#39;/facilities/prf.html&#39;, &#39;/facilities/saef2.html&#39;, &#39;/facilities/slf.html&#39;, &#39;/facilities/spaceport.html&#39;, &#39;/facilities/sspf.html&#39;, &#39;/facilities/tour.html&#39;, &#39;/facilities/vab.html&#39;, &#39;/facilities/vpf.html&#39;, &#39;/facts/about_ksc.html&#39;, &#39;/facts/facts.html&#39;, &#39;/facts/faq.html&#39;, &#39;/facts/faq01.html&#39;, &#39;/facts/faq02.html&#39;, &#39;/facts/faq03.html&#39;, &#39;/facts/faq04.html&#39;, &#39;/facts/faq05.html&#39;, &#39;/facts/faq06.html&#39;, &#39;/facts/faq07.html&#39;, &#39;/facts/faq08.html&#39;, &#39;/facts/faq09.html&#39;, &#39;/facts/faq10.html&#39;, &#39;/facts/faq11.html&#39;, &#39;/facts/faq12.html&#39;, &#39;/facts/faq13.html&#39;, &#39;/facts/internet/bdgtti-1.01.html&#39;, &#39;/facts/internet/bdgtti-1.01_foot.html&#39;, &#39;/facts/internet/bdgtti-1.01_toc.html&#39;, &#39;/facts/internet/html-primer.html&#39;, &#39;/facts/internet/url-primer.html&#39;, &#39;/facts/space_congress_95.html&#39;, &#39;/facts/wais-readme.html&#39;, &#39;/history//apollo/apollo-13/apollo-13-info.html&#39;, &#39;/history//apollo/apollo-13/apollo-13.html&#39;, &#39;/history//history.html&#39;, &#39;/history/apollo//apollo-13/apollo-13.html&#39;, &#39;/history/apollo/a-001/a-001-info.html&#39;, &#39;/history/apollo/a-001/a-001.html&#39;, &#39;/history/apollo/a-002/a-002-info.html&#39;, &#39;/history/apollo/a-002/a-002.html&#39;, &#39;/history/apollo/a-003/a-003-info.html&#39;, &#39;/history/apollo/a-003/a-003.html&#39;, &#39;/history/apollo/a-004/a-004-info.html&#39;, &#39;/history/apollo/a-004/a-004.html&#39;, &#39;/history/apollo/apollo-1/apollo-1-info.html&#39;, &#39;/history/apollo/apollo-1/apollo-1.html&#39;, &#39;/history/apollo/apollo-10/apollo-10-info.html&#39;, &#39;/history/apollo/apollo-10/apollo-10.html&#39;, &#39;/history/apollo/apollo-11/apollo-11-info.html&#39;, &#39;/history/apollo/apollo-11/apollo-11.html&#39;, &#39;/history/apollo/apollo-12/apollo-12-info.html&#39;, &#39;/history/apollo/apollo-12/apollo-12.html&#39;, &#39;/history/apollo/apollo-13//apollo-13.html&#39;, &#39;/history/apollo/apollo-13/apollo-13-info.html&#39;, &#39;/history/apollo/apollo-13/apollo-13.html&#39;, &#39;/history/apollo/apollo-14/apollo-14-info.html&#39;, &#39;/history/apollo/apollo-14/apollo-14.html&#39;, &#39;/history/apollo/apollo-15/apollo-15-info.html&#39;, &#39;/history/apollo/apollo-15/apollo-15.html&#39;, &#39;/history/apollo/apollo-16/apollo-16-info.html&#39;, &#39;/history/apollo/apollo-16/apollo-16.html&#39;, &#39;/history/apollo/apollo-17/apollo-17-info.html&#39;, &#39;/history/apollo/apollo-17/apollo-17.html&#39;, &#39;/history/apollo/apollo-4/apollo-4-info.html&#39;, &#39;/history/apollo/apollo-4/apollo-4.html&#39;, &#39;/history/apollo/apollo-5/apollo-5-info.html&#39;, &#39;/history/apollo/apollo-5/apollo-5.html&#39;, &#39;/history/apollo/apollo-6/apollo-6-info.html&#39;, &#39;/history/apollo/apollo-6/apollo-6.html&#39;, &#39;/history/apollo/apollo-7/apollo-7-info.html&#39;, &#39;/history/apollo/apollo-7/apollo-7.html&#39;, &#39;/history/apollo/apollo-8/apollo-8-info.html&#39;, &#39;/history/apollo/apollo-8/apollo-8.html&#39;, &#39;/history/apollo/apollo-9/apollo-9-info.html&#39;, &#39;/history/apollo/apollo-9/apollo-9.html&#39;, &#39;/history/apollo/apollo-sa.html&#39;, &#39;/history/apollo/apollo.html&#39;, &#39;/history/apollo/as-201/as-201-info.html&#39;, &#39;/history/apollo/as-201/as-201.html&#39;, &#39;/history/apollo/as-202/as-202-info.html&#39;, &#39;/history/apollo/as-202/as-202.html&#39;, &#39;/history/apollo/as-203/as-203-info.html&#39;, &#39;/history/apollo/as-203/as-203.html&#39;, &#39;/history/apollo/pad-abort-test-1/pad-abort-test-1-info.html&#39;, &#39;/history/apollo/pad-abort-test-1/pad-abort-test-1.html&#39;, &#39;/history/apollo/pad-abort-test-2/pad-abort-test-2-info.html&#39;, &#39;/history/apollo/pad-abort-test-2/pad-abort-test-2.html&#39;, &#39;/history/apollo/sa-1/sa-1-info.html&#39;, &#39;/history/apollo/sa-1/sa-1.html&#39;, &#39;/history/apollo/sa-10/sa-10-info.html&#39;, &#39;/history/apollo/sa-10/sa-10.html&#39;, &#39;/history/apollo/sa-2/sa-2-info.html&#39;, &#39;/history/apollo/sa-2/sa-2.html&#39;, &#39;/history/apollo/sa-3/sa-3-info.html&#39;, &#39;/history/apollo/sa-3/sa-3.html&#39;, &#39;/history/apollo/sa-4/sa-4-info.html&#39;, &#39;/history/apollo/sa-4/sa-4.html&#39;, &#39;/history/apollo/sa-5/sa-5-info.html&#39;, &#39;/history/apollo/sa-5/sa-5.html&#39;, &#39;/history/apollo/sa-6/sa-6-info.html&#39;, &#39;/history/apollo/sa-6/sa-6.html&#39;, &#39;/history/apollo/sa-7/sa-7-info.html&#39;, &#39;/history/apollo/sa-7/sa-7.html&#39;, &#39;/history/apollo/sa-8/sa-8-info.html&#39;, &#39;/history/apollo/sa-8/sa-8.html&#39;, &#39;/history/apollo/sa-9/sa-9-info.html&#39;, &#39;/history/apollo/sa-9/sa-9.html&#39;, &#39;/history/astp/astp.html&#39;, &#39;/history/gemini/gemini-1/gemini-1-info.html&#39;, &#39;/history/gemini/gemini-1/gemini-1.html&#39;, &#39;/history/gemini/gemini-2/gemini-2-info.html&#39;, &#39;/history/gemini/gemini-2/gemini-2.html&#39;, &#39;/history/gemini/gemini-3/gemini-3-info.html&#39;, &#39;/history/gemini/gemini-3/gemini-3.html&#39;, &#39;/history/gemini/gemini-4/gemini-4-info.html&#39;, &#39;/history/gemini/gemini-4/gemini-4.html&#39;, &#39;/history/gemini/gemini-ix-a/gemini-ix-a-info.html&#39;, &#39;/history/gemini/gemini-ix-a/gemini-ix-a.html&#39;, &#39;/history/gemini/gemini-v/gemini-v-info.html&#39;, &#39;/history/gemini/gemini-v/gemini-v.html&#39;, &#39;/history/gemini/gemini-vi-a/gemini-vi-a-info.html&#39;, &#39;/history/gemini/gemini-vi-a/gemini-vi-a.html&#39;, &#39;/history/gemini/gemini-vii/gemini-vii-info.html&#39;, &#39;/history/gemini/gemini-vii/gemini-vii.html&#39;, &#39;/history/gemini/gemini-viii/gemini-viii-info.html&#39;, &#39;/history/gemini/gemini-viii/gemini-viii.html&#39;, &#39;/history/gemini/gemini-x/gemini-x-info.html&#39;, &#39;/history/gemini/gemini-x/gemini-x.html&#39;, &#39;/history/gemini/gemini-xi/gemini-xi-info.html&#39;, &#39;/history/gemini/gemini-xi/gemini-xi.html&#39;, &#39;/history/gemini/gemini-xii/gemini-xii-info.html&#39;, &#39;/history/gemini/gemini-xii/gemini-xii.html&#39;, &#39;/history/gemini/gemini.html&#39;, &#39;/history/gemini/gemini_inwork.html&#39;, &#39;/history/history.html&#39;, &#39;/history/mercury/ma-6/ma-6.html&#39;, &#39;/history/mercury/ma-7/ma-7.html&#39;, &#39;/history/mercury/ma-8/ma-8.html&#39;, &#39;/history/mercury/ma-9/ma-9.html&#39;, &#39;/history/mercury/mercury.html&#39;, &#39;/history/mercury/mr-3/mr-3.html&#39;, &#39;/history/mercury/mr-4/mr-4.html&#39;, &#39;/history/skylab/skylab-1.html&#39;, &#39;/history/skylab/skylab-2-backup.html&#39;, &#39;/history/skylab/skylab-2.html&#39;, &#39;/history/skylab/skylab-3.html&#39;, &#39;/history/skylab/skylab-4.html&#39;, &#39;/history/skylab/skylab.html&#39;, &#39;/ksc.html&#39;, &#39;/mdss/MDSS.html&#39;, &#39;/mdss/apd/apd.html&#39;, &#39;/mdss/org.html&#39;, &#39;/mdss/ped/acs/ACS_homepage.html&#39;, &#39;/mdss/ped/acs/acshistory.html&#39;, &#39;/mdss/ped/acs/cmu.html&#39;, &#39;/mdss/ped/acs/othersites.html&#39;, &#39;/mdss/shuttleproc.html&#39;, &#39;/mdss/srqa/../MDSS.html&#39;, &#39;/mdss/srqa/qpa/qpa.html&#39;, &#39;/mdss/srqa/qpa/tools.html&#39;, &#39;/mdss/stationproc.html&#39;, &#39;/msfc/astro_correct.html&#39;, &#39;/msfc/astro_home.html&#39;, &#39;/msfc/crew/astronaut.html&#39;, &#39;/msfc/crew/crew.html&#39;, &#39;/msfc/crew/durrance.html&#39;, &#39;/msfc/crew/food.html&#39;, &#39;/msfc/crew/gregory.html&#39;, &#39;/msfc/crew/grunsfeld.html&#39;, &#39;/msfc/crew/jernigan.html&#39;, &#39;/msfc/crew/lawrence.html&#39;, &#39;/msfc/crew/oswald.html&#39;, &#39;/msfc/crew/parise.html&#39;, &#39;/msfc/crew/patches.html&#39;, &#39;/msfc/crew/training.html&#39;, &#39;/msfc/crew/trivia.html&#39;, &#39;/msfc/crew/vangen.html&#39;, &#39;/msfc/crew/wannabe.html&#39;, &#39;/msfc/description/description.html&#39;, &#39;/msfc/description/instruments/hut-tech.html&#39;, &#39;/msfc/description/instruments/hut.html&#39;, &#39;/msfc/description/instruments/imaging.html&#39;, &#39;/msfc/description/instruments/uit-tech.html&#39;, &#39;/msfc/description/instruments/uit.html&#39;, &#39;/msfc/description/instruments/wuppe.html&#39;, &#39;/msfc/description/shuttle/endeavour.html&#39;, &#39;/msfc/description/spacelab/spacelab.html&#39;, &#39;/msfc/description/starview.html&#39;, &#39;/msfc/description/ultraviolet.html&#39;, &#39;/msfc/onboard/onboard.html&#39;, &#39;/msfc/other.html&#39;, &#39;/msfc/team/hq.html&#39;, &#39;/msfc/team/jsc.html&#39;, &#39;/msfc/team/ksc.html&#39;, &#39;/msfc/team/msfc/cadre.html&#39;, &#39;/msfc/team/msfc/msfc.html&#39;, &#39;/msfc/team/msfc/pap.html&#39;, &#39;/msfc/team/msfc/pctc.html&#39;, &#39;/msfc/team/nasa_team.html&#39;, &#39;/msfc/visitor/visitors.html&#39;, &#39;/msfc/who.html&#39;, &#39;/pao/pao-test.html&#39;, &#39;/payloads/cm-systems.html&#39;, &#39;/payloads/org/cg-esd.html&#39;, &#39;/payloads/org/cg-iso.html&#39;, &#39;/payloads/org/cg-lmd.html&#39;, &#39;/payloads/org/cg-lso.html&#39;, &#39;/payloads/org/cg.html&#39;, &#39;/payloads/org/cm-cas.html&#39;, &#39;/payloads/org/cm-int.html&#39;, &#39;/payloads/org/cm-org.html&#39;, &#39;/payloads/org/cm-pmo.html&#39;, &#39;/payloads/org/cm.html&#39;, &#39;/payloads/org/cs-exd.html&#39;, &#39;/payloads/org/cs-ote.html&#39;, &#39;/payloads/org/cs-ped.html&#39;, &#39;/payloads/org/cs-pts.html&#39;, &#39;/payloads/org/cs.html&#39;, &#39;/payloads/org/cv-kvr.html&#39;, &#39;/payloads/org/cv-lod.html&#39;, &#39;/payloads/org/cv-pso.html&#39;, &#39;/payloads/org/cv.html&#39;, &#39;/payloads/processing/paylproc.html&#39;, &#39;/payloads/processing/ppart0.html&#39;, &#39;/payloads/processing/ppart1.html&#39;, &#39;/payloads/processing/ppart10.html&#39;, &#39;/payloads/processing/ppart11.html&#39;, &#39;/payloads/processing/ppart12.html&#39;, &#39;/payloads/processing/ppart2.html&#39;, &#39;/payloads/processing/ppart3.html&#39;, &#39;/payloads/processing/ppart4.html&#39;, &#39;/payloads/processing/ppart5.html&#39;, &#39;/payloads/processing/ppart6.html&#39;, &#39;/payloads/processing/ppart7.html&#39;, &#39;/payloads/processing/ppart8.html&#39;, &#39;/payloads/processing/ppart9.html&#39;, &#39;/payloads/processing/vpart0.html&#39;, &#39;/payloads/processing/vpart1.html&#39;, &#39;/payloads/processing/vpart10.html&#39;, &#39;/payloads/processing/vpart11.html&#39;, &#39;/payloads/processing/vpart2.html&#39;, &#39;/payloads/processing/vpart3.html&#39;, &#39;/payloads/processing/vpart4.html&#39;, &#39;/payloads/processing/vpart5.html&#39;, &#39;/payloads/processing/vpart6.html&#39;, &#39;/payloads/processing/vpart7.html&#39;, &#39;/payloads/processing/vpart8.html&#39;, &#39;/payloads/processing/vpart9.html&#39;, &#39;/persons/astronauts/a-to-d/DurranceST.html&#39;, &#39;/persons/astronauts/m-to-p/PariseRA.html&#39;, &#39;/persons/astronauts/u-to-z/VangenSD.html&#39;, &#39;/persons/nasa-cm/hec.html&#39;, &#39;/persons/nasa-cm/jmd.html&#39;, &#39;/persons/nasa-cm/mtd.html&#39;, &#39;/persons/nasa-cm/smr.html&#39;, &#39;/persons/nasa-cm/tnn.html&#39;, &#39;/persons/people.html&#39;, &#39;/procurement/procurement.html&#39;, &#39;/shuttle/countdown/count.html&#39;, &#39;/shuttle/countdown/count2.html&#39;, &#39;/shuttle/countdown/countdown.html&#39;, &#39;/shuttle/countdown/countdown70.html&#39;, &#39;/shuttle/countdown/countdown71.html&#39;, &#39;/shuttle/countdown/ksc.html&#39;, &#39;/shuttle/countdown/launch-team.html&#39;, &#39;/shuttle/countdown/liftoff.html&#39;, &#39;/shuttle/countdown/liftoff71.html&#39;, &#39;/shuttle/countdown/lps/aa/aa.html&#39;, &#39;/shuttle/countdown/lps/ab/ab.html&#39;, &#39;/shuttle/countdown/lps/ac/ac.html&#39;, &#39;/shuttle/countdown/lps/bkup-intg/bkup-intg.html&#39;, &#39;/shuttle/countdown/lps/c-1/c-1.html&#39;, &#39;/shuttle/countdown/lps/c-11-12/c-11-12.html&#39;, &#39;/shuttle/countdown/lps/c-2/c-2.html&#39;, &#39;/shuttle/countdown/lps/c-3-4/c-3-4.html&#39;, &#39;/shuttle/countdown/lps/c-5-6/c-5-6.html&#39;, &#39;/shuttle/countdown/lps/c-7-8/c-7-8.html&#39;, &#39;/shuttle/countdown/lps/c-9-10/c-9-10.html&#39;, &#39;/shuttle/countdown/lps/consoles.html&#39;, &#39;/shuttle/countdown/lps/fr.html&#39;, &#39;/shuttle/countdown/lps/hsp/hsp.html&#39;, &#39;/shuttle/countdown/lps/mpeg.html&#39;, &#39;/shuttle/countdown/lps/mstr/mstr.html&#39;, &#39;/shuttle/countdown/lps/omr/omr.html&#39;, &#39;/shuttle/countdown/lps/osr/osr.html&#39;, &#39;/shuttle/countdown/ocount.html&#39;, &#39;/shuttle/countdown/tour.html&#39;, &#39;/shuttle/countdown/video/video.html&#39;, &#39;/shuttle/missions/100th.html&#39;, &#39;/shuttle/missions/41-b/41-b-info.html&#39;, &#39;/shuttle/missions/41-b/mission-41-b.html&#39;, &#39;/shuttle/missions/41-c/41-c-info.html&#39;, &#39;/shuttle/missions/41-c/mission-41-c.html&#39;, &#39;/shuttle/missions/41-d/41-d-info.html&#39;, &#39;/shuttle/missions/41-d/mission-41-d.html&#39;, &#39;/shuttle/missions/41-g/41-g-info.html&#39;, &#39;/shuttle/missions/41-g/mission-41-g.html&#39;, &#39;/shuttle/missions/51-a/51-a-info.html&#39;, &#39;/shuttle/missions/51-a/mission-51-a.html&#39;, &#39;/shuttle/missions/51-b/51-b-info.html&#39;, &#39;/shuttle/missions/51-b/mission-51-b.html&#39;, &#39;/shuttle/missions/51-c/51-c-info.html&#39;, &#39;/shuttle/missions/51-c/mission-51-c.html&#39;, &#39;/shuttle/missions/51-d/51-d-info.html&#39;, &#39;/shuttle/missions/51-d/mission-51-d.html&#39;, &#39;/shuttle/missions/51-f/51-f-info.html&#39;, &#39;/shuttle/missions/51-f/mission-51-f.html&#39;, &#39;/shuttle/missions/51-g/51-g-info.html&#39;, &#39;/shuttle/missions/51-g/mission-51-g.html&#39;, &#39;/shuttle/missions/51-i/51-i-info.html&#39;, &#39;/shuttle/missions/51-i/mission-51-i.html&#39;, &#39;/shuttle/missions/51-j/51-j-info.html&#39;, &#39;/shuttle/missions/51-j/mission-51-j.html&#39;, &#39;/shuttle/missions/51-l/51-l-info.html&#39;, &#39;/shuttle/missions/51-l/mission-51-l.html&#39;, &#39;/shuttle/missions/61-a/61-a-info.html&#39;, &#39;/shuttle/missions/61-a/mission-61-a.html&#39;, &#39;/shuttle/missions/61-b/61-b-info.html&#39;, &#39;/shuttle/missions/61-b/mission-61-b.html&#39;, &#39;/shuttle/missions/61-c/61-c-info.html&#39;, &#39;/shuttle/missions/61-c/mission-61-c.html&#39;, &#39;/shuttle/missions/missions.html&#39;, &#39;/shuttle/missions/rollback.html&#39;, &#39;/shuttle/missions/rollbacks.html&#39;, &#39;/shuttle/missions/sts-1/mission-sts-1.html&#39;, &#39;/shuttle/missions/sts-1/sts-1-info.html&#39;, &#39;/shuttle/missions/sts-2/mission-sts-2.html&#39;, &#39;/shuttle/missions/sts-2/sts-2-info.html&#39;, &#39;/shuttle/missions/sts-26/mission-sts-26.html&#39;, &#39;/shuttle/missions/sts-26/sts-26-info.html&#39;, &#39;/shuttle/missions/sts-27/mission-sts-27.html&#39;, &#39;/shuttle/missions/sts-27/sts-27-info.html&#39;, &#39;/shuttle/missions/sts-28/mission-sts-28.html&#39;, &#39;/shuttle/missions/sts-28/sts-28-info.html&#39;, &#39;/shuttle/missions/sts-29/mission-sts-29.html&#39;, &#39;/shuttle/missions/sts-29/sts-29-info.html&#39;, &#39;/shuttle/missions/sts-3/mission-sts-3.html&#39;, &#39;/shuttle/missions/sts-3/sts-3-info.html&#39;, &#39;/shuttle/missions/sts-30/mission-sts-30.html&#39;, &#39;/shuttle/missions/sts-30/sts-30-info.html&#39;, &#39;/shuttle/missions/sts-31/mission-sts-31.html&#39;, &#39;/shuttle/missions/sts-31/sts-31-info.html&#39;, &#39;/shuttle/missions/sts-32/mission-sts-32.html&#39;, &#39;/shuttle/missions/sts-32/sts-32-info.html&#39;, &#39;/shuttle/missions/sts-33/mission-sts-33.html&#39;, &#39;/shuttle/missions/sts-33/sts-33-info.html&#39;, &#39;/shuttle/missions/sts-34/mission-sts-34.html&#39;, &#39;/shuttle/missions/sts-34/sts-34-info.html&#39;, &#39;/shuttle/missions/sts-35/mission-sts-35.html&#39;, &#39;/shuttle/missions/sts-35/sts-35-info.html&#39;, &#39;/shuttle/missions/sts-36/mission-sts-36.html&#39;, &#39;/shuttle/missions/sts-36/sts-36-info.html&#39;, &#39;/shuttle/missions/sts-37/mission-sts-37.html&#39;, &#39;/shuttle/missions/sts-37/sts-37-info.html&#39;, &#39;/shuttle/missions/sts-38/mission-sts-38.html&#39;, &#39;/shuttle/missions/sts-38/sts-38-info.html&#39;, &#39;/shuttle/missions/sts-39/mission-sts-39.html&#39;, &#39;/shuttle/missions/sts-39/sts-39-info.html&#39;, &#39;/shuttle/missions/sts-4/mission-sts-4.html&#39;, &#39;/shuttle/missions/sts-4/sts-4-info.html&#39;, &#39;/shuttle/missions/sts-40/mission-sts-40.html&#39;, &#39;/shuttle/missions/sts-40/sts-40-info.html&#39;, &#39;/shuttle/missions/sts-41/mission-sts-41.html&#39;, &#39;/shuttle/missions/sts-41/sts-41-info.html&#39;, &#39;/shuttle/missions/sts-42/mission-sts-42.html&#39;, &#39;/shuttle/missions/sts-42/sts-42-info.html&#39;, &#39;/shuttle/missions/sts-43/mission-sts-43.html&#39;, &#39;/shuttle/missions/sts-43/sts-43-info.html&#39;, &#39;/shuttle/missions/sts-44/mission-sts-44.html&#39;, &#39;/shuttle/missions/sts-44/sts-44-info.html&#39;, &#39;/shuttle/missions/sts-45/mission-sts-45.html&#39;, &#39;/shuttle/missions/sts-45/sts-45-info.html&#39;, &#39;/shuttle/missions/sts-46/mission-sts-46.html&#39;, &#39;/shuttle/missions/sts-46/sts-46-info.html&#39;, &#39;/shuttle/missions/sts-47/mission-sts-47.html&#39;, &#39;/shuttle/missions/sts-47/sts-47-info.html&#39;, &#39;/shuttle/missions/sts-48/mission-sts-48.html&#39;, &#39;/shuttle/missions/sts-48/sts-48-info.html&#39;, &#39;/shuttle/missions/sts-49/mission-sts-49.html&#39;, &#39;/shuttle/missions/sts-49/sts-49-info.html&#39;, &#39;/shuttle/missions/sts-5/mission-sts-5.html&#39;, &#39;/shuttle/missions/sts-5/sts-5-info.html&#39;, &#39;/shuttle/missions/sts-50/mission-sts-50.html&#39;, &#39;/shuttle/missions/sts-50/sts-50-info.html&#39;, &#39;/shuttle/missions/sts-51/mission-sts-51.html&#39;, &#39;/shuttle/missions/sts-51/sts-51-info.html&#39;, &#39;/shuttle/missions/sts-52/mission-sts-52.html&#39;, &#39;/shuttle/missions/sts-52/sts-52-info.html&#39;, &#39;/shuttle/missions/sts-53/mission-sts-53.html&#39;, &#39;/shuttle/missions/sts-53/sts-53-info.html&#39;, &#39;/shuttle/missions/sts-54/mission-sts-54.html&#39;, &#39;/shuttle/missions/sts-54/sts-54-info.html&#39;, &#39;/shuttle/missions/sts-55/mission-sts-55.html&#39;, &#39;/shuttle/missions/sts-55/sts-55-info.html&#39;, &#39;/shuttle/missions/sts-56/mission-sts-56.html&#39;, &#39;/shuttle/missions/sts-56/sts-56-info.html&#39;, &#39;/shuttle/missions/sts-57/mission-sts-57.html&#39;, &#39;/shuttle/missions/sts-57/sts-57-info.html&#39;, &#39;/shuttle/missions/sts-58/mission-sts-58.html&#39;, &#39;/shuttle/missions/sts-58/sts-58-info.html&#39;, &#39;/shuttle/missions/sts-59/mission-sts-59.html&#39;, &#39;/shuttle/missions/sts-59/sts-59-info.html&#39;, &#39;/shuttle/missions/sts-6/mission-sts-6.html&#39;, &#39;/shuttle/missions/sts-6/sts-6-info.html&#39;, &#39;/shuttle/missions/sts-60/mission-sts-60.html&#39;, &#39;/shuttle/missions/sts-60/sts-60-info.html&#39;, &#39;/shuttle/missions/sts-61/mission-sts-61.html&#39;, &#39;/shuttle/missions/sts-61/sts-61-info.html&#39;, &#39;/shuttle/missions/sts-62/mission-sts-62.html&#39;, &#39;/shuttle/missions/sts-62/sts-62-info.html&#39;, &#39;/shuttle/missions/sts-63/mission-sts-63.html&#39;, &#39;/shuttle/missions/sts-63/sts-63-info.html&#39;, &#39;/shuttle/missions/sts-64/mission-sts-64.html&#39;, &#39;/shuttle/missions/sts-64/sts-64-info.html&#39;, &#39;/shuttle/missions/sts-65/mission-sts-65.html&#39;, &#39;/shuttle/missions/sts-65/sts-65-info.html&#39;, &#39;/shuttle/missions/sts-66/mission-sts-66.html&#39;, &#39;/shuttle/missions/sts-66/sts-66-info.html&#39;, &#39;/shuttle/missions/sts-67/images/images.html&#39;, &#39;/shuttle/missions/sts-67/mission-sts-67.html&#39;, &#39;/shuttle/missions/sts-67/mission-sts-67a.html&#39;, &#39;/shuttle/missions/sts-67/sts-67-day-01-highlights.html&#39;, &#39;/shuttle/missions/sts-67/sts-67-day-02-highlights.html&#39;, &#39;/shuttle/missions/sts-67/sts-67-day-03-highlights.html&#39;, &#39;/shuttle/missions/sts-67/sts-67-day-04-highlights.html&#39;, &#39;/shuttle/missions/sts-67/sts-67-day-05-highlights.html&#39;, &#39;/shuttle/missions/sts-67/sts-67-day-06-highlights.html&#39;, &#39;/shuttle/missions/sts-67/sts-67-day-07-highlights.html&#39;, &#39;/shuttle/missions/sts-67/sts-67-day-08-highlights.html&#39;, &#39;/shuttle/missions/sts-67/sts-67-day-09-highlights.html&#39;, &#39;/shuttle/missions/sts-67/sts-67-day-10-highlights.html&#39;, &#39;/shuttle/missions/sts-67/sts-67-day-11-highlights.html&#39;, &#39;/shuttle/missions/sts-67/sts-67-day-12-highlights.html&#39;, &#39;/shuttle/missions/sts-67/sts-67-day-13-highlights.html&#39;, &#39;/shuttle/missions/sts-67/sts-67-day-14-highlights.html&#39;, &#39;/shuttle/missions/sts-67/sts-67-info.html&#39;, &#39;/shuttle/missions/sts-68/ksc-srl-image.html&#39;, &#39;/shuttle/missions/sts-68/mission-sts-68.html&#39;, &#39;/shuttle/missions/sts-68/sts-68-info.html&#39;, &#39;/shuttle/missions/sts-69/mission-sts-69.html&#39;, &#39;/shuttle/missions/sts-69/movies/movies.html&#39;, &#39;/shuttle/missions/sts-69/sts-69-info.html&#39;, &#39;/shuttle/missions/sts-7/mission-sts-7.html&#39;, &#39;/shuttle/missions/sts-7/sts-7-info.html&#39;, &#39;/shuttle/missions/sts-70/images/images.html&#39;, &#39;/shuttle/missions/sts-70/images/images1.html&#39;, &#39;/shuttle/missions/sts-70/mission-sts-70.html&#39;, &#39;/shuttle/missions/sts-70/movies/movies.html&#39;, &#39;/shuttle/missions/sts-70/sts-70-day-01-highlights.html&#39;, &#39;/shuttle/missions/sts-70/sts-70-day-02-highlights.html&#39;, &#39;/shuttle/missions/sts-70/sts-70-day-03-highlights.html&#39;, &#39;/shuttle/missions/sts-70/sts-70-day-04-highlights.html&#39;, &#39;/shuttle/missions/sts-70/sts-70-day-05-highlights.html&#39;, &#39;/shuttle/missions/sts-70/sts-70-day-06-highlights.html&#39;, &#39;/shuttle/missions/sts-70/sts-70-day-07-highlights.html&#39;, &#39;/shuttle/missions/sts-70/sts-70-day-08-highlights.html&#39;, &#39;/shuttle/missions/sts-70/sts-70-day-09-highlights.html&#39;, &#39;/shuttle/missions/sts-70/sts-70-day-10-highlights.html&#39;, &#39;/shuttle/missions/sts-70/sts-70-info.html&#39;, &#39;/shuttle/missions/sts-70/woodpecker.html&#39;, &#39;/shuttle/missions/sts-71/images/images.html&#39;, &#39;/shuttle/missions/sts-71/mission-sts-71.html&#39;, &#39;/shuttle/missions/sts-71/movies/movies.html&#39;, &#39;/shuttle/missions/sts-71/sts-71-day-01-highlights.html&#39;, &#39;/shuttle/missions/sts-71/sts-71-day-02-highlights.html&#39;, &#39;/shuttle/missions/sts-71/sts-71-day-03-highlights.html&#39;, &#39;/shuttle/missions/sts-71/sts-71-day-04-highlights.html&#39;, &#39;/shuttle/missions/sts-71/sts-71-day-05-highlights.html&#39;, &#39;/shuttle/missions/sts-71/sts-71-day-06-highlights.html&#39;, &#39;/shuttle/missions/sts-71/sts-71-day-07-highlights.html&#39;, &#39;/shuttle/missions/sts-71/sts-71-day-08-highlights.html&#39;, &#39;/shuttle/missions/sts-71/sts-71-day-09-highlights.html&#39;, &#39;/shuttle/missions/sts-71/sts-71-day-10-highlights.html&#39;, &#39;/shuttle/missions/sts-71/sts-71-day-11-highlights.html&#39;, &#39;/shuttle/missions/sts-71/sts-71-info.html&#39;, &#39;/shuttle/missions/sts-72/mission-sts-72.html&#39;, &#39;/shuttle/missions/sts-72/sts-72-info.html&#39;, &#39;/shuttle/missions/sts-73/mission-sts-73.html&#39;, &#39;/shuttle/missions/sts-73/sts-73-info.html&#39;, &#39;/shuttle/missions/sts-74/mission-sts-74.html&#39;, &#39;/shuttle/missions/sts-74/sts-74-info.html&#39;, &#39;/shuttle/missions/sts-75/mission-sts-75.html&#39;, &#39;/shuttle/missions/sts-75/sts-75-info.html&#39;, &#39;/shuttle/missions/sts-76/mission-sts-76.html&#39;, &#39;/shuttle/missions/sts-76/sts-76-info.html&#39;, &#39;/shuttle/missions/sts-77/mission-sts-77.html&#39;, &#39;/shuttle/missions/sts-77/sts-77-info.html&#39;, &#39;/shuttle/missions/sts-78/mission-sts-78.html&#39;, &#39;/shuttle/missions/sts-78/sts-78-info.html&#39;, &#39;/shuttle/missions/sts-8/mission-sts-8.html&#39;, &#39;/shuttle/missions/sts-8/sts-8-info.html&#39;, &#39;/shuttle/missions/sts-9/mission-sts-9.html&#39;, &#39;/shuttle/missions/sts-9/sts-9-info.html&#39;, &#39;/shuttle/resources/orbiters/atlantis.html&#39;, &#39;/shuttle/resources/orbiters/challenger.html&#39;, &#39;/shuttle/resources/orbiters/columbia.html&#39;, &#39;/shuttle/resources/orbiters/discovery.html&#39;, &#39;/shuttle/resources/orbiters/endeavour.html&#39;, &#39;/shuttle/resources/orbiters/enterprise.html&#39;, &#39;/shuttle/resources/orbiters/mpta-098.html&#39;, &#39;/shuttle/resources/orbiters/orbiters.html&#39;, &#39;/shuttle/resources/orbiters/pathfinder.html&#39;, &#39;/shuttle/technology/sts-newsref/apu_mods.html&#39;, &#39;/shuttle/technology/sts-newsref/carriers.html&#39;, &#39;/shuttle/technology/sts-newsref/centers.html&#39;, &#39;/shuttle/technology/sts-newsref/et.html&#39;, &#39;/shuttle/technology/sts-newsref/mission_profile.html&#39;, &#39;/shuttle/technology/sts-newsref/operations.html&#39;, &#39;/shuttle/technology/sts-newsref/pam-d.html&#39;, &#39;/shuttle/technology/sts-newsref/spacelab.html&#39;, &#39;/shuttle/technology/sts-newsref/srb.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-acronyms.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-airlock.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-apu.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-av.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-caws.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-comm.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-cron-72.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-cron.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-eclss-airlock.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-eclss-wcl.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-eps.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-gear.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-gnnc.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-inst.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-jsc-comm.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-jsc.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-lc39.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-lcc.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-mps.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-msfc.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-oalt.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-oms.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-ovcomm.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-rcs.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-rhc.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-subs.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-tps.html&#39;, &#39;/shuttle/technology/sts-newsref/sts-wcl.html&#39;, &#39;/shuttle/technology/sts-newsref/sts_asm.html&#39;, &#39;/shuttle/technology/sts-newsref/sts_coord.html&#39;, &#39;/shuttle/technology/sts-newsref/sts_eclss.html&#39;, &#39;/shuttle/technology/sts-newsref/sts_egress.html&#39;, &#39;/shuttle/technology/sts-newsref/sts_events.html&#39;, &#39;/shuttle/technology/sts-newsref/sts_mes.html&#39;, &#39;/shuttle/technology/sts-newsref/sts_overview.html&#39;, &#39;/shuttle/technology/sts-newsref/sts_spec.html&#39;, &#39;/shuttle/technology/sts-newsref/sts_sys.html&#39;, &#39;/shuttle/technology/sts-newsref/stsover-acronyms.html&#39;, &#39;/shuttle/technology/sts-newsref/stsover-chron.html&#39;, &#39;/shuttle/technology/sts-newsref/stsover-landing.html&#39;, &#39;/shuttle/technology/sts-newsref/stsover-launch.html&#39;, &#39;/shuttle/technology/sts-newsref/stsover-mgt.html&#39;, &#39;/shuttle/technology/sts-newsref/stsover-missions.html&#39;, &#39;/shuttle/technology/sts-newsref/stsover-prep.html&#39;, &#39;/shuttle/technology/sts-newsref/stsover.html&#39;, &#39;/shuttle/technology/sts-newsref/stsref-toc.html&#39;, &#39;/shuttle/technology/sts-newsref/tps_mods.html&#39;, &#39;/software//viewers/viewers.html&#39;, &#39;/software//winvn/winvn.html&#39;, &#39;/software/techdoc/td-Contents.html&#39;, &#39;/software/techdoc/td-Index.html&#39;, &#39;/software/techdoc/td-REV_.html&#39;, &#39;/software/techdoc/td.html&#39;, &#39;/software/viewers/viewers.html&#39;, &#39;/software/webadmin/faq.html&#39;, &#39;/software/winvn/brydon.html&#39;, &#39;/software/winvn/comment.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-Contents.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-I-1.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-I-10.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-I-11.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-I-2.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-I-3.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-I-4.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-I-5.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-I-6.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-I-7.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-I-8.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-I.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-II-1.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-II-2.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-II-3.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-II-4.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-II.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-III-2.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-III-3.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-III-4.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-III-5.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-III-6.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-III-7.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-III-8.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-III.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-IV-1.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-IV-2.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-IV-3.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-IV.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-V-1.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-V-2.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-V-3.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-V-4.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-V-5.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-V-6.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-V-7.html&#39;, &#39;/software/winvn/faq/WINVNFAQ-V.html&#39;, &#39;/software/winvn/faq/WINVNFAQ.html&#39;, &#39;/software/winvn/userguide/1_1.html&#39;, &#39;/software/winvn/userguide/wvnguide.html&#39;, &#39;/software/winvn/winvn.html&#39;, &#39;/statistics/1993/1993.html&#39;, &#39;/statistics/1993/Dec/Dec93.html&#39;, &#39;/statistics/1993/Dec/Dec93_archive.html&#39;, &#39;/statistics/1993/Nov/Nov93.html&#39;, &#39;/statistics/1993/Nov/Nov93_reverse_domains.html&#39;, &#39;/statistics/1993/Oct/Oct93_archive.html&#39;, &#39;/statistics/1993/Sep/Sep93.html&#39;, &#39;/statistics/1994/Apr/Apr94.html&#39;, &#39;/statistics/1994/Aug/Aug94_archive.html&#39;, &#39;/statistics/1994/Aug/Aug94_reverse_domains.html&#39;, &#39;/statistics/1994/Dec/Dec94.html&#39;, &#39;/statistics/1994/Dec/Dec94_archive.html&#39;, &#39;/statistics/1994/Dec/Dec94_reverse_domains.html&#39;, &#39;/statistics/1994/Feb/Feb94_reverse_domains.html&#39;, &#39;/statistics/1994/Jan/Jan94_archive.html&#39;, &#39;/statistics/1994/Jan/Jan94_reverse_domains.html&#39;, &#39;/statistics/1994/Jul/Jul94.html&#39;, &#39;/statistics/1994/Jul/Jul94_reverse_domains.html&#39;, &#39;/statistics/1994/Mar/Mar94.html&#39;, &#39;/statistics/1994/Mar/Mar94_archive.html&#39;, &#39;/statistics/1994/May/May94.html&#39;, &#39;/statistics/1994/May/May94_reverse_domains.html&#39;, &#39;/statistics/1994/Nov/Nov94.html&#39;, &#39;/statistics/1994/Nov/Nov94_archive.html&#39;, &#39;/statistics/1994/Nov/Nov94_reverse_domains.html&#39;, &#39;/statistics/1994/Oct/Oct94.html&#39;, &#39;/statistics/1994/Oct/Oct94_archive.html&#39;, &#39;/statistics/1994/Oct/Oct94_reverse_domains.html&#39;, &#39;/statistics/1994/Sep/Sep94.html&#39;, &#39;/statistics/1994/Sep/Sep94_archive.html&#39;, &#39;/statistics/1994/Sep/Sep94_reverse_domains.html&#39;, &#39;/statistics/1995/Apr/Apr95.html&#39;, &#39;/statistics/1995/Apr/Apr95_archive.html&#39;, &#39;/statistics/1995/Apr/Apr95_reverse_domains.html&#39;, &#39;/statistics/1995/Feb/Feb95.html&#39;, &#39;/statistics/1995/Feb/Feb95_archive.html&#39;, &#39;/statistics/1995/Feb/Feb95_reverse_domains.html&#39;, &#39;/statistics/1995/Jan/Jan95.html&#39;, &#39;/statistics/1995/Jan/Jan95_archive.html&#39;, &#39;/statistics/1995/Jan/Jan95_reverse_domains.html&#39;, &#39;/statistics/1995/Jul/Jul95.html&#39;, &#39;/statistics/1995/Jul/Jul95_archive.html&#39;, &#39;/statistics/1995/Jul/Jul95_reverse_domains.html&#39;, &#39;/statistics/1995/Jun/Jun95.html&#39;, &#39;/statistics/1995/Jun/Jun95_archive.html&#39;, &#39;/statistics/1995/Jun/Jun95_reverse_domains.html&#39;, &#39;/statistics/1995/Jun/agent.html&#39;, &#39;/statistics/1995/Jun/ref.html&#39;, &#39;/statistics/1995/Mar/Mar95.html&#39;, &#39;/statistics/1995/Mar/Mar95_archive.html&#39;, &#39;/statistics/1995/Mar/Mar95_reverse_domains.html&#39;, &#39;/statistics/1995/May/May95.html&#39;, &#39;/statistics/1995/May/May95_archive.html&#39;, &#39;/statistics/1995/May/May95_reverse_domains.html&#39;, &#39;/statistics/1995/bkup/Apr95.html&#39;, &#39;/statistics/1995/bkup/Apr95_full.html&#39;, &#39;/statistics/1995/bkup/Feb95.html&#39;, &#39;/statistics/1995/bkup/Feb95_full.html&#39;, &#39;/statistics/1995/bkup/Jan95_full.html&#39;, &#39;/statistics/1995/bkup/Mar95.html&#39;, &#39;/statistics/1995/bkup/Mar95_full.html&#39;, &#39;/statistics/statistics.html&#39;, &#39;/welcome.html&#39;, &#39;/whats-new.html&#39;, &#39;/~downs/harvest-1.2/INSTRUCTIONS.html&#39;, &#39;/~downs/harvest-1.2/brokers/Attributes.html&#39;, &#39;/~downs/harvest-1.2/brokers/www/admin/admin.html&#39;, &#39;/~downs/harvest-1.2/brokers/www/index.html&#39;, &#39;/~downs/harvest-1.2/brokers/www/query-glimpse.html&#39;, &#39;/~downs/harvest-1.2/brokers/www/query.html&#39;, &#39;/~downs/home.html&#39;, &#39;/~downs/www/index.html&#39;, &#39;/~downs/www/query.html&#39;, &#39;/~downs/www/summary.html&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="tugas7_2_graphPTA.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Graph PTA</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="tugas10_1_komuditasfb.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Komuditas FB</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

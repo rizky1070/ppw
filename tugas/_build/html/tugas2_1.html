@@ -193,10 +193,18 @@
 <li class="toctree-l1"><a class="reference internal" href="tugas4_1_ekstraksi_fitur_tfidf_pta_manajemen.html">Ekstraksi fitur TFID PTA Manajemen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas4_1_cbow_beritacopy.html">CBOW Berita</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas4_1_cbow_PTA_manajemen.html">CBOW PTA Manajemen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas5_berita.html">BERTopic Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas5_manajemen.html">BERTopic Manajemen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas6_LDA_klasifikasi_berita.html">LDA Klasifikasi Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas6_LDA_klasifikasi_beritaWithOutStemming.html">LDA Klasifikasi Berita Tanpa Stemming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UTS.html">UTS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas8_1_analisisdatsetwebusage.html">Analisis dataset webusage.csv</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas8_2_analisisdatasetnasa.html">Analisis dataset NASA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_1_datasetpagerankberita.html">Pagerank Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_1_datasetpagerankPTA.html">Pagerank PTA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_2_graphberita.html">Graph Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas7_2_graphPTA.html">Graph PTA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas8_2_analisisnasa.html">Analisis Dataset Log Nasa July</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas10_1_komuditasfb.html">Komuditas FB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas11_1_dokumen.html">Dokumen Analisis</a></li>
 </ul>
 
     </div>
@@ -467,169 +475,11 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">gaierror</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\urllib3\connection.py:198,</span> in <span class="ni">HTTPConnection._new_conn</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">197</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">198</span>     <span class="n">sock</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">create_connection</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">199</span>         <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_dns_host</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">),</span>
-<span class="g g-Whitespace">    </span><span class="mi">200</span>         <span class="bp">self</span><span class="o">.</span><span class="n">timeout</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">201</span>         <span class="n">source_address</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">source_address</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">202</span>         <span class="n">socket_options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">socket_options</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">203</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">204</span> <span class="k">except</span> <span class="n">socket</span><span class="o">.</span><span class="n">gaierror</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\urllib3\util\connection.py:60,</span> in <span class="ni">create_connection</span><span class="nt">(address, timeout, source_address, socket_options)</span>
-<span class="g g-Whitespace">     </span><span class="mi">58</span>     <span class="k">raise</span> <span class="n">LocationParseError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&#39;</span><span class="si">{</span><span class="n">host</span><span class="si">}</span><span class="s2">&#39;, label empty or too long&quot;</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="kc">None</span>
-<span class="ne">---&gt; </span><span class="mi">60</span> <span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">socket</span><span class="o">.</span><span class="n">getaddrinfo</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">family</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">61</span>     <span class="n">af</span><span class="p">,</span> <span class="n">socktype</span><span class="p">,</span> <span class="n">proto</span><span class="p">,</span> <span class="n">canonname</span><span class="p">,</span> <span class="n">sa</span> <span class="o">=</span> <span class="n">res</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\socket.py:955,</span> in <span class="ni">getaddrinfo</span><span class="nt">(host, port, family, type, proto, flags)</span>
-<span class="g g-Whitespace">    </span><span class="mi">954</span> <span class="n">addrlist</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="ne">--&gt; </span><span class="mi">955</span> <span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">_socket</span><span class="o">.</span><span class="n">getaddrinfo</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">family</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">proto</span><span class="p">,</span> <span class="n">flags</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">956</span>     <span class="n">af</span><span class="p">,</span> <span class="n">socktype</span><span class="p">,</span> <span class="n">proto</span><span class="p">,</span> <span class="n">canonname</span><span class="p">,</span> <span class="n">sa</span> <span class="o">=</span> <span class="n">res</span>
-
-<span class="ne">gaierror</span>: [Errno 11001] getaddrinfo failed
-
-<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
-
-<span class="ne">NameResolutionError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\urllib3\connectionpool.py:787,</span> in <span class="ni">HTTPConnectionPool.urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">786</span> <span class="c1"># Make the request on the HTTPConnection object</span>
-<span class="ne">--&gt; </span><span class="mi">787</span> <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_request</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">788</span>     <span class="n">conn</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">789</span>     <span class="n">method</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">790</span>     <span class="n">url</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">791</span>     <span class="n">timeout</span><span class="o">=</span><span class="n">timeout_obj</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">792</span>     <span class="n">body</span><span class="o">=</span><span class="n">body</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">793</span>     <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">794</span>     <span class="n">chunked</span><span class="o">=</span><span class="n">chunked</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">795</span>     <span class="n">retries</span><span class="o">=</span><span class="n">retries</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">796</span>     <span class="n">response_conn</span><span class="o">=</span><span class="n">response_conn</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">797</span>     <span class="n">preload_content</span><span class="o">=</span><span class="n">preload_content</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">798</span>     <span class="n">decode_content</span><span class="o">=</span><span class="n">decode_content</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">799</span>     <span class="o">**</span><span class="n">response_kw</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">800</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">802</span> <span class="c1"># Everything went great!</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\urllib3\connectionpool.py:488,</span> in <span class="ni">HTTPConnectionPool._make_request</span><span class="nt">(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)</span>
-<span class="g g-Whitespace">    </span><span class="mi">487</span>         <span class="n">new_e</span> <span class="o">=</span> <span class="n">_wrap_proxy_error</span><span class="p">(</span><span class="n">new_e</span><span class="p">,</span> <span class="n">conn</span><span class="o">.</span><span class="n">proxy</span><span class="o">.</span><span class="n">scheme</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">488</span>     <span class="k">raise</span> <span class="n">new_e</span>
-<span class="g g-Whitespace">    </span><span class="mi">490</span> <span class="c1"># conn.request() calls http.client.*.request, not the method in</span>
-<span class="g g-Whitespace">    </span><span class="mi">491</span> <span class="c1"># urllib3.request. It also calls makefile (recv) on the socket.</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\urllib3\connectionpool.py:464,</span> in <span class="ni">HTTPConnectionPool._make_request</span><span class="nt">(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)</span>
-<span class="g g-Whitespace">    </span><span class="mi">463</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">464</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_validate_conn</span><span class="p">(</span><span class="n">conn</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">465</span> <span class="k">except</span> <span class="p">(</span><span class="n">SocketTimeout</span><span class="p">,</span> <span class="n">BaseSSLError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\urllib3\connectionpool.py:1093,</span> in <span class="ni">HTTPSConnectionPool._validate_conn</span><span class="nt">(self, conn)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1092</span> <span class="k">if</span> <span class="n">conn</span><span class="o">.</span><span class="n">is_closed</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1093</span>     <span class="n">conn</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1095</span> <span class="c1"># TODO revise this, see https://github.com/urllib3/urllib3/issues/2791</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\urllib3\connection.py:753,</span> in <span class="ni">HTTPSConnection.connect</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">752</span> <span class="n">sock</span><span class="p">:</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span> <span class="o">|</span> <span class="n">ssl</span><span class="o">.</span><span class="n">SSLSocket</span>
-<span class="ne">--&gt; </span><span class="mi">753</span> <span class="bp">self</span><span class="o">.</span><span class="n">sock</span> <span class="o">=</span> <span class="n">sock</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new_conn</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">754</span> <span class="n">server_hostname</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">host</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\urllib3\connection.py:205,</span> in <span class="ni">HTTPConnection._new_conn</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">204</span> <span class="k">except</span> <span class="n">socket</span><span class="o">.</span><span class="n">gaierror</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">205</span>     <span class="k">raise</span> <span class="n">NameResolutionError</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">e</span>
-<span class="g g-Whitespace">    </span><span class="mi">206</span> <span class="k">except</span> <span class="n">SocketTimeout</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-
-<span class="ne">NameResolutionError</span>: &lt;urllib3.connection.HTTPSConnection object at 0x00000210A2071F90&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno 11001] getaddrinfo failed)
-
-<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
-
-<span class="ne">MaxRetryError</span><span class="g g-Whitespace">                             </span>Traceback (most recent call last)
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\requests\adapters.py:644,</span> in <span class="ni">HTTPAdapter.send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
-<span class="g g-Whitespace">    </span><span class="mi">643</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">644</span>     <span class="n">resp</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">645</span>         <span class="n">method</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">method</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">646</span>         <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">647</span>         <span class="n">body</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">body</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">648</span>         <span class="n">headers</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">headers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">649</span>         <span class="n">redirect</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">650</span>         <span class="n">assert_same_host</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">651</span>         <span class="n">preload_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">652</span>         <span class="n">decode_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">653</span>         <span class="n">retries</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_retries</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">654</span>         <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">655</span>         <span class="n">chunked</span><span class="o">=</span><span class="n">chunked</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">656</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">658</span> <span class="k">except</span> <span class="p">(</span><span class="n">ProtocolError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">)</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\urllib3\connectionpool.py:841,</span> in <span class="ni">HTTPConnectionPool.urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">839</span>     <span class="n">new_e</span> <span class="o">=</span> <span class="n">ProtocolError</span><span class="p">(</span><span class="s2">&quot;Connection aborted.&quot;</span><span class="p">,</span> <span class="n">new_e</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">841</span> <span class="n">retries</span> <span class="o">=</span> <span class="n">retries</span><span class="o">.</span><span class="n">increment</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">842</span>     <span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="n">new_e</span><span class="p">,</span> <span class="n">_pool</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span> <span class="n">_stacktrace</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()[</span><span class="mi">2</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">843</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">844</span> <span class="n">retries</span><span class="o">.</span><span class="n">sleep</span><span class="p">()</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\urllib3\util\retry.py:519,</span> in <span class="ni">Retry.increment</span><span class="nt">(self, method, url, response, error, _pool, _stacktrace)</span>
-<span class="g g-Whitespace">    </span><span class="mi">518</span>     <span class="n">reason</span> <span class="o">=</span> <span class="n">error</span> <span class="ow">or</span> <span class="n">ResponseError</span><span class="p">(</span><span class="n">cause</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">519</span>     <span class="k">raise</span> <span class="n">MaxRetryError</span><span class="p">(</span><span class="n">_pool</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">reason</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">reason</span>  <span class="c1"># type: ignore[arg-type]</span>
-<span class="g g-Whitespace">    </span><span class="mi">521</span> <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Incremented Retry for (url=&#39;</span><span class="si">%s</span><span class="s2">&#39;): </span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">new_retry</span><span class="p">)</span>
-
-<span class="ne">MaxRetryError</span>: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443): Max retries exceeded with url: /c_search/byprod/10/1 (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPSConnection object at 0x00000210A2071F90&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno 11001] getaddrinfo failed)&quot;))
-
-<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
-
-<span class="ne">ConnectionError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Contoh pemakaian</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">get_max_page</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
-
-<span class="nn">Cell In[3], line 3,</span> in <span class="ni">get_max_page</span><span class="nt">(prodi_id)</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">def</span><span class="w"> </span><span class="nf">get_max_page</span><span class="p">(</span><span class="n">prodi_id</span><span class="p">):</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BASE_URL</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">prodi_id</span><span class="si">}</span><span class="s2">/1&quot;</span>
-<span class="ne">----&gt; </span><span class="mi">3</span>     <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="c1"># Cari tombol &gt;&gt; (last page)</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\requests\api.py:73,</span> in <span class="ni">get</span><span class="nt">(url, params, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">62</span> <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">63</span><span class="w">     </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Sends a GET request.</span>
-<span class="g g-Whitespace">     </span><span class="mi">64</span><span class="sd"> </span>
-<span class="g g-Whitespace">     </span><span class="mi">65</span><span class="sd">     :param url: URL for the new :class:`Request` object.</span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">     </span><span class="mi">70</span><span class="sd">     :rtype: requests.Response</span>
-<span class="g g-Whitespace">     </span><span class="mi">71</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">73</span>     <span class="k">return</span> <span class="n">request</span><span class="p">(</span><span class="s2">&quot;get&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\requests\api.py:59,</span> in <span class="ni">request</span><span class="nt">(method, url, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">55</span> <span class="c1"># By using the &#39;with&#39; statement we are sure the session is closed, thus we</span>
-<span class="g g-Whitespace">     </span><span class="mi">56</span> <span class="c1"># avoid leaving sockets open which can trigger a ResourceWarning in some</span>
-<span class="g g-Whitespace">     </span><span class="mi">57</span> <span class="c1"># cases, and look like a memory leak in others.</span>
-<span class="g g-Whitespace">     </span><span class="mi">58</span> <span class="k">with</span> <span class="n">sessions</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">59</span>     <span class="k">return</span> <span class="n">session</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\requests\sessions.py:589,</span> in <span class="ni">Session.request</span><span class="nt">(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)</span>
-<span class="g g-Whitespace">    </span><span class="mi">584</span> <span class="n">send_kwargs</span> <span class="o">=</span> <span class="p">{</span>
-<span class="g g-Whitespace">    </span><span class="mi">585</span>     <span class="s2">&quot;timeout&quot;</span><span class="p">:</span> <span class="n">timeout</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">586</span>     <span class="s2">&quot;allow_redirects&quot;</span><span class="p">:</span> <span class="n">allow_redirects</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">587</span> <span class="p">}</span>
-<span class="g g-Whitespace">    </span><span class="mi">588</span> <span class="n">send_kwargs</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">589</span> <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">prep</span><span class="p">,</span> <span class="o">**</span><span class="n">send_kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">591</span> <span class="k">return</span> <span class="n">resp</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\requests\sessions.py:703,</span> in <span class="ni">Session.send</span><span class="nt">(self, request, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">700</span> <span class="n">start</span> <span class="o">=</span> <span class="n">preferred_clock</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span> <span class="c1"># Send the request</span>
-<span class="ne">--&gt; </span><span class="mi">703</span> <span class="n">r</span> <span class="o">=</span> <span class="n">adapter</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">705</span> <span class="c1"># Total elapsed time of the request (approximately)</span>
-<span class="g g-Whitespace">    </span><span class="mi">706</span> <span class="n">elapsed</span> <span class="o">=</span> <span class="n">preferred_clock</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\requests\adapters.py:677,</span> in <span class="ni">HTTPAdapter.send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
-<span class="g g-Whitespace">    </span><span class="mi">673</span>     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">reason</span><span class="p">,</span> <span class="n">_SSLError</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">674</span>         <span class="c1"># This branch is for urllib3 v1.22 and later.</span>
-<span class="g g-Whitespace">    </span><span class="mi">675</span>         <span class="k">raise</span> <span class="n">SSLError</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">677</span>     <span class="k">raise</span> <span class="ne">ConnectionError</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">679</span> <span class="k">except</span> <span class="n">ClosedPoolError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">680</span>     <span class="k">raise</span> <span class="ne">ConnectionError</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
-
-<span class="ne">ConnectionError</span>: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443): Max retries exceeded with url: /c_search/byprod/10/1 (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPSConnection object at 0x00000210A2071F90&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno 11001] getaddrinfo failed)&quot;))
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\laragon\bin\python\python-3.10\lib\site-packages\soupsieve\css_parser.py:876: FutureWarning: The pseudo class &#39;:contains&#39; is deprecated, &#39;:-soup-contains&#39; should be used moving forward.
+  warnings.warn(  # noqa: B028
 </pre></div>
 </div>
 </div>
