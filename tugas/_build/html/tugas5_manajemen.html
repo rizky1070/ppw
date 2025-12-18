@@ -205,6 +205,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tugas8_2_analisisnasa.html">Analisis Dataset Log Nasa July</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas10_1_komuditasfb.html">Komuditas FB</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas11_1_dokumen.html">Dokumen Analisis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UAS.html">UAS</a></li>
 </ul>
 
     </div>
@@ -413,6 +414,170 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting bertopic
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Using cached bertopic-0.17.4-py3-none-any.whl.metadata (24 kB)
+Requirement already satisfied: gensim in c:\laragon\bin\python\python-3.10\lib\site-packages (4.3.3)
+Requirement already satisfied: numpy in c:\laragon\bin\python\python-3.10\lib\site-packages (1.26.4)
+Collecting hdbscan&gt;=0.8.29 (from bertopic)
+  Using cached hdbscan-0.8.41-cp310-cp310-win_amd64.whl.metadata (15 kB)
+Collecting umap-learn&gt;=0.5.0 (from bertopic)
+  Using cached umap_learn-0.5.9.post2-py3-none-any.whl.metadata (25 kB)
+Requirement already satisfied: pandas&gt;=1.1.5 in c:\laragon\bin\python\python-3.10\lib\site-packages (from bertopic) (2.3.2)
+Requirement already satisfied: plotly&gt;=4.7.0 in c:\laragon\bin\python\python-3.10\lib\site-packages (from bertopic) (6.3.0)
+Requirement already satisfied: scikit-learn&gt;=1.0 in c:\laragon\bin\python\python-3.10\lib\site-packages (from bertopic) (1.7.2)
+Collecting sentence-transformers&gt;=0.4.1 (from bertopic)
+  Using cached sentence_transformers-5.2.0-py3-none-any.whl.metadata (16 kB)
+Requirement already satisfied: tqdm&gt;=4.41.1 in c:\laragon\bin\python\python-3.10\lib\site-packages (from bertopic) (4.67.1)
+Collecting llvmlite&gt;0.36.0 (from bertopic)
+  Using cached llvmlite-0.46.0-cp310-cp310-win_amd64.whl.metadata (4.9 kB)
+Requirement already satisfied: scipy&lt;1.14.0,&gt;=1.7.0 in c:\laragon\bin\python\python-3.10\lib\site-packages (from gensim) (1.13.1)
+Requirement already satisfied: smart-open&gt;=1.8.1 in c:\laragon\bin\python\python-3.10\lib\site-packages (from gensim) (7.3.1)
+Requirement already satisfied: joblib&gt;=1.0 in c:\laragon\bin\python\python-3.10\lib\site-packages (from hdbscan&gt;=0.8.29-&gt;bertopic) (1.5.2)
+Requirement already satisfied: python-dateutil&gt;=2.8.2 in c:\users\rizky\appdata\roaming\python\python310\site-packages (from pandas&gt;=1.1.5-&gt;bertopic) (2.9.0.post0)
+Requirement already satisfied: pytz&gt;=2020.1 in c:\laragon\bin\python\python-3.10\lib\site-packages (from pandas&gt;=1.1.5-&gt;bertopic) (2025.2)
+Requirement already satisfied: tzdata&gt;=2022.7 in c:\laragon\bin\python\python-3.10\lib\site-packages (from pandas&gt;=1.1.5-&gt;bertopic) (2025.2)
+Requirement already satisfied: narwhals&gt;=1.15.1 in c:\laragon\bin\python\python-3.10\lib\site-packages (from plotly&gt;=4.7.0-&gt;bertopic) (2.6.0)
+Requirement already satisfied: packaging in c:\users\rizky\appdata\roaming\python\python310\site-packages (from plotly&gt;=4.7.0-&gt;bertopic) (25.0)
+Requirement already satisfied: six&gt;=1.5 in c:\users\rizky\appdata\roaming\python\python310\site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas&gt;=1.1.5-&gt;bertopic) (1.17.0)
+Requirement already satisfied: threadpoolctl&gt;=3.1.0 in c:\laragon\bin\python\python-3.10\lib\site-packages (from scikit-learn&gt;=1.0-&gt;bertopic) (3.6.0)
+Collecting transformers&lt;6.0.0,&gt;=4.41.0 (from sentence-transformers&gt;=0.4.1-&gt;bertopic)
+  Using cached transformers-4.57.3-py3-none-any.whl.metadata (43 kB)
+Collecting torch&gt;=1.11.0 (from sentence-transformers&gt;=0.4.1-&gt;bertopic)
+  Using cached torch-2.9.1-cp310-cp310-win_amd64.whl.metadata (30 kB)
+Collecting huggingface-hub&gt;=0.20.0 (from sentence-transformers&gt;=0.4.1-&gt;bertopic)
+  Using cached huggingface_hub-1.2.3-py3-none-any.whl.metadata (13 kB)
+Requirement already satisfied: typing_extensions&gt;=4.5.0 in c:\users\rizky\appdata\roaming\python\python310\site-packages (from sentence-transformers&gt;=0.4.1-&gt;bertopic) (4.15.0)
+Collecting filelock (from transformers&lt;6.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic)
+  Using cached filelock-3.20.1-py3-none-any.whl.metadata (2.1 kB)
+Collecting huggingface-hub&gt;=0.20.0 (from sentence-transformers&gt;=0.4.1-&gt;bertopic)
+  Using cached huggingface_hub-0.36.0-py3-none-any.whl.metadata (14 kB)
+Requirement already satisfied: pyyaml&gt;=5.1 in c:\laragon\bin\python\python-3.10\lib\site-packages (from transformers&lt;6.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (6.0.2)
+Requirement already satisfied: regex!=2019.12.17 in c:\laragon\bin\python\python-3.10\lib\site-packages (from transformers&lt;6.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (2025.9.1)
+Requirement already satisfied: requests in c:\laragon\bin\python\python-3.10\lib\site-packages (from transformers&lt;6.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (2.32.5)
+Collecting tokenizers&lt;=0.23.0,&gt;=0.22.0 (from transformers&lt;6.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic)
+  Using cached tokenizers-0.22.1-cp39-abi3-win_amd64.whl.metadata (6.9 kB)
+Collecting safetensors&gt;=0.4.3 (from transformers&lt;6.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic)
+  Using cached safetensors-0.7.0-cp38-abi3-win_amd64.whl.metadata (4.2 kB)
+Collecting fsspec&gt;=2023.5.0 (from huggingface-hub&gt;=0.20.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic)
+  Using cached fsspec-2025.12.0-py3-none-any.whl.metadata (10 kB)
+Requirement already satisfied: wrapt in c:\laragon\bin\python\python-3.10\lib\site-packages (from smart-open&gt;=1.8.1-&gt;gensim) (1.17.3)
+Requirement already satisfied: sympy&gt;=1.13.3 in c:\laragon\bin\python\python-3.10\lib\site-packages (from torch&gt;=1.11.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (1.14.0)
+Requirement already satisfied: networkx&gt;=2.5.1 in c:\laragon\bin\python\python-3.10\lib\site-packages (from torch&gt;=1.11.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (3.4.2)
+Requirement already satisfied: jinja2 in c:\laragon\bin\python\python-3.10\lib\site-packages (from torch&gt;=1.11.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (3.1.6)
+Requirement already satisfied: mpmath&lt;1.4,&gt;=1.1.0 in c:\laragon\bin\python\python-3.10\lib\site-packages (from sympy&gt;=1.13.3-&gt;torch&gt;=1.11.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (1.3.0)
+Requirement already satisfied: colorama in c:\users\rizky\appdata\roaming\python\python310\site-packages (from tqdm&gt;=4.41.1-&gt;bertopic) (0.4.6)
+Collecting numba&gt;=0.51.2 (from umap-learn&gt;=0.5.0-&gt;bertopic)
+  Using cached numba-0.63.1-cp310-cp310-win_amd64.whl.metadata (2.8 kB)
+Collecting pynndescent&gt;=0.5 (from umap-learn&gt;=0.5.0-&gt;bertopic)
+  Using cached pynndescent-0.5.13-py3-none-any.whl.metadata (6.8 kB)
+Requirement already satisfied: MarkupSafe&gt;=2.0 in c:\laragon\bin\python\python-3.10\lib\site-packages (from jinja2-&gt;torch&gt;=1.11.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (3.0.2)
+Requirement already satisfied: charset_normalizer&lt;4,&gt;=2 in c:\laragon\bin\python\python-3.10\lib\site-packages (from requests-&gt;transformers&lt;6.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (3.4.3)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in c:\laragon\bin\python\python-3.10\lib\site-packages (from requests-&gt;transformers&lt;6.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (3.10)
+Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in c:\laragon\bin\python\python-3.10\lib\site-packages (from requests-&gt;transformers&lt;6.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (2.5.0)
+Requirement already satisfied: certifi&gt;=2017.4.17 in c:\laragon\bin\python\python-3.10\lib\site-packages (from requests-&gt;transformers&lt;6.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (2025.8.3)
+Using cached bertopic-0.17.4-py3-none-any.whl (154 kB)
+Using cached hdbscan-0.8.41-cp310-cp310-win_amd64.whl (687 kB)
+Using cached llvmlite-0.46.0-cp310-cp310-win_amd64.whl (38.1 MB)
+Using cached sentence_transformers-5.2.0-py3-none-any.whl (493 kB)
+Using cached transformers-4.57.3-py3-none-any.whl (12.0 MB)
+Using cached huggingface_hub-0.36.0-py3-none-any.whl (566 kB)
+Using cached tokenizers-0.22.1-cp39-abi3-win_amd64.whl (2.7 MB)
+Using cached fsspec-2025.12.0-py3-none-any.whl (201 kB)
+Using cached safetensors-0.7.0-cp38-abi3-win_amd64.whl (341 kB)
+Using cached torch-2.9.1-cp310-cp310-win_amd64.whl (111.0 MB)
+Using cached umap_learn-0.5.9.post2-py3-none-any.whl (90 kB)
+Using cached numba-0.63.1-cp310-cp310-win_amd64.whl (2.7 MB)
+Using cached pynndescent-0.5.13-py3-none-any.whl (56 kB)
+Using cached filelock-3.20.1-py3-none-any.whl (16 kB)
+Installing collected packages: safetensors, llvmlite, fsspec, filelock, torch, numba, huggingface-hub, tokenizers, pynndescent, hdbscan, umap-learn, transformers, sentence-transformers, bertopic
+
+   ----------------------------------------  0/14 [safetensors]
+   -- -------------------------------------  1/14 [llvmlite]
+   -- -------------------------------------  1/14 [llvmlite]
+   -- -------------------------------------  1/14 [llvmlite]
+   -- -------------------------------------  1/14 [llvmlite]
+   -- -------------------------------------  1/14 [llvmlite]
+   -- -------------------------------------  1/14 [llvmlite]
+   -- -------------------------------------  1/14 [llvmlite]
+   -- -------------------------------------  1/14 [llvmlite]
+   -- -------------------------------------  1/14 [llvmlite]
+   -- -------------------------------------  1/14 [llvmlite]
+   -- -------------------------------------  1/14 [llvmlite]
+   -- -------------------------------------  1/14 [llvmlite]
+   -- -------------------------------------  1/14 [llvmlite]
+   -- -------------------------------------  1/14 [llvmlite]
+   -- -------------------------------------  1/14 [llvmlite]
+   -- -------------------------------------  1/14 [llvmlite]
+   -- -------------------------------------  1/14 [llvmlite]
+   -- -------------------------------------  1/14 [llvmlite]
+   ----- ----------------------------------  2/14 [fsspec]
+   ----- ----------------------------------  2/14 [fsspec]
+   ----- ----------------------------------  2/14 [fsspec]
+   ----- ----------------------------------  2/14 [fsspec]
+   ----- ----------------------------------  2/14 [fsspec]
+   ----- ----------------------------------  2/14 [fsspec]
+   ----- ----------------------------------  2/14 [fsspec]
+   ----- ----------------------------------  2/14 [fsspec]
+   ----- ----------------------------------  2/14 [fsspec]
+   ----- ----------------------------------  2/14 [fsspec]
+   ----- ----------------------------------  2/14 [fsspec]
+   ----- ----------------------------------  2/14 [fsspec]
+   ----- ----------------------------------  2/14 [fsspec]
+   ----- ----------------------------------  2/14 [fsspec]
+   ----- ----------------------------------  2/14 [fsspec]
+   ----- ----------------------------------  2/14 [fsspec]
+   -------- -------------------------------  3/14 [filelock]
+   -------- -------------------------------  3/14 [filelock]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
+   ----------- ----------------------------  4/14 [torch]
 </pre></div>
 </div>
 </div>

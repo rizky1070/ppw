@@ -205,6 +205,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tugas8_2_analisisnasa.html">Analisis Dataset Log Nasa July</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas10_1_komuditasfb.html">Komuditas FB</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas11_1_dokumen.html">Dokumen Analisis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UAS.html">UAS</a></li>
 </ul>
 
     </div>
@@ -904,91 +905,6 @@ document.write(`
 <span class="n">tfidf_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">output_file_csv</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hasil TF-IDF berhasil disimpan ke file: </span><span class="si">{</span><span class="n">output_file_csv</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="nn">~\AppData\Local\Temp\ipykernel_24008\3859806255.py</span> in <span class="ni">?</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Simpan ke file CSV</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">output_file_csv</span> <span class="o">=</span> <span class="s2">&quot;hasil_tfidf_berita.csv&quot;</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">tfidf_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">output_file_csv</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> 
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hasil TF-IDF berhasil disimpan ke file: </span><span class="si">{</span><span class="n">output_file_csv</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="nn">C:\laragon\bin\python\python-3.10\lib\site-packages\pandas\util\_decorators.py</span> in <span class="ni">?</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">329</span>                     <span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">arguments</span><span class="o">=</span><span class="n">_format_argument_list</span><span class="p">(</span><span class="n">allow_args</span><span class="p">)),</span>
-<span class="g g-Whitespace">    </span><span class="mi">330</span>                     <span class="ne">FutureWarning</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">331</span>                     <span class="n">stacklevel</span><span class="o">=</span><span class="n">find_stack_level</span><span class="p">(),</span>
-<span class="g g-Whitespace">    </span><span class="mi">332</span>                 <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">333</span>             <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">C:\laragon\bin\python\python-3.10\lib\site-packages\pandas\core\generic.py</span> in <span class="ni">?</span><span class="nt">(self, path_or_buf, sep, na_rep, float_format, columns, header, index, index_label, mode, encoding, compression, quoting, quotechar, lineterminator, chunksize, date_format, doublequote, escapechar, decimal, errors, storage_options)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3982</span>             <span class="n">float_format</span><span class="o">=</span><span class="n">float_format</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">3983</span>             <span class="n">decimal</span><span class="o">=</span><span class="n">decimal</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">3984</span>         <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3985</span> 
-<span class="ne">-&gt; </span><span class="mi">3986</span>         <span class="k">return</span> <span class="n">DataFrameRenderer</span><span class="p">(</span><span class="n">formatter</span><span class="p">)</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">3987</span>             <span class="n">path_or_buf</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">3988</span>             <span class="n">lineterminator</span><span class="o">=</span><span class="n">lineterminator</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">3989</span>             <span class="n">sep</span><span class="o">=</span><span class="n">sep</span><span class="p">,</span>
-
-<span class="nn">C:\laragon\bin\python\python-3.10\lib\site-packages\pandas\io\formats\format.py</span> in <span class="ni">?</span><span class="nt">(self, path_or_buf, encoding, sep, columns, index_label, mode, compression, quoting, quotechar, lineterminator, chunksize, date_format, doublequote, escapechar, errors, storage_options)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1010</span>             <span class="n">escapechar</span><span class="o">=</span><span class="n">escapechar</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1011</span>             <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1012</span>             <span class="n">formatter</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">fmt</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1013</span>         <span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1014</span>         <span class="n">csv_formatter</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1015</span> 
-<span class="g g-Whitespace">   </span><span class="mi">1016</span>         <span class="k">if</span> <span class="n">created_buffer</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1017</span>             <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">path_or_buf</span><span class="p">,</span> <span class="n">StringIO</span><span class="p">)</span>
-
-<span class="nn">C:\laragon\bin\python\python-3.10\lib\site-packages\pandas\io\formats\csvs.py</span> in <span class="ni">?</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">266</span>                 <span class="n">escapechar</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">escapechar</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">267</span>                 <span class="n">quotechar</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">quotechar</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">268</span>             <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">269</span> 
-<span class="ne">--&gt; </span><span class="mi">270</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_save</span><span class="p">()</span>
-
-<span class="nn">C:\laragon\bin\python\python-3.10\lib\site-packages\pandas\io\formats\csvs.py</span> in <span class="ni">?</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">272</span>     <span class="k">def</span><span class="w"> </span><span class="nf">_save</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">273</span>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_need_to_save_header</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">274</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_save_header</span><span class="p">()</span>
-<span class="ne">--&gt; </span><span class="mi">275</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_save_body</span><span class="p">()</span>
-
-<span class="nn">C:\laragon\bin\python\python-3.10\lib\site-packages\pandas\io\formats\csvs.py</span> in <span class="ni">?</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">309</span>             <span class="n">start_i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">chunksize</span>
-<span class="g g-Whitespace">    </span><span class="mi">310</span>             <span class="n">end_i</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">start_i</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">chunksize</span><span class="p">,</span> <span class="n">nrows</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">311</span>             <span class="k">if</span> <span class="n">start_i</span> <span class="o">&gt;=</span> <span class="n">end_i</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">312</span>                 <span class="k">break</span>
-<span class="ne">--&gt; </span><span class="mi">313</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_save_chunk</span><span class="p">(</span><span class="n">start_i</span><span class="p">,</span> <span class="n">end_i</span><span class="p">)</span>
-
-<span class="nn">C:\laragon\bin\python\python-3.10\lib\site-packages\pandas\io\formats\csvs.py</span> in <span class="ni">?</span><span class="nt">(self, start_i, end_i)</span>
-<span class="g g-Whitespace">    </span><span class="mi">317</span>         <span class="n">slicer</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="n">start_i</span><span class="p">,</span> <span class="n">end_i</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">318</span>         <span class="n">df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">slicer</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">319</span> 
-<span class="g g-Whitespace">    </span><span class="mi">320</span>         <span class="n">res</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">_get_values_for_csv</span><span class="p">(</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">_number_format</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">321</span>         <span class="n">data</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">_iter_column_arrays</span><span class="p">())</span>
-<span class="g g-Whitespace">    </span><span class="mi">322</span> 
-<span class="g g-Whitespace">    </span><span class="mi">323</span>         <span class="n">ix</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_index</span><span class="p">[</span><span class="n">slicer</span><span class="p">]</span><span class="o">.</span><span class="n">_get_values_for_csv</span><span class="p">(</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">_number_format</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">324</span>         <span class="n">libwriters</span><span class="o">.</span><span class="n">write_csv_rows</span><span class="p">(</span>
-
-<span class="nn">C:\laragon\bin\python\python-3.10\lib\site-packages\pandas\core\frame.py</span> in <span class="ni">?</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">4040</span>         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_mgr</span><span class="p">,</span> <span class="n">ArrayManager</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">4041</span>             <span class="k">yield from</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mgr</span><span class="o">.</span><span class="n">arrays</span>
-<span class="g g-Whitespace">   </span><span class="mi">4042</span>         <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">4043</span>             <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="p">)):</span>
-<span class="ne">-&gt; </span><span class="mi">4044</span>                 <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_column_array</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-
-<span class="nn">C:\laragon\bin\python\python-3.10\lib\site-packages\pandas\core\frame.py</span> in <span class="ni">?</span><span class="nt">(self, i)</span>
-<span class="g g-Whitespace">   </span><span class="mi">4026</span> 
-<span class="g g-Whitespace">   </span><span class="mi">4027</span>         <span class="ne">Warning</span><span class="o">!</span><span class="w"> </span>The<span class="w"> </span>returned<span class="w"> </span>array<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>view<span class="w"> </span>but<span class="w"> </span>doesn<span class="err">&#39;</span>t<span class="w"> </span>handle<span class="w"> </span>Copy-on-Write,
-<span class="g g-Whitespace">   </span><span class="mi">4028</span>         <span class="n">so</span> <span class="n">this</span> <span class="n">should</span> <span class="n">be</span> <span class="n">used</span> <span class="k">with</span> <span class="n">caution</span> <span class="p">(</span><span class="k">for</span> <span class="n">read</span><span class="o">-</span><span class="n">only</span> <span class="n">purposes</span><span class="p">)</span><span class="o">.</span>
-<span class="g g-Whitespace">   </span><span class="mi">4029</span>         <span class="s2">&quot;&quot;&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">4030</span><span class="s2">         return self._mgr.iget_values(i)</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
 </div>
 </div>
