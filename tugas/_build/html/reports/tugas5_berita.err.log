@@ -30,7 +30,8 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-import sys
-!{sys.executable} -m pip install bertopic gensim numpy
+['import pandas as pd', 'import ast', 'import gensim', 'import numpy as np', 'from bertopic import BERTopic']
+...
+['', 'hasil_df.to_csv("hasil_topik_per_dokumen_berita.csv", index=False)', 'print("File \'hasil_topik_per_dokumen_berita.csv\' berhasil disimpan.")', 'print("-" * 30)', 'print("Proses selesai!")']
 -------------------
 

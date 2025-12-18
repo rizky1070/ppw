@@ -206,6 +206,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tugas10_1_komuditasfb.html">Komuditas FB</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas11_1_dokumen.html">Dokumen Analisis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UAS.html">UAS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linkdeploy.html">Link Deploy UAS Analisis Dokumen Untuk Mencari Keyword</a></li>
 </ul>
 
     </div>
@@ -413,27 +414,17 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting bertopic
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Using cached bertopic-0.17.4-py3-none-any.whl.metadata (24 kB)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: bertopic in c:\laragon\bin\python\python-3.10\lib\site-packages (0.17.4)
 Requirement already satisfied: gensim in c:\laragon\bin\python\python-3.10\lib\site-packages (4.3.3)
 Requirement already satisfied: numpy in c:\laragon\bin\python\python-3.10\lib\site-packages (1.26.4)
-Collecting hdbscan&gt;=0.8.29 (from bertopic)
-  Using cached hdbscan-0.8.41-cp310-cp310-win_amd64.whl.metadata (15 kB)
-Collecting umap-learn&gt;=0.5.0 (from bertopic)
-  Using cached umap_learn-0.5.9.post2-py3-none-any.whl.metadata (25 kB)
+Requirement already satisfied: hdbscan&gt;=0.8.29 in c:\laragon\bin\python\python-3.10\lib\site-packages (from bertopic) (0.8.41)
+Requirement already satisfied: umap-learn&gt;=0.5.0 in c:\laragon\bin\python\python-3.10\lib\site-packages (from bertopic) (0.5.9.post2)
 Requirement already satisfied: pandas&gt;=1.1.5 in c:\laragon\bin\python\python-3.10\lib\site-packages (from bertopic) (2.3.2)
 Requirement already satisfied: plotly&gt;=4.7.0 in c:\laragon\bin\python\python-3.10\lib\site-packages (from bertopic) (6.3.0)
 Requirement already satisfied: scikit-learn&gt;=1.0 in c:\laragon\bin\python\python-3.10\lib\site-packages (from bertopic) (1.7.2)
-Collecting sentence-transformers&gt;=0.4.1 (from bertopic)
-  Using cached sentence_transformers-5.2.0-py3-none-any.whl.metadata (16 kB)
+Requirement already satisfied: sentence-transformers&gt;=0.4.1 in c:\laragon\bin\python\python-3.10\lib\site-packages (from bertopic) (5.2.0)
 Requirement already satisfied: tqdm&gt;=4.41.1 in c:\laragon\bin\python\python-3.10\lib\site-packages (from bertopic) (4.67.1)
-Collecting llvmlite&gt;0.36.0 (from bertopic)
-  Using cached llvmlite-0.46.0-cp310-cp310-win_amd64.whl.metadata (4.9 kB)
+Requirement already satisfied: llvmlite&gt;0.36.0 in c:\laragon\bin\python\python-3.10\lib\site-packages (from bertopic) (0.46.0)
 Requirement already satisfied: scipy&lt;1.14.0,&gt;=1.7.0 in c:\laragon\bin\python\python-3.10\lib\site-packages (from gensim) (1.13.1)
 Requirement already satisfied: smart-open&gt;=1.8.1 in c:\laragon\bin\python\python-3.10\lib\site-packages (from gensim) (7.3.1)
 Requirement already satisfied: joblib&gt;=1.0 in c:\laragon\bin\python\python-3.10\lib\site-packages (from hdbscan&gt;=0.8.29-&gt;bertopic) (1.5.2)
@@ -444,140 +435,34 @@ Requirement already satisfied: narwhals&gt;=1.15.1 in c:\laragon\bin\python\pyth
 Requirement already satisfied: packaging in c:\users\rizky\appdata\roaming\python\python310\site-packages (from plotly&gt;=4.7.0-&gt;bertopic) (25.0)
 Requirement already satisfied: six&gt;=1.5 in c:\users\rizky\appdata\roaming\python\python310\site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas&gt;=1.1.5-&gt;bertopic) (1.17.0)
 Requirement already satisfied: threadpoolctl&gt;=3.1.0 in c:\laragon\bin\python\python-3.10\lib\site-packages (from scikit-learn&gt;=1.0-&gt;bertopic) (3.6.0)
-Collecting transformers&lt;6.0.0,&gt;=4.41.0 (from sentence-transformers&gt;=0.4.1-&gt;bertopic)
-  Using cached transformers-4.57.3-py3-none-any.whl.metadata (43 kB)
-Collecting torch&gt;=1.11.0 (from sentence-transformers&gt;=0.4.1-&gt;bertopic)
-  Using cached torch-2.9.1-cp310-cp310-win_amd64.whl.metadata (30 kB)
-Collecting huggingface-hub&gt;=0.20.0 (from sentence-transformers&gt;=0.4.1-&gt;bertopic)
-  Using cached huggingface_hub-1.2.3-py3-none-any.whl.metadata (13 kB)
+Requirement already satisfied: transformers&lt;6.0.0,&gt;=4.41.0 in c:\laragon\bin\python\python-3.10\lib\site-packages (from sentence-transformers&gt;=0.4.1-&gt;bertopic) (4.57.3)
+Requirement already satisfied: torch&gt;=1.11.0 in c:\laragon\bin\python\python-3.10\lib\site-packages (from sentence-transformers&gt;=0.4.1-&gt;bertopic) (2.9.1)
+Requirement already satisfied: huggingface-hub&gt;=0.20.0 in c:\laragon\bin\python\python-3.10\lib\site-packages (from sentence-transformers&gt;=0.4.1-&gt;bertopic) (0.36.0)
 Requirement already satisfied: typing_extensions&gt;=4.5.0 in c:\users\rizky\appdata\roaming\python\python310\site-packages (from sentence-transformers&gt;=0.4.1-&gt;bertopic) (4.15.0)
-Collecting filelock (from transformers&lt;6.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic)
-  Using cached filelock-3.20.1-py3-none-any.whl.metadata (2.1 kB)
-Collecting huggingface-hub&gt;=0.20.0 (from sentence-transformers&gt;=0.4.1-&gt;bertopic)
-  Using cached huggingface_hub-0.36.0-py3-none-any.whl.metadata (14 kB)
+Requirement already satisfied: filelock in c:\laragon\bin\python\python-3.10\lib\site-packages (from transformers&lt;6.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (3.20.1)
 Requirement already satisfied: pyyaml&gt;=5.1 in c:\laragon\bin\python\python-3.10\lib\site-packages (from transformers&lt;6.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (6.0.2)
 Requirement already satisfied: regex!=2019.12.17 in c:\laragon\bin\python\python-3.10\lib\site-packages (from transformers&lt;6.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (2025.9.1)
 Requirement already satisfied: requests in c:\laragon\bin\python\python-3.10\lib\site-packages (from transformers&lt;6.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (2.32.5)
-Collecting tokenizers&lt;=0.23.0,&gt;=0.22.0 (from transformers&lt;6.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic)
-  Using cached tokenizers-0.22.1-cp39-abi3-win_amd64.whl.metadata (6.9 kB)
-Collecting safetensors&gt;=0.4.3 (from transformers&lt;6.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic)
-  Using cached safetensors-0.7.0-cp38-abi3-win_amd64.whl.metadata (4.2 kB)
-Collecting fsspec&gt;=2023.5.0 (from huggingface-hub&gt;=0.20.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic)
-  Using cached fsspec-2025.12.0-py3-none-any.whl.metadata (10 kB)
+Requirement already satisfied: tokenizers&lt;=0.23.0,&gt;=0.22.0 in c:\laragon\bin\python\python-3.10\lib\site-packages (from transformers&lt;6.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (0.22.1)
+Requirement already satisfied: safetensors&gt;=0.4.3 in c:\laragon\bin\python\python-3.10\lib\site-packages (from transformers&lt;6.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (0.7.0)
+Requirement already satisfied: fsspec&gt;=2023.5.0 in c:\laragon\bin\python\python-3.10\lib\site-packages (from huggingface-hub&gt;=0.20.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (2025.12.0)
 Requirement already satisfied: wrapt in c:\laragon\bin\python\python-3.10\lib\site-packages (from smart-open&gt;=1.8.1-&gt;gensim) (1.17.3)
 Requirement already satisfied: sympy&gt;=1.13.3 in c:\laragon\bin\python\python-3.10\lib\site-packages (from torch&gt;=1.11.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (1.14.0)
 Requirement already satisfied: networkx&gt;=2.5.1 in c:\laragon\bin\python\python-3.10\lib\site-packages (from torch&gt;=1.11.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (3.4.2)
 Requirement already satisfied: jinja2 in c:\laragon\bin\python\python-3.10\lib\site-packages (from torch&gt;=1.11.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (3.1.6)
 Requirement already satisfied: mpmath&lt;1.4,&gt;=1.1.0 in c:\laragon\bin\python\python-3.10\lib\site-packages (from sympy&gt;=1.13.3-&gt;torch&gt;=1.11.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (1.3.0)
 Requirement already satisfied: colorama in c:\users\rizky\appdata\roaming\python\python310\site-packages (from tqdm&gt;=4.41.1-&gt;bertopic) (0.4.6)
-Collecting numba&gt;=0.51.2 (from umap-learn&gt;=0.5.0-&gt;bertopic)
-  Using cached numba-0.63.1-cp310-cp310-win_amd64.whl.metadata (2.8 kB)
-Collecting pynndescent&gt;=0.5 (from umap-learn&gt;=0.5.0-&gt;bertopic)
-  Using cached pynndescent-0.5.13-py3-none-any.whl.metadata (6.8 kB)
+Requirement already satisfied: numba&gt;=0.51.2 in c:\laragon\bin\python\python-3.10\lib\site-packages (from umap-learn&gt;=0.5.0-&gt;bertopic) (0.63.1)
+Requirement already satisfied: pynndescent&gt;=0.5 in c:\laragon\bin\python\python-3.10\lib\site-packages (from umap-learn&gt;=0.5.0-&gt;bertopic) (0.5.13)
 Requirement already satisfied: MarkupSafe&gt;=2.0 in c:\laragon\bin\python\python-3.10\lib\site-packages (from jinja2-&gt;torch&gt;=1.11.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (3.0.2)
 Requirement already satisfied: charset_normalizer&lt;4,&gt;=2 in c:\laragon\bin\python\python-3.10\lib\site-packages (from requests-&gt;transformers&lt;6.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (3.4.3)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in c:\laragon\bin\python\python-3.10\lib\site-packages (from requests-&gt;transformers&lt;6.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (3.10)
 Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in c:\laragon\bin\python\python-3.10\lib\site-packages (from requests-&gt;transformers&lt;6.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (2.5.0)
 Requirement already satisfied: certifi&gt;=2017.4.17 in c:\laragon\bin\python\python-3.10\lib\site-packages (from requests-&gt;transformers&lt;6.0.0,&gt;=4.41.0-&gt;sentence-transformers&gt;=0.4.1-&gt;bertopic) (2025.8.3)
-Using cached bertopic-0.17.4-py3-none-any.whl (154 kB)
-Using cached hdbscan-0.8.41-cp310-cp310-win_amd64.whl (687 kB)
-Using cached llvmlite-0.46.0-cp310-cp310-win_amd64.whl (38.1 MB)
-Using cached sentence_transformers-5.2.0-py3-none-any.whl (493 kB)
-Using cached transformers-4.57.3-py3-none-any.whl (12.0 MB)
-Using cached huggingface_hub-0.36.0-py3-none-any.whl (566 kB)
-Using cached tokenizers-0.22.1-cp39-abi3-win_amd64.whl (2.7 MB)
-Using cached fsspec-2025.12.0-py3-none-any.whl (201 kB)
-Using cached safetensors-0.7.0-cp38-abi3-win_amd64.whl (341 kB)
-Using cached torch-2.9.1-cp310-cp310-win_amd64.whl (111.0 MB)
-Using cached umap_learn-0.5.9.post2-py3-none-any.whl (90 kB)
-Using cached numba-0.63.1-cp310-cp310-win_amd64.whl (2.7 MB)
-Using cached pynndescent-0.5.13-py3-none-any.whl (56 kB)
-Using cached filelock-3.20.1-py3-none-any.whl (16 kB)
-Installing collected packages: safetensors, llvmlite, fsspec, filelock, torch, numba, huggingface-hub, tokenizers, pynndescent, hdbscan, umap-learn, transformers, sentence-transformers, bertopic
-
-   ----------------------------------------  0/14 [safetensors]
-   -- -------------------------------------  1/14 [llvmlite]
-   -- -------------------------------------  1/14 [llvmlite]
-   -- -------------------------------------  1/14 [llvmlite]
-   -- -------------------------------------  1/14 [llvmlite]
-   -- -------------------------------------  1/14 [llvmlite]
-   -- -------------------------------------  1/14 [llvmlite]
-   -- -------------------------------------  1/14 [llvmlite]
-   -- -------------------------------------  1/14 [llvmlite]
-   -- -------------------------------------  1/14 [llvmlite]
-   -- -------------------------------------  1/14 [llvmlite]
-   -- -------------------------------------  1/14 [llvmlite]
-   -- -------------------------------------  1/14 [llvmlite]
-   -- -------------------------------------  1/14 [llvmlite]
-   -- -------------------------------------  1/14 [llvmlite]
-   -- -------------------------------------  1/14 [llvmlite]
-   -- -------------------------------------  1/14 [llvmlite]
-   -- -------------------------------------  1/14 [llvmlite]
-   -- -------------------------------------  1/14 [llvmlite]
-   ----- ----------------------------------  2/14 [fsspec]
-   ----- ----------------------------------  2/14 [fsspec]
-   ----- ----------------------------------  2/14 [fsspec]
-   ----- ----------------------------------  2/14 [fsspec]
-   ----- ----------------------------------  2/14 [fsspec]
-   ----- ----------------------------------  2/14 [fsspec]
-   ----- ----------------------------------  2/14 [fsspec]
-   ----- ----------------------------------  2/14 [fsspec]
-   ----- ----------------------------------  2/14 [fsspec]
-   ----- ----------------------------------  2/14 [fsspec]
-   ----- ----------------------------------  2/14 [fsspec]
-   ----- ----------------------------------  2/14 [fsspec]
-   ----- ----------------------------------  2/14 [fsspec]
-   ----- ----------------------------------  2/14 [fsspec]
-   ----- ----------------------------------  2/14 [fsspec]
-   ----- ----------------------------------  2/14 [fsspec]
-   -------- -------------------------------  3/14 [filelock]
-   -------- -------------------------------  3/14 [filelock]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
-   ----------- ----------------------------  4/14 [torch]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[notice] A new release of pip is available: 25.2 -&gt; 25.3
+[notice] To update, run: C:\laragon\bin\python\python-3.10\python.exe -m pip install --upgrade pip
 </pre></div>
 </div>
 </div>
@@ -685,14 +570,20 @@ Installing collected packages: safetensors, llvmlite, fsspec, filelock, torch, n
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\laragon\bin\python\python-3.10\lib\site-packages\tqdm\auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
+  from .autonotebook import tqdm as notebook_tqdm
+</pre></div>
+</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tahap 1: Membaca dan memproses file data...
 File berhasil dimuat.
-Data siap. Jumlah dokumen: 1026
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data siap. Jumlah dokumen: 1026
 ------------------------------
 Tahap 2: Melatih model Word2Vec (100 dimensi)...
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-10 12:21:43,107 - BERTopic - Embedding - Transforming documents to embeddings.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-12-18 08:10:41,958 - BERTopic - Embedding - Transforming documents to embeddings.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model Word2Vec selesai dilatih.
@@ -703,99 +594,295 @@ Wrapper embedding siap digunakan.
 Tahap 4: Melatih model BERTopic...
 </pre></div>
 </div>
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "dbd6ff2827dc496ab4b4f96ec82ece3f", "version_major": 2, "version_minor": 0}</script><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-10-10 12:22:23,477 - BERTopic - Embedding - Completed ✓
-2025-10-10 12:22:23,478 - BERTopic - Dimensionality - Fitting the dimensionality reduction algorithm
-2025-10-10 12:22:25,656 - BERTopic - Dimensionality - Completed ✓
-2025-10-10 12:22:25,657 - BERTopic - Cluster - Start clustering the reduced embeddings
-2025-10-10 12:22:25,727 - BERTopic - Cluster - Completed ✓
-2025-10-10 12:22:25,732 - BERTopic - Representation - Fine-tuning topics using representation models.
-2025-10-10 12:22:25,924 - BERTopic - Representation - Completed ✓
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Batches:   0%|                                                                                                     | 0/33 [00:00&lt;?, ?it/s]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model BERTopic selesai dilatih!
-------------------------------
-Tahap 5: Menampilkan hasil topik...
-Daftar Topik yang Ditemukan:
-    Topic  Count                                   Name  \
-0      -1    306         -1_usaha_teliti_pengaruh_kerja   
-1       0    163     0_kerja_karyawan_pengaruh_variabel   
-2       1     82      1_produk_beli_putus_produktivitas   
-3       2     58     2_motivasi_kerja_karyawan_pengaruh   
-4       3     52            3_ratio_debt_equity_current   
-5       4     48     4_rasio_profitabilitas_usaha_putar   
-6       5     46               5_teliti_daya_data_layan   
-7       6     27   6_marketing_unjung_puas_relationship   
-8       7     25                     7_loan_ldr_car_roa   
-9       8     22         8_brand_merek_nokia_smartphone   
-10      9     22      9_gaya_pimpin_demokratis_karyawan   
-11     10     20           10_tbk_portofolio_optimal_pt   
-12     11     18            11_motor_honda_sepeda_merek   
-13     12     16            12_bank_tabung_cabang_kerja   
-14     13     16   13_guru_cerdas_intelektual_spiritual   
-15     14     15             14_bank_mandiri_rasio_uang   
-16     15     15         15_usaha_bersih_bangkrut_nyata   
-17     16     15  16_leverage_usaha_ukur_profitabilitas   
-18     17     13       17_corporate_csr_governance_good   
-19     18     12               18_return_on_value_saham   
-20     19     12            19_split_stock_saham_volume   
-21     20     12          20_estate_usaha_real_property   
-22     21     11   21_job_intention_turnover_insecurity   
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Batches:   3%|██▊                                                                                          | 1/33 [00:01&lt;00:40,  1.26s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Batches:   6%|█████▋                                                                                       | 2/33 [00:02&lt;00:32,  1.04s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Batches:   9%|████████▍                                                                                    | 3/33 [00:03&lt;00:28,  1.04it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Batches:  12%|███████████▎                                                                                 | 4/33 [00:03&lt;00:27,  1.06it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Batches:  15%|██████████████                                                                               | 5/33 [00:04&lt;00:25,  1.08it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Batches:  15%|██████████████                                                                               | 5/33 [00:05&lt;00:30,  1.08s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">56</span>
+<span class="g g-Whitespace">     </span><span class="mi">50</span> <span class="n">docs_for_bertopic</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span> <span class="k">for</span> <span class="n">tokens</span> <span class="ow">in</span> <span class="n">tokenized_docs</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">51</span> <span class="n">topic_model</span> <span class="o">=</span> <span class="n">BERTopic</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">52</span>     <span class="n">embedding_model</span><span class="o">=</span><span class="n">custom_embedding_model</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">53</span>     <span class="n">vectorizer_model</span><span class="o">=</span><span class="n">vectorizer_model</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">54</span>     <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span>
+<span class="g g-Whitespace">     </span><span class="mi">55</span> <span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">56</span> <span class="n">topics</span><span class="p">,</span> <span class="n">probabilities</span> <span class="o">=</span> <span class="n">topic_model</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">docs_for_bertopic</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">57</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model BERTopic selesai dilatih!&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">58</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">30</span><span class="p">)</span>
 
-                                       Representation  \
-0   [usaha, teliti, pengaruh, kerja, variabel, kar...   
-1   [kerja, karyawan, pengaruh, variabel, positif,...   
-2   [produk, beli, putus, produktivitas, kualitas,...   
-3   [motivasi, kerja, karyawan, pengaruh, variabel...   
-4   [ratio, debt, equity, current, to, asset, on, ...   
-5   [rasio, profitabilitas, usaha, putar, bursa, e...   
-6   [teliti, daya, data, layan, mahasiswa, beli, k...   
-7   [marketing, unjung, puas, relationship, experi...   
-8   [loan, ldr, car, roa, npl, ratio, deposit, ade...   
-9   [brand, merek, nokia, smartphone, handphone, i...   
-10  [gaya, pimpin, demokratis, karyawan, kerja, po...   
-11  [tbk, portofolio, optimal, pt, saham, proporsi...   
-12  [motor, honda, sepeda, merek, yamaha, beli, pu...   
-13  [bank, tabung, cabang, kerja, karyawan, nasaba...   
-14  [guru, cerdas, intelektual, spiritual, emosion...   
-15  [bank, mandiri, rasio, uang, bumn, sehat, perb...   
-16  [usaha, bersih, bangkrut, nyata, laba, periode...   
-17  [leverage, usaha, ukur, profitabilitas, uji, m...   
-18  [corporate, csr, governance, good, usaha, soci...   
-19  [return, on, value, saham, earning, added, eco...   
-20  [split, stock, saham, volume, dagang, beda, go...   
-21  [estate, usaha, real, property, nilai, pbv, di...   
-22  [job, intention, turnover, insecurity, the, pu...   
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\bertopic\_bertopic.py:459,</span> in <span class="ni">BERTopic.fit_transform</span><span class="nt">(self, documents, embeddings, images, y)</span>
+<span class="g g-Whitespace">    </span><span class="mi">457</span>     <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Embedding - Transforming documents to embeddings.&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">458</span>     <span class="bp">self</span><span class="o">.</span><span class="n">embedding_model</span> <span class="o">=</span> <span class="n">select_backend</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">embedding_model</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">language</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">459</span>     <span class="n">embeddings</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_extract_embeddings</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">460</span>         <span class="n">documents</span><span class="o">.</span><span class="n">Document</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
+<span class="g g-Whitespace">    </span><span class="mi">461</span>         <span class="n">images</span><span class="o">=</span><span class="n">images</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">462</span>         <span class="n">method</span><span class="o">=</span><span class="s2">&quot;document&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">463</span>         <span class="n">verbose</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">464</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">465</span>     <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Embedding - Completed </span><span class="se">\u2713</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">466</span> <span class="k">else</span><span class="p">:</span>
 
-                                  Representative_Docs  
-0   [teliti tuju pengaruh putar modal kerja tumbuh...  
-1   [lingkung kerja stres kerja faktor pengaruh ke...  
-2   [anik arismah pengaruh citra merek kualitas pr...  
-3   [anisyah ika aria dewi pengaruh kompensasi kem...  
-4   [nofvi damayanti pengaruh current ratio debt t...  
-5   [delfan analisis pengaruh struktur modal rasio...  
-6   [marti ekowatianalisis pengaruh kualitas layan...  
-7   [miftahul jannata ros pengaruh experiential ma...  
-8   [ismawati analisis pengaruh capital adequacy r...  
-9   [didik prioritas utama masyarakat usaha wujud ...  
-10  [zuhruf abdur rahman pengaruh gaya pimpin demo...  
-11  [putus investasi hubung untung risiko investor...  
-12  [teliti analis pengaruh kualitas produk citra ...  
-13  [teliti tuju uji pengaruh dimensi relationship...  
-14  [teliti ambil judul teliti pengaruh kompensasi...  
-15  [teliti tuju tingkat sehat bank perintah pt ba...  
-16  [aqnes dwi sakti hamidah pengaruh struktur uan...  
-17  [teliti tuju variabel financial leverage likui...  
-18  [fadjriya tri wulandari pengaruh mekanisme cor...  
-19  [juwita ayu kusuma wati analisis pengaruh econ...  
-20  [uswatun hasanah analisis beda volume dagang s...  
-21  [sofiatul icmiah pengaruh struktur aktiva prof...  
-22  [the title of this research isthe effect of em...  
-------------------------------
-Tahap 6: Menyimpan hasil ke file CSV...
-File &#39;informasi_topik_manajemen.csv&#39; berhasil disimpan.
-File &#39;hasil_topik_per_dokumen_manajemen.csv&#39; berhasil disimpan.
-------------------------------
-Proses selesai!
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\bertopic\_bertopic.py:3871,</span> in <span class="ni">BERTopic._extract_embeddings</span><span class="nt">(self, documents, images, method, verbose)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3869</span>     <span class="n">embeddings</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">embedding_model</span><span class="o">.</span><span class="n">embed_words</span><span class="p">(</span><span class="n">words</span><span class="o">=</span><span class="n">documents</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="n">verbose</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3870</span> <span class="k">elif</span> <span class="n">method</span> <span class="o">==</span> <span class="s2">&quot;document&quot;</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3871</span>     <span class="n">embeddings</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">embedding_model</span><span class="o">.</span><span class="n">embed_documents</span><span class="p">(</span><span class="n">documents</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="n">verbose</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3872</span> <span class="k">elif</span> <span class="n">documents</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">images</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">3873</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">3874</span>         <span class="s2">&quot;Make sure to use an embedding model that can either embed documents&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">3875</span>         <span class="s2">&quot;or images depending on which you want to embed.&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">3876</span>     <span class="p">)</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\bertopic\backend\_base.py:62,</span> in <span class="ni">BaseEmbedder.embed_documents</span><span class="nt">(self, document, verbose)</span>
+<span class="g g-Whitespace">     </span><span class="mi">50</span> <span class="k">def</span><span class="w"> </span><span class="nf">embed_documents</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">document</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">verbose</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">51</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Embed a list of n words into an n-dimensional</span>
+<span class="g g-Whitespace">     </span><span class="mi">52</span><span class="sd">     matrix of embeddings.</span>
+<span class="g g-Whitespace">     </span><span class="mi">53</span><span class="sd"> </span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">     </span><span class="mi">60</span><span class="sd">         that each have an embeddings size of `m`</span>
+<span class="g g-Whitespace">     </span><span class="mi">61</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">---&gt; </span><span class="mi">62</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed</span><span class="p">(</span><span class="n">document</span><span class="p">,</span> <span class="n">verbose</span><span class="p">)</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\bertopic\backend\_sentencetransformers.py:84,</span> in <span class="ni">SentenceTransformerBackend.embed</span><span class="nt">(self, documents, verbose)</span>
+<span class="g g-Whitespace">     </span><span class="mi">72</span> <span class="k">def</span><span class="w"> </span><span class="nf">embed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">documents</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">verbose</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">73</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Embed a list of n documents/words into an n-dimensional</span>
+<span class="g g-Whitespace">     </span><span class="mi">74</span><span class="sd">     matrix of embeddings.</span>
+<span class="g g-Whitespace">     </span><span class="mi">75</span><span class="sd"> </span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">     </span><span class="mi">82</span><span class="sd">         that each have an embeddings size of `m`</span>
+<span class="g g-Whitespace">     </span><span class="mi">83</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">---&gt; </span><span class="mi">84</span>     <span class="n">embeddings</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">embedding_model</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">documents</span><span class="p">,</span> <span class="n">show_progress_bar</span><span class="o">=</span><span class="n">verbose</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">85</span>     <span class="k">return</span> <span class="n">embeddings</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\torch\utils\_contextlib.py:120,</span> in <span class="ni">context_decorator.&lt;locals&gt;.decorate_context</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">117</span> <span class="nd">@functools</span><span class="o">.</span><span class="n">wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">118</span> <span class="k">def</span><span class="w"> </span><span class="nf">decorate_context</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">119</span>     <span class="k">with</span> <span class="n">ctx_factory</span><span class="p">():</span>
+<span class="ne">--&gt; </span><span class="mi">120</span>         <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\sentence_transformers\SentenceTransformer.py:1094,</span> in <span class="ni">SentenceTransformer.encode</span><span class="nt">(self, sentences, prompt_name, prompt, batch_size, show_progress_bar, output_value, precision, convert_to_numpy, convert_to_tensor, device, normalize_embeddings, truncate_dim, pool, chunk_size, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1091</span> <span class="n">features</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">extra_features</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1093</span> <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+<span class="ne">-&gt; </span><span class="mi">1094</span>     <span class="n">out_features</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1095</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;hpu&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1096</span>         <span class="n">out_features</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">out_features</span><span class="p">)</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\sentence_transformers\SentenceTransformer.py:1175,</span> in <span class="ni">SentenceTransformer.forward</span><span class="nt">(self, input, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1169</span>             <span class="n">module_kwarg_keys</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">module_kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">module_name</span><span class="p">,</span> <span class="p">[])</span>
+<span class="g g-Whitespace">   </span><span class="mi">1170</span>         <span class="n">module_kwargs</span> <span class="o">=</span> <span class="p">{</span>
+<span class="g g-Whitespace">   </span><span class="mi">1171</span>             <span class="n">key</span><span class="p">:</span> <span class="n">value</span>
+<span class="nn">   1172             for key, value</span> in <span class="ni">kwargs.items</span><span class="nt">()</span>
+<span class="nn">   1173             if key</span> in <span class="ni">module_kwarg_keys or (hasattr</span><span class="nt">(module, &quot;forward_kwargs&quot;) and key in module.forward_kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1174</span>         <span class="p">}</span>
+<span class="ne">-&gt; </span><span class="mi">1175</span>     <span class="nb">input</span> <span class="o">=</span> <span class="n">module</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="o">**</span><span class="n">module_kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1176</span> <span class="k">return</span> <span class="nb">input</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\torch\nn\modules\module.py:1775,</span> in <span class="ni">Module._wrapped_call_impl</span><span class="nt">(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1773</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_compiled_call_impl</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>  <span class="c1"># type: ignore[misc]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1774</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1775</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_call_impl</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\torch\nn\modules\module.py:1786,</span> in <span class="ni">Module._call_impl</span><span class="nt">(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1781</span> <span class="c1"># If we don&#39;t have any hooks, we want to skip the rest of the logic in</span>
+<span class="g g-Whitespace">   </span><span class="mi">1782</span> <span class="c1"># this function, and just call forward.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1783</span> <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_backward_hooks</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_backward_pre_hooks</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_forward_hooks</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_forward_pre_hooks</span>
+<span class="g g-Whitespace">   </span><span class="mi">1784</span>         <span class="ow">or</span> <span class="n">_global_backward_pre_hooks</span> <span class="ow">or</span> <span class="n">_global_backward_hooks</span>
+<span class="g g-Whitespace">   </span><span class="mi">1785</span>         <span class="ow">or</span> <span class="n">_global_forward_hooks</span> <span class="ow">or</span> <span class="n">_global_forward_pre_hooks</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">1786</span>     <span class="k">return</span> <span class="n">forward_call</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1788</span> <span class="n">result</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="g g-Whitespace">   </span><span class="mi">1789</span> <span class="n">called_always_called_hooks</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\sentence_transformers\models\Transformer.py:262,</span> in <span class="ni">Transformer.forward</span><span class="nt">(self, features, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">239</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">240</span><span class="sd"> Forward pass through the transformer model.</span>
+<span class="g g-Whitespace">    </span><span class="mi">241</span><span class="sd"> </span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">    </span><span class="mi">258</span><span class="sd">         - &#39;all_layer_embeddings&#39;: If the model outputs hidden states, contains embeddings from all layers</span>
+<span class="g g-Whitespace">    </span><span class="mi">259</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">260</span> <span class="n">trans_features</span> <span class="o">=</span> <span class="p">{</span><span class="n">key</span><span class="p">:</span> <span class="n">value</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">features</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_forward_params</span><span class="p">}</span>
+<span class="ne">--&gt; </span><span class="mi">262</span> <span class="n">outputs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">auto_model</span><span class="p">(</span><span class="o">**</span><span class="n">trans_features</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span> <span class="n">return_dict</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">263</span> <span class="n">token_embeddings</span> <span class="o">=</span> <span class="n">outputs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">264</span> <span class="n">features</span><span class="p">[</span><span class="s2">&quot;token_embeddings&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">token_embeddings</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\torch\nn\modules\module.py:1775,</span> in <span class="ni">Module._wrapped_call_impl</span><span class="nt">(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1773</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_compiled_call_impl</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>  <span class="c1"># type: ignore[misc]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1774</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1775</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_call_impl</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\torch\nn\modules\module.py:1786,</span> in <span class="ni">Module._call_impl</span><span class="nt">(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1781</span> <span class="c1"># If we don&#39;t have any hooks, we want to skip the rest of the logic in</span>
+<span class="g g-Whitespace">   </span><span class="mi">1782</span> <span class="c1"># this function, and just call forward.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1783</span> <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_backward_hooks</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_backward_pre_hooks</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_forward_hooks</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_forward_pre_hooks</span>
+<span class="g g-Whitespace">   </span><span class="mi">1784</span>         <span class="ow">or</span> <span class="n">_global_backward_pre_hooks</span> <span class="ow">or</span> <span class="n">_global_backward_hooks</span>
+<span class="g g-Whitespace">   </span><span class="mi">1785</span>         <span class="ow">or</span> <span class="n">_global_forward_hooks</span> <span class="ow">or</span> <span class="n">_global_forward_pre_hooks</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">1786</span>     <span class="k">return</span> <span class="n">forward_call</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1788</span> <span class="n">result</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="g g-Whitespace">   </span><span class="mi">1789</span> <span class="n">called_always_called_hooks</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\transformers\models\bert\modeling_bert.py:1000,</span> in <span class="ni">BertModel.forward</span><span class="nt">(self, input_ids, attention_mask, token_type_ids, position_ids, head_mask, inputs_embeds, encoder_hidden_states, encoder_attention_mask, past_key_values, use_cache, output_attentions, output_hidden_states, return_dict, cache_position)</span>
+<span class="g g-Whitespace">    </span><span class="mi">993</span> <span class="c1"># Prepare head mask if needed</span>
+<span class="g g-Whitespace">    </span><span class="mi">994</span> <span class="c1"># 1.0 in head_mask indicate we keep the head</span>
+<span class="g g-Whitespace">    </span><span class="mi">995</span> <span class="c1"># attention_probs has shape bsz x n_heads x N x N</span>
+<span class="g g-Whitespace">    </span><span class="mi">996</span> <span class="c1"># input head_mask has shape [num_heads] or [num_hidden_layers x num_heads]</span>
+<span class="g g-Whitespace">    </span><span class="mi">997</span> <span class="c1"># and head_mask is converted to shape [num_hidden_layers x batch x num_heads x seq_length x seq_length]</span>
+<span class="g g-Whitespace">    </span><span class="mi">998</span> <span class="n">head_mask</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_head_mask</span><span class="p">(</span><span class="n">head_mask</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">num_hidden_layers</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1000</span> <span class="n">encoder_outputs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">encoder</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1001</span>     <span class="n">embedding_output</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1002</span>     <span class="n">attention_mask</span><span class="o">=</span><span class="n">extended_attention_mask</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1003</span>     <span class="n">head_mask</span><span class="o">=</span><span class="n">head_mask</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1004</span>     <span class="n">encoder_hidden_states</span><span class="o">=</span><span class="n">encoder_hidden_states</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1005</span>     <span class="n">encoder_attention_mask</span><span class="o">=</span><span class="n">encoder_extended_attention_mask</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1006</span>     <span class="n">past_key_values</span><span class="o">=</span><span class="n">past_key_values</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1007</span>     <span class="n">use_cache</span><span class="o">=</span><span class="n">use_cache</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1008</span>     <span class="n">output_attentions</span><span class="o">=</span><span class="n">output_attentions</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1009</span>     <span class="n">output_hidden_states</span><span class="o">=</span><span class="n">output_hidden_states</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1010</span>     <span class="n">return_dict</span><span class="o">=</span><span class="n">return_dict</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1011</span>     <span class="n">cache_position</span><span class="o">=</span><span class="n">cache_position</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1012</span> <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1013</span> <span class="n">sequence_output</span> <span class="o">=</span> <span class="n">encoder_outputs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1014</span> <span class="n">pooled_output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pooler</span><span class="p">(</span><span class="n">sequence_output</span><span class="p">)</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pooler</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\torch\nn\modules\module.py:1775,</span> in <span class="ni">Module._wrapped_call_impl</span><span class="nt">(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1773</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_compiled_call_impl</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>  <span class="c1"># type: ignore[misc]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1774</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1775</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_call_impl</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\torch\nn\modules\module.py:1786,</span> in <span class="ni">Module._call_impl</span><span class="nt">(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1781</span> <span class="c1"># If we don&#39;t have any hooks, we want to skip the rest of the logic in</span>
+<span class="g g-Whitespace">   </span><span class="mi">1782</span> <span class="c1"># this function, and just call forward.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1783</span> <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_backward_hooks</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_backward_pre_hooks</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_forward_hooks</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_forward_pre_hooks</span>
+<span class="g g-Whitespace">   </span><span class="mi">1784</span>         <span class="ow">or</span> <span class="n">_global_backward_pre_hooks</span> <span class="ow">or</span> <span class="n">_global_backward_hooks</span>
+<span class="g g-Whitespace">   </span><span class="mi">1785</span>         <span class="ow">or</span> <span class="n">_global_forward_hooks</span> <span class="ow">or</span> <span class="n">_global_forward_pre_hooks</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">1786</span>     <span class="k">return</span> <span class="n">forward_call</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1788</span> <span class="n">result</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="g g-Whitespace">   </span><span class="mi">1789</span> <span class="n">called_always_called_hooks</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\transformers\models\bert\modeling_bert.py:650,</span> in <span class="ni">BertEncoder.forward</span><span class="nt">(self, hidden_states, attention_mask, head_mask, encoder_hidden_states, encoder_attention_mask, past_key_values, use_cache, output_attentions, output_hidden_states, return_dict, cache_position)</span>
+<span class="g g-Whitespace">    </span><span class="mi">646</span>     <span class="n">all_hidden_states</span> <span class="o">=</span> <span class="n">all_hidden_states</span> <span class="o">+</span> <span class="p">(</span><span class="n">hidden_states</span><span class="p">,)</span>
+<span class="g g-Whitespace">    </span><span class="mi">648</span> <span class="n">layer_head_mask</span> <span class="o">=</span> <span class="n">head_mask</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">if</span> <span class="n">head_mask</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
+<span class="ne">--&gt; </span><span class="mi">650</span> <span class="n">layer_outputs</span> <span class="o">=</span> <span class="n">layer_module</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">651</span>     <span class="n">hidden_states</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">652</span>     <span class="n">attention_mask</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">653</span>     <span class="n">layer_head_mask</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">654</span>     <span class="n">encoder_hidden_states</span><span class="p">,</span>  <span class="c1"># as a positional argument for gradient checkpointing</span>
+<span class="g g-Whitespace">    </span><span class="mi">655</span>     <span class="n">encoder_attention_mask</span><span class="o">=</span><span class="n">encoder_attention_mask</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">656</span>     <span class="n">past_key_values</span><span class="o">=</span><span class="n">past_key_values</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">657</span>     <span class="n">output_attentions</span><span class="o">=</span><span class="n">output_attentions</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">658</span>     <span class="n">cache_position</span><span class="o">=</span><span class="n">cache_position</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">659</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">661</span> <span class="n">hidden_states</span> <span class="o">=</span> <span class="n">layer_outputs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">662</span> <span class="k">if</span> <span class="n">output_attentions</span><span class="p">:</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\transformers\modeling_layers.py:94,</span> in <span class="ni">GradientCheckpointingLayer.__call__</span><span class="nt">(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">91</span>         <span class="n">logger</span><span class="o">.</span><span class="n">warning_once</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">93</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_gradient_checkpointing_func</span><span class="p">(</span><span class="n">partial</span><span class="p">(</span><span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__call__</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">),</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">94</span> <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__call__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\torch\nn\modules\module.py:1775,</span> in <span class="ni">Module._wrapped_call_impl</span><span class="nt">(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1773</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_compiled_call_impl</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>  <span class="c1"># type: ignore[misc]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1774</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1775</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_call_impl</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\torch\nn\modules\module.py:1786,</span> in <span class="ni">Module._call_impl</span><span class="nt">(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1781</span> <span class="c1"># If we don&#39;t have any hooks, we want to skip the rest of the logic in</span>
+<span class="g g-Whitespace">   </span><span class="mi">1782</span> <span class="c1"># this function, and just call forward.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1783</span> <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_backward_hooks</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_backward_pre_hooks</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_forward_hooks</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_forward_pre_hooks</span>
+<span class="g g-Whitespace">   </span><span class="mi">1784</span>         <span class="ow">or</span> <span class="n">_global_backward_pre_hooks</span> <span class="ow">or</span> <span class="n">_global_backward_hooks</span>
+<span class="g g-Whitespace">   </span><span class="mi">1785</span>         <span class="ow">or</span> <span class="n">_global_forward_hooks</span> <span class="ow">or</span> <span class="n">_global_forward_pre_hooks</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">1786</span>     <span class="k">return</span> <span class="n">forward_call</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1788</span> <span class="n">result</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="g g-Whitespace">   </span><span class="mi">1789</span> <span class="n">called_always_called_hooks</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\transformers\utils\deprecation.py:172,</span> in <span class="ni">deprecate_kwarg.&lt;locals&gt;.wrapper.&lt;locals&gt;.wrapped_func</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">168</span> <span class="k">elif</span> <span class="n">minimum_action</span> <span class="ow">in</span> <span class="p">(</span><span class="n">Action</span><span class="o">.</span><span class="n">NOTIFY</span><span class="p">,</span> <span class="n">Action</span><span class="o">.</span><span class="n">NOTIFY_ALWAYS</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">is_torchdynamo_compiling</span><span class="p">():</span>
+<span class="g g-Whitespace">    </span><span class="mi">169</span>     <span class="c1"># DeprecationWarning is ignored by default, so we use FutureWarning instead</span>
+<span class="g g-Whitespace">    </span><span class="mi">170</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="ne">FutureWarning</span><span class="p">,</span> <span class="n">stacklevel</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">172</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\transformers\models\bert\modeling_bert.py:588,</span> in <span class="ni">BertLayer.forward</span><span class="nt">(self, hidden_states, attention_mask, head_mask, encoder_hidden_states, encoder_attention_mask, past_key_values, output_attentions, cache_position)</span>
+<span class="g g-Whitespace">    </span><span class="mi">585</span>     <span class="n">attention_output</span> <span class="o">=</span> <span class="n">cross_attention_outputs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">586</span>     <span class="n">outputs</span> <span class="o">=</span> <span class="n">outputs</span> <span class="o">+</span> <span class="n">cross_attention_outputs</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>  <span class="c1"># add cross attentions if we output attention weights</span>
+<span class="ne">--&gt; </span><span class="mi">588</span> <span class="n">layer_output</span> <span class="o">=</span> <span class="n">apply_chunking_to_forward</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">589</span>     <span class="bp">self</span><span class="o">.</span><span class="n">feed_forward_chunk</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">chunk_size_feed_forward</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">seq_len_dim</span><span class="p">,</span> <span class="n">attention_output</span>
+<span class="g g-Whitespace">    </span><span class="mi">590</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">591</span> <span class="n">outputs</span> <span class="o">=</span> <span class="p">(</span><span class="n">layer_output</span><span class="p">,)</span> <span class="o">+</span> <span class="n">outputs</span>
+<span class="g g-Whitespace">    </span><span class="mi">593</span> <span class="k">return</span> <span class="n">outputs</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\transformers\pytorch_utils.py:257,</span> in <span class="ni">apply_chunking_to_forward</span><span class="nt">(forward_fn, chunk_size, chunk_dim, *input_tensors)</span>
+<span class="g g-Whitespace">    </span><span class="mi">254</span>     <span class="c1"># concatenate output at same dimension</span>
+<span class="g g-Whitespace">    </span><span class="mi">255</span>     <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">(</span><span class="n">output_chunks</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="n">chunk_dim</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">257</span> <span class="k">return</span> <span class="n">forward_fn</span><span class="p">(</span><span class="o">*</span><span class="n">input_tensors</span><span class="p">)</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\transformers\models\bert\modeling_bert.py:596,</span> in <span class="ni">BertLayer.feed_forward_chunk</span><span class="nt">(self, attention_output)</span>
+<span class="g g-Whitespace">    </span><span class="mi">595</span> <span class="k">def</span><span class="w"> </span><span class="nf">feed_forward_chunk</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attention_output</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">596</span>     <span class="n">intermediate_output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">intermediate</span><span class="p">(</span><span class="n">attention_output</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">597</span>     <span class="n">layer_output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="n">intermediate_output</span><span class="p">,</span> <span class="n">attention_output</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">598</span>     <span class="k">return</span> <span class="n">layer_output</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\torch\nn\modules\module.py:1775,</span> in <span class="ni">Module._wrapped_call_impl</span><span class="nt">(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1773</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_compiled_call_impl</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>  <span class="c1"># type: ignore[misc]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1774</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1775</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_call_impl</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\torch\nn\modules\module.py:1786,</span> in <span class="ni">Module._call_impl</span><span class="nt">(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1781</span> <span class="c1"># If we don&#39;t have any hooks, we want to skip the rest of the logic in</span>
+<span class="g g-Whitespace">   </span><span class="mi">1782</span> <span class="c1"># this function, and just call forward.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1783</span> <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_backward_hooks</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_backward_pre_hooks</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_forward_hooks</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_forward_pre_hooks</span>
+<span class="g g-Whitespace">   </span><span class="mi">1784</span>         <span class="ow">or</span> <span class="n">_global_backward_pre_hooks</span> <span class="ow">or</span> <span class="n">_global_backward_hooks</span>
+<span class="g g-Whitespace">   </span><span class="mi">1785</span>         <span class="ow">or</span> <span class="n">_global_forward_hooks</span> <span class="ow">or</span> <span class="n">_global_forward_pre_hooks</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">1786</span>     <span class="k">return</span> <span class="n">forward_call</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1788</span> <span class="n">result</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="g g-Whitespace">   </span><span class="mi">1789</span> <span class="n">called_always_called_hooks</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\transformers\models\bert\modeling_bert.py:512,</span> in <span class="ni">BertIntermediate.forward</span><span class="nt">(self, hidden_states)</span>
+<span class="g g-Whitespace">    </span><span class="mi">511</span> <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hidden_states</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">512</span>     <span class="n">hidden_states</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dense</span><span class="p">(</span><span class="n">hidden_states</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">513</span>     <span class="n">hidden_states</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">intermediate_act_fn</span><span class="p">(</span><span class="n">hidden_states</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">514</span>     <span class="k">return</span> <span class="n">hidden_states</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\torch\nn\modules\module.py:1775,</span> in <span class="ni">Module._wrapped_call_impl</span><span class="nt">(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1773</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_compiled_call_impl</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>  <span class="c1"># type: ignore[misc]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1774</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1775</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_call_impl</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\torch\nn\modules\module.py:1786,</span> in <span class="ni">Module._call_impl</span><span class="nt">(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1781</span> <span class="c1"># If we don&#39;t have any hooks, we want to skip the rest of the logic in</span>
+<span class="g g-Whitespace">   </span><span class="mi">1782</span> <span class="c1"># this function, and just call forward.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1783</span> <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_backward_hooks</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_backward_pre_hooks</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_forward_hooks</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_forward_pre_hooks</span>
+<span class="g g-Whitespace">   </span><span class="mi">1784</span>         <span class="ow">or</span> <span class="n">_global_backward_pre_hooks</span> <span class="ow">or</span> <span class="n">_global_backward_hooks</span>
+<span class="g g-Whitespace">   </span><span class="mi">1785</span>         <span class="ow">or</span> <span class="n">_global_forward_hooks</span> <span class="ow">or</span> <span class="n">_global_forward_pre_hooks</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">1786</span>     <span class="k">return</span> <span class="n">forward_call</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1788</span> <span class="n">result</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="g g-Whitespace">   </span><span class="mi">1789</span> <span class="n">called_always_called_hooks</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\torch\nn\modules\linear.py:134,</span> in <span class="ni">Linear.forward</span><span class="nt">(self, input)</span>
+<span class="g g-Whitespace">    </span><span class="mi">130</span> <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">131</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">132</span><span class="sd">     Runs the forward pass.</span>
+<span class="g g-Whitespace">    </span><span class="mi">133</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">134</span>     <span class="k">return</span> <span class="n">F</span><span class="o">.</span><span class="n">linear</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">weight</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">bias</span><span class="p">)</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
 </div>
 </div>

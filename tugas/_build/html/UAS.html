@@ -61,6 +61,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'UAS';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Link Deploy UAS Analisis Dokumen Untuk Mencari Keyword" href="linkdeploy.html" />
     <link rel="prev" title="Dokumen Analisis" href="tugas11_1_dokumen.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -205,6 +206,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tugas10_1_komuditasfb.html">Komuditas FB</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas11_1_dokumen.html">Dokumen Analisis</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">UAS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linkdeploy.html">Link Deploy UAS Analisis Dokumen Untuk Mencari Keyword</a></li>
 </ul>
 
     </div>
@@ -732,61 +734,18 @@ Note: you may need to restart the kernel to use updated packages.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">fitz</span>  <span class="c1"># PyMuPDF</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">nltk</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">networkx</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nx</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-
-<span class="n">File</span> <span class="n">C</span><span class="p">:</span>\<span class="n">laragon</span>\<span class="nb">bin</span>\<span class="n">python</span>\<span class="n">python</span><span class="o">-</span><span class="mf">3.10</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">nltk</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">153</span>
-<span class="g g-Whitespace">    </span><span class="mi">151</span> <span class="kn">from</span><span class="w"> </span><span class="nn">nltk.tag</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="g g-Whitespace">    </span><span class="mi">152</span> <span class="kn">from</span><span class="w"> </span><span class="nn">nltk.tokenize</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="ne">--&gt; </span><span class="mi">153</span> <span class="kn">from</span><span class="w"> </span><span class="nn">nltk.translate</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="g g-Whitespace">    </span><span class="mi">154</span> <span class="kn">from</span><span class="w"> </span><span class="nn">nltk.tree</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="g g-Whitespace">    </span><span class="mi">155</span> <span class="kn">from</span><span class="w"> </span><span class="nn">nltk.sem</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-
-<span class="n">File</span> <span class="n">C</span><span class="p">:</span>\<span class="n">laragon</span>\<span class="nb">bin</span>\<span class="n">python</span>\<span class="n">python</span><span class="o">-</span><span class="mf">3.10</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">nltk</span>\<span class="n">translate</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">24</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="kn">from</span><span class="w"> </span><span class="nn">nltk.translate.bleu_score</span><span class="w"> </span><span class="kn">import</span> <span class="n">sentence_bleu</span> <span class="k">as</span> <span class="n">bleu</span>
-<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="kn">from</span><span class="w"> </span><span class="nn">nltk.translate.ribes_score</span><span class="w"> </span><span class="kn">import</span> <span class="n">sentence_ribes</span> <span class="k">as</span> <span class="n">ribes</span>
-<span class="ne">---&gt; </span><span class="mi">24</span> <span class="kn">from</span><span class="w"> </span><span class="nn">nltk.translate.meteor_score</span><span class="w"> </span><span class="kn">import</span> <span class="n">meteor_score</span> <span class="k">as</span> <span class="n">meteor</span>
-<span class="g g-Whitespace">     </span><span class="mi">25</span> <span class="kn">from</span><span class="w"> </span><span class="nn">nltk.translate.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">alignment_error_rate</span>
-<span class="g g-Whitespace">     </span><span class="mi">26</span> <span class="kn">from</span><span class="w"> </span><span class="nn">nltk.translate.stack_decoder</span><span class="w"> </span><span class="kn">import</span> <span class="n">StackDecoder</span>
-
-<span class="n">File</span> <span class="n">C</span><span class="p">:</span>\<span class="n">laragon</span>\<span class="nb">bin</span>\<span class="n">python</span>\<span class="n">python</span><span class="o">-</span><span class="mf">3.10</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">nltk</span>\<span class="n">translate</span>\<span class="n">meteor_score</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">14</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="kn">from</span><span class="w"> </span><span class="nn">nltk.corpus</span><span class="w"> </span><span class="kn">import</span> <span class="n">WordNetCorpusReader</span><span class="p">,</span> <span class="n">wordnet</span>
-<span class="ne">---&gt; </span><span class="mi">14</span> <span class="kn">from</span><span class="w"> </span><span class="nn">nltk.stem.api</span><span class="w"> </span><span class="kn">import</span> <span class="n">StemmerI</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="kn">from</span><span class="w"> </span><span class="nn">nltk.stem.porter</span><span class="w"> </span><span class="kn">import</span> <span class="n">PorterStemmer</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="k">def</span><span class="w"> </span><span class="nf">_generate_enums</span><span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span>     <span class="n">hypothesis</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span>     <span class="n">reference</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span>     <span class="n">preprocess</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">lower</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">]],</span> <span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]]:</span>
-
-<span class="n">File</span> <span class="n">C</span><span class="p">:</span>\<span class="n">laragon</span>\<span class="nb">bin</span>\<span class="n">python</span>\<span class="n">python</span><span class="o">-</span><span class="mf">3.10</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">nltk</span>\<span class="n">stem</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">29</span>
-<span class="g g-Whitespace">     </span><span class="mi">27</span> <span class="kn">from</span><span class="w"> </span><span class="nn">nltk.stem.cistem</span><span class="w"> </span><span class="kn">import</span> <span class="n">Cistem</span>
-<span class="g g-Whitespace">     </span><span class="mi">28</span> <span class="kn">from</span><span class="w"> </span><span class="nn">nltk.stem.isri</span><span class="w"> </span><span class="kn">import</span> <span class="n">ISRIStemmer</span>
-<span class="ne">---&gt; </span><span class="mi">29</span> <span class="kn">from</span><span class="w"> </span><span class="nn">nltk.stem.lancaster</span><span class="w"> </span><span class="kn">import</span> <span class="n">LancasterStemmer</span>
-<span class="g g-Whitespace">     </span><span class="mi">30</span> <span class="kn">from</span><span class="w"> </span><span class="nn">nltk.stem.porter</span><span class="w"> </span><span class="kn">import</span> <span class="n">PorterStemmer</span>
-<span class="g g-Whitespace">     </span><span class="mi">31</span> <span class="kn">from</span><span class="w"> </span><span class="nn">nltk.stem.regexp</span><span class="w"> </span><span class="kn">import</span> <span class="n">RegexpStemmer</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:1027,</span> in <span class="ni">_find_and_load</span><span class="nt">(name, import_)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:1002,</span> in <span class="ni">_find_and_load_unlocked</span><span class="nt">(name, import_)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:945,</span> in <span class="ni">_find_spec</span><span class="nt">(name, path, target)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap_external&gt;:1439,</span> in <span class="ni">find_spec</span><span class="nt">(cls, fullname, path, target)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap_external&gt;:1411,</span> in <span class="ni">_get_spec</span><span class="nt">(cls, fullname, path, target)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap_external&gt;:1544,</span> in <span class="ni">find_spec</span><span class="nt">(self, fullname, target)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap_external&gt;:147,</span> in <span class="ni">_path_stat</span><span class="nt">(path)</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Consider using the pymupdf_layout package for a greatly improved page layout analysis.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\Rizky\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package stopwords to
+[nltk_data]     C:\Users\Rizky\AppData\Roaming\nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package punkt_tab to
+[nltk_data]     C:\Users\Rizky\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
 </pre></div>
 </div>
 </div>
@@ -816,332 +775,16 @@ Note: you may need to restart the kernel to use updated packages.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">
-     <input type="file" id="files-23314841-6c42-4b60-aae6-4aea8fd16cd1" name="files[]" multiple disabled
-        style="border:none" />
-     <output id="result-23314841-6c42-4b60-aae6-4aea8fd16cd1">
-      Upload widget is only available when the cell has been executed in the
-      current browser session. Please rerun this cell to enable.
-      </output>
-      <script>// Copyright 2017 Google LLC
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//      http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">files</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Hapus file PDF sebelumnya jika ada untuk menghindari konflik nama</span>
 
-/**
- * @fileoverview Helpers for google.colab Python module.
- */
-(function(scope) {
-function span(text, styleAttributes = {}) {
-  const element = document.createElement('span');
-  element.textContent = text;
-  for (const key of Object.keys(styleAttributes)) {
-    element.style[key] = styleAttributes[key];
-  }
-  return element;
-}
-
-// Max number of bytes which will be uploaded at a time.
-const MAX_PAYLOAD_SIZE = 100 * 1024;
-
-function _uploadFiles(inputId, outputId) {
-  const steps = uploadFilesStep(inputId, outputId);
-  const outputElement = document.getElementById(outputId);
-  // Cache steps on the outputElement to make it available for the next call
-  // to uploadFilesContinue from Python.
-  outputElement.steps = steps;
-
-  return _uploadFilesContinue(outputId);
-}
-
-// This is roughly an async generator (not supported in the browser yet),
-// where there are multiple asynchronous steps and the Python side is going
-// to poll for completion of each step.
-// This uses a Promise to block the python side on completion of each step,
-// then passes the result of the previous step as the input to the next step.
-function _uploadFilesContinue(outputId) {
-  const outputElement = document.getElementById(outputId);
-  const steps = outputElement.steps;
-
-  const next = steps.next(outputElement.lastPromiseValue);
-  return Promise.resolve(next.value.promise).then((value) => {
-    // Cache the last promise value to make it available to the next
-    // step of the generator.
-    outputElement.lastPromiseValue = value;
-    return next.value.response;
-  });
-}
-
-/**
- * Generator function which is called between each async step of the upload
- * process.
- * @param {string} inputId Element ID of the input file picker element.
- * @param {string} outputId Element ID of the output display.
- * @return {!Iterable<!Object>} Iterable of next steps.
- */
-function* uploadFilesStep(inputId, outputId) {
-  const inputElement = document.getElementById(inputId);
-  inputElement.disabled = false;
-
-  const outputElement = document.getElementById(outputId);
-  outputElement.innerHTML = '';
-
-  const pickedPromise = new Promise((resolve) => {
-    inputElement.addEventListener('change', (e) => {
-      resolve(e.target.files);
-    });
-  });
-
-  const cancel = document.createElement('button');
-  inputElement.parentElement.appendChild(cancel);
-  cancel.textContent = 'Cancel upload';
-  const cancelPromise = new Promise((resolve) => {
-    cancel.onclick = () => {
-      resolve(null);
-    };
-  });
-
-  // Wait for the user to pick the files.
-  const files = yield {
-    promise: Promise.race([pickedPromise, cancelPromise]),
-    response: {
-      action: 'starting',
-    }
-  };
-
-  cancel.remove();
-
-  // Disable the input element since further picks are not allowed.
-  inputElement.disabled = true;
-
-  if (!files) {
-    return {
-      response: {
-        action: 'complete',
-      }
-    };
-  }
-
-  for (const file of files) {
-    const li = document.createElement('li');
-    li.append(span(file.name, {fontWeight: 'bold'}));
-    li.append(span(
-        `(${file.type || 'n/a'}) - ${file.size} bytes, ` +
-        `last modified: ${
-            file.lastModifiedDate ? file.lastModifiedDate.toLocaleDateString() :
-                                    'n/a'} - `));
-    const percent = span('0% done');
-    li.appendChild(percent);
-
-    outputElement.appendChild(li);
-
-    const fileDataPromise = new Promise((resolve) => {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        resolve(e.target.result);
-      };
-      reader.readAsArrayBuffer(file);
-    });
-    // Wait for the data to be ready.
-    let fileData = yield {
-      promise: fileDataPromise,
-      response: {
-        action: 'continue',
-      }
-    };
-
-    // Use a chunked sending to avoid message size limits. See b/62115660.
-    let position = 0;
-    do {
-      const length = Math.min(fileData.byteLength - position, MAX_PAYLOAD_SIZE);
-      const chunk = new Uint8Array(fileData, position, length);
-      position += length;
-
-      const base64 = btoa(String.fromCharCode.apply(null, chunk));
-      yield {
-        response: {
-          action: 'append',
-          file: file.name,
-          data: base64,
-        },
-      };
-
-      let percentDone = fileData.byteLength === 0 ?
-          100 :
-          Math.round((position / fileData.byteLength) * 100);
-      percent.textContent = `${percentDone}% done`;
-
-    } while (position < fileData.byteLength);
-  }
-
-  // All done.
-  yield {
-    response: {
-      action: 'complete',
-    }
-  };
-}
-
-scope.google = scope.google || {};
-scope.google.colab = scope.google.colab || {};
-scope.google.colab._files = {
-  _uploadFiles,
-  _uploadFilesContinue,
-};
-})(self);
-</script> </div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Saving Nasi_goreng_food_and_wine_pairing_Fried_rice_food_.pdf to Nasi_goreng_food_and_wine_pairing_Fried_rice_food_.pdf
-Uploaded file: Nasi_goreng_food_and_wine_pairing_Fried_rice_food_.pdf
-Processing Nasi_goreng_food_and_wine_pairing_Fried_rice_food_.pdf...
-
-========================================
-TAHAP 1: EKSTRAKSI TEKS
-========================================
-Jumlah Karakter: 41741
-
-========================================
-TAHAP 2: PREPROCESSING (CONTOH 3 TAHAP)
-========================================
-Jumlah Kalimat Total: 341
-
---- A. Contoh 3 Kalimat SEBELUM Preprocessing (Asli) ---
-1. Jurnal Mahasiswa Pariwisata dan Bisnis EISSN: 2828-3325
-Vol 01 No 05, 2022: 1189 -1204EISSN 2579 – 3454
-https://dx.doi.org/10.22334/paris.v1i5
-
-
-_Submitted 20 Mei 2022_
-_Accepted 30 Mei 2022_
-
-# **NASI GORENG: FOOD AND WINE PAIRING** **_FRIED RICE: FOOD AND WINE PAIRING_**
-
-
-**Ni Kadek Jhiestany Nirmala Dewi**
-Diploma III Perhotelan, Institut Pariwisata dan Bisnis Internasional
-
-
-_nirmaladewi150500@gmail.com_
-
-
-**ABSTRAK**
-
-
-_Kuliner Indonesia memiliki potensi yang besar untuk dikemangkan menjadi destinasi_
-_wisata bagi para wisatawan mancanegara maupun lokal.
-2. Salah satunya adalah nasi goreng,_
-_yang merupakan makanan terenak kedua di dunia.
-3. Minum wine saat ini tengah menjadi_
-_tren, salah satu wine lokal yang di produksi di Bali yaitu Hatten Wines.
-
---- B. Contoh 3 Kalimat SETELAH Preprocessing (Cleaning) ---
-1. jurnal mahasiswa pariwisata dan bisnis eissn 
-vol  no    eissn   
-
-
-
-submitted  mei 
-accepted  mei 
-
- nasi goreng food and wine pairing fried rice food and wine pairing
-
-
-ni kadek jhiestany nirmala dewi
-diploma iii perhotelan institut pariwisata dan bisnis internasional
-
-
-nirmaladewigmailcom
-
-
-abstrak
-
-
-kuliner indonesia memiliki potensi yang besar untuk dikemangkan menjadi destinasi
-wisata bagi para wisatawan mancanegara maupun lokal
-2. salah satunya adalah nasi goreng
-yang merupakan makanan terenak kedua di dunia
-3. minum wine saat ini tengah menjadi
-tren salah satu wine lokal yang di produksi di bali yaitu hatten wines
-
---- C. Contoh 3 Kalimat SETELAH Tokenisasi (Unigram + Bigram) ---
-1. [&#39;jurnal&#39;, &#39;jurnal mahasiswa&#39;, &#39;mahasiswa&#39;, &#39;mahasiswa pariwisata&#39;, &#39;pariwisata&#39;, &#39;pariwisata bisnis&#39;, &#39;bisnis&#39;, &#39;bisnis eissn&#39;, &#39;eissn&#39;, &#39;eissn eissn&#39;, &#39;...&#39;]
-2. [&#39;salah&#39;, &#39;salah satunya&#39;, &#39;satunya&#39;, &#39;satunya nasi&#39;, &#39;nasi&#39;, &#39;nasi goreng&#39;, &#39;goreng&#39;, &#39;goreng makanan&#39;, &#39;makanan&#39;, &#39;makanan terenak&#39;, &#39;...&#39;]
-3. [&#39;minum&#39;, &#39;minum wine&#39;, &#39;wine&#39;, &#39;wine tren&#39;, &#39;tren&#39;, &#39;tren salah&#39;, &#39;salah&#39;, &#39;salah wine&#39;, &#39;wine&#39;, &#39;wine lokal&#39;, &#39;...&#39;]
-
-Jumlah Sequence: 318
-
-Total Token Siap Proses: 5868
-
-========================================
-TAHAP 3: MEMBANGUN GRAPH
-========================================
-Graph Terbentuk: 3124 Node, 11948 Edge
-
-========================================
-TAHAP 4: PERBANDINGAN SCORE 4 METODE
-========================================
-                   PageRank                 Degree            Betweenness               Closeness
-Rank                                                                                             
-1             wine (0.0161)          wine (0.1233)          wine (0.2375)    nasi goreng (0.3854)
-2             nasi (0.0128)          nasi (0.0820)          nasi (0.1444)         goreng (0.3789)
-3           goreng (0.0121)        goreng (0.0720)    penelitian (0.1293)           wine (0.3764)
-4      nasi goreng (0.0115)   nasi goreng (0.0637)        goreng (0.1290)           nasi (0.3624)
-5       penelitian (0.0067)    penelitian (0.0509)       makanan (0.0728)        pairing (0.3582)
-6          makanan (0.0051)       makanan (0.0429)   nasi goreng (0.0651)        makanan (0.3566)
-7          pairing (0.0045)     indonesia (0.0355)       pairing (0.0612)   wine pairing (0.3487)
-8             data (0.0042)       pairing (0.0323)     indonesia (0.0556)     penelitian (0.3410)
-9        indonesia (0.0041)          data (0.0320)          data (0.0548)           food (0.3388)
-10          hatten (0.0039)         wines (0.0288)  wine pairing (0.0379)          cocok (0.3388)
-11           wines (0.0039)        hatten (0.0269)          bali (0.0378)      food wine (0.3295)
-12    hatten wines (0.0036)  hatten wines (0.0234)         wines (0.0349)          jenis (0.3266)
-13            food (0.0034)         orang (0.0227)        anggur (0.0290)     wine cocok (0.3213)
-14    wine pairing (0.0032)          food (0.0211)          ayam (0.0283)  cocok pairing (0.3204)
-15           eissn (0.0029)         merah (0.0208)          food (0.0265)   hatten wines (0.3198)
-16           cocok (0.0026)         fried (0.0192)         orang (0.0259)        dikenal (0.3197)
-17       food wine (0.0025)          ikan (0.0192)         fried (0.0254)      indonesia (0.3196)
-18           fried (0.0025)  wine pairing (0.0186)      yangzhou (0.0251)   pairing nasi (0.3191)
-19           merah (0.0024)          bali (0.0186)         merah (0.0234)          lokal (0.3186)
-20           orang (0.0023)         cocok (0.0179)         eissn (0.0231)   mengkonsumsi (0.3185)
-
-========================================
-TAHAP 5: HASIL FINAL (CONSENSUS SCORE)
-========================================
-         Keyword  Total Score
-1           wine           78
-2           nasi           74
-3         goreng           72
-4    nasi goreng           69
-5     penelitian           63
-6        makanan           61
-7        pairing           57
-8      indonesia           43
-9           data           37
-10  wine pairing           35
-11          food           33
-12         wines           30
-13  hatten wines           24
-14        hatten           21
-15         cocok           17
-16     food wine           14
-17         orang           14
-18         fried           12
-19          bali           12
-20         merah           10
-Sedang menggambar 20 node... Mohon tunggu.
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;google&#39;
 </pre></div>
 </div>
-<img alt="_images/d3f72c652f09d28eb5db845d0310d07d2e83d5a30c8e31e780975ae27bbb7554.png" src="_images/d3f72c652f09d28eb5db845d0310d07d2e83d5a30c8e31e780975ae27bbb7554.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sedang menggambar 3124 node... Mohon tunggu.
-</pre></div>
-</div>
-<img alt="_images/5c5067fce77af3db0b2258094b3a0dbbdcf761e2355130dc9506835e46c09518.png" src="_images/5c5067fce77af3db0b2258094b3a0dbbdcf761e2355130dc9506835e46c09518.png" />
 </div>
 </div>
 </section>
@@ -1184,6 +827,15 @@ Sedang menggambar 20 node... Mohon tunggu.
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">Dokumen Analisis</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="linkdeploy.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Link Deploy UAS Analisis Dokumen Untuk Mencari Keyword</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>

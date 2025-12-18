@@ -206,6 +206,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tugas10_1_komuditasfb.html">Komuditas FB</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas11_1_dokumen.html">Dokumen Analisis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UAS.html">UAS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linkdeploy.html">Link Deploy UAS Analisis Dokumen Untuk Mencari Keyword</a></li>
 </ul>
 
     </div>
@@ -436,15 +437,11 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">23</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">cm</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.lines</span><span class="w"> </span><span class="kn">import</span> <span class="n">Line2D</span>
-<span class="ne">---&gt; </span><span class="mi">23</span> <span class="kn">import</span><span class="w"> </span><span class="nn">umap</span>
-<span class="g g-Whitespace">     </span><span class="mi">25</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Semua library berhasil diimpor.&quot;</span><span class="p">)</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;umap&#39;
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\laragon\bin\python\python-3.10\lib\site-packages\tqdm\auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
+  from .autonotebook import tqdm as notebook_tqdm
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Semua library berhasil diimpor.
 </pre></div>
 </div>
 </div>
@@ -467,7 +464,9 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dataset berhasil dimuat. Jumlah data: 3653 baris.
 Contoh data awal:
-                                          isi_berita  \
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                          isi_berita  \
 0  SURABAYA, BANGSAONLINE.com- Kejari Tanjung Per...   
 1  KOTA PASURUAN,BANGSAONLINE.com- Suasana Pasar ...   
 2  TUBAN, BANGSAONLINE.com- Satreskrim Polres Tub...   
@@ -581,88 +580,88 @@ Contoh data awal:
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Kamus dibuat dan difilter. Jumlah kata unik: 3864
 
 --- Menjalankan HDP untuk estimasi jumlah topik... ---
-✅ HDP mengestimasi ada sekitar: 20 topik.
-
---- Menjalankan pencarian koherensi dari 5 hingga 40 topik... ---
-Selesai menghitung untuk 5 topik. Skor Koherensi: 0.4229
-Selesai menghitung untuk 10 topik. Skor Koherensi: 0.5468
-Selesai menghitung untuk 15 topik. Skor Koherensi: 0.5460
-Selesai menghitung untuk 20 topik. Skor Koherensi: 0.5930
-Selesai menghitung untuk 25 topik. Skor Koherensi: 0.5291
-Selesai menghitung untuk 30 topik. Skor Koherensi: 0.5512
-Selesai menghitung untuk 35 topik. Skor Koherensi: 0.5460
-
-Total waktu pencarian koherensi: 4.36 menit
 </pre></div>
 </div>
-<img alt="_images/631f14b9ff176acfba3e935ad8c7a7025aa656b5d9bdd57f3f3be06ceda97f1e.png" src="_images/631f14b9ff176acfba3e935ad8c7a7025aa656b5d9bdd57f3f3be06ceda97f1e.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅ Jumlah topik optimal yang ditemukan: 20
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅ HDP mengestimasi ada sekitar: 20 topik.
 
---- Melatih model LDA final dengan topik optimal... ---
+--- Menjalankan pencarian koherensi dari 5 hingga 40 topik... ---
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">43</span>
+<span class="g g-Whitespace">     </span><span class="mi">40</span> <span class="n">search_step</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="g g-Whitespace">     </span><span class="mi">42</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Menjalankan pencarian koherensi dari </span><span class="si">{</span><span class="n">search_start</span><span class="si">}</span><span class="s2"> hingga </span><span class="si">{</span><span class="n">search_limit</span><span class="si">}</span><span class="s2"> topik... ---&quot;</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">43</span> <span class="n">coherence_values</span> <span class="o">=</span> <span class="n">compute_coherence_values_multicore</span><span class="p">(</span><span class="n">dictionary</span><span class="o">=</span><span class="n">dictionary</span><span class="p">,</span> <span class="n">corpus</span><span class="o">=</span><span class="n">corpus</span><span class="p">,</span> <span class="n">texts</span><span class="o">=</span><span class="n">documents</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">44</span>                                                     <span class="n">start</span><span class="o">=</span><span class="n">search_start</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="n">search_limit</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="n">search_step</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">46</span> <span class="c1"># Tampilkan grafik</span>
+<span class="g g-Whitespace">     </span><span class="mi">47</span> <span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">search_start</span><span class="p">,</span> <span class="n">search_limit</span><span class="p">,</span> <span class="n">search_step</span><span class="p">)</span>
 
---- Topik-topik yang Ditemukan oleh Model LDA ---
-Topik: 0
-Kata-kata: 0.017*&quot;&#39;kota&#39;,&quot; + 0.016*&quot;&#39;masyarakat&#39;,&quot; + 0.015*&quot;&#39;diri&#39;,&quot; + 0.013*&quot;&#39;tanah&#39;,&quot; + 0.011*&quot;&#39;batu&#39;,&quot; + 0.010*&quot;&#39;tani&#39;,&quot; + 0.008*&quot;&#39;harap&#39;,&quot; + 0.007*&quot;&#39;indonesia&#39;,&quot; + 0.007*&quot;&#39;kabupaten&#39;,&quot; + 0.007*&quot;&#39;jalan&#39;,&quot; + 0.007*&quot;&#39;usaha&#39;,&quot; + 0.006*&quot;&#39;madiun&#39;,&quot; + 0.006*&quot;&#39;pt&#39;,&quot; + 0.006*&quot;&#39;layan&#39;,&quot; + 0.006*&quot;&#39;lingkung&#39;,&quot;
+<span class="nn">Cell In[3], line 27,</span> in <span class="ni">compute_coherence_values_multicore</span><span class="nt">(dictionary, corpus, texts, limit, start, step)</span>
+<span class="g g-Whitespace">     </span><span class="mi">25</span> <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">26</span> <span class="k">for</span> <span class="n">num_topics</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">limit</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">27</span>     <span class="n">model</span> <span class="o">=</span> <span class="n">LdaMulticore</span><span class="p">(</span><span class="n">corpus</span><span class="o">=</span><span class="n">corpus</span><span class="p">,</span> <span class="n">id2word</span><span class="o">=</span><span class="n">dictionary</span><span class="p">,</span> <span class="n">num_topics</span><span class="o">=</span><span class="n">num_topics</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">28</span>                          <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="n">passes</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">workers</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">29</span>     <span class="n">coherencemodel</span> <span class="o">=</span> <span class="n">CoherenceModel</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span> <span class="n">texts</span><span class="o">=</span><span class="n">texts</span><span class="p">,</span> <span class="n">dictionary</span><span class="o">=</span><span class="n">dictionary</span><span class="p">,</span> <span class="n">coherence</span><span class="o">=</span><span class="s1">&#39;c_v&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">30</span>     <span class="n">current_coherence</span> <span class="o">=</span> <span class="n">coherencemodel</span><span class="o">.</span><span class="n">get_coherence</span><span class="p">()</span>
 
-Topik: 1
-Kata-kata: 0.029*&quot;&#39;ketua&#39;,&quot; + 0.024*&quot;&#39;gresik&#39;,&quot; + 0.012*&quot;&#39;urus&#39;,&quot; + 0.011*&quot;&#39;dprd&#39;,&quot; + 0.010*&quot;&#39;partai&#39;,&quot; + 0.009*&quot;&#39;kota&#39;,&quot; + 0.009*&quot;&#39;kabupaten&#39;,&quot; + 0.008*&quot;&#39;pimpin&#39;,&quot; + 0.008*&quot;&#39;pdip&#39;,&quot; + 0.008*&quot;&#39;probolinggo&#39;,&quot; + 0.008*&quot;&#39;gelar&#39;,&quot; + 0.008*&quot;&#39;masyarakat&#39;,&quot; + 0.007*&quot;&#39;calon&#39;,&quot; + 0.007*&quot;&#39;dpd&#39;,&quot; + 0.007*&quot;&#39;golkar&#39;,&quot;
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\gensim\models\ldamulticore.py:186,</span> in <span class="ni">LdaMulticore.__init__</span><span class="nt">(self, corpus, num_topics, id2word, workers, chunksize, passes, batch, alpha, eta, decay, offset, eval_every, iterations, gamma_threshold, random_state, minimum_probability, minimum_phi_value, per_word_topics, dtype)</span>
+<span class="g g-Whitespace">    </span><span class="mi">183</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">alpha</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">and</span> <span class="n">alpha</span> <span class="o">==</span> <span class="s1">&#39;auto&#39;</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">184</span>     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;auto-tuning alpha not implemented in LdaMulticore; use plain LdaModel.&quot;</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">186</span> <span class="nb">super</span><span class="p">(</span><span class="n">LdaMulticore</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">187</span>     <span class="n">corpus</span><span class="o">=</span><span class="n">corpus</span><span class="p">,</span> <span class="n">num_topics</span><span class="o">=</span><span class="n">num_topics</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">188</span>     <span class="n">id2word</span><span class="o">=</span><span class="n">id2word</span><span class="p">,</span> <span class="n">chunksize</span><span class="o">=</span><span class="n">chunksize</span><span class="p">,</span> <span class="n">passes</span><span class="o">=</span><span class="n">passes</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">,</span> <span class="n">eta</span><span class="o">=</span><span class="n">eta</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">189</span>     <span class="n">decay</span><span class="o">=</span><span class="n">decay</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="n">offset</span><span class="p">,</span> <span class="n">eval_every</span><span class="o">=</span><span class="n">eval_every</span><span class="p">,</span> <span class="n">iterations</span><span class="o">=</span><span class="n">iterations</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">190</span>     <span class="n">gamma_threshold</span><span class="o">=</span><span class="n">gamma_threshold</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">random_state</span><span class="p">,</span> <span class="n">minimum_probability</span><span class="o">=</span><span class="n">minimum_probability</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">191</span>     <span class="n">minimum_phi_value</span><span class="o">=</span><span class="n">minimum_phi_value</span><span class="p">,</span> <span class="n">per_word_topics</span><span class="o">=</span><span class="n">per_word_topics</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">192</span> <span class="p">)</span>
 
-Topik: 2
-Kata-kata: 0.017*&quot;&#39;khofifah&#39;,&quot; + 0.016*&quot;&#39;timur&#39;,&quot; + 0.016*&quot;&#39;jawa&#39;,&quot; + 0.012*&quot;&#39;indonesia&#39;,&quot; + 0.012*&quot;&#39;didik&#39;,&quot; + 0.012*&quot;&#39;jatim&#39;,&quot; + 0.009*&quot;&#39;masyarakat&#39;,&quot; + 0.008*&quot;&#39;gubernur&#39;,&quot; + 0.008*&quot;&#39;kuat&#39;,&quot; + 0.007*&quot;&#39;ajar&#39;,&quot; + 0.007*&quot;&#39;sekolah&#39;,&quot; + 0.006*&quot;&#39;bangun&#39;,&quot; + 0.006*&quot;&#39;bangsa&#39;,&quot; + 0.006*&quot;&#39;harap&#39;,&quot; + 0.006*&quot;&#39;kerja&#39;,&quot;
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\gensim\models\ldamodel.py:521,</span> in <span class="ni">LdaModel.__init__</span><span class="nt">(self, corpus, num_topics, id2word, distributed, chunksize, passes, update_every, alpha, eta, decay, offset, eval_every, iterations, gamma_threshold, minimum_probability, random_state, ns_conf, minimum_phi_value, per_word_topics, callbacks, dtype)</span>
+<span class="g g-Whitespace">    </span><span class="mi">519</span> <span class="n">use_numpy</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dispatcher</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">520</span> <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="ne">--&gt; </span><span class="mi">521</span> <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">corpus</span><span class="p">,</span> <span class="n">chunks_as_numpy</span><span class="o">=</span><span class="n">use_numpy</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">522</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_lifecycle_event</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">523</span>     <span class="s2">&quot;created&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">524</span>     <span class="n">msg</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;trained </span><span class="si">{</span><span class="bp">self</span><span class="si">}</span><span class="s2"> in </span><span class="si">{</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">start</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">s&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">525</span> <span class="p">)</span>
 
-Topik: 3
-Kata-kata: 0.017*&quot;&#39;guna&#39;,&quot; + 0.017*&quot;&#39;iphone&#39;,&quot; + 0.014*&quot;&#39;fitur&#39;,&quot; + 0.011*&quot;&#39;aplikasi&#39;,&quot; + 0.009*&quot;&#39;milik&#39;,&quot; + 0.009*&quot;&#39;pilih&#39;,&quot; + 0.009*&quot;&#39;bisnis&#39;,&quot; + 0.009*&quot;&#39;baru&#39;,&quot; + 0.008*&quot;&#39;teknologi&#39;,&quot; + 0.008*&quot;&#39;listrik&#39;,&quot; + 0.007*&quot;&#39;harga&#39;,&quot; + 0.007*&quot;&#39;indonesia&#39;,&quot; + 0.007*&quot;&#39;baterai&#39;,&quot; + 0.007*&quot;&#39;produk&#39;,&quot; + 0.006*&quot;&#39;mobil&#39;,&quot;
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\gensim\models\ldamulticore.py:316,</span> in <span class="ni">LdaMulticore.update</span><span class="nt">(self, corpus, chunks_as_numpy)</span>
+<span class="g g-Whitespace">    </span><span class="mi">312</span> <span class="c1"># endfor single corpus pass</span>
+<span class="g g-Whitespace">    </span><span class="mi">313</span> 
+<span class="g g-Whitespace">    </span><span class="mi">314</span> <span class="c1"># wait for all outstanding jobs to finish</span>
+<span class="g g-Whitespace">    </span><span class="mi">315</span> <span class="k">while</span> <span class="n">queue_size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">316</span>     <span class="n">process_result_queue</span><span class="p">(</span><span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">318</span> <span class="k">if</span> <span class="n">reallen</span> <span class="o">!=</span> <span class="n">lencorpus</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">319</span>     <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;input corpus size changed during training (don&#39;t use generators as input)&quot;</span><span class="p">)</span>
 
-Topik: 4
-Kata-kata: 0.016*&quot;&#39;anak&#39;,&quot; + 0.013*&quot;&#39;media&#39;,&quot; + 0.010*&quot;&#39;orang&#39;,&quot; + 0.009*&quot;&#39;indonesia&#39;,&quot; + 0.009*&quot;&#39;milik&#39;,&quot; + 0.008*&quot;&#39;surabaya&#39;,&quot; + 0.008*&quot;&#39;sosial&#39;,&quot; + 0.007*&quot;&#39;hidup&#39;,&quot; + 0.007*&quot;&#39;nama&#39;,&quot; + 0.007*&quot;&#39;rumah&#39;,&quot; + 0.007*&quot;&#39;salah&#39;,&quot; + 0.006*&quot;&#39;cerita&#39;,&quot; + 0.005*&quot;&#39;kenal&#39;,&quot; + 0.005*&quot;&#39;jalan&#39;,&quot; + 0.005*&quot;&#39;keluarga&#39;,&quot;
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\gensim\models\ldamulticore.py:274,</span> in <span class="ni">LdaMulticore.update.&lt;locals&gt;.process_result_queue</span><span class="nt">(force)</span>
+<span class="g g-Whitespace">    </span><span class="mi">268</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">269</span><span class="sd"> Clear the result queue, merging all intermediate results, and update the</span>
+<span class="g g-Whitespace">    </span><span class="mi">270</span><span class="sd"> LDA model if necessary.</span>
+<span class="g g-Whitespace">    </span><span class="mi">271</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">272</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">273</span> <span class="n">merged_new</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="ne">--&gt; </span><span class="mi">274</span> <span class="k">while</span> <span class="ow">not</span> <span class="n">result_queue</span><span class="o">.</span><span class="n">empty</span><span class="p">():</span>
+<span class="g g-Whitespace">    </span><span class="mi">275</span>     <span class="n">other</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">result_queue</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
+<span class="g g-Whitespace">    </span><span class="mi">276</span>     <span class="n">queue_size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">1</span>
 
-Topik: 5
-Kata-kata: 0.019*&quot;&#39;air&#39;,&quot; + 0.019*&quot;&#39;makan&#39;,&quot; + 0.018*&quot;&#39;bahan&#39;,&quot; + 0.012*&quot;&#39;ayam&#39;,&quot; + 0.011*&quot;&#39;buah&#39;,&quot; + 0.010*&quot;&#39;daun&#39;,&quot; + 0.010*&quot;&#39;bawang&#39;,&quot; + 0.009*&quot;&#39;minyak&#39;,&quot; + 0.009*&quot;&#39;goreng&#39;,&quot; + 0.009*&quot;&#39;pisang&#39;,&quot; + 0.009*&quot;&#39;telur&#39;,&quot; + 0.009*&quot;&#39;masak&#39;,&quot; + 0.009*&quot;&#39;putih&#39;,&quot; + 0.008*&quot;&#39;masuk&#39;,&quot; + 0.008*&quot;&#39;daging&#39;,&quot;
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\multiprocessing\queues.py:129,</span> in <span class="ni">Queue.empty</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">128</span> <span class="k">def</span><span class="w"> </span><span class="nf">empty</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">129</span>     <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_poll</span><span class="p">()</span>
 
-Topik: 6
-Kata-kata: 0.023*&quot;&#39;korban&#39;,&quot; + 0.015*&quot;&#39;warga&#39;,&quot; + 0.014*&quot;&#39;laku&#39;,&quot; + 0.012*&quot;&#39;polisi&#39;,&quot; + 0.011*&quot;&#39;jalan&#39;,&quot; + 0.011*&quot;&#39;aman&#39;,&quot; + 0.008*&quot;&#39;aksi&#39;,&quot; + 0.008*&quot;&#39;rumah&#39;,&quot; + 0.008*&quot;&#39;hasil&#39;,&quot; + 0.008*&quot;&#39;temu&#39;,&quot; + 0.007*&quot;&#39;polres&#39;,&quot; + 0.007*&quot;&#39;motor&#39;,&quot; + 0.007*&quot;&#39;lokasi&#39;,&quot; + 0.007*&quot;&#39;lapor&#39;,&quot; + 0.007*&quot;&#39;hukum&#39;,&quot;
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\multiprocessing\connection.py:262,</span> in <span class="ni">_ConnectionBase.poll</span><span class="nt">(self, timeout)</span>
+<span class="g g-Whitespace">    </span><span class="mi">260</span> <span class="bp">self</span><span class="o">.</span><span class="n">_check_closed</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">261</span> <span class="bp">self</span><span class="o">.</span><span class="n">_check_readable</span><span class="p">()</span>
+<span class="ne">--&gt; </span><span class="mi">262</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_poll</span><span class="p">(</span><span class="n">timeout</span><span class="p">)</span>
 
-Topik: 7
-Kata-kata: 0.112*&quot;&#39;angin&#39;,&quot; + 0.074*&quot;&#39;&#39;,&quot; + 0.060*&quot;&#39;suhu&#39;,&quot; + 0.059*&quot;&#39;c&#39;,&quot; + 0.058*&quot;&#39;cepat&#39;,&quot; + 0.056*&quot;&#39;ms&#39;,&quot; + 0.054*&quot;&#39;wib&#39;,&quot; + 0.053*&quot;&#39;cuaca&#39;,&quot; + 0.052*&quot;&#39;arah&#39;,&quot; + 0.033*&quot;&#39;cerah&#39;,&quot; + 0.032*&quot;&#39;awan&#39;,&quot; + 0.031*&quot;&#39;prakira&#39;,&quot; + 0.014*&quot;&#39;bmkg&#39;,&quot; + 0.013*&quot;&#39;resmi&#39;,&quot; + 0.011*&quot;&#39;e&#39;,&quot;
+<span class="nn">File C:\laragon\bin\python\python-3.10\lib\multiprocessing\connection.py:333,</span> in <span class="ni">PipeConnection._poll</span><span class="nt">(self, timeout)</span>
+<span class="g g-Whitespace">    </span><span class="mi">331</span> <span class="k">def</span><span class="w"> </span><span class="nf">_poll</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timeout</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">332</span>     <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_got_empty_message</span> <span class="ow">or</span>
+<span class="ne">--&gt; </span><span class="mi">333</span>                 <span class="n">_winapi</span><span class="o">.</span><span class="n">PeekNamedPipe</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_handle</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">334</span>         <span class="k">return</span> <span class="kc">True</span>
+<span class="g g-Whitespace">    </span><span class="mi">335</span>     <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="n">wait</span><span class="p">([</span><span class="bp">self</span><span class="p">],</span> <span class="n">timeout</span><span class="p">))</span>
 
-Topik: 8
-Kata-kata: 0.056*&quot;&#39;sehat&#39;,&quot; + 0.034*&quot;&#39;layan&#39;,&quot; + 0.033*&quot;&#39;serta&#39;,&quot; + 0.025*&quot;&#39;jkn&#39;,&quot; + 0.017*&quot;&#39;bpjs&#39;,&quot; + 0.015*&quot;&#39;sakit&#39;,&quot; + 0.015*&quot;&#39;program&#39;,&quot; + 0.011*&quot;&#39;jamin&#39;,&quot; + 0.011*&quot;&#39;masyarakat&#39;,&quot; + 0.010*&quot;&#39;gresik&#39;,&quot; + 0.010*&quot;&#39;bayar&#39;,&quot; + 0.009*&quot;&#39;daftar&#39;,&quot; + 0.008*&quot;&#39;langsung&#39;,&quot; + 0.008*&quot;&#39;obat&#39;,&quot; + 0.007*&quot;&#39;rumah&#39;,&quot;
-
-Topik: 9
-Kata-kata: 0.020*&quot;&#39;tafsir&#39;,&quot; + 0.015*&quot;&#39;nabi&#39;,&quot; + 0.014*&quot;&#39;tuhan&#39;,&quot; + 0.012*&quot;&#39;mustain&#39;,&quot; + 0.011*&quot;&#39;alquran&#39;,&quot; + 0.010*&quot;&#39;wa&#39;,&quot; + 0.010*&quot;&#39;baca&#39;,&quot; + 0.009*&quot;&#39;kiai&#39;,&quot; + 0.009*&quot;&#39;as&#39;,&quot; + 0.009*&quot;&#39;allah&#39;,&quot; + 0.009*&quot;&#39;orang&#39;,&quot; + 0.008*&quot;&#39;manusia&#39;,&quot; + 0.007*&quot;&#39;kh&#39;,&quot; + 0.007*&quot;&#39;pesantren&#39;,&quot; + 0.006*&quot;&#39;ayat&#39;,&quot;
-
-Topik: 10
-Kata-kata: 0.021*&quot;&#39;masyarakat&#39;,&quot; + 0.014*&quot;&#39;kota&#39;,&quot; + 0.012*&quot;&#39;perintah&#39;,&quot; + 0.011*&quot;&#39;giat&#39;,&quot; + 0.010*&quot;&#39;daerah&#39;,&quot; + 0.010*&quot;&#39;bangun&#39;,&quot; + 0.009*&quot;&#39;harap&#39;,&quot; + 0.009*&quot;&#39;program&#39;,&quot; + 0.009*&quot;&#39;kabupaten&#39;,&quot; + 0.009*&quot;&#39;desa&#39;,&quot; + 0.008*&quot;&#39;ekonomi&#39;,&quot; + 0.008*&quot;&#39;usaha&#39;,&quot; + 0.008*&quot;&#39;kerja&#39;,&quot; + 0.008*&quot;&#39;budaya&#39;,&quot; + 0.007*&quot;&#39;tingkat&#39;,&quot;
-
-Topik: 11
-Kata-kata: 0.023*&quot;&#39;mobil&#39;,&quot; + 0.022*&quot;&#39;haji&#39;,&quot; + 0.014*&quot;&#39;asuransi&#39;,&quot; + 0.010*&quot;&#39;gunung&#39;,&quot; + 0.009*&quot;&#39;milik&#39;,&quot; + 0.009*&quot;&#39;kendara&#39;,&quot; + 0.008*&quot;&#39;jalan&#39;,&quot; + 0.008*&quot;&#39;korupsi&#39;,&quot; + 0.008*&quot;&#39;puasa&#39;,&quot; + 0.008*&quot;&#39;usaha&#39;,&quot; + 0.007*&quot;&#39;dakwa&#39;,&quot; + 0.007*&quot;&#39;uang&#39;,&quot; + 0.007*&quot;&#39;hakim&#39;,&quot; + 0.006*&quot;&#39;ibadah&#39;,&quot; + 0.006*&quot;&#39;rp&#39;,&quot;
-
-Topik: 12
-Kata-kata: 0.047*&quot;&#39;kiai&#39;,&quot; + 0.031*&quot;&#39;asep&#39;,&quot; + 0.021*&quot;&#39;kh&#39;,&quot; + 0.018*&quot;&#39;pesantren&#39;,&quot; + 0.017*&quot;&#39;gus&#39;,&quot; + 0.010*&quot;&#39;hasyim&#39;,&quot; + 0.009*&quot;&#39;dr&#39;,&quot; + 0.009*&quot;&#39;santri&#39;,&quot; + 0.009*&quot;&#39;prof&#39;,&quot; + 0.009*&quot;&#39;chalim&#39;,&quot; + 0.009*&quot;&#39;nu&#39;,&quot; + 0.009*&quot;&#39;abdul&#39;,&quot; + 0.008*&quot;&#39;pondok&#39;,&quot; + 0.008*&quot;&#39;ummah&#39;,&quot; + 0.008*&quot;&#39;yusuf&#39;,&quot;
-
-Topik: 13
-Kata-kata: 0.019*&quot;&#39;sehat&#39;,&quot; + 0.015*&quot;&#39;makan&#39;,&quot; + 0.011*&quot;&#39;tubuh&#39;,&quot; + 0.009*&quot;&#39;tingkat&#39;,&quot; + 0.008*&quot;&#39;sakit&#39;,&quot; + 0.008*&quot;&#39;bantu&#39;,&quot; + 0.008*&quot;&#39;konsumsi&#39;,&quot; + 0.008*&quot;&#39;mbg&#39;,&quot; + 0.008*&quot;&#39;gizi&#39;,&quot; + 0.008*&quot;&#39;darah&#39;,&quot; + 0.007*&quot;&#39;jaga&#39;,&quot; + 0.007*&quot;&#39;siswa&#39;,&quot; + 0.007*&quot;&#39;kandung&#39;,&quot; + 0.006*&quot;&#39;program&#39;,&quot; + 0.006*&quot;&#39;jalan&#39;,&quot;
-
-Topik: 14
-Kata-kata: 0.012*&quot;&#39;santri&#39;,&quot; + 0.012*&quot;&#39;imam&#39;,&quot; + 0.012*&quot;&#39;al&#39;,&quot; + 0.012*&quot;&#39;allah&#39;,&quot; + 0.011*&quot;&#39;islam&#39;,&quot; + 0.010*&quot;&#39;mahasiswa&#39;,&quot; + 0.010*&quot;&#39;istri&#39;,&quot; + 0.010*&quot;&#39;suami&#39;,&quot; + 0.009*&quot;&#39;orang&#39;,&quot; + 0.009*&quot;&#39;masjid&#39;,&quot; + 0.008*&quot;&#39;ajar&#39;,&quot; + 0.008*&quot;&#39;salat&#39;,&quot; + 0.007*&quot;&#39;dr&#39;,&quot; + 0.007*&quot;&#39;universitas&#39;,&quot; + 0.007*&quot;&#39;terima&#39;,&quot;
-
-Topik: 15
-Kata-kata: 0.020*&quot;&#39;diri&#39;,&quot; + 0.017*&quot;&#39;kota&#39;,&quot; + 0.012*&quot;&#39;atlet&#39;,&quot; + 0.012*&quot;&#39;olahraga&#39;,&quot; + 0.011*&quot;&#39;juara&#39;,&quot; + 0.011*&quot;&#39;prestasi&#39;,&quot; + 0.009*&quot;&#39;latih&#39;,&quot; + 0.009*&quot;&#39;raih&#39;,&quot; + 0.008*&quot;&#39;batu&#39;,&quot; + 0.008*&quot;&#39;medali&#39;,&quot; + 0.008*&quot;&#39;turnamen&#39;,&quot; + 0.008*&quot;&#39;tim&#39;,&quot; + 0.007*&quot;&#39;semangat&#39;,&quot; + 0.007*&quot;&#39;kabupaten&#39;,&quot; + 0.006*&quot;&#39;ajang&#39;,&quot;
-
-Topik: 16
-Kata-kata: 0.201*&quot;&#39;rp&#39;,&quot; + 0.072*&quot;&#39;harga&#39;,&quot; + 0.049*&quot;&#39;gram&#39;,&quot; + 0.031*&quot;&#39;kg&#39;,&quot; + 0.025*&quot;&#39;ribu&#39;,&quot; + 0.022*&quot;&#39;merah&#39;,&quot; + 0.018*&quot;&#39;ayam&#39;,&quot; + 0.015*&quot;&#39;beras&#39;,&quot; + 0.015*&quot;&#39;sembako&#39;,&quot; + 0.014*&quot;&#39;turun&#39;,&quot; + 0.013*&quot;&#39;emas&#39;,&quot; + 0.012*&quot;&#39;cabai&#39;,&quot; + 0.012*&quot;&#39;alami&#39;,&quot; + 0.011*&quot;&#39;pasar&#39;,&quot; + 0.010*&quot;&#39;butuh&#39;,&quot;
-
-Topik: 17
-Kata-kata: 0.020*&quot;&#39;wisata&#39;,&quot; + 0.018*&quot;&#39;desa&#39;,&quot; + 0.013*&quot;&#39;unjung&#39;,&quot; + 0.010*&quot;&#39;air&#39;,&quot; + 0.009*&quot;&#39;warga&#39;,&quot; + 0.008*&quot;&#39;sumber&#39;,&quot; + 0.008*&quot;&#39;tarik&#39;,&quot; + 0.008*&quot;&#39;wisatawan&#39;,&quot; + 0.008*&quot;&#39;masuk&#39;,&quot; + 0.008*&quot;&#39;salah&#39;,&quot; + 0.007*&quot;&#39;orang&#39;,&quot; + 0.007*&quot;&#39;alam&#39;,&quot; + 0.007*&quot;&#39;gunung&#39;,&quot; + 0.007*&quot;&#39;kunjung&#39;,&quot; + 0.006*&quot;&#39;foto&#39;,&quot;
-
-Topik: 18
-Kata-kata: 0.027*&quot;&#39;perempuan&#39;,&quot; + 0.019*&quot;&#39;nu&#39;,&quot; + 0.017*&quot;&#39;nikah&#39;,&quot; + 0.014*&quot;&#39;orang&#39;,&quot; + 0.013*&quot;&#39;anak&#39;,&quot; + 0.012*&quot;&#39;muslimat&#39;,&quot; + 0.010*&quot;&#39;istri&#39;,&quot; + 0.010*&quot;&#39;hubung&#39;,&quot; + 0.010*&quot;&#39;ramal&#39;,&quot; + 0.009*&quot;&#39;lakilaki&#39;,&quot; + 0.009*&quot;&#39;haram&#39;,&quot; + 0.009*&quot;&#39;hidup&#39;,&quot; + 0.009*&quot;&#39;islam&#39;,&quot; + 0.008*&quot;&#39;zodiak&#39;,&quot; + 0.008*&quot;&#39;saudara&#39;,&quot;
-
-Topik: 19
-Kata-kata: 0.021*&quot;&#39;main&#39;,&quot; + 0.020*&quot;&#39;tim&#39;,&quot; + 0.012*&quot;&#39;menang&#39;,&quot; + 0.011*&quot;&#39;lagu&#39;,&quot; + 0.010*&quot;&#39;dunia&#39;,&quot; + 0.009*&quot;&#39;gemar&#39;,&quot; + 0.008*&quot;&#39;indonesia&#39;,&quot; + 0.008*&quot;&#39;hasil&#39;,&quot; + 0.008*&quot;&#39;rilis&#39;,&quot; + 0.008*&quot;&#39;the&#39;,&quot; + 0.008*&quot;&#39;milik&#39;,&quot; + 0.008*&quot;&#39;tanding&#39;,&quot; + 0.006*&quot;&#39;israel&#39;,&quot; + 0.006*&quot;&#39;amerika&#39;,&quot; + 0.006*&quot;&#39;juara&#39;,&quot;
-
-Ekstraksi fitur LDA selesai.
-Bentuk matriks fitur (X): (3653, 20)
+<span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
 </div>
 </div>

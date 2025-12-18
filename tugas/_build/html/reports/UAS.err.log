@@ -1,15 +1,4 @@
 Traceback (most recent call last):
-  File "C:\laragon\bin\python\python-3.10\lib\site-packages\nbclient\client.py", line 782, in _async_poll_for_reply
-    msg = await ensure_async(self.kc.shell_channel.get_msg(timeout=new_timeout))
-  File "C:\Users\Rizky\AppData\Roaming\Python\Python310\site-packages\jupyter_core\utils\__init__.py", line 214, in ensure_async
-    result = await obj
-  File "C:\Users\Rizky\AppData\Roaming\Python\Python310\site-packages\jupyter_client\channels.py", line 313, in get_msg
-    raise Empty
-_queue.Empty
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
   File "C:\laragon\bin\python\python-3.10\lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
     executenb(
   File "C:\laragon\bin\python\python-3.10\lib\site-packages\nbclient\client.py", line 1319, in execute
@@ -20,18 +9,40 @@ Traceback (most recent call last):
     return future.result()
   File "C:\laragon\bin\python\python-3.10\lib\site-packages\nbclient\client.py", line 709, in async_execute
     await self.async_execute_cell(
-  File "C:\laragon\bin\python\python-3.10\lib\site-packages\nbclient\client.py", line 1005, in async_execute_cell
-    exec_reply = await self.task_poll_for_reply
-  File "C:\laragon\bin\python\python-3.10\lib\site-packages\nbclient\client.py", line 806, in _async_poll_for_reply
-    error_on_timeout_execute_reply = await self._async_handle_timeout(timeout, cell)
-  File "C:\laragon\bin\python\python-3.10\lib\site-packages\nbclient\client.py", line 856, in _async_handle_timeout
-    raise CellTimeoutError.error_from_timeout_and_cell(
-nbclient.exceptions.CellTimeoutError: A cell timed out while it was being executed, after 30 seconds.
-The message was: Cell execution timed out.
-Here is a preview of the cell contents:
--------------------
-['import fitz  # PyMuPDF', 'import nltk', 'import networkx as nx', 'import matplotlib.pyplot as plt', 'import re']
-...
-['        plt.title(title_text, fontsize=20)', "        plt.axis('off')", '        plt.show()', '    else:', '        print("Graph kosong.")']
--------------------
+  File "C:\laragon\bin\python\python-3.10\lib\site-packages\nbclient\client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\laragon\bin\python\python-3.10\lib\site-packages\nbclient\client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+from google.colab import files
+import os
+
+# Hapus file PDF sebelumnya jika ada untuk menghindari konflik nama
+!rm -f *.pdf
+
+uploaded = files.upload()
+
+for filename in uploaded.keys():
+    print(f'Uploaded file: {filename}')
+    # Pastikan hanya satu file yang diproses untuk demonstrasi ini
+    # Anda bisa memodifikasi ini jika ingin memproses beberapa file
+    pdf_file_path = filename
+    print(f'Processing {pdf_file_path}...')
+    main(pdf_file_path)
+    break # Hanya proses file pertama yang diupload
+
+if not uploaded:
+    print("No file uploaded. Please upload a PDF file to proceed.")
+------------------
+
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [1;32mIn[3], line 1[0m
+[1;32m----> 1[0m [38;5;28;01mfrom[39;00m[38;5;250m [39m[38;5;21;01mgoogle[39;00m[38;5;21;01m.[39;00m[38;5;21;01mcolab[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m files
+[0;32m      2[0m [38;5;28;01mimport[39;00m[38;5;250m [39m[38;5;21;01mos[39;00m
+[0;32m      4[0m [38;5;66;03m# Hapus file PDF sebelumnya jika ada untuk menghindari konflik nama[39;00m
+
+[1;31mModuleNotFoundError[0m: No module named 'google'
 

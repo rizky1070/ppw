@@ -206,6 +206,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tugas10_1_komuditasfb.html">Komuditas FB</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas11_1_dokumen.html">Dokumen Analisis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UAS.html">UAS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linkdeploy.html">Link Deploy UAS Analisis Dokumen Untuk Mencari Keyword</a></li>
 </ul>
 
     </div>
@@ -656,6 +657,31 @@ document.write(`
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(18/25) Berhasil scrape: Naik Lagi, Simak Pergerakan Harga Emas Antam Terbaru Hari In...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(19/25) Berhasil scrape: Buka Musda VII LDII, Wali Kota Kediri Dorong Penguatan SDM d...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(20/25) Berhasil scrape: PT SIG Pabrik Tuban Rehab Rumah Milik Lansia di Merakurak...
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">180</span>
+<span class="g g-Whitespace">    </span><span class="mi">178</span> <span class="c1"># --- Untuk Menjalankan Seluruh Proses Scraping ---</span>
+<span class="g g-Whitespace">    </span><span class="mi">179</span> <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">180</span>     <span class="n">df_hasil</span> <span class="o">=</span> <span class="n">scrape_semua_berita</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">181</span>     <span class="k">if</span> <span class="n">df_hasil</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">182</span>         <span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_colwidth&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="nn">Cell In[1], line 160,</span> in <span class="ni">scrape_semua_berita</span><span class="nt">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">157</span>             <span class="n">artikel_diambil</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="g g-Whitespace">    </span><span class="mi">158</span>             <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;(</span><span class="si">{</span><span class="n">artikel_diambil</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">ARTIKEL_PER_KATEGORI</span><span class="si">}</span><span class="s2">) Berhasil scrape: </span><span class="si">{</span><span class="n">judul</span><span class="p">[:</span><span class="mi">60</span><span class="p">]</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">160</span>     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> 
+<span class="g g-Whitespace">    </span><span class="mi">162</span> <span class="c1"># Pindah ke halaman berikutnya untuk iterasi selanjutnya</span>
+<span class="g g-Whitespace">    </span><span class="mi">163</span> <span class="n">halaman_ke</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
 </div>
 </div>
