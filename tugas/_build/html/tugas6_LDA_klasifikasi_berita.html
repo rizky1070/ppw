@@ -205,7 +205,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tugas8_2_analisisnasa.html">Analisis Dataset Log Nasa July</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas10_1_komuditasfb.html">Komuditas FB</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas11_1_dokumen.html">Dokumen Analisis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="UAS.html">UAS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UASFix.html">UAS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linkdeploy.html">Link Deploy UAS Analisis Dokumen Untuk Mencari Keyword</a></li>
 </ul>
 
@@ -464,9 +464,7 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dataset berhasil dimuat. Jumlah data: 3653 baris.
 Contoh data awal:
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                          isi_berita  \
+                                          isi_berita  \
 0  SURABAYA, BANGSAONLINE.com- Kejari Tanjung Per...   
 1  KOTA PASURUAN,BANGSAONLINE.com- Suasana Pasar ...   
 2  TUBAN, BANGSAONLINE.com- Satreskrim Polres Tub...   
@@ -585,83 +583,6 @@ Contoh data awal:
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅ HDP mengestimasi ada sekitar: 20 topik.
 
 --- Menjalankan pencarian koherensi dari 5 hingga 40 topik... ---
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">43</span>
-<span class="g g-Whitespace">     </span><span class="mi">40</span> <span class="n">search_step</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="g g-Whitespace">     </span><span class="mi">42</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Menjalankan pencarian koherensi dari </span><span class="si">{</span><span class="n">search_start</span><span class="si">}</span><span class="s2"> hingga </span><span class="si">{</span><span class="n">search_limit</span><span class="si">}</span><span class="s2"> topik... ---&quot;</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">43</span> <span class="n">coherence_values</span> <span class="o">=</span> <span class="n">compute_coherence_values_multicore</span><span class="p">(</span><span class="n">dictionary</span><span class="o">=</span><span class="n">dictionary</span><span class="p">,</span> <span class="n">corpus</span><span class="o">=</span><span class="n">corpus</span><span class="p">,</span> <span class="n">texts</span><span class="o">=</span><span class="n">documents</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">44</span>                                                     <span class="n">start</span><span class="o">=</span><span class="n">search_start</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="n">search_limit</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="n">search_step</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">46</span> <span class="c1"># Tampilkan grafik</span>
-<span class="g g-Whitespace">     </span><span class="mi">47</span> <span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">search_start</span><span class="p">,</span> <span class="n">search_limit</span><span class="p">,</span> <span class="n">search_step</span><span class="p">)</span>
-
-<span class="nn">Cell In[3], line 27,</span> in <span class="ni">compute_coherence_values_multicore</span><span class="nt">(dictionary, corpus, texts, limit, start, step)</span>
-<span class="g g-Whitespace">     </span><span class="mi">25</span> <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">26</span> <span class="k">for</span> <span class="n">num_topics</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">limit</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">27</span>     <span class="n">model</span> <span class="o">=</span> <span class="n">LdaMulticore</span><span class="p">(</span><span class="n">corpus</span><span class="o">=</span><span class="n">corpus</span><span class="p">,</span> <span class="n">id2word</span><span class="o">=</span><span class="n">dictionary</span><span class="p">,</span> <span class="n">num_topics</span><span class="o">=</span><span class="n">num_topics</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">28</span>                          <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="n">passes</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">workers</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">29</span>     <span class="n">coherencemodel</span> <span class="o">=</span> <span class="n">CoherenceModel</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span> <span class="n">texts</span><span class="o">=</span><span class="n">texts</span><span class="p">,</span> <span class="n">dictionary</span><span class="o">=</span><span class="n">dictionary</span><span class="p">,</span> <span class="n">coherence</span><span class="o">=</span><span class="s1">&#39;c_v&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">30</span>     <span class="n">current_coherence</span> <span class="o">=</span> <span class="n">coherencemodel</span><span class="o">.</span><span class="n">get_coherence</span><span class="p">()</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\gensim\models\ldamulticore.py:186,</span> in <span class="ni">LdaMulticore.__init__</span><span class="nt">(self, corpus, num_topics, id2word, workers, chunksize, passes, batch, alpha, eta, decay, offset, eval_every, iterations, gamma_threshold, random_state, minimum_probability, minimum_phi_value, per_word_topics, dtype)</span>
-<span class="g g-Whitespace">    </span><span class="mi">183</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">alpha</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">and</span> <span class="n">alpha</span> <span class="o">==</span> <span class="s1">&#39;auto&#39;</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">184</span>     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;auto-tuning alpha not implemented in LdaMulticore; use plain LdaModel.&quot;</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">186</span> <span class="nb">super</span><span class="p">(</span><span class="n">LdaMulticore</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">187</span>     <span class="n">corpus</span><span class="o">=</span><span class="n">corpus</span><span class="p">,</span> <span class="n">num_topics</span><span class="o">=</span><span class="n">num_topics</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">188</span>     <span class="n">id2word</span><span class="o">=</span><span class="n">id2word</span><span class="p">,</span> <span class="n">chunksize</span><span class="o">=</span><span class="n">chunksize</span><span class="p">,</span> <span class="n">passes</span><span class="o">=</span><span class="n">passes</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">,</span> <span class="n">eta</span><span class="o">=</span><span class="n">eta</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">189</span>     <span class="n">decay</span><span class="o">=</span><span class="n">decay</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="n">offset</span><span class="p">,</span> <span class="n">eval_every</span><span class="o">=</span><span class="n">eval_every</span><span class="p">,</span> <span class="n">iterations</span><span class="o">=</span><span class="n">iterations</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">190</span>     <span class="n">gamma_threshold</span><span class="o">=</span><span class="n">gamma_threshold</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">random_state</span><span class="p">,</span> <span class="n">minimum_probability</span><span class="o">=</span><span class="n">minimum_probability</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">191</span>     <span class="n">minimum_phi_value</span><span class="o">=</span><span class="n">minimum_phi_value</span><span class="p">,</span> <span class="n">per_word_topics</span><span class="o">=</span><span class="n">per_word_topics</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">192</span> <span class="p">)</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\gensim\models\ldamodel.py:521,</span> in <span class="ni">LdaModel.__init__</span><span class="nt">(self, corpus, num_topics, id2word, distributed, chunksize, passes, update_every, alpha, eta, decay, offset, eval_every, iterations, gamma_threshold, minimum_probability, random_state, ns_conf, minimum_phi_value, per_word_topics, callbacks, dtype)</span>
-<span class="g g-Whitespace">    </span><span class="mi">519</span> <span class="n">use_numpy</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dispatcher</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
-<span class="g g-Whitespace">    </span><span class="mi">520</span> <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-<span class="ne">--&gt; </span><span class="mi">521</span> <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">corpus</span><span class="p">,</span> <span class="n">chunks_as_numpy</span><span class="o">=</span><span class="n">use_numpy</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">522</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_lifecycle_event</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">523</span>     <span class="s2">&quot;created&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">524</span>     <span class="n">msg</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;trained </span><span class="si">{</span><span class="bp">self</span><span class="si">}</span><span class="s2"> in </span><span class="si">{</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">start</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">s&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">525</span> <span class="p">)</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\gensim\models\ldamulticore.py:316,</span> in <span class="ni">LdaMulticore.update</span><span class="nt">(self, corpus, chunks_as_numpy)</span>
-<span class="g g-Whitespace">    </span><span class="mi">312</span> <span class="c1"># endfor single corpus pass</span>
-<span class="g g-Whitespace">    </span><span class="mi">313</span> 
-<span class="g g-Whitespace">    </span><span class="mi">314</span> <span class="c1"># wait for all outstanding jobs to finish</span>
-<span class="g g-Whitespace">    </span><span class="mi">315</span> <span class="k">while</span> <span class="n">queue_size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">316</span>     <span class="n">process_result_queue</span><span class="p">(</span><span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">318</span> <span class="k">if</span> <span class="n">reallen</span> <span class="o">!=</span> <span class="n">lencorpus</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">319</span>     <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;input corpus size changed during training (don&#39;t use generators as input)&quot;</span><span class="p">)</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\site-packages\gensim\models\ldamulticore.py:274,</span> in <span class="ni">LdaMulticore.update.&lt;locals&gt;.process_result_queue</span><span class="nt">(force)</span>
-<span class="g g-Whitespace">    </span><span class="mi">268</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">269</span><span class="sd"> Clear the result queue, merging all intermediate results, and update the</span>
-<span class="g g-Whitespace">    </span><span class="mi">270</span><span class="sd"> LDA model if necessary.</span>
-<span class="g g-Whitespace">    </span><span class="mi">271</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">272</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">273</span> <span class="n">merged_new</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="ne">--&gt; </span><span class="mi">274</span> <span class="k">while</span> <span class="ow">not</span> <span class="n">result_queue</span><span class="o">.</span><span class="n">empty</span><span class="p">():</span>
-<span class="g g-Whitespace">    </span><span class="mi">275</span>     <span class="n">other</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">result_queue</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
-<span class="g g-Whitespace">    </span><span class="mi">276</span>     <span class="n">queue_size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">1</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\multiprocessing\queues.py:129,</span> in <span class="ni">Queue.empty</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">128</span> <span class="k">def</span><span class="w"> </span><span class="nf">empty</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">129</span>     <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_poll</span><span class="p">()</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\multiprocessing\connection.py:262,</span> in <span class="ni">_ConnectionBase.poll</span><span class="nt">(self, timeout)</span>
-<span class="g g-Whitespace">    </span><span class="mi">260</span> <span class="bp">self</span><span class="o">.</span><span class="n">_check_closed</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">261</span> <span class="bp">self</span><span class="o">.</span><span class="n">_check_readable</span><span class="p">()</span>
-<span class="ne">--&gt; </span><span class="mi">262</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_poll</span><span class="p">(</span><span class="n">timeout</span><span class="p">)</span>
-
-<span class="nn">File C:\laragon\bin\python\python-3.10\lib\multiprocessing\connection.py:333,</span> in <span class="ni">PipeConnection._poll</span><span class="nt">(self, timeout)</span>
-<span class="g g-Whitespace">    </span><span class="mi">331</span> <span class="k">def</span><span class="w"> </span><span class="nf">_poll</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timeout</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">332</span>     <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_got_empty_message</span> <span class="ow">or</span>
-<span class="ne">--&gt; </span><span class="mi">333</span>                 <span class="n">_winapi</span><span class="o">.</span><span class="n">PeekNamedPipe</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_handle</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">334</span>         <span class="k">return</span> <span class="kc">True</span>
-<span class="g g-Whitespace">    </span><span class="mi">335</span>     <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="n">wait</span><span class="p">([</span><span class="bp">self</span><span class="p">],</span> <span class="n">timeout</span><span class="p">))</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
 </div>
 </div>
